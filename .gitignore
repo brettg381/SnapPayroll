@@ -22,6 +22,9 @@ ehthumbs.db
 /ivy*
 /eclipse
 
+# maven
+payroll/target/
+
 # general Java + Tomcat files
 *.class
 *.war
