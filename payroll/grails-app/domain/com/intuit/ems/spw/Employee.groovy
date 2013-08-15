@@ -5,7 +5,7 @@ class Employee {
 	String name
 	Company company
 	Date created
-	Data modified
+	Date modified
 	boolean isActive
 
 	Paycheck templatePaycheck

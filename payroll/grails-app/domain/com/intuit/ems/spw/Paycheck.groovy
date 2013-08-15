@@ -2,7 +2,7 @@ package com.intuit.ems.spw
 
 class Paycheck {
 
-	String employee
+	Employee employee
 	Date created
 	Date payDate
 	String payPeriod
