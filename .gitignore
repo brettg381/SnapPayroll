@@ -22,6 +22,10 @@ ehthumbs.db
 /ivy*
 /eclipse
 
+# general Java + Tomcat files
+*.class
+*.war
+
 # default HSQL database files for production mode
 /prodDb.*
 
@@ -50,4 +54,3 @@ ehthumbs.db
 
 # other
 *.iws
-
