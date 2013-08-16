@@ -1,0 +1,67 @@
+@mixin stage {
+	background-color: $lighter-gray;
+	@include background-image(linear-gradient(bottom, $lighter-gray 0%, #f9fafb 100%));
+	border-bottom: 1px solid $lighter-slate;
+}
+
+@mixin global-navigation {
+	background-color: $dark-slate;
+	color: $white;
+}
+
+@mixin trowser-navigation {
+	background-color: $slate;
+	color: $white;
+}
+
+@mixin sub-navigation {
+	@include opacity(.4);
+	background-color: $lighter-slate;
+	@include box-shadow(inset 0 -1px 0 rgba(188,194,204,.75));
+	@include background-image(linear-gradient(bottom, #dee6f1 0%, #f4f5f8 100%));
+}
+
+@mixin table-header {
+	background-color: $lighter-slate;
+}
+
+@mixin list-hover {
+	border-width: 1px 0;
+	border-style: solid;
+	border-top-color: $light-slate;
+	border-bottom-color: $light-slate;
+	background-color: $lightest-slate;
+}
+
+@mixin collapsible-row {
+	background-color: $lighter-gray;
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: $gray;
+}
+
+/* body.harmony {
+	.stage {
+		@include stage;
+	}
+
+	.global-navigation {
+		@include global-navigation;
+	}
+
+	.sub-navigation {
+		@include sub-navigation;
+	}
+
+	thead tr {
+		@include table-header;
+	}
+
+	.list-hover {
+		@include list-hover;
+	}
+
+	.row {
+		@include collapsible-row;
+	}
+} */

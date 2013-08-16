@@ -1,0 +1,81 @@
+
+.pattern-page {
+	width: 100%;
+	height: 100%
+}
+.pattern-page .content,
+.pattern-page aside {
+		float: left;
+	font-size: 1.2 rem;
+}
+.pattern-page >.content{
+	width: 70%;
+	padding-right: 40px;
+	padding-left: 40px;
+	
+}
+.pattern-page >.content img {
+	max-width: none;
+	padding-bottom: 20px;
+}
+.pattern-page .content  h3 {
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+.pattern-page .content  p {
+	width: 100%;
+}
+.pattern-page .content ul {
+	margin-bottom: 20px;
+}
+.pattern-page .pattern-type{
+	margin-left: 20px;
+	margin-bottom: 30px;
+}
+.pattern-page aside {
+	height: 100%;
+	width: 150px;
+
+	
+	padding: 0 0px 0 40px;
+	border-left: 1px solid #eee;
+}
+.pattern-page p {
+	width: auto;
+}
+.pattern-page aside > h2 {
+	font-size: 1.6rem;
+}
+body.harmony .pattern-page aside > .button {
+	margin-top: 40px;
+	padding: 0 20px;
+	width: 100%;
+	
+	display: inline-block;
+	float: none;
+
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.pattern-page aside > p{ 
+	width: 100%;
+	font-size: 1.2rem;
+}
+.two-col {
+	margin-right: 20px;
+	width: 48%;
+	float: left;
+}
+.two-col.last {
+	margin-right: 0;
+}
+body.harmony ul.no-bullets {
+	margin-left: 0;
+	list-style-type: none;
+	font-size: 1.2rem;
+}
+
+
+

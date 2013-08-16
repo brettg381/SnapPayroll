@@ -1,0 +1,50 @@
+  $lighter-gray: #f3f5f8; // Add Drawer Background, Collapsable Table Row Background
+    $light-gray: #ddd;    // Stroke Around White Buttons, Blackout Dates
+          $gray: #ccc;    // Stroke Around Fields, Horizontal Dividers in Tables
+     $dark-gray: #999;    // Gray Buttons
+   $darker-gray: #404040; // Body Copy
+
+$lightest-slate: #f3f8fe; // Table Hover State
+ $lighter-slate: #e3eaf3; // Table Headers, IPP Background
+   $light-slate: #c0d0e4; // Blue Dividers, Sort by Column Active State
+         $slate: #6e8ba8; // Trowser Header, Table Header Labels, Add Drawer Badge
+    $dark-slate: #193048; // Primary Navigation Background, Global Navigation Background
+  $darker-slate: #131f2b; // Flyouts, Tooltips, Sticky Footer Background, Category Header in Side Navigation
+ $darkest-slate: #0f1822; // Hovers State in Flyouts
+
+    $light-blue: #4376ef; // Primary Action Button on Dark Background
+          $blue: #3965ce; // Hover State, Links, Primary Action Button on Light Background
+     $dark-blue: #2c4d9c; // Hit State
+
+   $light-green: #f6fee6; // Confirmation Notification Background
+         $green: #a5d001; // Confirmation Notification Stroke
+    $dark-green: #4b9a18; // Confirmation Icon
+
+  $light-yellow: #fffce5; // Subtotal Background
+        $yellow: #fbe0a3; // Subtotal Stroke
+   $dark-yellow: #f2b835; // Caution Icon
+        $orange: #e77b07; // Special Date in Calendar
+
+    $light-pink: #fefcfc; // Error Notification Background
+          $pink: #ef797e; // Error Notification Stroke
+           $red: #dc3c1e; // Error Icon
+
+       $fuchsia: #c72f79; // Assistant Bar Background
+  $dark-fuchsia: #a32763; // Assistant Indicator Split
+
+         $white: #fff;    // White. Just Plain Ol' White
+         $black: #000;    // Black. As Dark as It Gets
+
+$translucent-black: rgba(0,0,0,.1);
+    $partial-black: rgba(0,0,0,.2);       // Drop Shadows
+       $half-black: rgba(0,0,0,.5);       // Navigation Hover
+$translucent-white: rgba(255,255,255,.1); // Navigation Item Dividers
+    $partial-white: rgba(255,255,255,.2);
+       $half-white: rgba(255,255,255,.5);
+
+  $insights-dark-blue: #4d5f89; // Section colors for insight charts
+   $insights-med-blue: #6c8eaf;
+     $insights-yellow: #f2b835;
+        $insights-red: #ce5133;
+      $insights-green: #a8cb24;
+$insights-group-label: #68779b;

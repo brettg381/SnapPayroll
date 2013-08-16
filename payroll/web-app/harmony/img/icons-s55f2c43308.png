@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="harmony">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Intuit Harmony Toolkit</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Toolkit Component Stylesheets (Compiled SASS/Compass) -->
+	<link rel="stylesheet" href="toolkit/css/screen.css">
+	<link rel="stylesheet" href="toolkit/css/kalendae.css"> <!-- Date Picker (To be loaded on an as-needed basis) -->
+     <link rel="stylesheet" href="toolkit/css/jquery.fancybox.css" type="text/css" media="screen" /> <!-- Fancybox CSS for overlay lightbox effects -->
+     <link rel="stylesheet" href="toolkit/css/template.css">
+	<!-- Toolkit Site Stylesheets -->
+	<link rel="stylesheet" href="css/prettify.css">
+	<link rel="stylesheet" href="css/toolkit.css">
+
+	<!-- !To Do: Implement a loader. -->
+
+	<!-- Toolkit Component Libraries -->
+	<script src="toolkit/js/jquery.min.js"></script>
+	<script src="toolkit/js/jquery.history.min.js"></script> <!-- jQuery-specific version of History.js -->
+	<script src="toolkit/js/jquery.tinyscrollbar.js"></script> <!-- Custom Scrollbar - We're using the non-minified version for development purposes -->
+	<script src="toolkit/js/modernizr.min.js"></script>
+	<script src="toolkit/js/kalendae.js"></script> <!-- Date Picker - We're using the non-minified version for development purposes -->
+     <script src="toolkit/js/jquery.fancybox.pack.js"></script> <!-- Fancybox overlay lightbox for thumbnail images to expand for better viewing -->
+     
+	<!-- Toolkit Site Scripts -->
+	<script src="js/prettify.min.js"></script> <!-- Provides syntax highlighting for code samples -->
+	<script src="js/toolkit.js"></script>
+
+	<!-- Toolkit Component Scripts -->
+	<script src="toolkit/js/harmony.js"></script>
+</head>
+
+
+<body class="harmony">
+
+<nav>
+	<div class="logo" title="Intuit"></div>
+	<div class="nav-drawer">
+		<div class="back"><a href="#back" class="selected">Back</a></div>
+		<div class="primary scrollable">
+			<ul>
+				<li><a href="introduction">Introduction</a></li>
+				<li><a href="#">About Harmony</a>
+					<ul>
+						<li class="section">About Harmony</li>
+						<li><a href="about-harmony-what-is-harmony">What is Harmony?</a></li>
+						<li><a href="about-harmony-design-principles">Design Principles</a></li>
+						<li><a href="about-harmony-meet-transit">Meet Transit</a></li>
+						<li><a href="about-harmony-color">Color</a></li>
+						<li><a href="about-harmony-typography">Typography</a></li>
+						<li><a href="about-harmony-iconography">Iconography</a></li>
+						<li><a href="about-harmony-transitions">Transitions</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Page Types</a>
+					<ul>
+						<li class="section">Page Types</li>
+						<li><a href="page-types-overview2">Overview</a></li>
+						<li><a href="page-types-dashboard">Dashboard</a></li>
+						<li><a href="page-types-pages-with-a-stage">Pages With a Stage</a></li>
+						<li><a href="page-types-split-view">Split View</a></li>
+						<li><a href="page-types-modals">Modals</a></li>
+						<li><a href="page-types-transaction-browser">Transaction Browser</a></li>
+						<li><a href="page-types-media-light-box">Media Light Box</a></li>
+						<li><a href="page-types-in-page-preview">In-page Preview</a></li>
+						<li><a href="page-types-browser-pop-out-window">Browser Pop-out Window</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Navigation</a>
+					<ul>
+						<li class="section">Navigation</li>
+						<li><a href="navigation-global-navigation">Global Navigation</a></li>
+						<li><a href="navigation-flyouts">Flyouts</a></li>
+						<li><a href="navigation-back-navigation">Back Navigation</a></li>
+						<li><a href="navigation-transaction-browser-navigation">Transaction Browser Navigation</a></li>
+						<li><a href="navigation-flow-navigation">Flow Navigation</a></li>
+						<li><a href="navigation-tabs">Horizontal Tabs</a></li>
+						<li><a href="navigation-links">Links</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Page Elements</a>
+					<ul>
+						<li class="section">Page Elements</li>
+						<li><a href="page-elements-stage">Stage</a></li>
+						<li><a href="page-elements-insights">Insights</a></li>
+						<li><a href="page-elements-sticky-footer">Sticky Footer</a></li>
+						<li><a href="page-elements-mobile-toolbars">Mobile Toolbars</a></li>
+						<li><a href="page-elements-badges">Badges</a></li>
+						<li><a href="page-elements-forms">Forms</a></li>
+						<li><a href="page-elements-tables">Tables</a></li>
+						<li><a href="page-elements-lists">Lists</a></li>
+						<li><a href="page-elements-activity-feeds">Activity Feeds</a></li>
+						<li><a href="page-elements-drawers">Drawers</a></li>
+						<li><a href="page-elements-tooltips">Tooltips</a></li>
+						<li><a href="page-elements-the-assistant">The Assistant</a></li>
+						<li><a href="page-elements-overlays">Overlays</a></li>
+						<li><a href="page-elements-modules">Modules</a></li>
+						<li><a href="page-elements-media">Media</a></li>
+						<li><a href="page-elements-carousels">Carousels</a></li>
+						<li><a href="page-elements-progress-indicators">Progress Indicators</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Controls</a>
+					<ul>
+						<li class="section">Controls</li>
+						<li><a href="controls-buttons">Buttons</a></li>
+						<li><a href="controls-show-more">Show More</a></li>
+						<li><a href="controls-accordions">Accordions</a></li>
+						<li><a href="controls-dropdowns">Dropdowns</a></li>
+						<li><a href="controls-checkboxes">Checkboxes</a></li>
+						<li><a href="controls-radio-buttons">Radio Buttons</a></li>
+						<li><a href="controls-date-pickers">Date Pickers</a></li>
+						<li><a href="controls-scrollbars">Scrollbars</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Interaction Patterns</a>
+					<ul>
+						<li class="section">Interaction Patterns</li>
+						<li><a href="interaction-patterns-progressive-disclosure">Progressive Disclosure</a></li>
+						<li><a href="interaction-patterns-type-ahead">Type-ahead</a></li>
+						<li><a href="interaction-patterns-search">Search</a></li>
+						<li><a href="interaction-patterns-live-filtering">Live Filtering</a></li>
+						<li><a href="interaction-patterns-lazy-loading">Lazy Loading</a></li>
+						<li><a href="interaction-patterns-alerts">Alerts</a></li>
+						<!--<li><a href="interaction-patterns-error-validation">Error Validation</a></li>-->
+						<li><a href="interaction-patterns-errors">Errors</a></li>
+						<li><a href="interaction-patterns-success-validation">Success Validation</a></li>
+						<li><a href="interaction-patterns-adding-to-a-form">Adding to a Form</a></li>
+						<li><a href="interaction-patterns-adding-to-content">Adding to Content</a></li>
+						<li><a href="interaction-patterns-auto-save">Auto-save</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Flows &amp; Hero Screens</a>
+					<ul>
+						<li class="section">Flows &amp; Hero Screens</li>
+						<li><a href="flows-and-hero-screens-overview">Overview</a></li>
+						<li><a href="flows-and-hero-screens-invoicing-flow">Invoicing Flow</a></li>
+						<li><a href="flows-and-hero-screens-multi-tasking-flow">Multi-tasking Flow</a></li>
+						<li><a href="flows-and-hero-screens-first-time-use-flow">First Time Use Flow</a></li>
+						<li><a href="flows-and-hero-screens-reporting">Reporting</a></li>
+						<li><a href="flows-and-hero-screens-insights">Insights</a></li>
+						<li><a href="flows-and-hero-screens-qbo-dashboard">QBO Dashboard</a></li>
+						<li><a href="flows-and-hero-screens-iop-dashboard">IOP Dashboard</a></li>
+						<li><a href="flows-and-hero-screens-recommending-apps">Recommending Apps</a></li>
+						<li><a href="flows-and-hero-screens-integrating-apps">Integrating Apps</a></li>
+						<li><a href="flows-and-hero-screens-download-app-flow">Download App Flow</a></li>
+						<li><a href="flows-and-hero-screens-app-activity-flow">App Activity Flow</a></li>
+						<li><a href="flows-and-hero-screens-manage-app-users-flow">Manage App Users Flow</a></li>
+						<li><a href="flows-and-hero-screens-receive-payment">Receive Payment</a></li>
+						<li><a href="flows-and-hero-screens-gopayment">GoPayment</a></li>
+						<li><a href="flows-and-hero-screens-to-dos-flow">To Dos Flow</a></li>
+						<li><a href="flows-and-hero-screens-messages-flow">Messages Flow</a></li>
+						<li><a href="flows-and-hero-screens-help">Help</a></li>
+					</ul>
+				</li>
+                    <li><a href="#">Voice and Tone</a>
+					<ul>
+						<li class="section">Voice and Tone</li>
+						<li><a href="voice-guiding-principles">Guiding Principles</a></li>
+						<!--<li><a href="voice-guiding-principles#">Content Type1</a></li>
+						<li><a href="voice-guiding-principles#">Content Type2</a></li>
+						<li><a href="voice-guiding-principles#">Content Type3</a></li>
+						<li><a href="voice-guiding-principles#">Content Type4</a></li>
+						<li><a href="voice-guiding-principles#">Content Type5</a></li>
+						<li><a href="voice-guiding-principles#">Content Type6</a></li>
+						<li><a href="voice-guiding-principles#">Content Type7</a></li>
+                              <li><a href="voice-guiding-principles#">Content Type8</a></li>-->
+					</ul>
+				</li>
+				<li><a href="#">Downloads</a>
+					<ul>
+						<li class="section">Downloads</li>
+						<li><a href="downloads-component-library">Component Library</a></li>
+						<li><a href="downloads-dashboard">Dashboard</a></li>
+						<li><a href="downloads-transaction-browser">Transaction Browser</a></li>
+						<li><a href="downloads-contacts">Contacts</a></li>
+						<li><a href="downloads-reports">Reports</a></li>
+						<li><a href="downloads-tablet">Tablet</a></li>
+						<li><a href="downloads-mobile">Mobile</a></li>
+						<li><a href="downloads-css">CSS</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div> <!-- .primary -->
+		<div class="secondary scrollable">
+			<!-- The secondary nav will be placed here via JavaScript. -->
+		</div>
+	</div> <!-- .nav-drawer -->
+</nav>
+
+<header>
+	<a href="#nav" class="menu" title="Menu"></a>
+	<div class="title">Harmony Design Language Toolkit</div>
+</header>
+
+<div id="main">
+	<div id="page" class="page"> </div> <!-- #page -->
+</div>
+
+</body> <!-- .harmony -->
+
+</html>

@@ -1,0 +1,9 @@
+// Standardize some common design elements
+@mixin harmony-radius {
+	@include background-clip();
+	@include border-radius(2px);
+}
+
+@mixin harmony-shadow {
+	@include box-shadow(0 2px 0 $partial-black);
+}

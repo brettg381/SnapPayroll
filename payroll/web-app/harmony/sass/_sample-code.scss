@@ -1,0 +1,127 @@
+/* These styles are only used for demo purposes in the sample code
+   and are not part the production reference code. */
+
+body.harmony {
+	/* Colors */
+	.lighter-gray { background-color: $lighter-gray; }
+	.light-gray { background-color: $light-gray; }
+	.gray { background-color: $gray; }
+	.dark-gray { background-color: $dark-gray; }
+	.darker-gray { background-color: $darker-gray; }
+	.lightest-slate { background-color: $lightest-slate; }
+	.lighter-slate { background-color: $lighter-slate; }
+	.light-slate { background-color: $light-slate; }
+	.slate { background-color: $slate; }
+	.dark-slate { background-color: $dark-slate; }
+	.darker-slate { background-color: $darker-slate; }
+	.light-blue { background-color: $light-blue; }
+	.blue { background-color: $blue; }
+	.dark-blue { background-color: $dark-blue; }
+	.light-green { background-color: $light-green; }
+	.green { background-color: $green; }
+	.dark-green { background-color: $dark-green; }
+	.light-yellow { background-color: $light-yellow; }
+	.yellow { background-color: $yellow; }
+	.dark-yellow { background-color: $dark-yellow; }
+	.orange { background-color: $orange; }
+	.light-pink { background-color: $light-pink; }
+	.pink { background-color: $pink; }
+	.red { background-color: $red; }
+	.fuchsia { background-color: $fuchsia; }
+	.dark-fuchsia { background-color: $dark-fuchsia; }
+
+	/* Typography */
+	.helvetica { font-size: 1.8rem; line-height: 2rem; }
+	.helvetica-regular { @include helvetica; }
+	.helvetica-light { @include helvetica-light; }
+	.helvetica-bold { @include helvetica-bold; }
+	.helvetica-italic { @include helvetica-italic; }
+	.pfdintextpro { font-size: 6rem; line-height: 6.2rem; }
+	.pfdintextpro-regular { @include pfdintextpro; }
+	.pfdintextpro-light { @include pfdintextpro-light; }
+	.pfdintextpro-bold { @include pfdintextpro-bold; }
+
+	#navigation-global-navigation,
+	#navigation-transaction-browser-navigation,
+	#navigation-flyouts,
+	#interaction-patterns-search,
+	#interactive-patterns-auto-save {
+		header {
+			position: relative;
+			margin: 0;
+		}
+	}
+	
+	#interactive-patterns-auto-save,
+	#navigation-flyouts {
+		header {
+			/* Make room for the flyout that is absolutly positioned. */
+			margin-bottom: 400px;
+		}
+	}
+
+	#about-harmony-color {
+		.swatch {
+			width: 50px;
+			height: 50px;
+			margin-bottom: 5px;
+		}
+	}
+
+	#page-elements-drawers {
+		.drawer {
+			height: 400px;
+		}
+	}
+	
+	#controls-buttons {
+		.light, .dark {
+			padding: 10px;
+		}
+		.dark {
+			background-color: $darker-slate;
+		}
+	}
+
+	#page-elements-badges {
+		.badge {
+			height: 15px;
+			min-width: 20px;
+			@include background-clip();
+			@include border-radius(10px);
+			box-sizing: border-box;
+			padding: 0 4px;
+			background-color: $slate;
+			font-size: 1.0rem;
+			line-height: 15px;
+			@include helvetica-bold;
+			color: $white;
+			display: inline-block;
+			text-align: center;
+			
+			&.dark {
+				background-color: $dark-slate;
+			}
+
+			&.global-nav {
+				padding: 0 2px;
+				min-width: 15px;
+				background-color: $blue;
+				@include box-shadow(0 2px $black);
+				@include harmony-radius;
+			}
+		}
+
+		.badge + .badge {
+			margin: 0 2px;
+		}
+	}
+	
+	#page-elements-sticky-footer {
+		margin-bottom: 55px;
+		.sticky-footer {
+			margin-left: -40px;
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,62 @@
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.tripple-space {
+	line-height: 350%;
+}
+
+body.harmony header {
+	left: 0;
+	right: 0;
+	width: auto;
+	margin-left: 0;
+}
+
+body.harmony div#main {
+	left: 0;
+	right: 0;
+	width: auto;
+	margin-left: 0;
+}
+
+body.harmony div#main div#page {
+	margin: 32px;
+}
+
+body.harmony div#main div#page h1 {
+	padding: 0;
+}
+body.harmony div#main div#page h2 {
+	padding: 0;
+	font-weight: bold;
+}
+body.harmony div#main div#page h3 {
+	padding: 0;
+}
+
+body.harmony .sticky-footer {
+	left: 0;
+	right: 0;
+	padding: 10px 13px;
+	height: 35px;
+}
+
+body.harmony .wizard-section {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	float: left;
+	width: 620px;
+	line-height: 200%;
+}
+img.wizard-icon {
+	padding: 96px 0;
+	float: left;
+}
+
+body.harmony .wizard-section .headline {
+	padding: 12px 0 12px 0;
+}

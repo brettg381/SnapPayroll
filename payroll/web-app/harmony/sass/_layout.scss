@@ -1,0 +1,569 @@
+html.harmony,
+body.harmony {
+	height: 100%;
+	overflow: hidden;
+}
+
+body.harmony {
+	&.no-select {
+		@include user-select(none);
+	}
+
+	.scrollable {
+		position: relative;
+		// Element created automatically by jquery.tinyscrollbar.js
+		.viewport {
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+			// Element created automatically by jquery.tinyscrollbar.js
+			.content {
+				position: absolute;
+				left: 0;
+				top: 0;
+				padding: 0;
+				margin: 0;
+			}
+		}
+		// Element created automatically by jquery.tinyscrollbar.js
+		.scrollbar {
+			position: absolute;
+			z-index: 10;
+			right: 0;
+			width: 8px;
+			// Element created automatically by jquery.tinyscrollbar.js
+			.track {
+				background-color: rgba(221,221,221,.5);
+				@include box-shadow(inset 0 2px 4px $partial-black);
+				height: 100%;
+				width: 8px;
+				position: relative;
+				padding: 0;
+				// Element created automatically by jquery.tinyscrollbar.js
+				.thumb {
+					background-color: rgba(0,0,0,.1);
+					@include border-radius(10px);
+					height: 20px;
+					width: 8px;
+					overflow: hidden;
+					position: absolute;
+					top: 0;
+					// Element created automatically by jquery.tinyscrollbar.js
+					.end {
+						// We couldn't find a purpose for this element, so we've left it commented out for now.
+						/*
+							background-color: rgba(51,51,51,.4);
+							overflow: hidden;
+							height: 5px;
+							width: 10px;
+						*/
+					}
+				}
+			}
+		}
+		.disable {
+			display: none;
+		}
+		&:hover, &:active {
+			.scrollbar {
+				.track {
+					.thumb {
+						background-color: rgba(0,0,0,.4);
+					}
+				}
+			}
+		}
+	}
+
+	nav {
+		width: 170px;
+		height: 100%;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		position: fixed;
+		top: 0;
+		left: 0;
+		font-size: 14px;
+		color: $white;
+		overflow: hidden;
+		background-color: $dark-slate;
+		@include box-shadow(inset -3px 0 4px $partial-black);
+		.logo {
+			width: 170px;
+			height: 40px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: $dark-slate;
+			background-image: url("../img/nav-logo-intuit.png"), url("../img/diagonal-pattern.png");
+			background-position: 15px 50%, 0 0;
+			background-repeat: no-repeat, repeat;
+			white-space: nowrap;
+			@include box-shadow(inset 0 -4px 8px $partial-black, inset -3px 0 4px $partial-black);
+		}
+		.nav-drawer {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.back {
+			width: 170px;
+			height: 40px;
+			position: absolute;
+			top: 40px;
+			left: 170px;
+			@include box-shadow(inset 0 1px $translucent-white);
+			z-index: 1;
+			a {
+				line-height: 40px;
+				display: inline-block;
+				width: 170px;
+				padding: 0 15px 0 40px;
+				background-image: url("../img/nav-icon-back.png");
+				background-repeat: no-repeat;
+				&:link,
+				&:visited {
+					color: $gray;
+					text-decoration: none;
+					background-position: 20px 0;
+					outline: none;
+				}
+				&:hover,
+				&:active {
+					color: $white;
+					text-decoration: none;
+					background-position: 20px -40px;
+					outline: none;
+				}
+			}
+		}
+		.primary, .secondary {
+			position: absolute;
+			box-sizing: border-box;
+			height: 100%;
+			width: 170px;
+			@include box-shadow(inset 0 1px $translucent-white);
+			padding-top: 1px;
+			.scrollbar {
+				.track {
+					background-color: $half-black;
+					.thumb {
+						background-color: rgba(255,255,255,.25);
+					}
+				}
+			}
+			&:hover, &:active {
+				.scrollbar {
+					.track {
+						.thumb {
+							background-color: rgba(255,255,255,.55);
+						}
+					}
+				}
+			}
+		}
+		.primary {
+			left: 0;
+			top: 40px;
+		}
+		.secondary {
+			left: 170px;
+			top: 80px;
+		}
+		ul {
+			height: 100%;
+			width: 170px;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			ul {
+				display: none;
+			}
+			li {
+				width: 170px;
+				height: 50px;
+				display: table;
+				border-bottom: 1px solid $black;
+				box-sizing: border-box;
+				a {
+					display: table-cell;
+					vertical-align: middle;
+					width: 170px;
+					padding: 0 15px 0 15px;
+					box-sizing: border-box;
+					&:link,
+					&:visited,
+					&:hover,
+					&:active, {
+						color: $white;
+						text-decoration: none;
+						outline: none;
+					}
+					&:hover {
+						background-color: $half-black;
+					}
+					&.selected {
+						border-left: 5px solid $blue;
+						padding-left: 10px;
+						background-color: $half-black;
+					}
+					&.parent {
+						padding-right: 30px;
+						&:hover {
+							background: $half-black url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+						}
+					}
+				}
+				&.section {
+					height: auto;
+					background-color: $darker-slate;
+					@include box-shadow(inset -3px 0 4px $partial-black);
+					display: table-cell;
+					vertical-align: middle;
+					color: $light-slate;
+					text-transform: uppercase;
+					width: 170px;
+					padding: 10px 15px;
+				}
+				&.icon {
+					a {
+						padding-left: 50px;
+						&.selected {
+							padding-left: 45px;
+						}
+					}
+					&.dashboard {
+						a {
+							background: sprite($icons, nav-dashboard) no-repeat;
+							&:hover {
+								background-color: $half-black;
+							}
+							&.selected {
+								background: $half-black sprite($icons, nav-dashboard, -5px, 0) no-repeat;
+							}
+							&.parent:hover {
+								background: sprite($icons, nav-dashboard) no-repeat, $half-black url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+							}
+						}
+					}
+					&.expenses {
+						a {
+							background: sprite($icons, nav-expenses) no-repeat;
+							&:hover {
+								background-color: $half-black;
+							}
+							&.selected {
+								background: $half-black sprite($icons, nav-expenses, -5px, 0) no-repeat;
+							}
+							&.parent:hover {
+								background: sprite($icons, nav-expenses) no-repeat, $half-black url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+							}
+						}
+					}
+					&.customers {
+						a {
+							background: sprite($icons, nav-customers) no-repeat;
+							&:hover {
+								background-color: $half-black;
+							}
+							&.selected {
+								background: $half-black sprite($icons, nav-customers, -5px, 0) no-repeat;
+							}
+							&.parent:hover {
+								background: sprite($icons, nav-customers) no-repeat, $half-black url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+							}
+						}
+					}
+					&.vendors {
+						a {
+							background: sprite($icons, nav-vendors) no-repeat;
+							&:hover {
+								background-color: $half-black;
+							}
+							&.selected {
+								background: $half-black sprite($icons, nav-vendors, -5px, 0) no-repeat;
+							}
+							&.parent:hover {
+								background: sprite($icons, nav-vendors) no-repeat, $half-black url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+							}
+						}
+					}
+					&.employees {
+						a {
+							background: sprite($icons, nav-employees) no-repeat;
+							&:hover {
+								background-color: $half-black;
+							}
+							&.selected {
+								background: $half-black sprite($icons, nav-employees, -5px, 0) no-repeat;
+							}
+							&.parent:hover {
+								background: sprite($icons, nav-employees) no-repeat, $half-black url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+							}
+						}
+					}
+					&.accountant {
+						a {
+							background: sprite($icons, nav-accountant) no-repeat;
+							&:hover {
+								background-color: $half-black;
+							}
+							&.selected {
+								background: $half-black sprite($icons, nav-accountant, -5px, 0) no-repeat;
+							}
+							&.parent:hover {
+								background: sprite($icons, nav-accountant) no-repeat, $half-black url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+							}
+						}
+					}
+					&.billsdotcom {
+						a {
+							background: sprite($icons, nav-billsdotcom) no-repeat;
+							&:hover {
+								background-color: $half-black;
+							}
+							&.selected {
+								background: $half-black sprite($icons, nav-billsdotcom, -5px, 0) no-repeat;
+							}
+							&.parent:hover {
+								background: sprite($icons, nav-billsdotcom) no-repeat, $half-black url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+							}
+						}
+					}
+					&.help {
+						a {
+							background: sprite($icons, nav-help) no-repeat;
+							&:hover {
+								background-color: $half-black;
+							}
+							&.selected {
+								background: $half-black sprite($icons, nav-help, -5px, 0) no-repeat;
+							}
+							&.parent:hover {
+								background: sprite($icons, nav-help) no-repeat, $half-black url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+							}
+						}
+					}
+					&.settings {
+						a {
+							background: sprite($icons, nav-settings) no-repeat;
+							&:hover {
+								background-color: $half-black;
+							}
+							&.selected {
+								background: $half-black sprite($icons, nav-settings, -5px, 0) no-repeat;
+							}
+							&.parent:hover {
+								background: sprite($icons, nav-settings) no-repeat, $half-black url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	header {
+		position: fixed;
+		top: 0;
+		z-index: 10;
+		margin-left: 170px;
+		height: 40px;
+		width: 100%;
+		@include global-navigation;
+		.menu {
+			float: left;
+			display: block;
+			width: 40px;
+			height: 40px;
+			padding: 0;
+			@include box-shadow(inset -1px 0 $translucent-white);
+			border-right: 1px solid $black;
+			background: sprite($icons, header-menu) no-repeat;
+			white-space: nowrap;
+			margin-right: 15px;
+		}
+		.title {
+			color: $lighter-slate;
+			line-height: 40px;
+			float: left;
+		}
+		&.trowser {
+			@include trowser-navigation;
+			.menu {
+				border-right: 1px solid $translucent-black;
+				background: sprite($icons, trowser-menu) no-repeat;
+				margin-right: 0;
+			}
+			.navigation {
+				float: left;
+				display: block;
+				min-width: 40px;
+				height: 40px;
+				padding: 0;
+				@include box-shadow(inset -1px 0 $translucent-white);
+				border-right: 1px solid $translucent-black;
+				background: sprite($icons, trowser-history) no-repeat;
+				white-space: nowrap;
+				margin-right: 15px;
+				&.disabled {
+					opacity: 1;
+					background: sprite($icons, trowser-history-disabled) no-repeat;
+				}
+				.badge {
+					color: #fff;
+					text-align: center;
+					width: auto;
+					margin: 12px 10px 0 40px;
+				}
+			}
+			.title {
+				color: $white;
+			}
+			.status {
+				color: $half-white;
+				font-style: italic;
+				line-height: 40px;
+				float: right;
+				padding-right: 30px;
+				border-right: 1px solid $translucent-white;
+			}
+			.actions {
+				a {
+					&.invoice-solutions {
+						width: auto;
+						line-height: 40px;
+						padding: 0 10px 0 40px;
+						border-left: 1px solid $translucent-black;
+						border-right: 1px solid $translucent-white;
+						background: sprite($icons, trowser-invoice-solutions) no-repeat;
+						color: $white;
+						text-decoration: none;
+					}
+					&.help {
+						background: sprite($icons, trowser-help) no-repeat;
+						border-left: 1px solid $translucent-black;
+						border-right: 1px solid $translucent-white;
+					}
+					&.close {
+						background: sprite($icons, trowser-close) no-repeat;
+						border-left: 1px solid $translucent-black;
+						border-right: 1px solid $translucent-white;
+					}
+				}
+			}
+		}
+		.actions {
+			float: right;
+			a {
+				display: block;
+				float: left;
+				position: relative;
+				width: 40px;
+				height: 40px;
+				border-left: 1px solid $darker-slate;
+				white-space: nowrap;
+				&.create {
+					background: sprite($icons, header-create) no-repeat;
+				}
+				&.todo {
+					background: sprite($icons, header-todo) no-repeat;
+				}
+				&.help {
+					background: sprite($icons, header-help) no-repeat;
+				}
+				&.account {
+					background: sprite($icons, header-account) no-repeat;
+				}
+				.badge {
+					position: absolute;
+					top: 5px;
+					left: 25px;
+					height: 15px;
+					min-width: 15px;
+					background-color: $blue;
+					@include harmony-radius;
+					@include box-shadow(0 2px $black);
+					padding: 0 2px;
+					font-size: 1.0rem;
+					line-height: 15px;
+					@include helvetica-bold;
+					color: $white;
+				}
+				&.open {
+					background-color: $darker-slate;
+				}
+			}
+			.search {
+				display: block;
+				border-left: 1px solid $darker-slate;
+				float: left;
+				box-sizing: border-box;
+				height: 40px;
+				padding: 6px 10px;
+				form {
+					height: 40px;
+					input[type=search] {
+						
+					}
+					input[type=submit] {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	div#main {
+		position: absolute;
+		height: auto;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 40px 0 0 170px;
+		iframe {
+			height: 100%;
+			width: 100%;
+		}
+		div#page {
+			height: 100%;
+			overflow: auto;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		min-width: 790px;
+		max-width: 1270px;
+	}
+
+	h1 {
+		@include box-shadow(inset 0 -1px $lighter-slate);
+		border-bottom: 4px solid $lighter-gray;
+		padding: 24px 0;
+		margin: 0;
+	}
+
+	h2, h3 {
+		padding: 24px 0;
+	}
+
+	h4 {
+		padding: 12px 0 3px;
+	}
+
+	p {
+		padding: 0 0 20px;
+	}
+
+	ul {
+		list-style: disc;
+		margin-left: 20px;
+		li {
+			padding: 0;
+		}
+	}
+}

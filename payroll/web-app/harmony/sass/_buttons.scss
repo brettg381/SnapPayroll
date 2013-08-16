@@ -1,0 +1,671 @@
+@mixin button {
+	@include harmony-radius;
+	@include helvetica;
+	cursor: pointer;
+	font-size: 1.4rem;
+	line-height: 34px;
+	height: 34px;
+	padding: 0 20px;
+	border: 0;
+	margin-bottom: 2px;
+	box-sizing: border-box;
+}
+
+@mixin mini-button {
+	font-size: 1.2rem;
+	line-height: 24px;
+	height: 24px;
+}
+
+@mixin standard-button-light {
+	@include box-shadow(inset 0 0 0 1px rgba(151,151,151,.4));
+	@include background-image(linear-gradient(top, $white 0%, #f2f2f2 100%));
+}
+
+@mixin standard-button-light-hover {
+	@include box-shadow(0 2px 0 $partial-black, inset 0 0 0 1px rgba(151,151,151,.4));
+	@include background-image(linear-gradient(top, $white 0%, #f5f5f5 100%));
+}
+
+@mixin standard-button-light-active {
+	background-color: $white;
+	@include box-shadow(inset 0 1px 4px 0 rgba(0,0,0,.3));
+	background-image: none; // no gradient overlay
+}
+
+@mixin standard-button-light-disabled {
+	background-color: $white;
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1));
+	background-image: none; // no gradient overlay
+}
+
+@mixin standard-button-plus-light {
+	@include box-shadow(inset 0 0 0 1px rgba(151,151,151,.4));
+	@include background(sprite($icons, button-plus-light) no-repeat, linear-gradient(top, $white 0%, #f2f2f2 100%));
+}
+
+@mixin standard-button-plus-light-hover {
+	@include box-shadow(0 2px 0 $partial-black, inset 0 0 0 1px rgba(151,151,151,.4));
+	@include background(sprite($icons, button-plus-light) no-repeat, linear-gradient(top, $white 0%, #f5f5f5 100%));
+}
+
+@mixin standard-button-plus-light-active {
+	background-color: $white;
+	@include box-shadow(inset 0 1px 4px 0 rgba(0,0,0,.3));
+	background: sprite($icons, button-plus-light-active) no-repeat; // no gradient overlay
+}
+
+@mixin standard-button-plus-light-disabled {
+	background-color: $white;
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1));
+	background: sprite($icons, button-plus-light-disabled) no-repeat; // no gradient overlay
+}
+
+@mixin standard-button-dark {
+	border: 1px solid #171d23;
+	@include box-shadow(inset 0 0 0 1px rgba(255,255,255,.1));
+	@include background-image(linear-gradient(top, #777f88 0%, #535c65 100%));
+}
+
+@mixin standard-button-dark-hover {
+	border: 1px solid #171d23;
+	@include box-shadow(0 2px 0 #3a4249, inset 0 0 0 1px rgba(255,255,255,.1));
+	@include background-image(linear-gradient(top, #777f88 0%, #535c65 100%));
+}
+
+@mixin standard-button-dark-active {
+	border: 1px solid #2a353f;
+	@include box-shadow(inset 0 1px 4px 0 rgba(0,0,0,.6));
+	@include background-image(linear-gradient(top, #28323b 0%, #36424f 100%));
+}
+
+@mixin standard-button-dark-disabled {
+	border: 1px solid #171d23;
+	@include box-shadow(inset 0 0 0 1px rgba(255,255,255,.1));
+	@include background-image(linear-gradient(top, #3b464f 0%, #2d3842 100%));
+}
+
+@mixin standard-button-plus-dark {
+	border: 1px solid #171d23;
+	@include box-shadow(inset 0 0 0 1px rgba(255,255,255,.1));
+	@include background(sprite($icons, button-plus-dark) no-repeat, linear-gradient(top, #777f88 0%, #535c65 100%));
+}
+
+@mixin standard-button-plus-dark-hover {
+	border: 1px solid #171d23;
+	@include box-shadow(0 2px 0 #3a4249, inset 0 0 0 1px rgba(255,255,255,.1));
+	@include background(sprite($icons, button-plus-dark) no-repeat, linear-gradient(top, #777f88 0%, #535c65 100%));
+}
+
+@mixin standard-button-plus-dark-active {
+	border: 1px solid #2a353f;
+	@include box-shadow(inset 0 1px 4px 0 rgba(0,0,0,.6));
+	@include background(sprite($icons, button-plus-dark-active) no-repeat, linear-gradient(top, #28323b 0%, #36424f 100%));
+}
+
+@mixin standard-button-plus-dark-disabled {
+	border: 1px solid #171d23;
+	@include box-shadow(inset 0 0 0 1px rgba(255,255,255,.1));
+	@include background(sprite($icons, button-plus-dark-disabled) no-repeat, linear-gradient(top, #3b464f 0%, #2d3842 100%));
+}
+
+@mixin primary-button-light {
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1));
+	@include background-image(linear-gradient(top, #4376cf 0%, #3558c1 100%));
+}
+
+@mixin primary-button-light-hover {
+	@include box-shadow(0 2px 0 $partial-black, inset 0 0 0 1px rgba(0,0,0,.1));
+	@include background-image(linear-gradient(top, #4376cf 0%, #3558c1 100%));
+}
+
+@mixin primary-button-light-active {
+	@include box-shadow(inset 0 1px 4px 0 rgba(0,0,0,.3));
+	@include background-image(linear-gradient(top, #274389 0%, #3459a5 100%));
+}
+
+@mixin primary-button-light-disabled {
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1));
+	@include background-image(linear-gradient(top, #bccaeb 0%, #a5b9e4 100%));
+}
+
+@mixin primary-button-dark {
+	border: 1px solid #171d23;
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1));
+	@include background-image(linear-gradient(top, #4f8aea 0%, #3e67e5 100%));
+}
+
+@mixin primary-button-dark-hover {
+	border: 1px solid #171d23;
+	@include box-shadow(0 2px 0 #3b4249, inset 0 0 0 1px rgba(0,0,0,.1));
+	@include background-image(linear-gradient(top, #4f8aea 0%, #3e67e5 100%));
+}
+
+@mixin primary-button-dark-active {
+	border: 1px solid #2a353f;
+	@include box-shadow(inset 0 1px 4px 0 rgba(0,0,0,.3));
+	@include background-image(linear-gradient(top, #1c3159 0%, #254176 100%));
+}
+
+@mixin primary-button-dark-disabled {
+	border: 1px solid #171d23;
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1));
+	@include background-image(linear-gradient(top, #25426c 0%, #203666 100%));
+}
+
+@mixin secondary-button-plus {
+	@include box-shadow(inset 0 0 0 1px rgba(151,151,151,.4));
+	@include background(sprite($icons, button-plus-secondary) no-repeat, linear-gradient(top, $white 0%, #f2f2f2 100%));
+}
+
+@mixin secondary-button-plus-hover {
+	@include box-shadow(0 2px 0 $partial-black, inset 0 0 0 1px rgba(151,151,151,.4));
+	@include background(sprite($icons, button-plus-secondary) no-repeat, linear-gradient(top, $white 0%, #f5f5f5 100%));
+}
+
+@mixin secondary-button-plus-active {
+	background-color: $white;
+	@include box-shadow(inset 0 1px 4px 0 rgba(0,0,0,.3));
+	background: sprite($icons, button-plus-secondary-active) no-repeat; // no gradient overlay
+}
+
+@mixin secondary-button-plus-disabled {
+	background-color: $white;
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1));
+	background: sprite($icons, button-plus-secondary-disabled) no-repeat; // no gradient overlay
+}
+
+@mixin combo-button-light {
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1));
+	@include background-image(linear-gradient(top, #4376cf 0%, #3558c1 100%));
+}
+
+@mixin combo-button-arrow-light {
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1), -1px 0 $translucent-white);
+	@include background(sprite($icons, combo-button-arrow, 1px, 1px) no-repeat, linear-gradient(top, #4376cf 0%, #3558c1 100%));
+}
+
+@mixin combo-button-light-hover {
+	@include box-shadow(0 2px 0 $partial-black, inset 0 0 0 1px rgba(0,0,0,.1));
+	@include background-image(linear-gradient(top, #4376cf 0%, #3558c1 100%));
+}
+
+@mixin combo-button-arrow-light-hover {
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1), -1px 0 $translucent-white);
+	@include background(sprite($icons, combo-button-arrow, 1px, 1px) no-repeat, linear-gradient(top, #4376cf 0%, #3558c1 100%));
+}
+
+@mixin combo-button-light-active {
+	@include box-shadow(inset 0 1px 4px 0 rgba(0,0,0,.3));
+	@include background-image(linear-gradient(top, #274389 0%, #3459a5 100%));
+}
+
+@mixin combo-button-arrow-light-active {
+	@include box-shadow(inset 0 1px 4px 0 rgba(0,0,0,.3), -1px 0 $translucent-white);
+	@include background(sprite($icons, combo-button-arrow-active, 1px, 1px) no-repeat, linear-gradient(top, #274389 0%, #3459a5 100%));
+}
+
+@mixin combo-button-light-disabled {
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1));
+	@include background-image(linear-gradient(top, #bccaeb 0%, #a5b9e4 100%));
+}
+
+@mixin combo-button-arrow-light-disabled {
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1), -1px 0 $translucent-white);
+	@include background(sprite($icons, combo-button-arrow, 1px, 1px) no-repeat, linear-gradient(top, #bccaeb 0%, #a5b9e4 100%));
+}
+
+@mixin combo-button-dark {
+	border: 1px solid #171d23;
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1));
+	@include background-image(linear-gradient(top, #4f8aea 0%, #3e67e5 100%));
+}
+
+@mixin combo-button-arrow-dark {
+	border-width: 1px 1px 1px 0;
+	border-style: solid;
+	border-color: #171d23;
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1), -1px 0 $translucent-white);
+	@include background(sprite($icons, combo-button-arrow, 1px, 1px) no-repeat, linear-gradient(top, #4f8aea 0%, #3e67e5 100%));
+}
+
+@mixin combo-button-dark-hover {
+	@include box-shadow(0 2px 0 #3b4249, inset 0 0 0 1px rgba(0,0,0,.1));
+	@include background-image(linear-gradient(top, #4f8aea 0%, #3e67e5 100%));
+}
+
+@mixin combo-button-arrow-dark-hover {
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1), -1px 0 $translucent-white);
+	@include background(sprite($icons, combo-button-arrow, 1px, 1px) no-repeat, linear-gradient(top, #4f8aea 0%, #3e67e5 100%));
+}
+
+@mixin combo-button-dark-active {
+	@include box-shadow(inset 0 1px 4px 0 rgba(0,0,0,.3));
+	@include background-image(linear-gradient(top, #1c3159 0%, #254176 100%));
+}
+
+@mixin combo-button-arrow-dark-active {
+	@include box-shadow(inset 0 1px 4px 0 rgba(0,0,0,.3), -1px 0 $translucent-white);
+	@include background(sprite($icons, combo-button-arrow-active, 1px, 1px) no-repeat, linear-gradient(top, #1c3159 0%, #254176 100%));
+}
+
+@mixin combo-button-dark-disabled {
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1));
+	@include background-image(linear-gradient(top, #25426c 0%, #203666 100%));
+}
+
+@mixin combo-button-arrow-dark-disabled {
+	@include box-shadow(inset 0 0 0 1px rgba(0,0,0,.1), -1px 0 $translucent-white);
+	@include background(sprite($icons, combo-button-arrow-disabled, 1px, 1px) no-repeat, linear-gradient(top, #25426c 0%, #203666 100%));
+}
+
+@mixin segment-button-light-selected {
+	background-color: #cbcbcb;
+	@include box-shadow(inset 0 1px 3px rgba(0,0,0,.65));
+	background-image: none;
+}
+
+@mixin segment-button-dark-selected {
+	border: 1px solid #2a353f;
+	@include box-shadow(inset 0 1px 4px 0 rgba(0,0,0,.6));
+	@include background-image(linear-gradient(top, #1f272e 0%, #343f4c 100%));
+}
+
+@mixin icon-button {
+	display: inline-block;
+	height: 22px;
+	width: 22px;
+	text-indent: 22px;
+	overflow: hidden;
+	line-height: inherit;
+	padding: 0;
+	opacity: 1;
+	@include box-shadow(0 0);
+	border: none;
+}
+
+$standard-button-light-text:          $darker-gray; // is the same as rgb(64,64,64) used below
+$standard-button-light-text-active:   rgba(64,64,64,.5);
+$standard-button-light-text-disabled: rgba(64,64,64,.3);
+
+$standard-button-dark-text:           $white;
+$standard-button-dark-text-active:    rgba(255,255,255,.5);
+$standard-button-dark-text-disabled:  rgba(255,255,255,.3);
+
+$primary-button-light-text:           $white;
+$primary-button-light-text-active:    rgba(255,255,255,.5);
+$primary-button-light-text-disabled:  $primary-button-light-text;
+
+$primary-button-dark-text:            $white;
+$primary-button-dark-text-active:     rgba(255,255,255,.5);
+$primary-button-dark-text-disabled:   rgba(255,255,255,.3);
+
+$secondary-button-text:               $blue; // is the same as rgb(57,101,206) used below
+$secondary-button-text-active:        rgba(57,101,206,.5);
+$secondary-button-text-disabled:      rgba(57,101,206,.3);
+
+$combo-button-light-text:             $primary-button-light-text;
+$combo-button-light-text-active:      $primary-button-light-text-active;
+$combo-button-light-text-disabled:    $primary-button-light-text-disabled;
+
+$combo-button-dark-text:              $primary-button-dark-text;
+$combo-button-dark-text-active:       $primary-button-dark-text-active;
+$combo-button-dark-text-disabled:     $primary-button-dark-text-disabled;
+
+body.harmony {
+	.button, .button:link, [type=button], [type=submit] {
+		@include button;
+		@include standard-button-light;
+		color: $standard-button-light-text;
+		&.mini {
+			@include mini-button;
+		}
+		&:visited {
+			color: $standard-button-light-text;
+		}
+		&:hover, &.hover {
+			@include standard-button-light-hover;
+			text-decoration: none;
+		}
+		&:active, &.active {
+			color: $standard-button-light-text-active;
+			@include standard-button-light-active;
+		}
+		&[disabled=disabled], &.disabled {
+			opacity: 1;
+			color: $standard-button-light-text-disabled;
+			@include standard-button-light-disabled;
+			&:active, &.active {
+				color: $standard-button-light-text-disabled;
+			}
+		}
+		&.plus {
+			padding: 0 15px 0 25px;
+			@include standard-button-plus-light;
+			&:hover, &.hover {
+				@include standard-button-plus-light-hover;
+			}
+			&:active, &.active {
+				@include standard-button-plus-light-active;
+			}
+			&[disabled=disabled], &.disabled {
+				@include standard-button-plus-light-disabled;
+			}
+		}
+		&.primary {
+			@include primary-button-light;
+			color: $primary-button-light-text;
+			&:hover, &.hover {
+				@include primary-button-light-hover;
+			}
+			&:active, &.active {
+				color: $primary-button-light-text-active;
+				@include primary-button-light-active;
+			}
+			&[disabled=disabled], &.disabled {
+				color: $primary-button-light-text-disabled;
+				@include primary-button-light-disabled;
+				&:active, &.active {
+					color: $primary-button-light-text-disabled;
+				}
+			}
+		}
+		&.secondary {
+			color: $secondary-button-text;
+			&:hover, &.hover {
+			}
+			&:active, &.active {
+				color: $secondary-button-text-active;
+			}
+			&[disabled=disabled], &.disabled {
+				color: $secondary-button-text-disabled;
+				&:active, &.active {
+					color: $secondary-button-text-disabled;
+				}
+			}
+			&.plus {
+				@include secondary-button-plus;
+				&:hover, &.hover {
+					@include secondary-button-plus-hover;
+				}
+				&:active, &.active {
+					@include secondary-button-plus-active;
+				}
+				&[disabled=disabled], &.disabled {
+					@include secondary-button-plus-disabled;
+				}
+			}
+		}
+	}
+
+	// Dark Background
+	.dark {
+		.button, .button:link, [type=button], [type=submit] {
+			@include standard-button-dark;
+			color: $standard-button-dark-text;
+			&:visited {
+				color: $standard-button-dark-text;
+			}
+			&:hover, &.hover {
+				@include standard-button-dark-hover;
+			}
+			&:active, &.active {
+				color: $standard-button-dark-text-active;
+				@include standard-button-dark-active;
+			}
+			&[disabled=disabled], &.disabled {
+				color: $standard-button-dark-text-disabled;
+				@include standard-button-dark-disabled;
+				&:active, &.active {
+					color: $standard-button-dark-text-disabled;
+				}
+			}
+			&.plus {
+				@include standard-button-plus-dark;
+				&:hover, &.hover {
+					@include standard-button-plus-dark-hover;
+				}
+				&:active, &.active {
+					@include standard-button-plus-dark-active;
+				}
+				&[disabled=disabled], &.disabled {
+					@include standard-button-plus-dark-disabled;
+				}
+			}
+			&.primary {
+				@include primary-button-dark;
+				color: $primary-button-dark-text;
+				&:hover, &.hover {
+					@include primary-button-dark-hover;
+				}
+				&:active, &.active {
+					color: $primary-button-dark-text-active;
+					@include primary-button-dark-active;
+				}
+				&[disabled=disabled], &.disabled {
+					color: $primary-button-dark-text-disabled;
+					@include primary-button-dark-disabled;
+					&:active, &.active {
+						color: $primary-button-dark-text-disabled;
+					}
+				}
+			}
+		}
+	}
+
+	a.button {
+		display: inline-block;
+	}
+
+	.combo-button {
+		display: inline-block;
+		position: relative;
+		@include harmony-radius;
+		margin-bottom: 2px;
+		cursor: pointer;
+		.button, .button:link, [type=button], [type=submit] {
+			color: $combo-button-light-text;
+			@include combo-button-light;
+			padding-right: 50px;
+			margin-bottom: 0;
+			&:active, &.active {
+				color: $combo-button-light-text-active;
+				@include combo-button-light-active;
+			}
+		}
+		ul.options {
+			display: none;
+			position: absolute;
+			top: 37px;
+			left: 0;
+			z-index: 5;
+			border: 1px solid $gray;
+			margin: 0;
+			width: 100%;
+			box-sizing: border-box;
+			@include harmony-radius;
+			background-color: $white;
+			@include harmony-shadow;
+			list-style: none;
+			cursor: pointer;
+			li {
+				font-size: 1.2rem;
+				line-height: 34px;
+				height: 34px;
+				padding: 0 10px;
+				margin: 1px;
+				&:hover {
+					background-color: $blue;
+					color: $white;
+				}
+			}
+		}
+		&::after {
+			display: block;
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			right: 0;
+			width: 30px;
+			height: 34px;
+			content: "";
+			box-sizing: border-box;
+			@include border-radius(0 2px 2px 0);
+			@include background-clip();
+			@include combo-button-arrow-light;
+		}
+		&:hover, &.hover {
+			@include combo-button-light-hover;
+			&::after {
+				@include combo-button-arrow-light-hover;
+			}
+		}
+		&:active, &.active, &.open {
+			@include combo-button-light-active;
+			&::after {
+				@include combo-button-arrow-light-active;
+			}
+		}
+		&.disabled {
+			opacity: 1;
+			.button, .button:link, [type=button], [type=submit] {
+				@include combo-button-light-disabled;
+				color: $combo-button-light-text-disabled;
+			}
+			&:hover, &.hover {
+				@include combo-button-light-disabled;
+				&::after {
+					@include combo-button-arrow-light-disabled;
+				}
+			}
+			&:active, &.active, &.open {
+				@include combo-button-light-disabled;
+				&::after {
+					@include combo-button-arrow-light-disabled;
+				}
+			}
+			&::after {
+				@include combo-button-arrow-light-disabled;
+			}
+		}
+		&.open {
+			ul {
+				display: block;
+			}
+		}
+	}
+
+	.dark {
+		.combo-button {
+			.button, .button:link, [type=button], [type=submit] {
+				color: $combo-button-dark-text;
+				@include combo-button-dark;
+				&:active, &.active {
+					color: $combo-button-dark-text-active;
+					@include combo-button-dark-active;
+				}
+			}
+			&::after {
+				@include combo-button-arrow-dark;
+			}
+			&:hover, &.hover {
+				@include combo-button-dark-hover;
+				&::after {
+					@include combo-button-arrow-dark-hover;
+				}
+			}
+			&:active, &.active, &.open {
+				@include combo-button-dark-active;
+				&::after {
+					@include combo-button-arrow-dark-active;
+				}
+			}
+			&.disabled {
+				.button, .button:link, [type=button], [type=submit] {
+					@include combo-button-dark-disabled;
+					color: $combo-button-dark-text-disabled;
+				}
+				&:hover, &.hover {
+					@include combo-button-dark-disabled;
+					&::after {
+						@include combo-button-arrow-dark-disabled;
+					}
+				}
+				&:active, &.active, &.open {
+					@include combo-button-dark-disabled;
+					&::after {
+						@include combo-button-arrow-dark-disabled;
+					}
+				}
+				&::after {
+					@include combo-button-arrow-dark-disabled;
+				}
+			}
+		}
+	}
+
+	.segment-button {
+		overflow: hidden;
+		display: inline-block;
+		white-space: nowrap;
+		margin-bottom: 2px;
+		cursor: pointer;
+		.button, .button:link, [type=button], [type=submit] {
+			float: left;
+			margin-left: -1px;
+			margin-bottom: 0;
+			@include border-radius(0);
+			&:first-child {
+				@include border-radius(2px 0 0 2px);
+				margin-left: 0;
+			}
+			&:last-child {
+				@include border-radius(0 2px 2px 0);
+			}
+			&.selected {
+				@include segment-button-light-selected;
+			}
+		}
+	}
+
+	.dark {
+		.segment-button {
+			.button, .button:link, [type=button], [type=submit] {
+				&.selected {
+					@include segment-button-dark-selected;
+				}
+			}
+		}
+	}
+
+	.icon-button, .icon-button:link, .icon-button[type=button], .icon-button[type=submit] {
+		@include icon-button;
+		&.mail {
+			background: sprite($icon-buttons, mail-light) no-repeat;
+			&:hover, &.hover, &:active, &.active {
+				background: sprite($icon-buttons, mail-light-active) no-repeat;
+			}
+			&[disabled=disabled], &.disabled {
+				background: sprite($icon-buttons, mail-light-disabled) no-repeat;
+			}
+		}
+	}
+
+	.dark {
+		.icon-button, .icon-button:link, .icon-button[type=button], .icon-button[type=submit] {
+			&:hover, &.hover, &:active, &.active, &[disabled=disabled], &.disabled {
+				@include box-shadow(0 0);
+				border: none;
+			}
+			&.mail {
+				background: sprite($icon-buttons, mail-dark) no-repeat;
+				&:hover, &.hover, &:active, &.active {
+					background: sprite($icon-buttons, mail-dark-active) no-repeat;
+				}
+				&[disabled=disabled], &.disabled {
+					background: sprite($icon-buttons, mail-dark-disabled) no-repeat;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,381 @@
+@font-face {
+	font-family: "DINNextLPro-Light";
+	src: url('../../harmony/fonts/DINNextLTPro-Light.ttf');
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.bold {
+    font-weight: bold;
+}
+.tripple-space {
+	line-height: 350%;
+}
+
+body.harmony header {
+	left: 0;
+	right: 0;
+	width: auto;
+	margin-left: 0;
+}
+body.harmony div#main div#page {
+    padding-left: 650px;
+    background: #f1f3f7;
+}
+body.harmony div#main div#page div#left-wrapper {
+    width: 614px;
+    height: 100%;
+    float: left;
+    margin-left: -650px;
+    background: white;
+}
+body.harmony div#main div#page div#content-left {
+    margin: 18px;
+}
+body.harmony div#main div#page div#content-left h2 {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    padding-top: 29px;
+    margin-left: 24px;
+    font-weight: bold;
+    font-size: 21px;
+}
+body.harmony div.stage h2 {
+	padding-top: 29px;
+	margin-left: 24px;
+	font-weight: bold;
+	font-size: 21px;
+}
+body.harmony div.stage .info-block {
+	height: 66px;
+	padding: 15px 10px;
+}
+body.harmony div.stage .info-block .label {
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	font-size: 12px;
+  	text-transform: uppercase;
+  	color: #6d8ba7;
+}
+body.harmony div.stage .info-block .amount {
+	font-family: "DINNextLPro-Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 34px;
+	line-height: 34px;
+	display: block;
+	margin: 3px 4px 3px auto;
+}
+body.harmony div#main {
+	left: 0;
+	right: 0;
+	width: auto;
+	margin-left: 0;
+}
+body.harmony .sticky-footer {
+	left: 0;
+	right: 0;
+	padding: 10px 13px;
+	height: 35px;
+}
+
+body.harmony .select select {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 14px;
+}
+/* Horizontal forms have labels above fields. */
+body.harmony form.horizontal {
+	display: inline-block;
+	width: 100%;
+}
+body.harmony form.horizontal label {
+	display: block;
+	margin: 6px 0;
+	font-weight: bold;
+}
+body.harmony form.horizontal div.input {
+    float:left;
+}
+body.harmony form.horizontal input[type=text] {
+    margin: 0;
+    border-left: none;
+    border-radius: 0;
+}
+body.harmony form.horizontal input[type=text].first {
+    border-left: 1px solid #cccccc;
+}
+body.harmony form.horizontal#name-form {
+    margin-left: 24px;
+}
+
+/* Employees Table */
+body.harmony table#employees {
+	margin: 20px 0;
+}
+
+/********** Assistant *********/ 
+body.harmony .assistant-small {
+    font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    display: inline-block;
+    margin: 4px 0 15px 15px;
+    position: relative;
+    vertical-align: top;
+    background: #fff;
+    border: 1px solid #bbbbbb;
+    width: 280px;
+    min-height: 50px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    -webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+}
+body.harmony .assistant-small .title-bar {
+    border-top: 8px solid #c04b84;
+    width: 100%;
+    display:block;
+}
+body.harmony .assistant-small .title {
+    color: #c72f79;
+    font-size: 2.0rem;
+    float: left;
+    padding: 15px 0 15px 15px;
+}
+ 
+body.harmony .assistant-small .close {
+    border: none;
+    height: 14px;
+    width: 14px;
+    background: url('../../images/hlite/iconsprite2.png') 0 -1743px;
+    float: right;
+    margin: 10px 10px 0 0;
+}
+body.harmony .assistant-small .close:hover {
+    cursor: pointer;
+}
+body.harmony .assistant-small .content {
+    padding: 10px 5px 10px 15px;
+    /*clear: both;*/
+    display: block;
+}
+body.harmony .assistant-small:after, .assistant-small:before {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+ 
+body.harmony .assistant-small:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #ffffff;
+                border-top-color: #ffffff;
+    border-width: 6px;
+    top: 50%;
+    margin-top: -6px;
+}
+body.harmony .assistant-small:before {
+    border-color: rgba(187, 187, 187, 0);
+    border-right-color: #bbbbbb;
+    border-top-color: #bbae9b;
+    border-width: 7px;
+    top: 50%;
+    margin-top: -7px;
+}            
+ 
+ 
+body.harmony .assistant-large {
+    font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    display: inline-block;
+    margin: 4px 0 15px 15px;
+    position: relative;
+    vertical-align: top;
+    background: #fff;
+    border: 1px solid #bbbbbb;
+    width: 280px;
+    min-height: 50px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    -webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+}
+ 
+body.harmony .assistant-large .title {
+    background-color: #a32763;
+    font-size: 2.0rem;
+    padding-left: 15px;
+    line-height: 40px;
+    color: #fff;
+    vertical-align: middle;
+}
+ 
+body.harmony .assistant-large .content {
+    padding: 20px 5px 20px 15px;
+    display: block;
+}
+body.harmony .assistant-large:after, .assistant-large:before {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+ 
+body.harmony .assistant-large:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #ffffff;
+    border-width: 12px;
+    top: 50%;
+    margin-top: -12px;
+}
+body.harmony .assistant-large:before {
+    border-color: rgba(187, 187, 187, 0);
+    border-right-color: #bbbbbb;
+    border-width: 13px;
+    top: 50%;
+    margin-top: -13px;
+}
+/********** End of Assistant *********/
+
+/********** Form table *************/
+body.harmony table tr td {
+  height: 32px;
+  padding: 0 10px;
+  border-bottom: 1px solid #cccccc;
+  border-left: 1px dotted #cccccc;
+}
+body.harmony table tr td:first-child {
+  border-left: 1px solid #cccccc;
+}
+body.harmony table tr td:last-child {
+  border-right: 1px solid #cccccc;
+}
+
+/************ DT ****************/
+dl {
+    border-top: 1px solid #cccccc;
+    margin-left: 16px;
+    margin-top: 40px;
+    padding-top: 40px;
+    counter-reset: cc;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+dt {
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 0 5px 0;
+}
+dt:before {
+    content: counter(cc);
+    counter-increment: cc;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: #cccccc;
+    font-size: 38px;
+    font-weight: normal;
+}
+dd {
+    margin: 0 0 36px 0;
+}   
+dt, dd {
+    padding-left: 50px;
+}
+dd img.icn {
+}
+/*********** RIGHT *************/
+#content-right {
+    width: 520px;
+    padding: 30px 0 0 40px;
+}
+#content-right #sample-check-info {
+    margin-top: 55px;
+}
+#content-right #sample-check-info strong {
+    font-weight: bold;
+}
+#content-right #sample-check-outer {
+    background: white;
+    margin-top: 20px;
+    padding: 7px;
+    width: 500px;
+    height: 648px;
+    border: 1px solid #cccccc;
+}
+#content-right #sample-check-outer img#corner {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+}
+#content-right #sample-check-outer #sample-check-inner {
+    height: 645px;
+    background: #f2f6fb url('../../images/hlite/SampleCheck.png') no-repeat 50% 10px;
+}
+#content-right #sample-check-footer {
+    border-left: 7px solid white;
+    border-bottom: 7px solid white;
+    height: 47px;
+    width: 451px;
+    background-color: #f2f6fb;
+    float: left;
+}
+#content-right #sample-check-body {
+    background: #f2f6fb url('../../images/hlite/SampleCheck.png') no-repeat 50% 10px;
+    margin-top: 20px;
+    width: 500px;
+    height: 594px;
+    border: 7px solid white;
+    border-bottom: none;
+}
+#content-right #corner {
+    margin-left: -3px;
+}
+div#address {
+    margin: 30px;
+}
+div#address span {
+    line-height: 12px;
+    font-size: 11px;
+    display: block;
+}
+div#details {
+    margin: 50px 52px 50px 30px;
+}
+div#details span.label {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #6d8ba7;
+    margin-right: 12px;
+}
+div#details span#recipient {
+    font-size: 22px;
+}
+div#details span#amount {
+    float: right;
+    font-family: "Adobe Garamond Pro","Times new Roman",Georgia,Serif;
+    font-weight: lighter;
+    font-size: 30px;
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+

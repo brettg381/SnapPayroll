@@ -1,0 +1,353 @@
+@import "compass/css3/background-clip";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "colors";
+@import "type";
+@import "mixins";
+@import "sprites";
+
+@mixin in-month             { color: $darker-gray; background-color: $white;         background-image: none; }
+@mixin in-month-current     { color: $white;       background-color: $blue;          background-image: none; }
+@mixin out-of-month         { color: $light-gray;  background-color: $white;         background-image: none; }
+@mixin out-of-month-current { color: $light-gray;  background-color: $white;         background-image: none; }
+@mixin in-month-hover       { color: $darker-gray; background-color: $lighter-slate; background-image: none; }
+@mixin notable              { color: $orange;      background-color: $white;         background-image: none; }
+@mixin notable-hover        { color: $orange;      background-color: $lighter-slate; background-image: none; }
+@mixin notable-current      { color: $white;       background-color: $orange;        background-image: none; }
+@mixin blackout             { color: $white;       background: $light-gray  sprite($icons, datepicker-blackout) no-repeat; }
+@mixin blackout-current     { color: $white;       background: $light-slate sprite($icons, datepicker-blackout) no-repeat; }
+
+// Base container
+.kalendae {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	padding: 10px;
+	margin: 5px;
+	font-size: 1.2rem;
+	font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: 400;
+	font-stretch: normal;
+	cursor: default;
+	position: relative;
+	border: 1px solid $gray;
+	@include harmony-radius;
+	background-color: $white;
+
+
+	// Popup Container for Kalendae.Input
+	&.k-floating {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100000;
+		margin: -20px 0 0 10px;
+		@include box-shadow(0 2px 0 $partial-black);
+		.k-notch {
+			position: absolute;
+			top: 20px;
+			left: -10px;
+			margin: 0;
+			border-top: 10px solid transparent;
+			border-left: 0;
+			border-right: 10px solid $white;
+			border-bottom: 10px solid transparent;
+			padding: 0;
+			width: 0;
+			height: 0;
+			&:before {
+				// Outline
+				content: "\20";
+				position: absolute;
+				top: -10px;
+				left: -1px;
+				margin: 0;
+				border-top: 10px solid transparent;
+				border-left: 0;
+				border-right: 10px solid $gray;
+				border-bottom: 10px solid transparent;
+				padding: 0;
+				width: 0;
+				height: 0;
+				z-index: -1;
+			}
+			&:after {
+				// Shadow
+				content: "\20";
+				position: absolute;
+				top: -8px;
+				left: -1px;
+				margin: 0;
+				border-top: 10px solid transparent;
+				border-left: 0;
+				border-right: 10px solid $partial-black;
+				border-bottom: 10px solid transparent;
+				padding: 0;
+				width: 0;
+				height: 0;
+				z-index: -2;
+			}
+		}
+	}
+
+	// Month Container
+	.k-calendar {
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+		width: 196px;
+		vertical-align: top;
+	}
+
+	// Month Separator
+	.k-separator {
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+		width: 2px;
+		vertical-align: top;
+		background: $light-gray;
+		height: 155px;
+		margin: 0px 10px;
+	}
+
+	// Month Title Row
+	.k-title {
+		text-align: center;
+		white-space: nowrap;
+		position: relative;
+		height: 50px;
+	}
+	.k-caption {
+		font-size: 1.8rem;
+		.k-title-year {
+			display: block;
+			font-size: 1.2rem;
+			line-height: 12px;
+			margin-bottom: 5px;
+		}
+	}
+
+	// Month and Year Buttons
+	.k-btn-previous-month,
+	.k-btn-next-month,
+	.k-btn-previous-year,
+	.k-btn-next-year {
+		display: block;
+		width: 9px;
+		height: 15px;
+		cursor: pointer;
+		position: absolute;
+		top: 18px;
+	}
+
+	// .k-btn-previous-year {
+	// 	left: 0;
+	// 	&:after {
+	// 		content: "\00AB";
+	// 	}
+	// 	&:hover {
+	// 		color: #6FDF81;
+	// 	}
+	// }
+	// .k-btn-next-year {
+	// 	right: 0;
+	// 	&:after {
+	// 		content: "\00BB";
+	// 	}
+	// 	&:hover {
+	// 		color: #6FDF81;
+	// 	}
+	// }
+	.k-btn-previous-month {
+		left: 20px;
+		background: sprite($icons, datepicker-previous) no-repeat;
+/*
+		&:after {
+			content: "\2039";
+		}
+		&:hover {
+			color: #7EA0E2;
+		}
+*/
+	}
+	.k-btn-next-month {
+		right: 20px;
+		background: sprite($icons, datepicker-next) no-repeat;
+/*
+		&:after {
+			content: "\203A";
+		}
+		&:hover {
+			color: #7EA0E2;
+		}
+*/
+	}
+
+	// Remove extra buttons when calendar shows multiple months
+	.k-first-month .k-btn-next-month,
+	.k-middle-month .k-btn-next-month,
+	.k-middle-month .k-btn-previous-month,
+	.k-last-month .k-btn-previous-month,
+	.k-first-month .k-btn-next-year,
+	.k-middle-month .k-btn-next-year,
+	.k-middle-month .k-btn-previous-year,
+	.k-last-month .k-btn-previous-year {
+		display: none;
+	}
+
+	// Disable year nav option
+	.k-title.k-disable-year-nav .k-btn-next-year,
+	.k-title.k-disable-year-nav .k-btn-previous-year {
+		display: none;
+	}
+	.k-title.k-disable-year-nav .k-btn-next-month {
+		right: 20px;
+	}
+	.k-title.k-disable-year-nav .k-btn-previous-month {
+		left: 20px;
+	}
+
+	// Force specific width for month container contents
+	.k-title,
+	.k-header,
+	.k-days {
+		width: 196px;
+		display: block;
+		overflow: hidden;
+	}
+
+	.k-header {
+		border-bottom: 1px solid $blue;
+	}
+
+	// Hide unusable buttons
+	&.k-disable-next-month-btn .k-btn-next-month,
+	&.k-disable-previous-month-btn .k-btn-previous-month,
+	&.k-disable-next-year-btn .k-btn-next-year,
+	&.k-disable-previous-year-btn .k-btn-previous-year {
+		display: none;
+	}
+
+	// Week columns and day cells
+	.k-header span,
+	.k-days span {
+		margin: 1px 1px;
+	}
+
+	.k-header span {
+		display: inline-block;
+		text-align: center;
+		height: 22px;
+		width: 26px;
+		box-sizing: border-box;
+		line-height: 22px;
+		color: $darker-gray;
+	}
+
+	.k-days span {
+		display: inline-block;
+		height: 22px;
+		width: 26px;
+		box-sizing: border-box;
+		text-align: center;
+		line-height: 22px;
+		color: $darker-gray;
+
+		// Days inside of the month view
+		&.k-in-month {
+			@include blackout;
+			&.k-active {
+				@include in-month;
+				cursor: pointer;
+				&:hover {
+					@include in-month-hover;
+				}
+				&.k-notable {
+					@include notable;
+				}
+			}
+		}
+
+		// Days outside of the month view (before the first day of the month, after the last day of the month)
+		&.k-out-of-month {
+			@include out-of-month;
+		}
+
+		// Selected day, when outside the selectable area
+		&.k-selected {
+			@include out-of-month-current;
+		}
+
+		// Selected day, when inside the selectable area
+		&.k-selected.k-active {
+			@include in-month-current;
+			&.k-notable {
+				@include notable-current;
+			}
+		}
+
+		// Days between the start and end points on a range, outside of the selectable area
+		// &.k-range {
+		// 	background: none;
+		// 	border-color: #6DD4FE;
+		// }
+
+		// Days between the start and end points on a range, inside of the selectable area
+		// &.k-range.k-in-month {
+		// 	background: #C4D4F1;
+		// 	border-color: #19AEFE;
+		// 	color: #333;
+		// }
+	}
+
+	// Today
+	.k-today {
+		@include helvetica-bold;
+	}
+
+	//-------------------------------------IE8 ONLY CODE BELOW THIS LINE--------------------------------------------
+	// &.ie8 {
+	// 	&.k-floating {
+	// 		border: 1px solid $gray;
+	// 	}
+	// 	.k-btn-previous-month,
+	// 	.k-btn-next-month,
+	// 	.k-btn-previous-year,
+	// 	.k-btn-next-year {
+	// 		width: 16px;
+	// 		height: 16px;
+	// 		cursor: pointer;
+	// 		background: #777 url('arrows.png') no-repeat center left;
+	// 		position: absolute;
+	// 		top: 0;
+	// 	}
+	// 
+	// 	.k-btn-next-month,
+	// 	.k-btn-next-year {
+	// 		background-position: center right;
+	// 	}
+	// 
+	// 	.k-btn-previous-month:hover,
+	// 	.k-btn-next-month:hover {
+	// 		background-color: #7EA0E2;
+	// 	}
+	// 
+	// 	.k-btn-previous-year,
+	// 	.k-btn-next-year {
+	// 		background-color: #333;
+	// 	}
+	// 
+	// 	.k-btn-previous-year:hover,
+	// 	.k-btn-next-year:hover {
+	// 		background-color: #6FDF81;
+	// 	}
+	// 
+	// 	.k-btn-previous-month:after,
+	// 	.k-btn-next-month:after,
+	// 	.k-btn-previous-year:after,
+	// 	.k-btn-next-year:after {
+	// 		display: none;
+	// 	}
+	// }
+}

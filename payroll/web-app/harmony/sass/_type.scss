@@ -1,0 +1,90 @@
+@mixin helvetica {
+	font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: 400;
+	font-stretch: normal;
+}
+
+@mixin helvetica-bold {
+	font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: 600;
+	font-stretch: normal;
+}
+
+@mixin helvetica-light {
+	font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: 300;
+	font-stretch: normal;
+}
+
+@mixin helvetica-italic {
+	font-family: "HelveticaNeueItalic", "HelveticaNeue-Italic", "Helvetica Neue Italic", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: italic;
+}
+
+/* PF Din Text Pro is used for the display of numerals. */
+@mixin pfdintextpro {
+	font-family: "PFDinTextProRegular", "PFDinTextPro-Regular", "PFDinTextPro", "PF DinText Pro", sans-serif;
+	font-weight: 400;
+	font-stretch: normal;
+	letter-spacing: -0.025em;
+}
+
+@mixin pfdintextpro-bold {
+	font-family: "PFDinTextProBold", "PFDinTextPro-Bold", "PF DinText Pro Bold", "PFDinTextPro", "PF DinText Pro", sans-serif;
+	font-weight: 600;
+	font-stretch: normal;
+	letter-spacing: -0.025em;
+}
+
+@mixin pfdintextpro-light {
+	font-family: "PFDinTextProLight", "PFDinTextPro-Light", "PF DinText Pro Light" , "PFDinTextPro", "PF DinText Pro", sans-serif;
+	font-weight: 300;
+	font-stretch: normal;
+	letter-spacing: -0.025em;
+}
+
+html.harmony {
+	/* The standard browser default font is typically set to 16 pixels. Scaling the HTML element down to 10 pixels
+	   allows us to use rem units to approximate pixel sizing, while keeping relative sizing. (e.g., 1.2rem = 12px) */
+	font-size: 62.5%;
+}
+
+body.harmony {
+	@include helvetica;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	color: $darker-gray;
+
+	header {
+		font-size: 1.4rem;
+	}
+
+	h1 {
+		@include helvetica-light;
+		font-size: 2.6rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.8rem;
+	}
+
+	h4 {
+		@include helvetica-bold;
+		font-size: 1.4rem;
+	}
+
+	input {
+		@include helvetica;
+		font-size: 1.2rem;
+	}
+
+	.numeral {
+		@include pfdintextpro;
+	}
+}

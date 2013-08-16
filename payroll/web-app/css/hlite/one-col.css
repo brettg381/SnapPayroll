@@ -1,0 +1,219 @@
+@font-face {
+	font-family: "DINNextLPro-Light";
+	src: url('../../harmony/fonts/DINNextLTPro-Light.ttf');
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.tripple-space {
+	line-height: 350%;
+}
+
+body.harmony header {
+	left: 0;
+	right: 0;
+	width: auto;
+	margin-left: 0;
+}
+body.harmony div#main div#page div#content {
+	margin: 0 30px;
+}
+body.harmony div.stage h2 {
+	padding-top: 29px;
+	margin-left: 24px;
+	font-weight: bold;
+	font-size: 21px;
+}
+body.harmony div.stage .info-block {
+	height: 66px;
+	padding: 15px 10px;
+}
+body.harmony div.stage .info-block .label {
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	font-size: 12px;
+  	text-transform: uppercase;
+  	color: #6d8ba7;
+}
+body.harmony div.stage .info-block .amount {
+	font-family: "DINNextLPro-Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 34px;
+	line-height: 34px;
+	display: block;
+	margin: 3px 4px 3px auto;
+}
+body.harmony div#main {
+	left: 0;
+	right: 0;
+	width: auto;
+	margin-left: 0;
+}
+body.harmony .sticky-footer {
+	left: 0;
+	right: 0;
+	padding: 10px 13px;
+	height: 35px;
+}
+
+body.harmony .select select {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 14px;
+}
+/* Horizontal forms have labels above fields. */
+body.harmony form.horizontal {
+	display: inline-block;
+	width: 100%;
+}
+body.harmony form.horizontal label {
+	display: block;
+	margin: 6px 0;
+	font-weight: bold;
+}
+body.harmony form.horizontal div.input.right {
+	margin-left: 60px;
+}
+body.harmony form input[type=text] {
+	height: 34px;
+}
+
+/* Employees Table */
+body.harmony table#employees {
+	margin: 20px 0;
+}
+
+
+/********** Assistant *********/
+ 
+body.harmony .assistant-small {
+    font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    display: inline-block;
+    margin: 4px 0 15px 15px;
+    position: relative;
+    vertical-align: top;
+    background: #fff;
+    border: 1px solid #bbbbbb;
+    width: 280px;
+    min-height: 50px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    -webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+}
+ 
+body.harmony .assistant-small .title-bar {
+    border-top: 8px solid #c04b84;
+    width: 100%;
+    display:block;
+}
+ 
+body.harmony .assistant-small .title {
+    color: #c72f79;
+    font-size: 2.0rem;
+    float: left;
+    padding: 15px 0 15px 15px;
+}
+ 
+body.harmony .assistant-small .close {
+    border: none;
+    height: 14px;
+    width: 14px;
+    background: url('../../images/hlite/iconsprite2.png') 0 -1743px;
+    float: right;
+    margin: 12px 10px 0 0;
+}
+body.harmony .assistant-small .close:hover {
+    cursor: pointer;
+}
+body.harmony .assistant-small .content {
+    padding: 10px 5px 10px 15px;
+    display: block;
+}
+body.harmony .assistant-small:after, .assistant-small:before {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+ 
+body.harmony .assistant-small:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #ffffff;
+    border-top-color: #ffffff;
+    border-width: 6px;
+    top: 50%;
+    margin-top: -6px;
+}
+body.harmony .assistant-small:before {
+    border-color: rgba(187, 187, 187, 0);
+    border-right-color: #bbbbbb;
+    border-top-color: #bbae9b;
+    border-width: 7px;
+    top: 50%;
+    margin-top: -7px;
+}            
+
+body.harmony .assistant-large {
+    font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    display: inline-block;
+    margin: 4px 0 15px 15px;
+    position: relative;
+    vertical-align: top;
+    background: #fff;
+    border: 1px solid #bbbbbb;
+    width: 280px;
+    min-height: 50px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    -webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+}
+ 
+body.harmony .assistant-large .title {
+    background-color: #a32763;
+    font-size: 2.0rem;
+    padding-left: 15px;
+    line-height: 40px;
+    color: #fff;
+    vertical-align: middle;
+}
+ 
+body.harmony .assistant-large .content {
+    padding: 20px 5px 20px 15px;
+    display: block;
+}
+body.harmony .assistant-large:after, .assistant-large:before {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+ 
+body.harmony .assistant-large:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #ffffff;
+    border-width: 12px;
+    top: 50%;
+    margin-top: -12px;
+}
+body.harmony .assistant-large:before {
+    border-color: rgba(187, 187, 187, 0);
+    border-right-color: #bbbbbb;
+    border-width: 13px;
+    top: 50%;
+    margin-top: -13px;
+}
+//********** End of Assistant *********/

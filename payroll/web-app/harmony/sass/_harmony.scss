@@ -1,0 +1,44 @@
+body.harmony {
+	// !Links
+	a {
+		text-decoration: none;
+		&:link, &:visited {
+			color: $blue;
+		}
+		&:hover {
+			color: $blue;
+			text-decoration: underline;
+		}
+		&:active {
+			color: $dark-blue;
+		}
+		&.disabled {
+			text-decoration: none;
+			opacity: .4;
+			cursor: default;
+		}
+		&.back {
+			padding-left: 11px;
+			&:link, &:visited, &:hover {
+				@include background(sprite($icons, link-back, 0, -1px) no-repeat);
+			}
+			&:active {
+				@include background(sprite($icons, link-back-active, 0, -1px) no-repeat);
+			}
+			&.disabled {
+				&:link, &:visited, &:hover, &:active {
+					@include background(sprite($icons, link-back, 0, -1px) no-repeat);
+				}
+			}
+		}
+	}
+
+	input[type=button], input[type=submit], input[type=reset] {
+		margin: 0;
+	}
+
+	ol {
+		list-style: decimal;
+		padding-left: 20px;
+	}
+}
