@@ -12,8 +12,13 @@
     <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
 
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+
+      .body{
+        font-weight: normal;
+      }
+
+      .btn-success{
+        float: right;
       }
 
       .calc {
@@ -24,7 +29,9 @@
         border-radius: 20px;
       }
 
-      .calchead {
+      .calchead{
+        font-size: 30px;
+        font-weight: bold;
         margin-top: 10px;
         width: 300px;
       }
@@ -47,10 +54,10 @@
         width: 700px;
       }
 
-      .hero-unit {
-        background-color: white;
-        margin: -80px auto 0 -60px;
-       }
+      .img-center {
+        margin: 0 auto;
+        display: block;
+      }
 
       .input-mini{
         width: 45px;
@@ -69,17 +76,21 @@
         margin-top: 0;
       }
 
-      .nav-collapse {
-        background-color: #365ebf;
-      }
-
       .paydropdown {
         width: 100px;
       }
 
+      .stepheader {
+        text-align: center;
+      }
+
+      .steptext {
+        text-align: center;
+        padding-right: 15px;
+      }
+
 
     </style>
-    <link href="lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -95,72 +106,27 @@
   </head>
 
   <body>
-
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="content">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#">Payroll <em>lite</em></a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#payroll">Payroll 101</a></li>
-              <li><a href="#support">Support</a></li>
-              <li><a href="#products">Other Payroll</a></li>
-            </ul>
-            <form class="navbar-form pull-right">
-              <input class="span1" type="text" placeholder="email">
-              <input class="span1" type="password" placeholder="password">
-              <button type="button" class="btn btn-mini">Sign In</button>
-              <button type="button" class="btn btn-mini btn-primary">Create Account
-              </button>
-            </form>
-          </div><!--/.nav-collapse -->
+    <div class="row">
+        <div class="span12">
+          <img src="img/Payrollhomenav.png" class="img-rounded alt="payrollnav">
         </div>
-      </div>
     </div>
 
     <div class="content maincontent">
-      <div class="row-fluid">
-        <div class="span7">
-          <div class="hero-unit">
-            <h2>Intuit Online Payroll <em>lite</em>
-            </h2>
-            <br>Calculate paychecks for employees with confidence
-            <dl>
-              <dt>Worry-free accuracy ensured</dt>
-                <dd>Avoid penalties with with the latest tax calculations</dd>
-              <br>
-              <dt>Save check history</dt>
-                <dd>Share data with your accountant for a seamless tax time</dd>
-              <br>
-              <dt>Valuable data with your employees' payroll costs</dt>
-                <dd>See compelling insights about your payroll expenses</dd>
-              <br>
-              <dt>Perfect for young businesses</dt>
-                <dd>Not quite ready for a fully featured payroll solution? No problem!</dd>
-            </dl>
 
-            </p>
-            <p>
-
-            </p>
-          </div>
-
-
-        </div>
         <!-- /calculator -->
-        <div class="span5 calc">
-            <form class "maincalc">
-              <fieldset>
-                <legend><p class="text-center calchead">Paycheck Calculator</p></legend>
-                    <label class="formlabel">State</label>
+
+        <h3>Intuit Online Payroll <em>lite</em></h3>
+        <br><h4>Calculate paychecks for employees with confidence</h4>
+
+        <p class="text-center calchead">
+        Paycheck Calculator</p>
+        <div class="accordion maincalc">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                  State
+                  </a>
                       <select>
                         <option>Alabama</option>
                         <option>Alaska</option>
@@ -169,50 +135,87 @@
                         <option>California</option>
                         <option>Colorado</option>
                       </select>
-                  <div class="row-fluid calcinner">
-                    <div class="span5">
 
-                      <label class="formlabel">Pay Information</label>
-                      <ul class="inline">
-                        <li>Pay date</li>
-                        <li>Pay Period
+          <div class="accordion maincalc">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                  Pay Information
+                  </a>
+              </div>
+<!-- /Pay info on calc -->
+              <div id="collapseOne" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                  <ul class="inline">
+                        <br>Pay date [calendar picker]
+                        <br>Pay Period
                         <select class="paydropdown">
                           <option>Weekly</option>
                           <option>Biweekly</option>
-                        </select></li>
-                        <li>Pay Type
+                        </select>
+                        <br>Pay Type
                         <select class="paydropdown">
                           <option>Hourly</option>
                           <option>Salary</option>
-                        </select></li>
-                        <li>Hours Worked <input class="input-mini" type="text" placeholder="0"></li>
-                        <li>Pay rate $<input class="input-mini" type="text" placeholder="0.00"> / hr</li>
-                        <li>Gross YTD $<input class="input-mini" type="text" placeholder="0.00"></li>
+                        </select>
+                        <br>Hours Worked <input class="input-mini" type="text" placeholder="0">
+                        <br>Pay rate $<input class="input-mini" type="text" placeholder="0.00"> / hr
+                        <br>Gross YTD $<input class="input-mini" type="text" placeholder="0.00">
                       </ul>
-
-                      <label class="formlabel">Additional Pay (Optional)</label>
-                      <ul class="inline">
-                        <li>Overtime Worked<input class="input-mini" type="text" placeholder="0.00">hrs</li>
-                        <li>Salary $<input class="input-mini" type="text" placeholder="0.00"></li>
-                        <li>Bonus $<input class="input-mini" type="text" placeholder="0.00"></li>
-                        <li>Commission $<input class="input-mini" type="text" placeholder="0.00"></li>
-                      </ul>
-
-                      <label class="formlabel">Federal Withholdings</label>
-                      <ul class="inline">
-                        <li>Filing Status
-                          <select class="paydropdown">
-                          <option>Single</option>
-                          <option>Married</option>
-                          <option>Married, but Single Rate</option>
-                          <option>Do Not Withhold</option>
+                </div>
+              </div>
+            </div>
+<!-- /Additional Pay on calc -->
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                Additional Pay (optional)
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                  <ul class="inline">
+                      <li>Overtime Worked<input class="input-mini" type="text" placeholder="0.00">hrs</li>
+                      <li>Salary $<input class="input-mini" type="text" placeholder="0.00"></li>
+                      <li>Bonus $<input class="input-mini" type="text" placeholder="0.00"></li>
+                      <li>Commission $<input class="input-mini" type="text" placeholder="0.00"></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+<!-- /Federal Withhold on calc -->
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                Federal Withholdings
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                    <ul class="inline">
+                      <li>Filing Status
+                        <select class="paydropdown">
+                        <option>Single</option>
+                        <option>Married</option>
+                        <option>Married, but Single Rate</option>
+                        <option>Do Not Withhold</option>
                         </select></li>
                         <li>Allowances<input class="input-mini" type="text" placeholder="0"></li>
                         <li>Additional $<input class="input-mini" type="text" placeholder="0.00"></li>
-                      </ul>
-
-                      <label class="formlabel">California State Withholdings</label>
-                      <ul class="inline">
+                     </ul>
+                 </div>
+              </div>
+            </div>
+<!-- /State Withhold on calc -->
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                California State Withholdings
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                    <ul class="inline">
                         <li>Filing Status
                           <select class="paydropdown">
                           <option>Single/Married (2+ incomes)</option>
@@ -223,36 +226,102 @@
                         <li>Number of Allowances<input class="input-mini" type="text" placeholder="0"></li>
                         <li>Additional Withholding<input class="input-mini" type="text" placeholder="0.00"></li>
                       </ul>
+                 </div>
+              </div>
+            </div>
 
-                    </div>
-                  </div>
+
+          </div>
+
+
                     <br>
-                    <button type="submit" class="btn">Submit</button>
-              </fieldset>
-            </form>
+                    <button type="submit" class="btn btn-success">Calculate!</button>
+
           </div>
 
         </div>
       </div>
 
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="container marketing">
+      <br><br>
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="span4">
+          <img class="img-circle img-center" src="img/140by140.png">
+          <h3 class="stepheader">Step 1</h3>
+          <p class="steptext">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img class="img-circle img-center" src="img/140by140.png">
+          <h3 class="stepheader">Step 2</h3>
+          <p class="steptext">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img class="img-circle img-center" src="img/140by140.png">
+          <h3 class="stepheader">Step 3</h3>
+          <p class="steptext">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.</p>
+        </div><!-- /.span3 -->
+      </div><!-- /.row -->
+    <!-- Nested media object -->
+
+<!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+      <br><br>
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="img/browser-icon-chrome.png">
+        <h2 class="featurette-heading">Worry-free accuracy ensured <span class="muted">It'll blow your mind.</span></h2>
+        <p class="lead"> Avoid penalties with with the latest tax calculationss</p>
+      </div>
+      <br><br>
+
+      <hr class="featurette-divider">
+      <br><br>
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="img/browser-icon-firefox.png">
+        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">Save check history</span></h2>
+        <p class="lead">Share data with your accountant for seamless taxes</p>
+      </div>
+      <br><br>
+
+      <hr class="featurette-divider">
+      <br><br>
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="img/browser-icon-safari.png">
+        <h2 class="featurette-heading">Valuable data with your employees' payroll costs<span class="muted">Checkmate.</span></h2>
+        <p class="lead">See compelling insights about your payroll expenses</p>
+      </div>
+      <br><br>
+
+      <hr class="featurette-divider">
+      <br><br>
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="img/browser-icon-safari.png">
+        <h2 class="featurette-heading">Perfect for young businesses<span class="muted">Checkmate.</span></h2>
+        <p class="lead">Not quite ready for a fully featured payroll solution? No problem! We've got your back!</p>
+        <br><br>
+        </div>
+      <!-- /END THE FEATURETTES -->
+
+      </div>
+  <br>
+  <br>
+  <br>
+  <h1>INTUIT FOOTER<h1>
+  <br>
+  <br>
     </div> <!-- /container -->
+
+
 
   <!-- Le javascript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="../assets/js/jquery.js"></script>
-  <script src="../assets/js/bootstrap-transition.js"></script>
-  <script src="../assets/js/bootstrap-alert.js"></script>
-  <script src="../assets/js/bootstrap-modal.js"></script>
-  <script src="../assets/js/bootstrap-dropdown.js"></script>
-  <script src="../assets/js/bootstrap-scrollspy.js"></script>
-  <script src="../assets/js/bootstrap-tab.js"></script>
-  <script src="../assets/js/bootstrap-tooltip.js"></script>
-  <script src="../assets/js/bootstrap-popover.js"></script>
-  <script src="../assets/js/bootstrap-button.js"></script>
-  <script src="../assets/js/bootstrap-collapse.js"></script>
-  <script src="../assets/js/bootstrap-carousel.js"></script>
-  <script src="../assets/js/bootstrap-typeahead.js"></script>
-
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.js"></script>
   </body>
 </html>
