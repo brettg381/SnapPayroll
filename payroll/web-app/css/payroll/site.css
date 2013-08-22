@@ -1,7 +1,15 @@
+body.harmony div#main {
+	margin-left: 0;
+}
 body.harmony header {
 	left: 0;
 	right: 0;
 	width: auto;
+	margin-left: 0;
+	background: #e3eaf3;
+}
+body.harmony header .title {
+	color: #6d8ba7;
 }
 
 body.harmony .stage {
@@ -31,6 +39,8 @@ body.harmony .content {
 }
 
 body.harmony .content div.buttonbar {
+	width: 100%;
+	float: left;
 	margin: 24px 0;
 }
 body.harmony .content div.buttonbar .right {
