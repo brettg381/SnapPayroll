@@ -1,0 +1,65 @@
+body.harmony div#main {
+	margin-left: 0;
+}
+body.harmony header {
+	left: 0;
+	right: 0;
+	width: auto;
+	margin-left: 0;
+	background: #e3eaf3;
+}
+body.harmony header .title {
+	color: #6d8ba7;
+}
+
+body.harmony .stage {
+	padding: 24px 15px;
+	overflow: auto;
+
+}
+
+body.harmony .stage h2 {
+	padding: 0 0 24px 0;
+	font-weight: bold;
+}
+
+body.harmony .stage div.action {
+	padding: 30px;
+	border-left: 1px solid gray;
+	width: 260px;
+	height: 110px;
+	float: left;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size: 19px;
+	line-height: 130%;
+}
+
+body.harmony .content {
+	padding: 0 40px;
+}
+
+body.harmony .content div.buttonbar {
+	width: 100%;
+	float: left;
+	margin: 24px 0;
+}
+body.harmony .content div.buttonbar .right {
+	float: right;
+}
+body.harmony .content div.buttonbar .search {
+  display: block;
+  box-sizing: border-box;
+  float: left;
+  height: 34px;
+  padding: 0 10px 6px 0;
+}
+body.harmony .content div.buttonbar .search form {
+  height: 34px;
+}
+body.harmony .content div.buttonbar .search form input[type=submit] {
+  display: none;
+}
+body.harmony .content div.buttonbar .search form input[type=search] {
+	height: 34px;
+	background: white url('../../harmony/img/icons-s2b11c90dfb.png') 167px -1294px no-repeat;
+}

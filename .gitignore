@@ -21,6 +21,7 @@ ehthumbs.db
 /*.tmproj
 /ivy*
 /eclipse
+.idea
 
 # maven
 payroll/target/

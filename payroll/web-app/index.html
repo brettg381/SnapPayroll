@@ -1,6 +1,321 @@
+<!DOCTYPE html>
 <html>
-<head></head>
+<head>
+    <meta charset="utf-8">
+    <title>Easy Paycheck</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/intuit-favicon.ico">
+    <link href="jquery-ui-1.10.3-intuit.custom/css/custom-theme/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-no-gutter/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/h5bp-html5-boilerplate-defe483/css/normalize.css"> -->
+    <link rel="stylesheet" href="css/payroll/site.css">
+</head>
 <body>
-Something here.
+    <div id="main-layout" class="layout" style="display:none;">
+    <div id="west">
+        <div id="nav">
+            <div id="app-title">Easy Paychecks</div>
+            <ul>
+                <li class="paychecks selected">Paychecks</li>
+                <li class="employees">Employees</li>
+                <li class="taxes">Taxes</li>
+            </ul>
+        </div>
+    </div>
+    <div id="north">
+        <div id="main-menu">
+            <!-- TODO login items go here -->
+        </div>
+    </div>
+    <div id="center">
+        <h1 id="title">Paychecks</h1>
+        <div id="insight">
+            <img src="images/payroll/payroll-insight-mock.png"/>
+            <div id="call-to-action">
+                <button class="btn btn-primary">Calculate New Check</button>
+            </div>
+        </div>
+        <div id="data">
+            <table id="paychecks">
+                <tr>
+                    <th>Employee</th>
+                    <th>Pay Date</th>
+                    <th>Net Pay</th>
+                </tr>
+                <tr>
+                    <td>Brett Groshong</td>
+                    <td>8/9/2013</td>
+                    <td>$1234.56</td>
+                </tr>
+                <tr>
+                    <td>Catherine Ho</td>
+                    <td>8/9/2013</td>
+                    <td>$1234.56</td>
+                </tr>
+                <tr>
+                    <td>Colin Roper</td>
+                    <td>8/9/2013</td>
+                    <td>$1234.56</td>
+                </tr>
+                <tr>
+                    <td>Kyle Kilat</td>
+                    <td>8/9/2013</td>
+                    <td>$1234.56</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
+    <div id="action-layout" class="layout harmony">
+        <header class="trowser">
+            <a href="#nav" class="menu" title="Menu"></a>
+            <div class="title">Calculate Paycheck</div>
+            <!--
+            <div class="actions">
+                <a class="help" title="Help"></a>
+                <a class="close" title="Close"></a>
+            </div>
+            -->
+            <div class="status"></div>
+        </header>
+        <div id="left">
+            <h1>Let's calculate a new paycheck!</h1>
+            <form class="form-horizontal" id="calculator-form" method="post" action=".">
+                <div class="accordion-group">
+                    <div class="control-group">
+                        <label class="control-label" for="inputEmployee">Employee</label>
+                        <div class="controls">
+                            <input type="text" id="inputEmployee" placeholder="Employee 1">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputState">State</label>
+                        <div class="controls">
+                            <select id="inputState" class="input-medium">
+                                <option>California</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                    <!--------------------->
+                    <!-- PAY INFORMATION -->
+                    <div id="paymentAccordion" class="accordion">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <span class="form_help"><a href=""><img src="images/payroll/help_symbol.png" alt="Help"></a></span>
+                                <a class="accordion-toggle collapsed disabled" data-toggle="collapse" href="#payInformationSection" data-parent="#paymentAccordion">
+                                    <h4 class="form_title arrow-right">Pay Information </h4>
+                                </a>
+                            </div>
+                            <div id="payInformationSection" class="accordion-body collapse">
+                                <div class="control-group">
+                                    <label class="control-label" for="payDate">Pay Date</label>
+                                    <div class="controls">
+                                        <input type="text" class="input-small" id="payDate" placeholder="08/15/2013">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="payPeriod">Pay Period</label>
+                                    <div class="controls">
+                                        <select id="payPeriod" class="input-medium">
+                                            <option>Weekly</option>
+                                            <option>Bi-weekly</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="payType">Pay Type</label>
+                                    <div class="controls">
+                                        <select id="payType" class="input-medium">
+                                            <option>Hourly</option>
+                                            <option>Salary</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="hoursWorked">Hours Worked</label>
+                                    <div class="controls">
+                                        <input type="text" class="input-small" id="hoursWorked" placeholder="0">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="payRate">Pay Rate</label>
+                                    <div class="controls">
+                                        <div class="input-prepend">
+                                            <span class="add-on">$</span>
+                                            <input type="text" id="payRate" class="input-small" placeholder="10.00">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-------------------->
+                        <!-- ADDITIONAL PAY -->
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <span class="form_help"><a href=""><img src="images/payroll/help_symbol.png" alt="Help"></a></span>
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#paymentAccordion" href="#additionalPaySection">
+                                    <h4 class="form_title arrow-right">Additional Pay <small>(Optional)</small></h4>
+                                </a>
+                            </div>
+                            <div id="additionalPaySection" class="accordion-body collapse">
+                                <div class="control-group">
+                                    <label class="control-label" for="overtimeWorked">Overtime Worked</label>
+                                    <div class="controls">
+                                        <input type="text" class="input-small" id="overtimeWorked" placeholder="0">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="salary">Salary</label>
+                                    <div class="controls">
+                                        <div class="input-prepend">
+                                            <span class="add-on">$</span>
+                                            <input type="text" id="salary" class="input-small" placeholder="0.00">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="bonus">Bonus</label>
+                                    <div class="controls">
+                                        <div class="input-prepend">
+                                            <span class="add-on">$</span>
+                                            <input type="text" id="bonus" class="input-small" placeholder="0.00">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="commission">Commission</label>
+                                    <div class="controls">
+                                        <div class="input-prepend">
+                                            <span class="add-on">$</span>
+                                            <input type="text" id="commission" class="input-small" placeholder="0.00">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--------------------------->
+                    <!-- FEDERAL WITHHOLDINGS --->
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <span class="form_help"><a href=""><img src="images/payroll/help_symbol.png" alt="Help"></a></span>
+                            <a class="accordion-toggle" data-toggle="collapse" href="#federalWithHoldingsSection" data-parent="#paymentAccordion">
+                                <h4 class="form_title arrow-right">Federal Withholdings</h4>
+                            </a>
+                        </div>
+                        <div id="federalWithHoldingsSection" class="accordion-body collapse">
+                            <span class="info">Enter the info from the employee completed W4 Form. If you don't have the employee's W4 yet, don't worry, we'll fill in the safest tax rates for you.</span>
+                            <div class="control-group">
+                                <label class="control-label" for="fedFilingStatus">Filing Status</label>
+                                <div class="controls">
+                                    <select id="fedFilingStatus">
+                                        <option>Single</option>
+                                        <option>Married</option>
+                                        <option>Married but Single Rate</option>
+                                        <option>Do Not Withhold</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="fedAllowances">Number of Allowances</label>
+                                <div class="controls">
+                                    <input type="text" class="input-mini" id="fedAllowances" placeholder="0">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="fedAdditionalWithheld">Additional</label>
+                                <div class="controls">
+                                    <div class="input-prepend">
+                                        <span class="add-on">$</span>
+                                        <input type="text" id="fedAdditionalWithheld" class="input-small" placeholder="0.00">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------>
+                    <!-- STATE WITHHOLDINGS -->
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <span class="form_help"><a href=""><img src="images/payroll/help_symbol.png" alt="Help"></a></span>
+                            <a class="accordion-toggle" data-toggle="collapse" href="#stateWithHoldingsSection" data-parent="#paymentAccordion">
+                                <h4 class="form_title arrow-right">California State Withholdings</h4>
+                            </a>
+                        </div>
+                        <div id="stateWithHoldingsSection" class="accordion-body collapse">
+                            <div class="control-group">
+                                <label class="control-label" for="stateFilingStatus">Filing Status</label>
+                                <div class="controls">
+                                    <select id="stateFilingStatus">
+                                        <option>Single/Married (2+ incomes)</option>
+                                        <option>Married (1 income)</option>
+                                        <option>Head of Household</option>
+                                        <option>Do Not Withhold</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="allowances">Number of Allowances</label>
+                                <div class="controls">
+                                    <input type="text" class="input-mini" id="allowances" placeholder="0">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="additionalWithheld">Additional</label>
+                                <div class="controls">
+                                    <div class="input-prepend">
+                                        <span class="add-on">$</span>
+                                        <input type="text" id="additionalWithheld" class="input-small" placeholder="0.00">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="right" class="striped">
+            <div id="sample-check-wrapper">
+            <div id="sample-check-body">
+                <div id="address">
+                    <span class="name bold"></span>
+                    <span class="street"></span>
+                    <span class="city"></span>
+                </div>
+                <div id="details">
+                    <span class="desc">pay to</span>
+                    <span id="recipient">Employee 1</span>
+                    <span id="amount">$0.00</span>
+                </div>
+            </div>
+            <div id="sample-check-footer">
+                <img id="corner" src="images/pagecornerturned.png"/>
+            </div>
+            </div>
+        </div>
+        <div id="footer" class="sticky-footer">
+            <button class="right btn btn-primary">Save check</button>
+        </div>
+    </div>
+<!-- LIBS -->
+    <script type="text/javascript" src="js/libs/backbone.marionette/jquery.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.10.3-intuit.custom/js/jquery-ui-1.10.3.custom.js"></script>
+    <script type="text/javascript" src="bootstrap-no-gutter/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/libs/backbone.marionette/underscore.js"></script>
+    <script type="text/javascript" src="js/libs/backbone.marionette/backbone.js"></script>
+<!-- <script src="js/libs/backbone.marionette/json2"/> -->
+<!-- <script src="js/libs/backbone.marionette/backbone.marionette"/> -->
+<!-- <script src="js/libs/backbone.marionette/backbone.babysitter"/> -->
+<!-- <script src="js/libs/backbone.marionette/backbone.wreqr"/> -->
+<!-- CUSTOM -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+        $('.accordion').on('show hide', function (n) {
+            $(n.target).siblings('.accordion-heading').find('.accordion-toggle h4').toggleClass('arrow-right arrow-down');
+        });
+    </script>
+    <!--<script type="text/javascript" src="js/models/User.js"></script>-->
+    <!--<script type="text/javascript" src="js/models/Employee.js"></script>-->
 </body>
 </html>
