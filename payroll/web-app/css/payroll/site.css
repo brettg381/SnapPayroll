@@ -12,6 +12,12 @@ body, html {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
 }
+table {
+    max-width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 h1 {
     font-size: 18px;
     font-weight: 700;
@@ -329,6 +335,30 @@ h1#title {
     font-weight: lighter;
     font-size: 30px;
     font-style: italic;
+}
+#itemization table {
+    width: 100%;
+    margin: 0 0 10px;
+    font-size: 12px;
+    text-align: left;
+}
+#itemization table .first {
+    padding: 4px 0 4px 10px;
+}
+#itemization table th {
+    color: #6d8ba7;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c1dbec;
+}
+#itemization th,td {
+    padding: 0px;
+    text-align: left;
+}
+#itemization table.total {
+    margin: 20px 0 0;
+    font-weight: bold;
+    border-top: 1px solid #8a9eae;
+    border-bottom: 1px solid #8a9eae;
 }
 
 /******************** FROM HARMONY ***********************/

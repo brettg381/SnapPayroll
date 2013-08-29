@@ -288,6 +288,55 @@
                     <span id="recipient">Employee 1</span>
                     <span id="amount">$0.00</span>
                 </div>
+                <div id="itemization">
+                    <table border="0">
+                        <tr>
+                            <th class="first" width="70%">Gross Pay</th>
+                            <th width="30%">Current</th>
+                        </tr>
+                        <tr>
+                            <td class="first">Hourly</td>
+                            <td>$0.00</td>
+                        </tr>
+                        <tr>
+                            <td class="first">{{hours_worked}} hrs</span> <span>x</span> <span>$ {{pay_rate_hs}} /hr</td>
+                            <td>${{hours_total}}</td>
+                        </tr>
+                        <tr>
+                            <td class="first">Salary</td>
+                            <td>${{salary}}</td>
+                        </tr>
+                        <tr>
+                            <td class="first">OT: {{ot_hours_worked}} hrs</span> <span>x</span><span>$ {{ot_pay_rate_hs}} /hr</td>
+                            <td>${{ot_total}}</td>
+                        </tr>
+                        <tr>
+                            <td class="first">Bonus</td>
+                            <td>${{bonus}}</td>
+                        </tr>
+                        <tr>
+                            <td class="first">Commission</td>
+                            <td>${{commission}}</td>
+                        </tr>
+                    </table>
+
+                    <table border="0">
+                        <tr>
+                            <th class="first" width="70%">Taxes withheld</th>
+                            <th width="30%">&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td class="first">{{name}}</td>
+                            <td>-${{amount}}</td>
+                        </tr>
+                    </table>
+                    <table class="total" border="0">
+                        <tr>
+                            <td class="first" width="70%">Net pay this check</th>
+                            <td>${{net_pay}}</th>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div id="sample-check-footer">
                 <img id="corner" src="images/pagecornerturned.png"/>
