@@ -317,7 +317,7 @@ h1#title {
     display: block;
 }
 #details {
-    margin: 38px 52px 50px 30px;
+    margin: 38px 52px 88px 30px;
 }
 #details span.desc {
     font-size: 12px;
@@ -336,9 +336,12 @@ h1#title {
     font-size: 30px;
     font-style: italic;
 }
+#itemization {
+    overflow: hidden;
+}
 #itemization table {
     width: 100%;
-    margin: 0 0 10px;
+    margin: 20px 0 10px 22px;
     font-size: 12px;
     text-align: left;
 }
@@ -348,17 +351,15 @@ h1#title {
 #itemization table th {
     color: #6d8ba7;
     text-transform: uppercase;
-    border-bottom: 1px solid #c1dbec;
 }
 #itemization th,td {
     padding: 0px;
     text-align: left;
+    line-height: 12px;
 }
 #itemization table.total {
-    margin: 20px 0 0;
     font-weight: bold;
-    border-top: 1px solid #8a9eae;
-    border-bottom: 1px solid #8a9eae;
+    text-transform: uppercase;
 }
 
 /******************** FROM HARMONY ***********************/
