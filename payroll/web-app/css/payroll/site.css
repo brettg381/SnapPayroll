@@ -4,6 +4,9 @@
 .right {
     float: right;
 }
+.left {
+    float: left;
+}
 .bold {
     font-weight: bold;
 }
@@ -121,8 +124,9 @@ h4 {
 #overviewLayout h1.title {
     display: block;
     margin: 0;
-    padding: 10px 30px;
+    padding: 13px 30px;
     background-color: #f7fafc;
+    line-height: 34px;
 }
 /**
  * MAIN MENU
@@ -368,6 +372,36 @@ h4 {
 #itemization table.total {
     font-weight: bold;
     text-transform: uppercase;
+}
+
+/**
+ * BADGE
+ */
+#badge {
+    overflow: hidden;
+    width: 306px;
+    height: 430px;
+    margin: 60px auto;
+    background: url('../../images/badge.png') no-repeat;
+    background-size: contain;
+}
+#badge #badgeNameAbreviation {
+    margin: 165px auto 0;
+    text-align: center;
+}
+#badge #badgeNameAbreviation span {
+    font-size: 80px;
+    line-height: 100px;
+    color: #8faabf;
+    text-transform: uppercase;
+}
+#badge #badgeName {
+    margin: 90px auto 0;
+    text-align: center;
+}
+#badge #badgeName span {
+    font-size: 22px;
+    font-weight: bold;
 }
 
 /**

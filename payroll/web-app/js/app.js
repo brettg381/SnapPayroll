@@ -13,6 +13,12 @@ var formatDate = function(date) {
 // =====================
 // MODELS
 
+// User
+app.User = Backbone.Model.extend({
+    defaults: {
+        email: ''
+    }
+});
 // Paycheck
 app.Paycheck = Backbone.Model.extend({
     defaults: {
@@ -33,10 +39,14 @@ app.Paycheck = Backbone.Model.extend({
         "stateAdditionalWithholding": 0.0
     }
 });
-// User
-app.User = Backbone.Model.extend({
+// Employee
+app.Employee = Backbone.Model.extend({
     defaults: {
-        email: ''
+        employeeName: 'Employee 1',
+        payType: 'Hourly',
+        payRate: 0.00,
+        numChecks: 0,
+        netPay: 0.00
     }
 });
 
@@ -47,23 +57,14 @@ app.User = Backbone.Model.extend({
 app.PaycheckCollection = Backbone.Collection.extend({
     model: app.Paycheck
 });
+// Employees
+app.EmployeesCollection = Backbone.Collection.extend({
+    model: app.Employee
+});
 
 // =====================
 // VIEWS
 
-// PaychecksView
-app.PaychecksView = Backbone.View.extend({
-    el: '#paychecks',
-    initialize: function() {
-        var source = $('#paychecksTemplate').html();
-        this.template = Handlebars.compile(source);
-        this.collection.on('add', this.render, this);  // might be able to do this with bindings
-    },
-    render: function() {
-        var html = this.template(this.collection.toJSON());
-        this.$el.html(html);
-    }
-});
 // UserView
 app.UserView = Backbone.View.extend({
     el: '#userid',
@@ -79,14 +80,43 @@ app.UserView = Backbone.View.extend({
     }
 });
 
+// PaychecksView
+app.PaychecksView = Backbone.View.extend({
+    el: '#paychecks',
+    initialize: function() {
+        var source = $('#paychecksTemplate').html();
+        this.template = Handlebars.compile(source);
+        this.collection.on('add', this.render, this);
+    },
+    render: function() {
+        var html = this.template(this.collection.toJSON());
+        this.$el.html(html);
+    }
+});
+
+// EmployeesView
+app.EmployeesView = Backbone.View.extend({
+    el: '#employees',
+    initialize: function() {
+        var source = $('#employeesTemplate').html();
+        this.template = Handlebars.compile(source);
+        this.collection.on('add', this.render, this);
+    },
+    render: function() {
+        var html = this.template(this.collection.toJSON());
+        this.$el.html(html);
+    }
+});
+
 // =====================
 // APP INITIALIZATION
 app.paychecks = new app.PaycheckCollection();
-app.paychecksView = new app.PaychecksView({
-    collection: app.paychecks
-});
+app.paychecksView = new app.PaychecksView({collection: app.paychecks});
+app.employees = new app.EmployeesCollection();
+app.employeesView = new app.EmployeesView({collection: app.employees});
 app.userView = new app.UserView();
 app.currentUser = null;
+
 // =====================
 // TESTING
 //var paycheck = new app.Paycheck({
