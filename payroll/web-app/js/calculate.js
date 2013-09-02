@@ -1,6 +1,5 @@
 var AC_URL =  'http://pocketpayroll-lb-QA-ssl-1602432401.us-east-1.elb.amazonaws.com/v1/usa/ca';
 var AC_API_KEY = '44F0DCC0-6D52-4BDC-95E1-9784496A177A';
-var DEBUG = true;
 
 var formatPayDate = function(payDateStr) {
     var dateObj, payMonth, payDay;
@@ -10,6 +9,13 @@ var formatPayDate = function(payDateStr) {
     payDay = dateObj.getDate();
     payDay = (payDay < 10) ? '0' + payDay : '' + payDay;
     return dateObj.getFullYear() + payMonth + payDay;
+}
+var unformatPayDate = function(dateStr) {
+    var year, month, day;
+    year = dateStr.substring(0, 4);
+    month = dateStr.substring(4, 6);
+    day = dateStr.substring(6);
+    return month + '/' + day + '/' + year;
 }
 var formatPeriodsInYear = function(payDateStr) {
     return (payDateStr.toLowerCase() == 'weekly') ? 52 : 26;
@@ -27,7 +33,7 @@ var updateCheckDisplay = function(obj) {
 }
 var calculate = function() {
     var payType, grossHourly, hoursWorked, payRate, grossPay, payAmount, commission, bonus, salary;
-    var overtimeHoursWorked, payDate, grossOvertime, payDay, dateObj;
+    var overtimeHoursWorked, payDate, grossOvertime;
     payType = $('#payType').val();
     if (payType.toLowerCase() == 'hourly') {
         hoursWorked = $('#hoursWorked').val();
@@ -80,6 +86,7 @@ var calculate = function() {
         dataType: 'json',
         data: JSON.stringify(obj),
         success: function(data, status, jqXHR) {
+            latestCalculatedData = data;
             updateCheckDisplay(data);
         },
         error: function(jqXHR, status, errorThrown) {
@@ -141,4 +148,3 @@ $('#stateAdditionalWithheld').blur(function() {
     calculate();
 });
 
-//calculate();

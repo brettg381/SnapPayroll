@@ -8,23 +8,24 @@
     <link rel="shortcut icon" href="images/intuit-favicon.ico">
     <link href="jquery-ui-1.10.3-intuit.custom/css/custom-theme/jquery-ui-1.10.3.custom.css" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap-no-gutter/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="css/h5bp-html5-boilerplate-defe483/css/normalize.css"> -->
+    <link rel="stylesheet" href="css/payroll/harmony-custom.css">
     <link rel="stylesheet" href="css/payroll/site.css">
 </head>
 <body>
-    <div id="main-layout" class="layout" style="display:none;">
+    <div id="main-layout" class="frameLayout harmony" style="display:none;">
     <div id="west">
         <div id="nav">
             <div id="app-title">Easy Paychecks</div>
             <ul>
-                <li class="paychecks selected">Paychecks</li>
-                <li class="employees">Employees</li>
-                <li class="taxes">Taxes</li>
+                <li id="navPaychecks" class="paychecks selected">Paychecks</li>
+                <li id="navEmployees" class="employees">Employees</li>
             </ul>
         </div>
     </div>
     <div id="north">
-        <div id="main-menu">
+        <div id="mainMenu">
+            <a href="" class="right menuItem"><img src="images/payroll/help_symbol.png" alt="Help"></a>
+            <div id="userid" class="right menuItem"></div>
             <!-- TODO login items go here -->
         </div>
     </div>
@@ -33,50 +34,31 @@
         <div id="insight">
             <img src="images/payroll/payroll-insight-mock.png"/>
             <div id="call-to-action">
-                <button class="btn btn-primary">Calculate New Check</button>
+                <button id="calculateCheckButton" class="button primary">Calculate New Check</button>
             </div>
         </div>
         <div id="data">
-            <table id="paychecks">
-                <tr>
-                    <th>Employee</th>
-                    <th>Pay Date</th>
-                    <th>Net Pay</th>
-                </tr>
-                <tr>
-                    <td>Brett Groshong</td>
-                    <td>8/9/2013</td>
-                    <td>$1234.56</td>
-                </tr>
-                <tr>
-                    <td>Catherine Ho</td>
-                    <td>8/9/2013</td>
-                    <td>$1234.56</td>
-                </tr>
-                <tr>
-                    <td>Colin Roper</td>
-                    <td>8/9/2013</td>
-                    <td>$1234.56</td>
-                </tr>
-                <tr>
-                    <td>Kyle Kilat</td>
-                    <td>8/9/2013</td>
-                    <td>$1234.56</td>
-                </tr>
+            <table id="paycheckTable">
+                <thead>
+                    <tr>
+                        <th>Employee</th>
+                        <th>Pay Date</th>
+                        <th>Gross Pay</th>
+                        <th>Net Pay</th>
+                    </tr>
+                </thead>
+                <tbody id="paychecks">
+                </tbody>
             </table>
         </div>
     </div>
     </div>
-    <div id="action-layout" class="layout harmony">
+    <div id="action-layout" class="frameLayout harmony">
         <header class="trowser">
-            <a href="#nav" class="menu" title="Menu"></a>
             <div class="title">Calculate Paycheck</div>
-            <!--
             <div class="actions">
                 <a class="help" title="Help"></a>
-                <a class="close" title="Close"></a>
             </div>
-            -->
             <div class="status"></div>
         </header>
         <div id="middle">
@@ -347,8 +329,8 @@
                         </table>
                         <table class="total" border="0">
                             <tr>
-                                <td class="first" width="70%">Net pay this check</th>
-                                <td id="netPay">$0.00</th>
+                                <th class="first" width="70%">Net pay this check</th>
+                                <td id="netPay">$0.00</td>
                             </tr>
                         </table>
                     </div>
@@ -360,28 +342,139 @@
             </div>
         </div>
         <div id="footer" class="sticky-footer">
-            <button class="right btn btn-primary">Save check</button>
+            <!--<a href="#signupModal" role="button" class="right button primary" data-toggle="modal">Save check</a>-->
+            <button id="saveCheckButton" class="right button primary">Save check</button>
         </div>
+        <!-- MODALS -->
+        <div class="modal-overlay" id="signupModal">
+            <div class="scrim">
+                <div class="layout">
+                    <div class="modal-content">
+                        <div class="modal-main-col">
+                            <h1>To save your checks, sign up for free!</h1>
+                            <form class="form-horizontal" id="signupForm" method="post" action=".">
+                                <div class="control-group">
+                                    <label class="control-label" for="signupEmail"><b>Your Email</b></label>
+                                    <div class="controls">
+                                        <input type="text" id="signupEmail" placeholder="example@example.com">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="signupPassword"><b>Password</b></label>
+                                    <div class="controls">
+                                        <input type="password" id="signupPassword">
+                                    </div>
+                                </div>
+                            </form>
+                            <button id="signupCancelButton" class="button secondary">No Thanks</button>
+                            <button id="signupGoButton" class="button primary">Sign Up!</button>
+                        </div>
+                        <div class="modal-right-col">
+                            <ul>
+                                <li>
+                                    <img src="images/payroll/taxes-dark.png">
+                                    <span><b>Get accurate calculations</b> based on up-to-date tax rates</span>
+                                </li>
+                                <li>
+                                    <img src="images/payroll/history-dark.png">
+                                    <span><b>Simplify taxes and accounting</b> by saving your check history</span>
+                                </li>
+                                <li>
+                                    <img src="images/payroll/paychecks-dark.png">
+                                    <span><b>Calculate future checks faster</b> with saved employee details</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- TEMPLATES -->
+        <script type="text/template" id="paychecksTemplate">
+            {{#each []}}
+                <tr>
+                    <td>{{this.employee}}</td>
+                    <td>{{this.payDate}}</td>
+                    <td>{{this.grossPay}}</td>
+                    <td>{{this.netPay}}</td>
+                </tr>
+            {{/each}}
+        </script>
+        <script type="text/template" id="userTemplate">{{email}}</script>
     </div>
 <!-- LIBS -->
     <script type="text/javascript" src="js/libs/backbone.marionette/jquery.js"></script>
     <script type="text/javascript" src="jquery-ui-1.10.3-intuit.custom/js/jquery-ui-1.10.3.custom.js"></script>
     <script type="text/javascript" src="bootstrap-no-gutter/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/handlebars.js"></script>
     <script type="text/javascript" src="js/libs/backbone.marionette/underscore.js"></script>
     <script type="text/javascript" src="js/libs/backbone.marionette/backbone.js"></script>
+<!-- <script type="text/javascript" src="js/backbone.localStorage-min.js"></script> -->
 <!-- <script src="js/libs/backbone.marionette/json2"/> -->
 <!-- <script src="js/libs/backbone.marionette/backbone.marionette"/> -->
 <!-- <script src="js/libs/backbone.marionette/backbone.babysitter"/> -->
 <!-- <script src="js/libs/backbone.marionette/backbone.wreqr"/> -->
 <!-- CUSTOM -->
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/test-iop.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/calculate.js"></script>
+    <!--<script type="text/javascript" src="js/test-iop.js"></script> -->
     <script type="text/javascript">
-        $('.accordion').on('show hide', function (n) {
-            $(n.target).siblings('.accordion-heading').find('.accordion-toggle h4').toggleClass('arrow-right arrow-down');
+        // reads data out of the paycheck display form and adds a paycheck object
+        var saveCurrentCheck = function() {
+            var payDate = (latestCalculatedData == null) ? formatDate(new Date()) : unformatPayDate(latestCalculatedData.parsedInput.payDate);
+            var grossPay = (latestCalculatedData == null) ? '$0.00' : latestCalculatedData.parsedInput.grossPay;
+            var check = new app.Paycheck({
+                employee: $('#recipient').html(),
+                payDate: payDate,
+                grossPay: grossPay,
+                netPay: $('#netPay').html()
+            });
+            app.paychecks.add(check);
+        };
+        $('.accordion').on('show hide', function (evt) {
+            $(evt.target).siblings('.accordion-heading').find('.accordion-toggle h4').toggleClass('arrow-right arrow-down');
+        });
+        $('#saveCheckButton').on('click', function () {
+            if (app.currentUser != null) {
+                saveCurrentCheck();
+                $('#main-layout').css('display', 'inline');
+                $('#action-layout').hide('slide', {'direction': 'right'}, 400, function() {
+                });
+            } else {
+                $('#signupModal').fadeIn(200);
+            }
+        });
+        $('#signupCancelButton').on('click', function () {
+            $('#signupModal').fadeOut(200);
+        });
+        $('#signupGoButton').on('click', function () {
+            // validate form
+            // ...
+            app.currentUser = new app.User({email: $('#signupEmail').val()});
+            app.userView.render();
+            saveCurrentCheck();
+            // transfer to the overview
+            $('#signupModal').fadeOut(200);
+            $('#main-layout').css('display', 'inline');
+            $('#action-layout').hide('slide', {'direction': 'right'}, 400, function() {
+            });
+        });
+        $('#calculateCheckButton').on('click', function() {
+            $('#action-layout').show('slide', {'direction': 'right'}, 400, function() {
+            });
+        });
+        $('#navEmployees').on('click', function() {
+            $('#nav li').each(function() {
+                $(this).toggleClass('selected');
+            });
+            // switch to employee layout
+        });
+        $('#navPaychecks').on('click', function() {
+            $('#nav li').each(function() {
+                $(this).toggleClass('selected');
+            });
+            // switch to paycheck layout
         });
     </script>
-    <!--<script type="text/javascript" src="js/models/User.js"></script>-->
-    <!--<script type="text/javascript" src="js/models/Employee.js"></script>-->
 </body>
 </html>

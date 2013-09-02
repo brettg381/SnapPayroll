@@ -1,0 +1,33 @@
+<html>
+<head>
+    <script type="text/javascript" src="js/libs/backbone.marionette/jquery.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var companyModel = {
+        "updateCompanyModel": {
+            "realmId": "1003900273",
+            "companyWorkLocation": "Mountain View,CA,94039",
+            "businessName": "Acme Inc.",
+            "featureSetType": "BasicMinus"
+        }
+    };
+//    console.log(companyModel);
+    $.ajax({
+        url: 'https://branch-ws.iopdev.intuit.com/test/webservices/json/SetupWebService',
+        contentType: 'application/json',
+        type: 'POST',
+        dataType: 'json',
+        data: JSON.stringify(companyModel),
+        success: function(data, status, jqXHR) {
+            console.log('----- updateCompany SUCCESS ------');
+            console.log(data);
+        },
+        error: function(jqXHR, status, errorThrown) {
+            alert('----- updateCompany FAILURE ------');
+            alert(JSON.toString(status));
+        }
+    });
+</script>
+</body>
+</html>
