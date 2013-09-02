@@ -7,6 +7,9 @@
 .bold {
     font-weight: bold;
 }
+.inactive {
+    display: none;
+}
 body, html {
     height: 100%;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -53,16 +56,17 @@ h4 {
 /**
  * SECTIONS
  */
-#main-layout #west {
+#overviewLayout .west {
     height: 100%;
     float: left;
 }
-#main-layout #north {
+#overviewLayout .north {
     overflow: hidden;
 }
-#main-layout #center {
+#overviewLayout .center {
     overflow: hidden;
 }
+
 #action-layout #middle {
     position: absolute;
     top: 40px;
@@ -91,22 +95,22 @@ h4 {
 /**
  * INSIGHT
  **/
-#insight {
+#overviewLayout .insight {
     background-color: #f7fafc;
     padding: 10px 0 60px 0;
 }
-#insight img {
+#overviewLayout .insight img {
     display: inline-block;
     vertical-align: middle;
 }
-#insight #call-to-action {
+#overviewLayout .insight .call-to-action {
     display: inline-block;
     vertical-align: middle;
     height: 204px;
     overflow: hidden;
     border-left: 1px solid #d3d8e0;
 }
-#insight #call-to-action button {
+#overviewLayout .insight .call-to-action button {
     margin-top: 45%;
     margin-left: 40px;
 }
@@ -114,7 +118,7 @@ h4 {
 /**
  * TITLE
  **/
-h1#title {
+#overviewLayout h1.title {
     display: block;
     margin: 0;
     padding: 10px 30px;
@@ -123,12 +127,12 @@ h1#title {
 /**
  * MAIN MENU
  */
-#mainMenu {
+#overviewLayout .mainMenu {
     height: 22px;
     padding: 9px 0;
     background-color: #ebf0f6;
 }
-#mainMenu .menuItem {
+#overviewLayout .mainMenu .menuItem {
     margin-right: 20px;
 }
 
@@ -191,41 +195,41 @@ h1#title {
 /**
  * VERTICAL NAVIGATION
  */
-#nav {
+.nav {
     width: 212px;
     height: 100%;
     background: #192f48;
     border-right: 4px solid #132436;
 }
-#nav div#app-title {
+.nav .app-title {
     color: #8696a2;
     padding: 11px 10px 11px 77px;
     background: url("../../images/payroll/nav-logo-intuit.png") no-repeat 11px 9px;
     font-size: 18px;
 }
-#nav ul {
+.nav ul {
     margin: 0;
     padding: 0;
 }
-#nav ul li {
+.nav ul li {
     cursor: pointer;
     color: white;
     padding: 15px 10px 15px 60px;
 }
-#nav ul li.selected {
+.nav ul li.selected {
     background-color: #1899cd;
 }
-#nav ul li.employees {
+.nav ul li.employees {
     background-image: url('../../images/payroll/employee-icon.png');
     background-repeat: no-repeat;
     background-position: 20px 12px;
 }
-#nav ul li.paychecks {
+.nav ul li.paychecks {
     background-image: url('../../images/payroll/paychecks-icon.png');
     background-repeat: no-repeat;
     background-position: 20px 12px;
 }
-#nav ul li.taxes {
+.nav ul li.taxes {
     background-image: url('../../images/payroll/taxes-icon.png');
     background-repeat: no-repeat;
     background-position: 20px 12px;
@@ -234,24 +238,24 @@ h1#title {
 /**
  * DATA SECTION - typically with a table
  */
-#data table {
+.data table {
     width: 100%;
 }
-#data table th,td {
+.data table th,td {
     text-align: left;
     padding: 10px 20px;
 }
-#data table th {
+.data table th {
     background-color: #e4e9f4;
     color: #8faabf;
     text-transform: capitalize;
     font-variant: small-caps;
     border-right: 1px dotted;
 }
-#data table th:last-child {
+.data table th:last-child {
     border-right: 0;
 }
-#data table td {
+.data table td {
     border-bottom: 1px solid #d3d8e0;
 }
 

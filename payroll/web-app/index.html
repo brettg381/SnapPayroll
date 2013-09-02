@@ -12,46 +12,65 @@
     <link rel="stylesheet" href="css/payroll/site.css">
 </head>
 <body>
-    <div id="main-layout" class="frameLayout harmony" style="display:none;">
-    <div id="west">
-        <div id="nav">
-            <div id="app-title">Easy Paychecks</div>
-            <ul>
-                <li id="navPaychecks" class="paychecks selected">Paychecks</li>
-                <li id="navEmployees" class="employees">Employees</li>
-            </ul>
-        </div>
-    </div>
-    <div id="north">
-        <div id="mainMenu">
-            <a href="" class="right menuItem"><img src="images/payroll/help_symbol.png" alt="Help"></a>
-            <div id="userid" class="right menuItem"></div>
-            <!-- TODO login items go here -->
-        </div>
-    </div>
-    <div id="center">
-        <h1 id="title">Paychecks</h1>
-        <div id="insight">
-            <img src="images/payroll/payroll-insight-mock.png"/>
-            <div id="call-to-action">
-                <button id="calculateCheckButton" class="button primary">Calculate New Check</button>
+    <div id="overviewLayout" class="frameLayout harmony" style="display:none;">
+        <div class="west">
+            <div class="nav">
+                <div class="app-title">Easy Paychecks</div>
+                <ul>
+                    <li class="paychecks selected">Paychecks</li>
+                    <li class="employees">Employees</li>
+                </ul>
             </div>
         </div>
-        <div id="data">
-            <table id="paycheckTable">
-                <thead>
-                    <tr>
-                        <th>Employee</th>
-                        <th>Pay Date</th>
-                        <th>Gross Pay</th>
-                        <th>Net Pay</th>
-                    </tr>
-                </thead>
-                <tbody id="paychecks">
-                </tbody>
-            </table>
+        <div class="north">
+            <div class="mainMenu">
+                <a href="" class="right menuItem"><img src="images/payroll/help_symbol.png" alt="Help"></a>
+                <div class="userid" class="right menuItem"></div>
+            </div>
         </div>
-    </div>
+        <div class="center">
+            <div id="paychecksOverview">
+                <h1 class="title">Paychecks</h1>
+                <div class="insight">
+                    <img src="images/payroll/payroll-insight-mock.png"/>
+                    <div class="call-to-action">
+                        <button id="calculateCheckButton" class="button primary">Calculate New Check</button>
+                    </div>
+                </div>
+                <div class="data">
+                    <table id="paycheckTable">
+                        <thead>
+                            <tr>
+                                <th>Employee</th>
+                                <th>Pay Date</th>
+                                <th>Gross Pay</th>
+                                <th>Net Pay</th>
+                            </tr>
+                        </thead>
+                        <tbody id="paychecks">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="employeesOverview" class="inactive">
+                <h1 class="title">Employees</h1>
+                <div class="data">
+                    <table id="employeesTable">
+                        <thead>
+                        <tr>
+                            <th>Employee</th>
+                            <th>Pay Type</th>
+                            <th>Gross Rate</th>
+                            <th>Checks</th>
+                            <th>Total 2013 Net Pay</th>
+                        </tr>
+                        </thead>
+                        <tbody id="employees">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="action-layout" class="frameLayout harmony">
         <header class="trowser">
@@ -437,7 +456,7 @@
         $('#saveCheckButton').on('click', function () {
             if (app.currentUser != null) {
                 saveCurrentCheck();
-                $('#main-layout').css('display', 'inline');
+                $('#paycheckOverviewLayout').css('display', 'inline');
                 $('#action-layout').hide('slide', {'direction': 'right'}, 400, function() {
                 });
             } else {
@@ -455,7 +474,7 @@
             saveCurrentCheck();
             // transfer to the overview
             $('#signupModal').fadeOut(200);
-            $('#main-layout').css('display', 'inline');
+            $('#overviewLayout').css('display', 'inline');
             $('#action-layout').hide('slide', {'direction': 'right'}, 400, function() {
             });
         });
@@ -463,17 +482,23 @@
             $('#action-layout').show('slide', {'direction': 'right'}, 400, function() {
             });
         });
-        $('#navEmployees').on('click', function() {
-            $('#nav li').each(function() {
+        $('.nav li').on('click', function() {
+            if ($(this).hasClass('selected')) {
+                return;
+            }
+            $('.nav li').each(function() {
                 $(this).toggleClass('selected');
             });
-            // switch to employee layout
-        });
-        $('#navPaychecks').on('click', function() {
-            $('#nav li').each(function() {
-                $(this).toggleClass('selected');
-            });
-            // switch to paycheck layout
+            switch ($(this).html()) {
+                case 'Paychecks':
+                    $('#paychecksOverview').toggleClass('inactive');
+                    $('#employeesOverview').toggleClass('inactive');
+                    break;
+                case 'Employees':
+                    $('#employeesOverview').toggleClass('inactive');
+                    $('#paychecksOverview').toggleClass('inactive');
+                    break;
+            };
         });
     </script>
 </body>
