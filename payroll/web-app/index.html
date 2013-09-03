@@ -12,7 +12,185 @@
     <link rel="stylesheet" href="css/payroll/site.css">
 </head>
 <body>
-    <div id="overviewLayout" class="frameLayout harmony" style="display:none;">
+    <div id="landingLayout" class="frameLayout harmony">
+        <div class="row-fluid">
+            <div class="offset1 span6">
+                <div class="invisibleHeader">
+                    <img class="logo" src="images/payroll/nav-logo-intuit.png"/>
+                    <span>Easy Paychecks</span>
+                </div>
+                <div id="landingCalcFormWrapper">
+                    <div id="landingCalcForm">
+                        <h1>Let's calculate a new paycheck!</h1>
+                        <form class="form-horizontal" method="post" action=".">
+                            <div class="accordion-group">
+                                <div class="control-group">
+                                    <label class="control-label" for="inputState">State</label>
+                                    <div class="controls">
+                                        <select id="ladingInputState" class="input-medium">
+                                            <option>California</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--------------------->
+                            <!-- PAY INFORMATION -->
+                            <div id="landingAccordion" class="accordion">
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" href="#landingPayInformationSection" data-parent="#landingAccordion">
+                                            <h4 class="form_title arrow-right">Pay Information </h4>
+                                        </a>
+                                    </div>
+                                    <div id="landingPayInformationSection" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="landingHoursWorked">Hours Worked</label>
+                                            <div class="controls">
+                                                <input type="text" class="input-small" id="landingHoursWorked" placeholder="0">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landingPayRate">Pay Rate</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" id="landingPayRate" class="input-small" placeholder="0.00">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landingPayDate">Pay Date</label>
+                                            <div class="controls">
+                                                <input type="text" class="input-small" id="landingPayDate" placeholder="08/15/2013">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landingPayPeriod">Pay Period</label>
+                                            <div class="controls">
+                                                <select id="landingPayPeriod" class="input-medium">
+                                                    <option>Weekly</option>
+                                                    <option>Bi-weekly</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landingPayType">Pay Type</label>
+                                            <div class="controls">
+                                                <select id="landingPayType" class="input-medium">
+                                                    <option>Hourly</option>
+                                                    <option>Salary</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--------------------------->
+                                <!-- FEDERAL WITHHOLDINGS --->
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" href="#landingFederalWithHoldingsSection" data-parent="#landingAccordion">
+                                            <h4 class="form_title arrow-right">Federal Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="landingFederalWithHoldingsSection" class="accordion-body collapse">
+                                        <span class="info">Enter the info from the employee completed W4 Form. If you don't have the employee's W4 yet, don't worry, we'll fill in the safest tax rates for you.</span>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landingFedFilingStatus">Filing Status</label>
+                                            <div class="controls">
+                                                <select id="landingFedFilingStatus">
+                                                    <option value="Single">Single</option>
+                                                    <option value="Married">Married</option>
+                                                    <option value="Single">Married but Single Rate</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landingFedAllowances">Number of Allowances</label>
+                                            <div class="controls">
+                                                <input type="text" class="input-mini" id="landingFedAllowances" placeholder="0">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landingFedAdditionalWithheld">Additional</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" id="landingFedAdditionalWithheld" class="input-small" placeholder="0.00">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!------------------------>
+                                <!-- STATE WITHHOLDINGS -->
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" href="#landingStateWithHoldingsSection" data-parent="#landingAccordion">
+                                            <h4 class="form_title arrow-right">California State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="landingStateWithHoldingsSection" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="landingStateFilingStatus">Filing Status</label>
+                                            <div class="controls">
+                                                <select id="landingStateFilingStatus">
+                                                    <option value="SingleOrDualIncome">Single/Married (2+ incomes)</option>
+                                                    <option value="MarriedOneIncome">Married (1 income)</option>
+                                                    <option value="HeadOfHousehold">Head of Household</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landingStateAllowances">Number of Allowances</label>
+                                            <div class="controls">
+                                                <input type="text" class="input-mini" id="landingStateAllowances" placeholder="0">
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landingStateAdditionalWithheld">Additional</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" id="landingStateAdditionalWithheld" class="input-small" placeholder="0.00">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <button id="landingCalculateButton" class="button primary">Calculate Check</button>
+                    </div>
+                </div>
+            </div>
+            <div class="span4">
+                <div id="landingInfoWrapper">
+                    <div id="landingControls">
+                        <span>Sign Up</span>
+                        <span>Log In</span>
+                    </div>
+                    <div id="landingInfo">
+                        <h3>Calculate paychecks for FREE!</h3>
+                        <div class="landingInfoItem">
+                            <img src="images/payroll/taxes-light.png"/>
+                            <span><b>Get accurate calculations</b> based on up-to-date tax rates</span>
+                        </div>
+                        <div class="landingInfoItem">
+                            <img src="images/payroll/history-light.png"/>
+                            <span><b>Simplify taxes and accounting</b> by saving your check history</span>
+                        </div>
+                        <div class="landingInfoItem">
+                            <img src="images/payroll/paychecks-light.png"/>
+                            <span><b>Calculate future checks faster</b> with saved employee details</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overviewLayout" class="frameLayout harmony inactive">
         <div class="west">
             <div class="nav">
                 <div class="app-title">Easy Paychecks</div>
@@ -23,9 +201,9 @@
             </div>
         </div>
         <div class="north">
-            <div class="mainMenu">
+            <div id="mainMenu">
                 <a href="" class="right menuItem"><img src="images/payroll/help_symbol.png" alt="Help"></a>
-                <div class="userid" class="right menuItem"></div>
+                <div class="userid right menuItem"></div>
             </div>
         </div>
         <div class="center">
@@ -72,7 +250,7 @@
             </div>
         </div>
     </div>
-    <div id="action-layout" class="frameLayout harmony">
+    <div id="action-layout" class="frameLayout harmony inactive">
         <header class="trowser paycheckInput">
             <div class="title">Calculate Paycheck</div>
             <div class="actions">
@@ -620,28 +798,11 @@
     <script type="text/javascript" src="js/libs/backbone.marionette/underscore.js"></script>
     <script type="text/javascript" src="js/libs/backbone.marionette/backbone.js"></script>
     <script type="text/javascript" src="http://www.myersdaily.org/joseph/javascript/md5.js"></script>
-<!-- <script type="text/javascript" src="js/backbone.localStorage-min.js"></script> -->
-<!-- <script src="js/libs/backbone.marionette/json2"/> -->
-<!-- <script src="js/libs/backbone.marionette/backbone.marionette"/> -->
-<!-- <script src="js/libs/backbone.marionette/backbone.babysitter"/> -->
-<!-- <script src="js/libs/backbone.marionette/backbone.wreqr"/> -->
 <!-- CUSTOM -->
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/calculate.js"></script>
     <script type="text/javascript" src="js/addee.js"></script>
     <script type="text/javascript">
-        // reads data out of the paycheck display form and adds an employee object
-        var saveCurrentEmployee = function() {
-            var payRate = '$' + parseFloat($('#payRate').val()).toFixed(2) + '/hr';
-            var ee = new app.Employee({
-                name : $('#inputEmployee').val(),
-                payType: $('#payType').val(),
-                payRate: payRate,
-                numChecks: 1,
-                netPay: $('#netPay').html()
-            });
-            app.employees.add(ee);
-        }
         // reads data out of the paycheck display form and adds a paycheck object
         var saveCurrentCheck = function() {
             var payDate = (latestCalculatedData == null) ? formatDate(new Date()) : unformatPayDate(latestCalculatedData.parsedInput.payDate);
@@ -654,15 +815,23 @@
             });
             app.paychecks.add(check);
         };
+        $('#landingCalculateButton').on('click', function() {
+            // fill in the regular paycheck form
+            // ...
+            // call calculate
+            // ...
+            $('#action-layout').show();
+            $('#landingLayout').hide('slide', {'direction': 'right'}, 400);
+        });
         $('.accordion').on('show hide', function (evt) {
             $(evt.target).siblings('.accordion-heading').find('.accordion-toggle h4').toggleClass('arrow-right arrow-down');
         });
         $('#saveCheckButton').on('click', function () {
             if (app.currentUser != null) {
                 saveCurrentCheck();
+                saveEmployeeFromPaycheckForm()
                 $('#paycheckOverviewLayout').css('display', 'inline');
-                $('#action-layout').hide('slide', {'direction': 'right'}, 400, function() {
-                });
+                $('#action-layout').hide('slide', {'direction': 'right'}, 400);
             } else {
                 $('#signupModal').fadeIn(200);
             }
@@ -676,7 +845,7 @@
             app.currentUser = new app.User({email: $('#signupEmail').val()});
             app.userView.render();
             saveCurrentCheck();
-            saveCurrentEmployee();
+            saveEmployeeFromPaycheckForm();
             // transfer to the overview
             $('#signupModal').fadeOut(200);
             $('#overviewLayout').css('display', 'inline');
@@ -712,7 +881,7 @@
             $('#action-layout').hide('slide', {'direction': 'right'}, 400);
         });
         $('#finishAddEmployeeButton').on('click', function() {
-            addEmployeeFromForm();
+            saveEmployeeFromEmployeeForm();
             $('#action-layout').hide('slide', {'direction': 'right'}, 400);
         });
         $('.nav li').on('click', function() {

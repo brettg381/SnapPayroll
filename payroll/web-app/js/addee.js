@@ -13,7 +13,7 @@ var getAbbreviation = function(name) {
     return parts[0].substring(0, 1) + parts[parts.length - 1].substring(0, 1);
 }
 
-var addEmployeeFromForm = function() {
+var saveEmployeeFromEmployeeForm = function() {
     var name = $('#eeInputName').val();
     var ee = new app.Employee({
         name: name,
@@ -31,6 +31,28 @@ var addEmployeeFromForm = function() {
         stateAllowances: parseInt($('#eeInputStateAllowances').val()),
         stateAdditionalWithheld: parseFloat($('#eeInputStateAdditionalWithheld').val()),
         numChecks: 0
+    });
+    app.employees.add(ee);
+}
+
+var saveEmployeeFromPaycheckForm = function() {
+    var name = $('#inputEmployee').val();
+    name = (name == '') ? 'Employee 1' : name;
+    var ee = new app.Employee({
+        name: name,
+        abbr: getAbbreviation(name),
+        state: $('#inputState').val(),
+        payRate: parseFloat($('#payRate').val()),
+        payPeriod: $('#payPeriod').val(),
+        payType: $('#payType').val(),
+        fedFilingStatus: $('#fedFilingStatus').val(),
+        fedAllowances: parseInt($('#fedAllowances').val()),
+        fedAdditionalWithheld: parseFloat($('#fedAdditionalWithheld').val()),
+        stateFilingStatus: $('#stateFilingStatus').val(),
+        stateAllowances: parseInt($('#stateAllowances').val()),
+        stateAdditionalWithheld: parseFloat($('#stateAdditionalWithheld').val()),
+        numChecks: 1,
+        netPay: parseFloat($('#netPay').html().substring(1))
     });
     app.employees.add(ee);
 }

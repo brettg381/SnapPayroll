@@ -56,6 +56,126 @@ h4 {
     bottom: 0;
     padding: 40px 0 55px 0;
 }
+#landingLayout {
+    background: #192f47;
+    padding: 70px 40px;
+    z-index: 30;
+}
+
+/**
+ * LANDING PAGE
+ */
+#landingLayout .invisibleHeader {
+    color: #8997a5;
+    vertical-align: middle;
+}
+#landingLayout .invisibleHeader img.logo {
+    width: 114px;
+    height: 36px;
+    float: left;
+}
+#landingLayout .invisibleHeader span {
+    font-size: 30px;
+    line-height: 47px;
+    display: inline-block;
+    margin-left: 20px;
+}
+#landingCalcFormWrapper {
+    background: white;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+#landingInfoWrapper {
+    overflow: hidden;
+    width: 382px;
+}
+#landingCalcForm {
+    margin: 20px 35px;
+}
+#landingCalcForm label {
+    font-weight: 600;
+}
+#landingCalcForm h1 {
+    font-size: 24px;
+}
+#landingLayout form {
+    margin-top: 20px;
+}
+#landingLayout form .accordion-group {
+    border: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    border-bottom: 1px solid lightgray;
+}
+#landingLayout form .accordion-heading {
+}
+#landingLayout form .accordion-group .info {
+    display: block;
+    padding: 0 25px 20px;
+}
+#landingLayout form .accordion-heading .form_help {
+    float: right;
+    margin: 15px 20px 0 0;
+}
+#landingLayout form .accordion-heading .accordion-toggle {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+#landingLayout form .accordion-heading .accordion-toggle h4 {
+    padding: 0 20px;
+}
+#landingLayout form .accordion-heading .accordion-toggle h4.arrow-down {
+    background: url("../../images/payroll/arrow-down.png") no-repeat top left;
+}
+#landingLayout form .accordion-heading .accordion-toggle h4.arrow-right {
+    background: url("../../images/payroll/arrow-right.png") no-repeat top left;
+}
+#landingLayout form .accordion-heading .accordion-toggle h4 small {
+    font-style: italic;
+    margin-left: 5px;
+}
+#landingLayout button {
+    display: block;
+    margin: 40px auto;
+}
+#landingControls {
+    margin-right: 40px;
+}
+#landingControls span {
+    display: block;
+    color: #8997a5;
+    float: right;
+    margin-left: 30px;
+    font-size: 15px;
+    line-height: 55px;
+    cursor: pointer;
+}
+#landingInfo {
+    margin: 90px 0 0 50px;
+}
+#landingInfo h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+#landingInfo .landingInfoItem {
+    color: #8997a5;
+    padding-top: 30px;
+    padding-right: 45px;
+}
+#landingInfo .landingInfoItem img {
+    float: left;
+    display: block;
+    clear: both;
+}
+#landingInfo .landingInfoItem span {
+    display: block;
+    padding-left: 65px;
+}
+
 /**
  * SECTIONS
  */
@@ -131,12 +251,12 @@ h4 {
 /**
  * MAIN MENU
  */
-#overviewLayout .mainMenu {
+#overviewLayout #mainMenu {
     height: 22px;
     padding: 9px 0;
     background-color: #ebf0f6;
 }
-#overviewLayout .mainMenu .menuItem {
+#overviewLayout #mainMenu .menuItem {
     margin-right: 20px;
 }
 

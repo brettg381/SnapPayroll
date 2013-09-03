@@ -67,7 +67,7 @@ app.EmployeesCollection = Backbone.Collection.extend({
 
 // UserView
 app.UserView = Backbone.View.extend({
-    el: '#userid',
+    el: '#mainMenu .userid',
     initialize: function() {
         var source = $('#userTemplate').html();
         this.template = Handlebars.compile(source);
@@ -116,15 +116,3 @@ app.employees = new app.EmployeesCollection();
 app.employeesView = new app.EmployeesView({collection: app.employees});
 app.userView = new app.UserView();
 app.currentUser = null;
-
-// =====================
-// TESTING
-//var paycheck = new app.Paycheck({
-//    "employee": 'Brett Groshong',
-//    "grossPay": 1000.00,
-//    "netPay": 123.45
-//});
-//
-//$(document).ready(function() {
-//    app.paychecks.add(paycheck);
-//});
