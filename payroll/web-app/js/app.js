@@ -42,7 +42,7 @@ app.Paycheck = Backbone.Model.extend({
 // Employee
 app.Employee = Backbone.Model.extend({
     defaults: {
-        employeeName: 'Employee 1',
+        name: 'Employee 1',
         payType: 'Hourly',
         payRate: 0.00,
         numChecks: 0,

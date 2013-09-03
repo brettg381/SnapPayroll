@@ -378,6 +378,7 @@ h4 {
  * BADGE
  */
 #badge {
+    position: relative;
     overflow: hidden;
     width: 306px;
     height: 430px;
@@ -385,21 +386,26 @@ h4 {
     background: url('../../images/badge.png') no-repeat;
     background-size: contain;
 }
-#badge #badgeNameAbreviation {
+#badge img {
+    position: absolute;
+    left: 82px;
+    top: 147px;
+}
+#badge #badgeNameAbbreviation {
     margin: 165px auto 0;
     text-align: center;
 }
-#badge #badgeNameAbreviation span {
+#badge #badgeNameAbbreviation span {
     font-size: 80px;
     line-height: 100px;
     color: #8faabf;
-    text-transform: uppercase;
 }
 #badge #badgeName {
     margin: 90px auto 0;
     text-align: center;
 }
 #badge #badgeName span {
+    color: #646464;
     font-size: 22px;
     font-weight: bold;
 }

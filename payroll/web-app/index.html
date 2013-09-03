@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div id="employeesOverview" class="inactive">
-                <h1 class="title">Employees<button class="button primary right">Add new employee</button></h1>
+                <h1 class="title">Employees<button id="addEmployeeButton" class="button primary right">Add new employee</button></h1>
                 <div class="data">
                     <table id="employeesTable">
                         <thead>
@@ -88,7 +88,7 @@
         <div id="middle">
             <div id="left-wrapper">
                 <div id="left">
-                    <div class ="paycheckInput">
+                    <div class="paycheckInput">
                         <h1>Let's calculate a new paycheck!</h1>
                         <form class="form-horizontal" id="calculator-form" method="post" action=".">
                             <div class="accordion-group">
@@ -292,6 +292,12 @@
                                     <label class="control-label" for="eeInputName">Employee name</label>
                                     <div class="controls">
                                         <input type="text" id="eeInputName" placeholder="Employee 1">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="eeInputName">Employee email</label>
+                                    <div class="controls">
+                                        <input type="text" id="eeInputEmail" placeholder="example@example.com">
                                     </div>
                                 </div>
                                 <div class="control-group">
@@ -520,7 +526,8 @@
                 </div>
                 <div class="employeeInput inactive">
                     <div id="badge">
-                        <div id="badgeNameAbreviation"><span>EN</span></div>
+                        <img id="badgeImage" src="images/mock-gravatar.png"/>
+                        <div id="badgeNameAbbreviation"><span>EN</span></div>
                         <div id="badgeName"><span>Employee 1</span></div>
                     </div>
                 </div>
@@ -532,9 +539,9 @@
             </div>
             <div class="sticky-footer employeeInput inactive">
                 <div class="dark left">
-                    <button id="addEmployeeButton inactive" class="button">Cancel</button>
+                    <button id="cancelAddEmployeeButton" class="button">Cancel</button>
                 </div>
-                <button id="cancelAddEmployeeButton" class="button primary right">Add</button>
+                <button id="finishAddEmployeeButton" class="button primary right">Add</button>
             </div>
         </div>
         <!-- MODALS -->
@@ -596,7 +603,7 @@
         <script type="text/template" id="employeesTemplate">
             {{#each []}}
             <tr>
-                <td>{{this.employeeName}}</td>
+                <td>{{this.name}}</td>
                 <td>{{this.payType}}</td>
                 <td>{{this.payRate}}</td>
                 <td>{{this.numChecks}}</td>
@@ -612,6 +619,7 @@
     <script type="text/javascript" src="js/handlebars.js"></script>
     <script type="text/javascript" src="js/libs/backbone.marionette/underscore.js"></script>
     <script type="text/javascript" src="js/libs/backbone.marionette/backbone.js"></script>
+    <script type="text/javascript" src="http://www.myersdaily.org/joseph/javascript/md5.js"></script>
 <!-- <script type="text/javascript" src="js/backbone.localStorage-min.js"></script> -->
 <!-- <script src="js/libs/backbone.marionette/json2"/> -->
 <!-- <script src="js/libs/backbone.marionette/backbone.marionette"/> -->
@@ -620,12 +628,13 @@
 <!-- CUSTOM -->
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/calculate.js"></script>
+    <script type="text/javascript" src="js/addee.js"></script>
     <script type="text/javascript">
         // reads data out of the paycheck display form and adds an employee object
         var saveCurrentEmployee = function() {
             var payRate = '$' + parseFloat($('#payRate').val()).toFixed(2) + '/hr';
             var ee = new app.Employee({
-                employeeName : $('#inputEmployee').val(),
+                name : $('#inputEmployee').val(),
                 payType: $('#payType').val(),
                 payRate: payRate,
                 numChecks: 1,
@@ -671,12 +680,40 @@
             // transfer to the overview
             $('#signupModal').fadeOut(200);
             $('#overviewLayout').css('display', 'inline');
-            $('#action-layout').hide('slide', {'direction': 'right'}, 400, function() {
+            $('#action-layout').hide('slide', {'direction': 'right'}, 400);
+        });
+        $('#addEmployeeButton').on('click', function() {
+            $('#action-layout .paycheckInput').each(function() {
+                if (!$(this).hasClass('inactive')) {
+                    $(this).addClass('inactive');
+                }
             });
+            $('#action-layout .employeeInput').each(function() {
+                if ($(this).hasClass('inactive')) {
+                    $(this).removeClass('inactive');
+                }
+            });
+            $('#action-layout').show('slide', {'direction': 'right'}, 400);
         });
         $('#calculateCheckButton').on('click', function() {
-            $('#action-layout').show('slide', {'direction': 'right'}, 400, function() {
+            $('#action-layout .paycheckInput').each(function() {
+                if ($(this).hasClass('inactive')) {
+                    $(this).removeClass('inactive');
+                }
             });
+            $('#action-layout .employeeInput').each(function() {
+                if (!$(this).hasClass('inactive')) {
+                    $(this).addClass('inactive');
+                }
+            });
+            $('#action-layout').show('slide', {'direction': 'right'}, 400);
+        });
+        $('#cancelAddEmployeeButton').on('click', function() {
+            $('#action-layout').hide('slide', {'direction': 'right'}, 400);
+        });
+        $('#finishAddEmployeeButton').on('click', function() {
+            addEmployeeFromForm();
+            $('#action-layout').hide('slide', {'direction': 'right'}, 400);
         });
         $('.nav li').on('click', function() {
             if ($(this).hasClass('selected')) {
