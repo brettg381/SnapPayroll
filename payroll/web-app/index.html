@@ -22,6 +22,7 @@
                 <div id="landingCalcFormWrapper">
                     <div id="landingCalcForm">
                         <h1>Let's calculate a new paycheck!</h1>
+                        <img id="startPointer" src="images/landing-arrow.png"/>
                         <form class="form-horizontal" method="post" action=".">
                             <div class="accordion-group">
                                 <div class="control-group">
@@ -801,6 +802,7 @@
 <!-- CUSTOM -->
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/calculate.js"></script>
+    <script type="text/javascript" src="js/landing.js"></script>
     <script type="text/javascript" src="js/addee.js"></script>
     <script type="text/javascript">
         // reads data out of the paycheck display form and adds a paycheck object
@@ -816,10 +818,8 @@
             app.paychecks.add(check);
         };
         $('#landingCalculateButton').on('click', function() {
-            // fill in the regular paycheck form
-            // ...
-            // call calculate
-            // ...
+            transferLandingData();
+            calculate();
             $('#action-layout').show();
             $('#landingLayout').hide('slide', {'direction': 'right'}, 400);
         });
