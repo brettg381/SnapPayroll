@@ -111,7 +111,7 @@ var calculate = function() {
 };
 
 // EVENTS FOR THE FORM
-$('#inputEmployee').keyup(function() {
+$('#inputEmployee').bind('change paste keyup', function() {
     $('#recipient').html($('#inputEmployee').val());
 });
 $('#inputState').change(function() {

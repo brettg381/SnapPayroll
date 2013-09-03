@@ -805,6 +805,15 @@
     <script type="text/javascript" src="js/landing.js"></script>
     <script type="text/javascript" src="js/addee.js"></script>
     <script type="text/javascript">
+        $('#inputEmployee').typeahead({
+            source: function(query, process) {
+                var eeNames = [];
+                app.employees.forEach(function(model) {
+                    eeNames.push(model.get('name'));
+                });
+                process(eeNames);
+            }
+        });
         // reads data out of the paycheck display form and adds a paycheck object
         var saveCurrentCheck = function() {
             var payDate = (latestCalculatedData == null) ? formatDate(new Date()) : unformatPayDate(latestCalculatedData.parsedInput.payDate);
