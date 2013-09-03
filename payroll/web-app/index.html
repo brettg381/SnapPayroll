@@ -706,7 +706,7 @@
                 <div class="employeeInput inactive">
                     <div id="badge">
                         <img id="badgeImage" src="images/mock-gravatar.png"/>
-                        <div id="badgeNameAbbreviation"><span>EN</span></div>
+                        <div id="badgeNameAbbreviation"><span>E1</span></div>
                         <div id="badgeName"><span>Employee 1</span></div>
                     </div>
                 </div>
@@ -817,6 +817,12 @@
             });
             app.paychecks.add(check);
         };
+        var clearForms = function() {
+            $('form').each(function() {$(this).find('input[type=text]').val('')});
+            latestCalculatedData = null;
+            clearCheckDisplay();
+            clearBadge();
+        }
         $('#landingCalculateButton').on('click', function() {
             transferLandingData();
             calculate();
@@ -829,9 +835,10 @@
         $('#saveCheckButton').on('click', function () {
             if (app.currentUser != null) {
                 saveCurrentCheck();
-                saveEmployeeFromPaycheckForm()
+                saveEmployeeFromPaycheckForm();
                 $('#paycheckOverviewLayout').css('display', 'inline');
                 $('#action-layout').hide('slide', {'direction': 'right'}, 400);
+                clearForms();
             } else {
                 $('#signupModal').fadeIn(200);
             }
@@ -840,16 +847,29 @@
             $('#signupModal').fadeOut(200);
         });
         $('#signupGoButton').on('click', function () {
-            // validate form
-            // ...
+            var valid = true;
+            var emailPattern = /.+@.+\..+/;
+            if (!emailPattern.test($('#signupEmail').val())) {
+                $('#signupEmail').css('border-color', 'red');
+                valid = false;
+            } else {
+                $('#signupEmail').css('border-color', '#cccccc');
+            }
+            if ($('#signupPassword').val() == '') {
+                $('#signupPassword').css('border-color', 'red');
+                valid = false;
+            } else {
+                $('#signupPassword').css('border-color', '#cccccc');
+            }
+            if (!valid) return;
             app.currentUser = new app.User({email: $('#signupEmail').val()});
             app.userView.render();
             saveCurrentCheck();
             saveEmployeeFromPaycheckForm();
-            // transfer to the overview
             $('#signupModal').fadeOut(200);
             $('#overviewLayout').css('display', 'inline');
             $('#action-layout').hide('slide', {'direction': 'right'}, 400);
+            clearForms();
         });
         $('#addEmployeeButton').on('click', function() {
             $('#action-layout .paycheckInput').each(function() {
@@ -879,10 +899,12 @@
         });
         $('#cancelAddEmployeeButton').on('click', function() {
             $('#action-layout').hide('slide', {'direction': 'right'}, 400);
+            clearForms();
         });
         $('#finishAddEmployeeButton').on('click', function() {
             saveEmployeeFromEmployeeForm();
             $('#action-layout').hide('slide', {'direction': 'right'}, 400);
+            clearForms();
         });
         $('.nav li').on('click', function() {
             if ($(this).hasClass('selected')) {

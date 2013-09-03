@@ -20,16 +20,31 @@ var unformatPayDate = function(dateStr) {
 var formatPeriodsInYear = function(payDateStr) {
     return (payDateStr.toLowerCase() == 'weekly') ? 52 : 26;
 }
+var clearCheckDisplay = function() {
+    $('#recipient').html('Employee 1');
+    $('#displayGrossHourly').html('$0.00');
+    $('#displayGrossOvertime').html('$0.00');
+    $('#displayAdditionalSalary').html('$0.00');
+    $('#displayAdditionalBonus').html('$0.00');
+    $('#displayAdditionalCommission').html('$0.00');
+    $('#SocSecurity').html('-$0.00');
+    $('#CA_SDI').html('-$0.00');
+    $('#Medicare').html('-$0.00');
+    $('#FedIncome').html('-$0.00');
+    $('#CA_Income').html('-$0.00');
+    $('#amount').html('$0.00');
+    $('#netPay').html('$0.00');
+}
 var updateCheckDisplay = function(obj) {
-    var net = parseFloat(obj.parsedInput.grossPay);
+    var netPay = parseFloat(obj.parsedInput.grossPay);
     for (var i = 0; i < obj.employeeTaxes.length; i++) {
         var val = parseFloat(obj.employeeTaxes[i].amount);
-        net += val;
+        netPay += val;
         $('#' + obj.employeeTaxes[i].name).html('-$' + (val * -1));
     }
     // net
-    $('#amount').html('$' + net.toFixed(2));
-    $('#netPay').html('$' + net.toFixed(2));
+    $('#amount').html('$' + netPay.toFixed(2));
+    $('#netPay').html('$' + netPay.toFixed(2));
 }
 var calculate = function() {
     var payType, grossHourly, hoursWorked, payRate, grossPay, payAmount, commission, bonus, salary;

@@ -13,6 +13,12 @@ var getAbbreviation = function(name) {
     return parts[0].substring(0, 1) + parts[parts.length - 1].substring(0, 1);
 }
 
+var clearBadge = function() {
+    $('#badgeImage').attr('src', 'images/mock-gravatar.png');
+    $('#badgeNameAbbreviation span').html('E1');
+    $('#badgeName span').html('Employee 1');
+}
+
 var saveEmployeeFromEmployeeForm = function() {
     var name = $('#eeInputName').val();
     var ee = new app.Employee({
