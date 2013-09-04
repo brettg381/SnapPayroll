@@ -390,6 +390,41 @@ h4 {
 }
 
 /**
+ * Paycheck history table
+ */
+#paychecks td {
+    padding: 4px 20px;
+}
+div.mugshot {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid #8faabf;
+    height: 32px;
+    width: 32px;
+    margin-right: 10px;
+}
+div.namePlate {
+    margin: 3px;
+    background: #e4e9f4;
+    width: 26px;
+    height: 26px;
+}
+span.abbreviation {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    line-height: 26px;
+    font-size: 18px;
+    color: #8faabf;
+}
+div.mugshot img {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+/**
  * SAMPLE CHECK
  */
 #sample-check-wrapper {

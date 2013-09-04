@@ -771,7 +771,14 @@
         <script type="text/template" id="paychecksTemplate">
             {{#each []}}
                 <tr>
-                    <td>{{this.employee}}</td>
+                    <td>
+                        <div class="mugshot">
+                            <div class="namePlate">
+                                <span class="abbreviation">{{this.eeAbbr}}</span>
+                            </div>
+                            <img src="images/mock-gravatar-small.png"/>
+                        </div>
+                        {{this.employee}}</td>
                     <td>{{fmtDate this.payDate}}</td>
                     <td>{{fmtDollars this.grossPay}}</td>
                     <td>{{fmtDollars this.netPay}}</td>
@@ -782,7 +789,15 @@
         <script type="text/template" id="employeesTemplate">
             {{#each []}}
             <tr>
-                <td>{{this.name}}</td>
+                <td>
+                    <div class="mugshot">
+                        <div class="namePlate">
+                            <span class="abbreviation">{{this.abbr}}</span>
+                        </div>
+                        <img src="images/mock-gravatar-small.png"/>
+                    </div>
+                    {{this.name}}
+                </td>
                 <td>{{this.payType}}</td>
                 <td>{{fmtDollars this.payRate}}</td>
                 <td>{{this.numChecks}}</td>

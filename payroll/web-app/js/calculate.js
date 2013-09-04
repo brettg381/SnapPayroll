@@ -9,13 +9,6 @@ var formatPayDate = function(dateObj) {
     payDay = (payDay < 10) ? '0' + payDay : '' + payDay;
     return dateObj.getFullYear() + payMonth + payDay;
 }
-//var unformatPayDate = function(dateStr) {
-//    var year, month, day;
-//    year = dateStr.substring(0, 4);
-//    month = dateStr.substring(4, 6);
-//    day = dateStr.substring(6);
-//    return month + '/' + day + '/' + year;
-//}
 var formatPeriodsInYear = function(payDateStr) {
     return (payDateStr.toLowerCase() == 'weekly') ? 52 : 26;
 }
@@ -48,6 +41,7 @@ var updateCheckDisplay = function(obj) {
 
 var savePaycheckFromPaycheckForm = function() {
     var ee = $('#inputEmployee').val();
+    var ee = (ee == '') ? 'Employee 1' : ee
     var payPeriod = $('#payPeriod').val();
     var hoursWorked = parseInt($('#hoursWorked').val());
     var payRate = parseFloat($('#payRate').val());
@@ -58,7 +52,8 @@ var savePaycheckFromPaycheckForm = function() {
     var grossPay = payRate * hoursWorked + payRate * 1.5 * otHoursWorked + additionalBonus + additionalSalary + additionalCommission;
     var paycheck = new app.Paycheck({
         "user": (app.currentUser == null) ? 'Unknown' : app.currentUser.email,
-        "employee": (ee == '') ? 'Employee 1' : ee,
+        "employee": ee,
+        "eeAbbr": getAbbreviation(ee),
         "state": $('#inputState').val(),
         "hoursWorked": hoursWorked,
         "payRate": payRate,
