@@ -76,11 +76,16 @@ var savePaycheckFromPaycheckForm = function() {
     app.paychecks.add(paycheck);
 }
 
+var delayedCalculate = function() {
+    if (app.calcTimeout != null) {
+        clearTimeout(app.calcTimeout);
+    }
+    app.calcTimeout = setTimeout(calculate, 200);
+}
 var calculate = function() {
     var payType, grossHourly, hoursWorked, payRate, grossPay, payAmount, commission, bonus, salary;
     var overtimeHoursWorked, payDate, grossOvertime;
     payType = $('#payType').val();
-    payDate = $('#payDate').val()
     if (payType.toLowerCase() == 'hourly') {
         hoursWorked = $('#hoursWorked').val();
         payRate = $('#payRate').val();
@@ -108,6 +113,7 @@ var calculate = function() {
         if (!payAmount) return;
         payAmount = parseFloat(payAmount);
     }
+    payDate = $('#payDate').val();
     var obj = {
         "grossPay": grossPay,
         "grossQTD": 0.0,
@@ -142,55 +148,55 @@ var calculate = function() {
 };
 
 // EVENTS FOR THE FORM
-$('#inputEmployee').bind('change paste keyup', function() {
+$('#inputEmployee').bind('change paste keyup blur', function() {
     $('#recipient').html($('#inputEmployee').val());
 });
 $('#inputState').change(function() {
     console.log('inputState change');
 });
-$('#payDate').blur(function() {
-    calculate();
+$('#payDate').bind('change paste keyup blur', function() {
+    delayedCalculate();
 });
-$('#payPeriod').change(function() {
-    calculate();
+$('#payPeriod').bind('change paste keyup blur', function() {
+    delayedCalculate();
 });
-$('#payType').change(function() {
-    calculate();
+$('#payType').bind('change paste keyup blur', function() {
+    delayedCalculate();
 });
-$('#hoursWorked').blur(function() {
-    calculate();
+$('#hoursWorked').bind('change paste keyup blur', function() {
+    delayedCalculate();
 });
-$('#payRate').blur(function() {
-    calculate();
+$('#payRate').bind('change paste keyup blur', function() {
+    delayedCalculate();
 });
-$('#overtimeHoursWorked').blur(function() {
-    calculate();
+$('#overtimeHoursWorked').bind('change paste keyup blur', function() {
+    delayedCalculate();
 });
-$('#salary').blur(function() {
-    calculate();
+$('#salary').bind('change paste keyup blur', function() {
+    delayedCalculate();
 });
-$('#bonus').blur(function() {
-    calculate();
+$('#bonus').bind('change paste keyup blur', function() {
+    delayedCalculate();
 });
-$('#commission').blur(function() {
-    calculate();
+$('#commission').bind('change paste keyup blur', function() {
+    delayedCalculate();
 });
-$('#fedFilingStatus').change(function() {
-    calculate();
+$('#fedFilingStatus').bind('change paste keyup blur', function() {
+    delayedCalculate();
 });
-$('#fedAllowances').blur(function() {
-    calculate();
+$('#fedAllowances').bind('change paste keyup blur', function() {
+    delayedCalculate();
 });
-$('#fedAdditionalWithheld').blur(function() {
-    calculate();
+$('#fedAdditionalWithheld').bind('change paste keyup blur', function() {
+    delayedCalculate();
 });
-$('#stateFilingStatus').change(function() {
-    calculate();
+$('#stateFilingStatus').bind('change paste keyup blur', function() {
+    delayedCalculate();
 });
-$('#stateAllowances').blur(function() {
-    calculate();
+$('#stateAllowances').bind('change paste keyup blur', function() {
+    delayedCalculate();
 });
-$('#stateAdditionalWithheld').blur(function() {
-    calculate();
+$('#stateAdditionalWithheld').bind('change paste keyup blur', function() {
+    delayedCalculate();
 });
 
