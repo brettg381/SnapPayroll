@@ -772,9 +772,9 @@
             {{#each []}}
                 <tr>
                     <td>{{this.employee}}</td>
-                    <td>{{this.payDate}}</td>
-                    <td>{{this.grossPay}}</td>
-                    <td>{{this.netPay}}</td>
+                    <td>{{fmtDate this.payDate}}</td>
+                    <td>{{fmtDollars this.grossPay}}</td>
+                    <td>{{fmtDollars this.netPay}}</td>
                 </tr>
             {{/each}}
         </script>
@@ -784,9 +784,9 @@
             <tr>
                 <td>{{this.name}}</td>
                 <td>{{this.payType}}</td>
-                <td>{{this.payRate}}</td>
+                <td>{{fmtDollars this.payRate}}</td>
                 <td>{{this.numChecks}}</td>
-                <td>{{this.netPay}}</td>
+                <td>{{fmtDollars this.netPay}}</td>
             </tr>
             {{/each}}
         </script>
@@ -815,21 +815,8 @@
                 process(eeNames);
             }
         });
-        // reads data out of the paycheck display form and adds a paycheck object
-        var saveCurrentCheck = function() {
-            var payDate = (latestCalculatedData == null) ? formatDate(new Date()) : unformatPayDate(latestCalculatedData.parsedInput.payDate);
-            var grossPay = (latestCalculatedData == null) ? '$0.00' : '$' + latestCalculatedData.parsedInput.grossPay.toFixed(2);
-            var check = new app.Paycheck({
-                employee: $('#recipient').html(),
-                payDate: payDate,
-                grossPay: grossPay,
-                netPay: $('#netPay').html()
-            });
-            app.paychecks.add(check);
-        };
         var clearForms = function() {
             $('form').each(function() {$(this).find('input[type=text]').val('')});
-            latestCalculatedData = null;
             clearCheckDisplay();
             clearBadge();
         }
@@ -844,7 +831,7 @@
         });
         $('#saveCheckButton').on('click', function () {
             if (app.currentUser != null) {
-                saveCurrentCheck();
+                savePaycheckFromPaycheckForm();
                 saveEmployeeFromPaycheckForm();
                 $('#paycheckOverviewLayout').css('display', 'inline');
                 $('#action-layout').hide('slide', {'direction': 'right'}, 400);
@@ -874,7 +861,7 @@
             if (!valid) return;
             app.currentUser = new app.User({email: $('#signupEmail').val()});
             app.userView.render();
-            saveCurrentCheck();
+            savePaycheckFromPaycheckForm();
             saveEmployeeFromPaycheckForm();
             $('#signupModal').fadeOut(200);
             $('#overviewLayout').css('display', 'inline');

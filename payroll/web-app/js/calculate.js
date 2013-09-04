@@ -1,22 +1,21 @@
 var AC_URL =  'http://pocketpayroll-lb-QA-ssl-1602432401.us-east-1.elb.amazonaws.com/v1/usa/ca';
 var AC_API_KEY = '44F0DCC0-6D52-4BDC-95E1-9784496A177A';
 
-var formatPayDate = function(payDateStr) {
-    var dateObj, payMonth, payDay;
-    dateObj = payDateStr ? new Date(payDateStr) : new Date();
+var formatPayDate = function(dateObj) {
+    var payMonth, payDay;
     payMonth = dateObj.getMonth() + 1;
     payMonth = (payMonth < 10) ? '0' + payMonth : '' + payMonth;
     payDay = dateObj.getDate();
     payDay = (payDay < 10) ? '0' + payDay : '' + payDay;
     return dateObj.getFullYear() + payMonth + payDay;
 }
-var unformatPayDate = function(dateStr) {
-    var year, month, day;
-    year = dateStr.substring(0, 4);
-    month = dateStr.substring(4, 6);
-    day = dateStr.substring(6);
-    return month + '/' + day + '/' + year;
-}
+//var unformatPayDate = function(dateStr) {
+//    var year, month, day;
+//    year = dateStr.substring(0, 4);
+//    month = dateStr.substring(4, 6);
+//    day = dateStr.substring(6);
+//    return month + '/' + day + '/' + year;
+//}
 var formatPeriodsInYear = function(payDateStr) {
     return (payDateStr.toLowerCase() == 'weekly') ? 52 : 26;
 }
@@ -40,16 +39,53 @@ var updateCheckDisplay = function(obj) {
     for (var i = 0; i < obj.employeeTaxes.length; i++) {
         var val = parseFloat(obj.employeeTaxes[i].amount);
         netPay += val;
-        $('#' + obj.employeeTaxes[i].name).html('-$' + (val * -1));
+        $('#' + obj.employeeTaxes[i].name).html('-$' + (val * -1).toFixed(2));
     }
     // net
     $('#amount').html('$' + netPay.toFixed(2));
     $('#netPay').html('$' + netPay.toFixed(2));
 }
+
+var savePaycheckFromPaycheckForm = function() {
+    var ee = $('#inputEmployee').val();
+    var payPeriod = $('#payPeriod').val();
+    var hoursWorked = parseInt($('#hoursWorked').val());
+    var payRate = parseFloat($('#payRate').val());
+    var otHoursWorked = parseInt($('#overtimeHoursWorked').val());
+    var additionalSalary = parseFloat($('#salary').val());
+    var additionalBonus = parseFloat($('#bonus').val());
+    var additionalCommission = parseFloat($('#commission').val());
+    var grossPay = payRate * hoursWorked + payRate * 1.5 * otHoursWorked + additionalBonus + additionalSalary + additionalCommission;
+    var paycheck = new app.Paycheck({
+        "user": (app.currentUser == null) ? 'Unknown' : app.currentUser.email,
+        "employee": (ee == '') ? 'Employee 1' : ee,
+        "state": $('#inputState').val(),
+        "hoursWorked": hoursWorked,
+        "payRate": payRate,
+        "payDate": new Date($('#payDate').val()),
+        "payPeriod": payPeriod,
+        "payPeriodsInYear": payPeriod == 'Weekly' ? 52 : 26,
+        "otHoursWorked": otHoursWorked,
+        "additionalSalary": additionalSalary,
+        "additionalBonus": additionalBonus,
+        "additionalCommission": additionalCommission,
+        "grossPay": grossPay,
+        "netPay": parseFloat($('#netPay')),
+        "federalFilingStatus": $('#fedFilingStatus'),
+        "federalAdditionalWithholding": parseFloat($('#fedAdditionalWithheld')),
+        "federalExemptions": parseInt($('#fedAllowances')),
+        "stateFilingStatus": $('#stateFilingStatus'),
+        "stateExemptions": parseInt($('#stateAllowances')),
+        "stateAdditionalWithholding": parseFloat($('#stateAdditionalWithheld'))
+    });
+    app.paychecks.add(paycheck);
+}
+
 var calculate = function() {
     var payType, grossHourly, hoursWorked, payRate, grossPay, payAmount, commission, bonus, salary;
     var overtimeHoursWorked, payDate, grossOvertime;
     payType = $('#payType').val();
+    payDate = $('#payDate').val()
     if (payType.toLowerCase() == 'hourly') {
         hoursWorked = $('#hoursWorked').val();
         payRate = $('#payRate').val();
@@ -83,7 +119,7 @@ var calculate = function() {
         "grossMTD": 0.0,
         "grossYTD": 0.0,
         "periodsInYear": formatPeriodsInYear($('#payPeriod').val()),
-        "payDate": formatPayDate($('#payDate').val()),
+        "payDate": formatPayDate((payDate == '') ? new Date() : new Date(payDate)),
         "federalFilingStatus": $('#fedFilingStatus').val(),
         "federalAdditionalWithholding":$('#fedAdditionalWithheld').val(),
         "federalExemptions": $('#fedAllowances').val(),

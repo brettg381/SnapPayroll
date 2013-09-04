@@ -11,6 +11,21 @@ var formatDate = function(date) {
 };
 
 // =====================
+// TEMPLATE HELPERS
+Handlebars.registerHelper('fmtDollars', function(val) {
+    if (val > 0) {
+        return '$' + val.toFixed(2);
+    } else if (val < 0) {
+        return '-$' + val.toFixed(2);
+    }
+    return '$0.00';
+});
+Handlebars.registerHelper('fmtDate', function(val) {
+    return formatDate(val);
+});
+
+
+// =====================
 // MODELS
 
 // User
