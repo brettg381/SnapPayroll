@@ -4,10 +4,9 @@ var today = new Date();
 var latestCalculatedData = null;
 var app = app || {};
 var formatDate = function(date) {
-    var todayYearStr = date.getFullYear() + '';
     var todayMonthStr = (today.getMonth() < 10) ? '0' + (today.getMonth() + 1) : '' + (today.getMonth() + 1);
     var todayDayStr = (today.getDate() < 10) ? '0' + today.getDate() : '' + today.getDate();
-    return todayMonthStr + '/' + todayDayStr + '/' + todayYearStr;
+    return todayMonthStr + '/' + todayDayStr + '/' + date.getFullYear();
 };
 
 // =====================
@@ -45,7 +44,7 @@ app.Paycheck = Backbone.Model.extend({
         "grossMTD": 0.0,
         "grossYTD": 0.0,
         "periodsInYear": 52,
-        "payDate": formatDate(new Date()),
+        "payDate": new Date(),
         "federalFilingStatus": 'Single',
         "federalAdditionalWithholding": 0.0,
         "federalExemptions": 0,

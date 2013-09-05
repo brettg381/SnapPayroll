@@ -41,7 +41,7 @@ var updateCheckDisplay = function(obj) {
 
 var savePaycheckFromPaycheckForm = function() {
     var ee = $('#inputEmployee').val();
-    var ee = (ee == '') ? 'Employee 1' : ee
+    ee = (ee == '') ? 'Employee 1' : ee
     var payPeriod = $('#payPeriod').val();
     var hoursWorked = parseInt($('#hoursWorked').val());
     var payRate = parseFloat($('#payRate').val());
@@ -50,6 +50,7 @@ var savePaycheckFromPaycheckForm = function() {
     var additionalBonus = parseFloat($('#bonus').val());
     var additionalCommission = parseFloat($('#commission').val());
     var grossPay = payRate * hoursWorked + payRate * 1.5 * otHoursWorked + additionalBonus + additionalSalary + additionalCommission;
+    var payDateStr = $('#payDate').val();
     var paycheck = new app.Paycheck({
         "user": (app.currentUser == null) ? 'Unknown' : app.currentUser.email,
         "employee": ee,
@@ -57,7 +58,7 @@ var savePaycheckFromPaycheckForm = function() {
         "state": $('#inputState').val(),
         "hoursWorked": hoursWorked,
         "payRate": payRate,
-        "payDate": new Date($('#payDate').val()),
+        "payDate": (payDateStr == '') ? new Date() : new Date(payDateStr),
         "payPeriod": payPeriod,
         "payPeriodsInYear": payPeriod == 'Weekly' ? 52 : 26,
         "otHoursWorked": otHoursWorked,
