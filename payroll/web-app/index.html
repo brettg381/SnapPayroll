@@ -819,7 +819,7 @@
                         </div>
                         <img src="http://www.gravatar.com/avatar/{{md5 this.email}}?s=26&d=blank"/>
                     </div>
-                    <span>{{this.name}}</span>
+                    <span class="name">{{this.name}}</span>
                 </td>
                 <td>{{this.payType}}</td>
                 <td>{{fmtDollars this.payRate}}</td>
@@ -913,19 +913,10 @@
             $('#action-layout').hide('slide', {'direction': 'right'}, 400);
             clearForms();
             $('#cancelSaveCheckButton').removeClass('inactive');
+            app.userView.render();
         });
         $('#addEmployeeButton').on('click', function() {
-            $('#action-layout .paycheckInput').each(function() {
-                if (!$(this).hasClass('inactive')) {
-                    $(this).addClass('inactive');
-                }
-            });
-            $('#action-layout .employeeInput').each(function() {
-                if ($(this).hasClass('inactive')) {
-                    $(this).removeClass('inactive');
-                }
-            });
-            $('#action-layout').show('slide', {'direction': 'right'}, 400);
+            activateEmployeeDisplay("Add Employee", "Let's add a new employee!", "Add");
         });
         $('#cancelAddEmployeeButton').on('click', function() {
             $('#action-layout').hide('slide', {'direction': 'right'}, 400);

@@ -20,6 +20,9 @@ var clearBadge = function() {
 }
 var validateEmailField = function(field) {
     var val = field.val();
+    if (val == '') {
+        return true;
+    }
     var isValid = true;
     var emailPattern = /.+@.+\..+/;
     if (!emailPattern.test(val)) {
@@ -43,56 +46,117 @@ var validateEmployeeForm = function() {
 var saveEmployeeFromEmployeeForm = function() {
     if (!validateEmployeeForm()) return false;
     var name = $('#eeInputName').val();
-    var ee = new app.Employee({
+    var ee = findEmployeeByName(name);
+    if (ee == null) {
+        ee = new app.Employee();
+        app.employees.add(ee);
+    }
+    ee.set({
         name: name,
         abbr: getAbbreviation(name),
         email: $('#eeInputEmail').val(),
         state: $('#eeInputState').val(),
-        payRate: parseFloat($('#eeInputPayRate').val()),
+        payRate: toFloat($('#eeInputPayRate').val()),
         payPeriod: $('#eeInputPayPeriod').val(),
         payType: $('#eeInputPayType').val(),
         previousPay: $('#eeInputPreviousPayYes').is(':checked'),
         fedFilingStatus: $('#eeInputFedFilingStatus').val(),
-        fedAllowances: parseInt($('#eeInputFedAllowances').val()),
-        fedAdditionalWithheld: parseFloat($('#eeInputFedAdditionalWithheld').val()),
+        fedAllowances: toInt($('#eeInputFedAllowances').val()),
+        fedAdditionalWithheld: toFloat($('#eeInputFedAdditionalWithheld').val()),
         stateFilingStatus: $('#eeInputStateFilingStatus').val(),
-        stateAllowances: parseInt($('#eeInputStateAllowances').val()),
-        stateAdditionalWithheld: parseFloat($('#eeInputStateAdditionalWithheld').val()),
+        stateAllowances: toInt($('#eeInputStateAllowances').val()),
+        stateAdditionalWithheld: toFloat($('#eeInputStateAdditionalWithheld').val()),
         numChecks: 0
     });
-    app.employees.add(ee);
+    app.employeesView.render();
     return true;
+}
+var findEmployeeByName = function(name) {
+    var ee = null;
+    app.employees.forEach(function(model) {
+        if (model.get('name') == name) {
+            ee = model;
+        }
+    });
+    return ee;
+}
+var populatePaycheckFormWithEmployee = function(ee) {
+    $('#inputEmployee').val(ee.get('name'));
+    $('#payRate').val(ee.get('payRate'));
+    $('#fedFilingStatus').val(ee.get('fedFilingStatus'));
+    $('#fedAllowances').val(ee.get('fedAllowances'));
+    $('#fedAdditionalWithheld').val(ee.get('fedAdditionalWithheld'));
+    $('#stateFilingStatus').val(ee.get('stateFilingStatus'));
+    $('#stateAllowances').val(ee.get('stateAllowances'));
+    $('#stateAdditionalWithheld').val(ee.get('stateAdditionalWithheld'));
+}
+var populateEmployeeFormWithEmployee = function(ee) {
+    $('#eeInputName').val(ee.get('name'));
+    $('#eeInputEmail').val(ee.get('email'));
+    $('#eeInputPayRate').val(ee.get('payRate'));
+    $('#eeInputPayPeriod').val(ee.get('payPeriod'));
+    $('#eeInputFedFilingStatus').val(ee.get('fedFilingStatus'));
+    $('#eeInputFedAllowances').val(ee.get('fedAllowances'));
+    $('#eeInputFedAdditionalWithheld').val(ee.get('fedAdditionalWithheld'));
+    $('#eeInputStateFilingStatus').val(ee.get('stateFilingStatus'));
+    $('#eeInputStateAllowances').val(ee.get('stateAllowances'));
+    $('#eeInputStateAdditionalWithheld').val(ee.get('stateAdditionalWithheld'));
 }
 
 var saveEmployeeFromPaycheckForm = function() {
     var name = $('#inputEmployee').val();
     name = (name == '') ? 'Employee 1' : name;
-    var ee = new app.Employee({
+    var ee = findEmployeeByName(name);
+    if (ee == null) {
+        ee = new app.Employee();
+        app.employees.add(ee);
+    }
+    ee.set({
         name: name,
         abbr: getAbbreviation(name),
         state: $('#inputState').val(),
-        payRate: parseFloat($('#payRate').val()),
+        payRate: toFloat($('#payRate').val()),
         payPeriod: $('#payPeriod').val(),
         payType: $('#payType').val(),
         fedFilingStatus: $('#fedFilingStatus').val(),
-        fedAllowances: parseInt($('#fedAllowances').val()),
-        fedAdditionalWithheld: parseFloat($('#fedAdditionalWithheld').val()),
+        fedAllowances: toInt($('#fedAllowances').val()),
+        fedAdditionalWithheld: toFloat($('#fedAdditionalWithheld').val()),
         stateFilingStatus: $('#stateFilingStatus').val(),
-        stateAllowances: parseInt($('#stateAllowances').val()),
-        stateAdditionalWithheld: parseFloat($('#stateAdditionalWithheld').val()),
+        stateAllowances: toInt($('#stateAllowances').val()),
+        stateAdditionalWithheld: toFloat($('#stateAdditionalWithheld').val()),
         numChecks: 1,
-        netPay: parseFloat($('#netPay').html().substring(1))
+        netPay: toFloat($('#netPay').html().substring(1))
     });
-    app.employees.add(ee);
+    app.employeesView.render();
+    return true;
+}
+
+var activateEmployeeDisplay = function(header, slugline, buttonText) {
+    $('#action-layout header.employeeInput div.title').html(header);
+    $('#left div.employeeInput h1').html(slugline);
+    $('#finishAddEmployeeButton').html(buttonText);
+
+    $('#action-layout .paycheckInput').each(function() {
+        if (!$(this).hasClass('inactive')) {
+            $(this).addClass('inactive');
+        }
+    });
+    $('#action-layout .employeeInput').each(function() {
+        if ($(this).hasClass('inactive')) {
+            $(this).removeClass('inactive');
+        }
+    });
+    $('#eeInputName').trigger('paste');
+    $('#action-layout').show('slide', {'direction': 'right'}, 400);
 }
 
 // EVENTS FOR THE FORM
-$('#eeInputName').keyup(function() {
+$('#eeInputName').bind('change paste keyup blur',function() {
     var name = $('#eeInputName').val();
     $('#badgeName span').html(name);
     $('#badgeNameAbbreviation span').html(getAbbreviation(name));
 });
-$('#eeInputEmail').blur(function() {
+$('#eeInputEmail').bind('change paste keyup blur', function() {
     var email = $('#eeInputEmail').val().toLowerCase();
     var hash = md5($.trim(email));
     var srcStr = 'http://www.gravatar.com/avatar/' + hash + '?s=142&d=blank';

@@ -8,6 +8,18 @@ var formatDate = function(date) {
     var todayDayStr = (today.getDate() < 10) ? '0' + today.getDate() : '' + today.getDate();
     return todayMonthStr + '/' + todayDayStr + '/' + date.getFullYear();
 };
+var toFloat = function(str) {
+    if (str == null || str == '') {
+        return 0.0;
+    }
+    return parseFloat(str);
+}
+var toInt = function(str) {
+    if (str == null || str == '') {
+        return 0;
+    }
+    return parseInt(str);
+}
 
 // =====================
 // TEMPLATE HELPERS
@@ -184,6 +196,11 @@ app.EmployeesView = Backbone.View.extend({
     render: function() {
         var html = this.template(this.collection.toJSON());
         this.$el.html(html);
+        $('#employees tr').on('click', function() {
+            var ee = findEmployeeByName($(this).find('.name').html());
+            populateEmployeeFormWithEmployee(ee);
+            activateEmployeeDisplay("Update Employee", "Update your employee.", "Update");
+        });
     }
 });
 

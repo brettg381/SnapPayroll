@@ -94,7 +94,7 @@ var validatePaycheckForm = function() {
 var savePaycheckFromPaycheckForm = function() {
     if (!validatePaycheckForm()) return;
     var ee = $('#inputEmployee').val();
-    ee = (ee == '') ? 'Employee 1' : ee
+    ee = (ee == '') ? 'Employee 1' : ee;
     var payPeriod = $('#payPeriod').val();
     var hoursWorked = $('#hoursWorked').val();
     hoursWorked = (hoursWorked == '') ? 0 : parseFloat(hoursWorked);
@@ -214,7 +214,12 @@ var calculate = function() {
 
 // EVENTS FOR THE PAYCHECK FORM
 $('#inputEmployee').bind('change paste keyup blur', function() {
-    $('#recipient').html($('#inputEmployee').val());
+    var name = $('#inputEmployee').val();
+    $('#recipient').html(name);
+    var ee = findEmployeeByName(name);
+    if (ee != null) {
+        populatePaycheckFormWithEmployee(ee);
+    }
 });
 $('#inputState').change(function() {
     console.log('inputState change');
