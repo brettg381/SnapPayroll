@@ -916,9 +916,10 @@
             clearForms();
         });
         $('#finishAddEmployeeButton').on('click', function() {
-            saveEmployeeFromEmployeeForm();
-            $('#action-layout').hide('slide', {'direction': 'right'}, 400);
-            clearForms();
+            if (saveEmployeeFromEmployeeForm()) {
+                $('#action-layout').hide('slide', {'direction': 'right'}, 400);
+                clearForms();
+            }
         });
         $('.nav li').on('click', function() {
             if ($(this).hasClass('selected')) {

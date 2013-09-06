@@ -18,8 +18,30 @@ var clearBadge = function() {
     $('#badgeNameAbbreviation span').html('E1');
     $('#badgeName span').html('Employee 1');
 }
-
+var validateEmailField = function(field) {
+    var val = field.val();
+    var isValid = true;
+    var emailPattern = /.+@.+\..+/;
+    if (!emailPattern.test(val)) {
+        field.addClass('error');
+        isValid = false;
+    } else {
+        field.removeClass('error');
+    }
+    return isValid;
+}
+var validateEmployeeForm = function() {
+    var isValid = true;
+    if (!validateEmailField($('#eeInputEmail'))) isValid = false;
+    if (!validateNumberField($('#eeInputPayRate'))) isValid = false;
+    if (!validateNumberField($('#eeInputFedAllowances'))) isValid = false;
+    if (!validateNumberField($('#eeInputStateAllowances'))) isValid = false;
+    if (!validateNumberField($('#eeInputFedAdditionalWithheld'))) isValid = false;
+    if (!validateNumberField($('#eeInputStateAdditionalWithheld'))) isValid = false;
+    return isValid;
+}
 var saveEmployeeFromEmployeeForm = function() {
+    if (!validateEmployeeForm()) return false;
     var name = $('#eeInputName').val();
     var ee = new app.Employee({
         name: name,
@@ -39,6 +61,7 @@ var saveEmployeeFromEmployeeForm = function() {
         numChecks: 0
     });
     app.employees.add(ee);
+    return true;
 }
 
 var saveEmployeeFromPaycheckForm = function() {
@@ -74,4 +97,10 @@ $('#eeInputEmail').blur(function() {
     var hash = md5($.trim(email));
     var srcStr = 'http://www.gravatar.com/avatar/' + hash + '?s=142&d=blank';
     $('#badgeImage').attr('src', srcStr);
+    validateEmployeeForm();
 });
+$('#eeInputPayRate').bind('change paste keyup blur', function() {validateEmployeeForm();});
+$('#eeInputFedAllowances').bind('change paste keyup blur', function() {validateEmployeeForm();});
+$('#eeInputStateAllowances').bind('change paste keyup blur', function() {validateEmployeeForm();});
+$('#eeInputFedAdditionalWithholdings').bind('change paste keyup blur', function() {validateEmployeeForm();});
+$('#eeInputStateAdditionalWithholdings').bind('change paste keyup blur', function() {validateEmployeeForm();});
