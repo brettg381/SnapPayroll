@@ -714,6 +714,9 @@
         </div>
         <div id="footer">
             <div class="sticky-footer paycheckInput">
+                <div class="dark left">
+                    <button id="cancelSaveCheckButton" class="button inactive">Cancel</button>
+                </div>
                 <button id="saveCheckButton" class="right button primary">Save check</button>
             </div>
             <div class="sticky-footer employeeInput inactive">
@@ -857,6 +860,11 @@
                 $('#signupModal').fadeIn(200);
             }
         });
+        $('#cancelSaveCheckButton').on('click', function() {
+            $('#paycheckOverviewLayout').css('display', 'inline');
+            $('#action-layout').hide('slide', {'direction': 'right'}, 400);
+            clearForms();
+        });
         $('#signupCancelButton').on('click', function () {
             $('#signupModal').fadeOut(200);
         });
@@ -884,6 +892,7 @@
             $('#overviewLayout').css('display', 'inline');
             $('#action-layout').hide('slide', {'direction': 'right'}, 400);
             clearForms();
+            $('#cancelSaveCheckButton').removeClass('inactive');
         });
         $('#addEmployeeButton').on('click', function() {
             $('#action-layout .paycheckInput').each(function() {
