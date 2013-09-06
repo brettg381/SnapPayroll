@@ -15,7 +15,7 @@
             unencryptedEmail : "test@test.com",
             encryptedEmail : "asd2654foi1wer98e3!==",
             companyName : "Acme Inc.",
-            startWidget : oiiWidgets.WIDGET_SIGN_IN,		/* If, for example, you wanted to force starting with the sign-in -widget */
+            startWidget : oiiWidgets.WIDGET_SIGN_UP,		/* If, for example, you wanted to force starting with the sign-in -widget */
             isMigrate : true,								/* set to true if doing sign-up workflow */
             useCurrentLogin : false,
             showVerifyLogin : false,
@@ -48,38 +48,7 @@ function handleWidgetFinish(realmId, grantInfo, autoCreated) {
 //    --- autoCreated is true or false to indicate if realm was created by OII ---
     console.log(realmId);
     $('#oiiContainer').hide();
-    var obj = {"updateCompanyModel": {
-        "companyModel": {
-            "businessName": "Acorn Enterprise",
-            "featureSetType" :"BasicMinus",
-            "employeeCountRange": "OneToTwentyFive",
-            "primaryContact": {
-                "userID": "brett_groshong@intuit.com",
-                "password":"passw0rd",
-                "firstName":"Brett","lastName":"Groshong",
-                "eMailAddress":"brett_groshong@intuit.com"},
-            "businessAddress": {
-                "address1": "121 Main St.",
-                "address2":"Building 8",
-                "city": "Mountain View",
-                "zip":"94039"},
-            "realmId": "1003900273"},
-        "persist":true}};
-    $.ajax({
-        url: 'https://branch-ws.iopdev.intuit.com:2443/webservices/json/SetupWebService',
-        type: 'POST',
-        contentType: 'application/json',
-        dataType: 'json',
-        data: JSON.stringify(obj),
-        success: function(data, status, jqXHR) {
-            console.log('-------------- SUCCESS ---------------');
-            console.log(data);
-        },
-        error: function(jqXHR, status, errorThrown) {
-            console.log('-------------- ERROR ---------------');
-            console.log(errorThrown);
-        }
-    });
+    console.log('done');
 }
 function handleWidgetNeedCreate(companyName) {
 //	--- handle realm creation workflow ---

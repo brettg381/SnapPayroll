@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript" src="js/libs/backbone.marionette/jquery.js"></script>
+<script type="text/javascript">
+    var obj = {"key": 'stuff', "val": 'junk'};
+    $.ajax({
+        url: 'http://updates.html5rocks.com',
+        type: 'GET',
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify(obj),
+        success: function(data, status, jqXHR) {
+            console.log('-------------- SUCCESS ---------------');
+            console.log(data);
+        },
+        error: function(jqXHR, status, errorThrown) {
+            console.log('-------------- ERROR ---------------');
+            console.log(errorThrown);
+        }
+    });
+</script>
+</body>
+</html>

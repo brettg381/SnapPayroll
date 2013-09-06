@@ -13,6 +13,9 @@
 .inactive {
     display: none;
 }
+input.error {
+    border: 1px red solid;
+}
 body, html {
     height: 100%;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -394,6 +397,7 @@ h4 {
  */
 #paychecks td {
     padding: 4px 20px;
+    vertical-align: middle;
 }
 div.mugshot {
     position: relative;
@@ -403,6 +407,7 @@ div.mugshot {
     height: 32px;
     width: 32px;
     margin-right: 10px;
+    vertical-align: middle;
 }
 div.namePlate {
     margin: 3px;

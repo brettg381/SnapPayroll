@@ -22,6 +22,10 @@ Handlebars.registerHelper('fmtDollars', function(val) {
 Handlebars.registerHelper('fmtDate', function(val) {
     return formatDate(val);
 });
+Handlebars.registerHelper('md5', function(val) {
+    if (val == undefined || val == '') return 0;
+    return md5(val);
+});
 
 
 // =====================

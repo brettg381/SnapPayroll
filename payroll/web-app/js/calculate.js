@@ -39,13 +39,64 @@ var updateCheckDisplay = function(obj) {
     $('#netPay').html('$' + netPay.toFixed(2));
 }
 
+var validateNumberField = function(field) {
+    if (isNaN(field.val())) {
+        field.addClass('error');
+        return false;
+    } else {
+        field.removeClass('error');
+        return true;
+    }
+}
+var validateDateField = function(field) {
+    if (new Date(field.val()) instanceof Date) {
+        field.removeClass('error');
+        return true;
+    } else {
+        field.addClass('error');
+        return false;
+    }
+}
+var validateLandingForm = function() {
+    var result = true;
+    if (!validateNumberField($('#landingHoursWorked'))) result = false;
+    if (!validateNumberField($('#landingPayRate'))) result = false;
+    if (!validateDateField($('#landingPayDate'))) result = false;
+    if (!validateNumberField($('#landingOvertimeHoursWorked'))) result = false;
+    if (!validateNumberField($('#landingSalary'))) result = false;
+    if (!validateNumberField($('#landingBonus'))) result = false;
+    if (!validateNumberField($('#landingCommission'))) result = false;
+    if (!validateNumberField($('#landingFedAllowances'))) result = false;
+    if (!validateNumberField($('#landingFedAdditionalWithheld'))) result = false;
+    if (!validateNumberField($('#landingStateAllowances'))) result = false;
+    if (!validateNumberField($('#landingStateAdditionalWithheld'))) result = false;
+    return result;
+}
+
+var validatePaycheckForm = function() {
+    var result = true;
+    if (!validateNumberField($('#hoursWorked'))) result = false;
+    if (!validateNumberField($('#payRate'))) result = false;
+    if (!validateDateField($('#payDate'))) result = false;
+    if (!validateNumberField($('#overtimeHoursWorked'))) result = false;
+    if (!validateNumberField($('#salary'))) result = false;
+    if (!validateNumberField($('#bonus'))) result = false;
+    if (!validateNumberField($('#commission'))) result = false;
+    if (!validateNumberField($('#fedAllowances'))) result = false;
+    if (!validateNumberField($('#fedAdditionalWithheld'))) result = false;
+    if (!validateNumberField($('#stateAllowances'))) result = false;
+    if (!validateNumberField($('#stateAdditionalWithheld'))) result = false;
+    return result;
+}
+
 var savePaycheckFromPaycheckForm = function() {
+    if (!validatePaycheckForm()) return;
     var ee = $('#inputEmployee').val();
     ee = (ee == '') ? 'Employee 1' : ee
     var payPeriod = $('#payPeriod').val();
-    var hoursWorked = parseInt($('#hoursWorked').val());
+    var hoursWorked = parseFloat($('#hoursWorked').val());
     var payRate = parseFloat($('#payRate').val());
-    var otHoursWorked = parseInt($('#overtimeHoursWorked').val());
+    var otHoursWorked = parseFloat($('#overtimeHoursWorked').val());
     var additionalSalary = parseFloat($('#salary').val());
     var additionalBonus = parseFloat($('#bonus').val());
     var additionalCommission = parseFloat($('#commission').val());
@@ -76,7 +127,6 @@ var savePaycheckFromPaycheckForm = function() {
     });
     app.paychecks.add(paycheck);
 }
-
 var delayedCalculate = function() {
     if (app.calcTimeout != null) {
         clearTimeout(app.calcTimeout);
@@ -86,16 +136,17 @@ var delayedCalculate = function() {
 var calculate = function() {
     var payType, grossHourly, hoursWorked, payRate, grossPay, payAmount, commission, bonus, salary;
     var overtimeHoursWorked, payDate, grossOvertime;
+    if (!validatePaycheckForm()) return;
     payType = $('#payType').val();
     if (payType.toLowerCase() == 'hourly') {
         hoursWorked = $('#hoursWorked').val();
         payRate = $('#payRate').val();
         if (!hoursWorked || !payRate) return;
-        hoursWorked = parseInt(hoursWorked);
+        hoursWorked = parseFloat(hoursWorked);
         payRate = parseFloat(payRate);
         grossHourly = hoursWorked * payRate;
         overtimeHoursWorked = $('#overtimeHoursWorked').val();
-        overtimeHoursWorked = overtimeHoursWorked ? parseInt(overtimeHoursWorked) : 0;
+        overtimeHoursWorked = overtimeHoursWorked ? parseFloat(overtimeHoursWorked) : 0;
         grossOvertime = (payRate * 1.5) * overtimeHoursWorked;
         salary = $('#salary').val();
         salary = salary ? parseFloat(salary) : 0;
@@ -148,7 +199,7 @@ var calculate = function() {
     });
 };
 
-// EVENTS FOR THE FORM
+// EVENTS FOR THE PAYCHECK FORM
 $('#inputEmployee').bind('change paste keyup blur', function() {
     $('#recipient').html($('#inputEmployee').val());
 });
@@ -201,3 +252,15 @@ $('#stateAdditionalWithheld').bind('change paste keyup blur', function() {
     delayedCalculate();
 });
 
+// EVENTS FOR THE LANDING FORM
+$('#landingHoursWorked').bind('change paste keyup blur', function() {validateLandingForm();});
+$('#landingPayRate').bind('change paste keyup blur', function() {validateLandingForm();});
+$('#landingPayDate').bind('change paste keyup blur', function() {validateLandingForm();});
+$('#landingOvertimeHoursWorked').bind('change paste keyup blur', function() {validateLandingForm();});
+$('#landingSalary').bind('change paste keyup blur', function() {validateLandingForm();});
+$('#landingBonus').bind('change paste keyup blur', function() {validateLandingForm();});
+$('#landingCommission').bind('change paste keyup blur', function() {validateLandingForm();});
+$('#landingFedAllowances').bind('change paste keyup blur', function() {validateLandingForm();});
+$('#landingFedAdditionalWithheld').bind('change paste keyup blur', function() {validateLandingForm();});
+$('#landingStateAllowances').bind('change paste keyup blur', function() {validateLandingForm();});
+$('#landingStateAdditionalWithheld').bind('change paste keyup blur', function() {validateLandingForm();});

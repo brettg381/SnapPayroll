@@ -1,0 +1,40 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript" src="js/libs/backbone.marionette/jquery.js"></script>
+<script type="text/javascript">
+var obj = {"updateCompanyModel": {
+    "companyModel": {
+    "businessName": "001 Test LLC",
+    "featureSetType" :"BasicMinus",
+    "employeeCountRange": "OneToTwentyFive",
+    "primaryContact": {
+    "authId": "1004703613",  // only first time
+    "firstName": "Huck",
+    "lastName": "Finn",
+    "eMailAddress": "test20130905@example.com"},
+    "businessAddress": {
+    "address1": "121 Main St.",
+    "address2":"Building 8",
+    "city": "Mountain View",
+    "zip":"94039"},
+    "realmId": "1004703292"},
+    "persist":true}};
+$.ajax({
+        url: 'https://branch-ws.iopdev.intuit.com:2443/webservices/json/SetupWebService',
+        type: 'POST',
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify(obj),
+        success: function(data, status, jqXHR) {
+        console.log('-------------- SUCCESS ---------------');
+        console.log(data);
+    },
+    error: function(jqXHR, status, errorThrown) {
+        console.log('-------------- ERROR ---------------');
+        console.log(errorThrown);
+        }
+    });
+</script>
+</body>
+</html>

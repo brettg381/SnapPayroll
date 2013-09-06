@@ -24,7 +24,7 @@ var saveEmployeeFromEmployeeForm = function() {
     var ee = new app.Employee({
         name: name,
         abbr: getAbbreviation(name),
-        email: $('eeInputEmail').val(),
+        email: $('#eeInputEmail').val(),
         state: $('#eeInputState').val(),
         payRate: parseFloat($('#eeInputPayRate').val()),
         payPeriod: $('#eeInputPayPeriod').val(),
