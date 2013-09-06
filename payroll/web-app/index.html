@@ -210,11 +210,7 @@
         <div class="center">
             <div id="paychecksOverview">
                 <h1 class="title">Paychecks</h1>
-                <div class="insight">
-                    <img src="images/payroll/payroll-insight-mock.png"/>
-                    <div class="call-to-action">
-                        <button id="calculateCheckButton" class="button primary">Calculate New Check</button>
-                    </div>
+                <div id="paycheckInsight" class="insight">
                 </div>
                 <div class="data">
                     <table id="paycheckTable">
@@ -771,6 +767,29 @@
             </div>
         </div>
         <!-- TEMPLATES -->
+        <script type="text/template" id="paycheckInsightTemplate">
+            <div class="insightBlock">
+                <div id="insightTotalNetPay">
+                    <span class="insightValueSm">{{fmtDollars this.totalNet}}</span>
+                    <span class="insightLabelSm">NET PAY</span>
+                </div>
+                <div id="insightTotalTaxesWithheld">
+                    <span class="insightValueSm">{{fmtDollars this.totalTaxes}}</span>
+                    <span class="insightLabelSm">TAXES WITHHELD</span>
+                </div>
+            </div>
+            <div id="donutchart" class="insightBlock">
+            </div>
+            <div class="insightBlock">
+                <div id="insightTotalGrossPay">
+                    <span class="insightValueLg">{{fmtDollars this.totalGross}}</span>
+                    <span class="insightLabelLg">TOTAL GROSS PAY FOR 2013</span>
+                </div>
+            </div>
+            <div class="call-to-action">
+                <button id="calculateCheckButton" class="button primary">Calculate New Check</button>
+            </div>
+        </script>
         <script type="text/template" id="paychecksTemplate">
             {{#each []}}
                 <tr>
@@ -817,6 +836,7 @@
     <script type="text/javascript" src="js/handlebars.js"></script>
     <script type="text/javascript" src="js/libs/backbone.marionette/underscore.js"></script>
     <script type="text/javascript" src="js/libs/backbone.marionette/backbone.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="js/md5.js"></script>
 <!-- CUSTOM -->
     <script type="text/javascript" src="js/app.js"></script>
@@ -850,7 +870,7 @@
             $(evt.target).siblings('.accordion-heading').find('.accordion-toggle h4').toggleClass('arrow-right arrow-down');
         });
         $('#saveCheckButton').on('click', function () {
-            if (app.currentUser != null) {
+            if (app.currentUser.get('isLoggedIn')) {
                 savePaycheckFromPaycheckForm();
                 saveEmployeeFromPaycheckForm();
                 $('#paycheckOverviewLayout').css('display', 'inline');
@@ -884,8 +904,8 @@
                 $('#signupPassword').css('border-color', '#cccccc');
             }
             if (!valid) return;
-            app.currentUser = new app.User({email: $('#signupEmail').val()});
-            app.userView.render();
+            app.currentUser.set('email', $('#signupEmail').val());
+            app.currentUser.set('isLoggedIn', true);
             savePaycheckFromPaycheckForm();
             saveEmployeeFromPaycheckForm();
             $('#signupModal').fadeOut(200);
@@ -903,19 +923,6 @@
             $('#action-layout .employeeInput').each(function() {
                 if ($(this).hasClass('inactive')) {
                     $(this).removeClass('inactive');
-                }
-            });
-            $('#action-layout').show('slide', {'direction': 'right'}, 400);
-        });
-        $('#calculateCheckButton').on('click', function() {
-            $('#action-layout .paycheckInput').each(function() {
-                if ($(this).hasClass('inactive')) {
-                    $(this).removeClass('inactive');
-                }
-            });
-            $('#action-layout .employeeInput').each(function() {
-                if (!$(this).hasClass('inactive')) {
-                    $(this).addClass('inactive');
                 }
             });
             $('#action-layout').show('slide', {'direction': 'right'}, 400);

@@ -27,6 +27,33 @@ Handlebars.registerHelper('md5', function(val) {
     return md5(val);
 });
 
+// =======================
+// CHART DRAWING
+// google.setOnLoadCallback(drawChart);
+function drawChart(totalNet, totalTaxes) {
+    var data = google.visualization.arrayToDataTable([
+        ['Source', 'Amount'],
+        ['Net Pay', totalNet],
+        ['Taxes Withheld', totalTaxes]
+    ]);
+    var options = {
+        backgroundColor: '#f7fafc',
+        colors: ['#50b8d4','#c1589f'],
+        height: 200,
+        width: 280,
+        chartArea: {
+            left: 0,
+            top: 0,
+            height: '100%',
+            width: '100%'
+        },
+        legend: 'none',
+        pieSliceText: 'none',
+        pieHole: 0.5
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+    chart.draw(data, options);
+}
 
 // =====================
 // MODELS
@@ -34,7 +61,11 @@ Handlebars.registerHelper('md5', function(val) {
 // User
 app.User = Backbone.Model.extend({
     defaults: {
-        email: ''
+        isLoggedIn: false,
+        email: '',
+        totalNet: 0.0,
+        totalGross: 0.0,
+        totalTaxes: 0.0
     }
 });
 // Paycheck
@@ -91,9 +122,39 @@ app.UserView = Backbone.View.extend({
         this.template = Handlebars.compile(source);
     },
     render: function() {
-        if (app.currentUser != null) {
+        if (app.currentUser.get('isLoggedIn')) {
             var html = this.template(app.currentUser.toJSON());
             this.$el.html(html);
+        }
+    }
+});
+
+// PaycheckInsightView
+app.PaycheckInsightView = Backbone.View.extend({
+    el: '#paycheckInsight',
+    initialize: function() {
+        var source = $('#paycheckInsightTemplate').html();
+        this.template = Handlebars.compile(source);
+        this.model.on('change', this.render, this);
+    },
+    render: function() {
+        if (app.currentUser.get('isLoggedIn')) {
+            var html = this.template(app.currentUser.toJSON());
+            this.$el.html(html);
+            $('#calculateCheckButton').on('click', function() {
+                $('#action-layout .paycheckInput').each(function() {
+                    if ($(this).hasClass('inactive')) {
+                        $(this).removeClass('inactive');
+                    }
+                });
+                $('#action-layout .employeeInput').each(function() {
+                    if (!$(this).hasClass('inactive')) {
+                        $(this).addClass('inactive');
+                    }
+                });
+                $('#action-layout').show('slide', {'direction': 'right'}, 400);
+            });
+            drawChart(app.currentUser.get('totalNet'), app.currentUser.get('totalTaxes'));
         }
     }
 });
@@ -132,5 +193,7 @@ app.paychecks = new app.PaycheckCollection();
 app.paychecksView = new app.PaychecksView({collection: app.paychecks});
 app.employees = new app.EmployeesCollection();
 app.employeesView = new app.EmployeesView({collection: app.employees});
+app.currentUser = new app.User();
 app.userView = new app.UserView();
-app.currentUser = null;
+app.paycheckInsightView = new app.PaycheckInsightView({model: app.currentUser});
+

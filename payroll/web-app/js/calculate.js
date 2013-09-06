@@ -1,3 +1,5 @@
+google.load("visualization", "1", {packages:["corechart"]});
+
 var AC_URL =  'http://pocketpayroll-lb-QA-ssl-1602432401.us-east-1.elb.amazonaws.com/v1/usa/ca';
 var AC_API_KEY = '44F0DCC0-6D52-4BDC-95E1-9784496A177A';
 
@@ -94,16 +96,23 @@ var savePaycheckFromPaycheckForm = function() {
     var ee = $('#inputEmployee').val();
     ee = (ee == '') ? 'Employee 1' : ee
     var payPeriod = $('#payPeriod').val();
-    var hoursWorked = parseFloat($('#hoursWorked').val());
-    var payRate = parseFloat($('#payRate').val());
-    var otHoursWorked = parseFloat($('#overtimeHoursWorked').val());
-    var additionalSalary = parseFloat($('#salary').val());
-    var additionalBonus = parseFloat($('#bonus').val());
-    var additionalCommission = parseFloat($('#commission').val());
+    var hoursWorked = $('#hoursWorked').val();
+    hoursWorked = (hoursWorked == '') ? 0 : parseFloat(hoursWorked);
+    var payRate = $('#payRate').val();
+    payRate = (payRate == '') ? 0 : parseFloat(payRate);
+    var otHoursWorked = $('#overtimeHoursWorked').val();
+    otHoursWorked = (otHoursWorked == '') ? 0 : parseFloat(otHoursWorked);
+    var additionalSalary = $('#salary').val();
+    additionalSalary = (additionalSalary == '') ? 0 : parseFloat(additionalSalary);
+    var additionalBonus = $('#bonus').val();
+    additionalBonus = (additionalBonus == '') ? 0 : parseFloat(additionalBonus);
+    var additionalCommission = $('#commission').val();
+    additionalCommission = (additionalCommission == '') ? 0 : parseFloat(additionalCommission);
     var grossPay = payRate * hoursWorked + payRate * 1.5 * otHoursWorked + additionalBonus + additionalSalary + additionalCommission;
     var payDateStr = $('#payDate').val();
+    var netPay = parseFloat($('#netPay').html().substring(1));
     var paycheck = new app.Paycheck({
-        "user": (app.currentUser == null) ? 'Unknown' : app.currentUser.email,
+        "user": (app.currentUser.get('isLoggedIn')) ? app.currentUser.get('email') : 'Unknown',
         "employee": ee,
         "eeAbbr": getAbbreviation(ee),
         "state": $('#inputState').val(),
@@ -117,7 +126,7 @@ var savePaycheckFromPaycheckForm = function() {
         "additionalBonus": additionalBonus,
         "additionalCommission": additionalCommission,
         "grossPay": grossPay,
-        "netPay": parseFloat($('#netPay')),
+        "netPay": netPay,
         "federalFilingStatus": $('#fedFilingStatus'),
         "federalAdditionalWithholding": parseFloat($('#fedAdditionalWithheld')),
         "federalExemptions": parseInt($('#fedAllowances')),
@@ -126,6 +135,10 @@ var savePaycheckFromPaycheckForm = function() {
         "stateAdditionalWithholding": parseFloat($('#stateAdditionalWithheld'))
     });
     app.paychecks.add(paycheck);
+    app.currentUser.set('totalNet',app.currentUser.get('totalNet') + netPay);
+    app.currentUser.set('totalGross', app.currentUser.get('totalGross') + grossPay);
+    app.currentUser.set('totalTaxes', app.currentUser.get('totalTaxes') + (grossPay - netPay));
+    app.paycheckInsightView.render();
 }
 var delayedCalculate = function() {
     if (app.calcTimeout != null) {
