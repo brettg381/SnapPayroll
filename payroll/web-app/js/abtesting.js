@@ -42,13 +42,15 @@ var abcore = {
         postImpression : function(experimentId, uid) {
             var date = new Date();
             var timestamp = date.toISOString();
-            var data ="{"+abcore.const.APP+": [['"+timestamp+"', '"+experimentId+"']]}";
+            var data = {};
+            data[abcore.const.APP] = [[timestamp, experimentId]];
+            //var data ="{\""+abcore.const.APP+"\": [['"+timestamp+"', '"+experimentId+"']]}";
             $.ajax({
                 url: 'http://intuit.levelupanalytics.com/abntest/impressions/' + uid,
                 type: 'POST',
                 contentType: 'application/json',
                 dataType: 'json',
-                data: data,
+                data: JSON.stringify(data),
                 success: function(data, status, jqXHR) {
                     console.log('[ABCORE] postImpression SUCCESS!');
                 },
@@ -58,14 +60,17 @@ var abcore = {
                 }
             });
         },
-        postAction : function(actionStr) {
-            var data ="{"+abcore.const.APP+": [['"+timestamp+"', '"+experimentId+"', '"+actionStr+"']]}";
+        postAction : function(actionStr, experimentId, uid) {
+            var date = new Date();
+            var timestamp = date.toISOString();
+            var data = {};
+            data[abcore.const.APP] = [[timestamp, experimentId, actionStr]];
             $.ajax({
                 url: 'http://intuit.levelupanalytics.com/abntest/actions/' + uid,
                 type: 'POST',
                 contentType: 'application/json',
                 dataType: 'json',
-                data: data,
+                data: JSON.stringify(data),
                 success: function(data, status, jqXHR) {
                     console.log('[ABCORE] postActions SUCCESS!');
                 },
@@ -102,11 +107,11 @@ var setLoginFlow = function(flowName) {
 var registerAbcoreActions = function() {
     $('#signupGoButton').bind('click', function() {
         console.log('[APP] sign-up button clicked with abcore action attached.');
-        abcore.utils.postAction('sign-up');
+        abcore.utils.postAction('sign-up', abcore.const.EXPERIMENT , abcore.uid);
     });
     $('#landingCalculateButton').bind('click', function() {
         console.log('[APP] landing page calculate button clicked with abcore action attached.');
-        abcore.utils.postAction('landing-calculate');
+        abcore.utils.postAction('landing-calculate', abcore.const.EXPERIMENT , abcore.uid);
     });
 };
 
@@ -148,12 +153,12 @@ $.ajax({
         console.log('[ABCORE] BUCKET ASSIGNMENT = ' + abcore.bucketId);
         var flowName = '';
         switch (abcore.bucketId) {
-            case '1': flowName = 'landing-page'; break;
-            case '2': flowName = 'calculator-page'; break;
-            case '3': flowName = 'sign-up-page'; break;
+            case 'flow_a_with_landing': flowName = 'landing-page'; break;
+            case 'flow_b_direct_fill_out': flowName = 'calculator-page'; break;
+            case 'flow_c_sign-up_page': flowName = 'sign-up-page'; break;
         }
         setLoginFlow(flowName);
-        abcore.util.postImpression(abcore.const.EXPERIMENT, abcore.uid);
+        abcore.utils.postImpression(abcore.const.EXPERIMENT, abcore.uid);
         $(document).ready(function() {
             abcore.utils.postAction('page-load');
             registerAbcoreActions();
