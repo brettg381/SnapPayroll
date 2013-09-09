@@ -44,7 +44,7 @@ var abcore = {
             var timestamp = date.toISOString();
             var data ="{"+abcore.const.APP+": [['"+timestamp+"', '"+experimentId+"']]}";
             $.ajax({
-                url: 'https://intuit.levelupanalytics.com/abntest/impressions/' + uid,
+                url: 'http://intuit.levelupanalytics.com/abntest/impressions/' + uid,
                 type: 'POST',
                 contentType: 'application/json',
                 dataType: 'json',
@@ -61,7 +61,7 @@ var abcore = {
         postAction : function(actionStr) {
             var data ="{"+abcore.const.APP+": [['"+timestamp+"', '"+experimentId+"', '"+actionStr+"']]}";
             $.ajax({
-                url: 'https://intuit.levelupanalytics.com/abntest/actions/' + uid,
+                url: 'http://intuit.levelupanalytics.com/abntest/actions/' + uid,
                 type: 'POST',
                 contentType: 'application/json',
                 dataType: 'json',
@@ -141,7 +141,7 @@ abcore.utils.setCookie(abcore.const.UID_COOKIE_NAME, abcore.uid, 20);
 
 // Ask the abcore service for the bucket ID.
 $.ajax({
-    url: 'https://intuit.levelupanalytics.com/abntest/assignments/'+abcore.uid+'/brett_test_OptimalPaycheckFlow/brett_test_IOPLiteFirst-UseExperiments',
+    url: 'http://intuit.levelupanalytics.com/abntest/assignments/'+abcore.uid+'/brett_test_OptimalPaycheckFlow/brett_test_IOPLiteFirst-UseExperiments',
     type: 'GET',
     success: function(data, status, jqXHR) {
         abcore.bucketId = data.value.assignment;
