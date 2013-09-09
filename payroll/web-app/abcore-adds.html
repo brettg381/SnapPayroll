@@ -1,11 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <link rel="stylesheet" href="bootstrap-no-gutter/css/bootstrap.min.css">
+    <script type="text/javascript" src="js/libs/backbone.marionette/jquery.js"></script>
+    <style>
+        body {
+            height: 100%;
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        }
+        .blue {
+            background: #e3eaf3;
+        }
+        div.row-fluid {
+            height: 100%;
+        }
+        div.span2 {
+            height: 100%;
+        }
+        div.col {
+            padding-top: 50px;
+        }
+        div.col h2 {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+        div.col img.snapshot {
+            display: block;
+            margin: 0 auto;
+        }
+        div.col span.description {
+            font-size: 20px;
+        }
+        div.col span.source {
+            display: block;
+            color: #007da9;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 22px;
+        }
+        div.col img.ad {
+            display: block;
+            margin-top: 45px;
+        }
+        #header {
+            display: block;
+            text-align: center;
+            background: #0098cd;
+            color: #ffffff;
+            font-weight: 400;
+            padding: 20px 0;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+            margin: 10px -30px;
+        }
+    </style>
 </head>
 <body>
-<a href="index.html">First Person</a><br/>
-<a href="index.html">Second Person</a><br/>
-<a href="index.html">Third Person</a><br/>
+<div class="row-fluid">
+    <div class="span8 offset2">
+        <h1 id="header">EasyPaycheck A/B First Time Use Test Personas</h1>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span2 offset2">
+        <div id="col1" class="col">
+            <img src="images/absite/person1.png" class="img-polaroid snapshot"/>
+            <h2 class="name">Janice</h2>
+            <span class="description">
+                Jane runs a successful dog walking service. She is considering hiring
+                other walkers to fill hours but isn't sure when/if she'll make that decision.
+            </span>
+            <span class="source">
+                Origin: Facebook ad
+            </span>
+            <a href="http://easypaycheck.intuitlabs.com?uid=janice">http://easypaycheck.intuitlabs.com?uid=janice</a>
+            <img class="ad" src="images/absite/ad-facebook.png"/>
+        </div>
+    </div>
+    <div class="span2 offset1">
+        <div id="col2" class="col">
+            <img src="images/absite/person2.png" class="img-polaroid snapshot"/>
+            <h2 class="name">Anthony</h2>
+            <span class="description">
+                Anthony is a partner in a small law firm. He has a payroll
+                solution but is always on the lookout for a better/cheaper alternative.
+            </span>
+            <span class="source">
+                Origin: Google ad
+            </span>
+            <a href="http://easypaycheck.intuitlabs.com?uid=anthony">http://easypaycheck.intuitlabs.com?uid=anthony</a>
+            <img class="ad" src="images/absite/ad-google.png"/>
+        </div>
+    </div>
+    <div class="span2 offset1">
+        <div id="col3" class="col">
+            <img src="images/absite/person3.png" class="img-polaroid snapshot"/>
+            <h2 class="name">Victoria</h2>
+            <span class="description">
+                Victoria is co-founder of a tech startup. She has no experience with HR
+                but wants to hire developers and designers to augment her staff.
+            </span>
+            <span class="source">
+                Origin: TechCrunch
+            </span>
+            <a href="http://easypaycheck.intuitlabs.com?uid=victoria">http://easypaycheck.intuitlabs.com?uid=victoria</a>
+            <img class="ad" src="images/absite/ad-techcrunch.png"/>
+        </div>
+    </div>
+</div>
+<script>
+    $('#col1').on('click', function() { window.location = 'http://easypaycheck.intuitlabs.com?uid=janice'});
+    $('#col2').on('click', function() { window.location = 'http://easypaycheck.intuitlabs.com?uid=anthony'});
+    $('#col3').on('click', function() { window.location = 'http://easypaycheck.intuitlabs.com?uid=victoria'});
+</script>
 </body>
 </html>

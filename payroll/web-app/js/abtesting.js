@@ -141,7 +141,7 @@ abcore.utils.setCookie(abcore.const.UID_COOKIE_NAME, abcore.uid, 20);
 
 // Ask the abcore service for the bucket ID.
 $.ajax({
-    url: 'https://intuit.levelupanalytics.com/abntest/assignments/user_brett/brett_test_OptimalPaycheckFlow/brett_test_IOPLiteFirst-UseExperiments',
+    url: 'https://intuit.levelupanalytics.com/abntest/assignments/'+abcore.uid+'/brett_test_OptimalPaycheckFlow/brett_test_IOPLiteFirst-UseExperiments',
     type: 'GET',
     success: function(data, status, jqXHR) {
         abcore.bucketId = data.value.assignment;
