@@ -18,12 +18,18 @@
 //		isEmailConfirmed:			Indicates whether email is considered confirmed by app
 //		unencryptedEmail:			User's email (should match email in encryptedEmail parameter)
 //		encryptedEmail:				User's email, encrypted so that it can be used to find accounts by email
+//		userId:						User ID value to pre-fill for User ID fields.
 //		encryptedData:				If provided, used by Realm Picker (format: realmId=12345!offeringRoleIds=Intuit.ems.CompanyAdmin,Intuit.ems.Employees)
-//		companyName:				Company name for current user
+//		companyName:				Company name for current user. If provided, will be used to auto-create realm. If omitted and realm needs to be created, user will be prompted for company name.
 //		startWidget:				Optional specification of which widget to start with, overriding the normal starting widget (use one of the oiiWidgets.WIDGET... constants to specify the widget ID)
-//		isSignup:					true if using widgets for sign-up workflow [*** default=false ***]
-//		isMigration:				true if using widgets for migration workflow [*** default=false ***]
-//		isUpdate:					true if using widgets for update workflow [*** default=false ***]
+//		flow:						Optional flow selector to control back-end business logic (default value set based on isSignin, isSignup, isMigration, or isUpdate)
+//		isSignin:					true if using widgets for sign-in workflow [*** default=false ***] (defaults "flow" param to "sign-in")
+//		isSignup:					true if using widgets for sign-up workflow [*** default=false ***] (defaults "flow" param to "sign-up") (see account-picker note below)
+//		isMigration:				true if using widgets for migration workflow [*** default=false ***] (defaults "flow" param to "migration")
+//		isUpdate:					true if using widgets for update workflow [*** default=false ***] (defaults "flow" param to "migration")
+//		autoSignup:					true to allow Account Picker to automatically go to Sign Up if no account found for given/entered email address [***default=false***] (see account-picker note below)
+//		allowAccountCreate:			false to hide "create new account" link on Sign In widget [***default=true***]
+// 		allowRealmCreate:			false to hide "create new company" link on Realm Picker widget [***default=true***]
 //		useCurrentLogin:			true to use current login in widget workflow, set to false to clear current login when launching OII workflow [*** default=true ***]
 //		showVerifyLogin:			true to show verify login UI if user is already logged in [*** default=false ***]
 //		showSecurityUpgrade:		true to show "Upgrade Security Level" prompt for low security accounts [*** default=false ***]
@@ -31,10 +37,11 @@
 //		passwordRecoveryContinue:	function pointer called when users clicks "Continue" at end of password recovery widget (setting this causes Continue button to be shown)
 //		onTermsOfServiceClick:		function pointer called when "terms of service" link clicked (if not set, terms-of-service link will not be shown)
 //		onCustomerServiceClick: 	function pointer called when "customer service" link clicked (if not set, customer-service link will not be shown)
+//		onCreateAccountClick:		function pointer called when "create a new account" link clicked (if not set, create account is handled by widgets)
 //		onNotify:					function pointer called for notifications of interesting activity (see sample code below for parameters received)
 //		onUpdate:					function pointer called when widget content is updated (see sample code below for parameters received)
 //		onFinish:					function pointer called when realm selection is completed (see sample code below for parameters received)
-//		onFinishNeedCreate:			function pointer called when user selects to create a new company [*** default=null ***] (if not set, create company is handled by OII)
+//		onFinishNeedCreate:			function pointer called when a realm needs to be created [*** default=null ***] (if not set, create company is handled by OII)
 //		onError:					function pointer called when widget content encounters an error (see sample code below for parameters received)
 //	The values below are available for changing text within the widgets
 //		emailCheckerHeader:					account-picker widget's "enter email" view header
@@ -71,7 +78,7 @@
 //				encryptedEmail : "asd2654foi1wer98e3!==",
 //				companyName : "Acme Inc.",
 //				startWidget : oiiWidgets.WIDGET_SIGN_IN,		/* If, for example, you wanted to force starting with the sign-in -widget */
-//				isSignup : true,								/* set to true if doing sign-up workflow */
+//				isSignin : true,								/* set to true if doing sign-in workflow */
 //				useCurrentLogin : false,
 //				showVerifyLogin : false,
 //				showSecurityUpgrade : true,
@@ -124,6 +131,22 @@
 //				window.open("http://about.intuit.com/contact/", "oiiNavigation");
 //			}
 //		</script>
+//
+// NOTE: The account-picker widget is the first widget selected if isSignup parameter is set to true.
+//
+// 		If email parameters (unencryptedEmail and encryptedEmail) are not passed to oiiWidgets.launch(), the account-picker will prompt for an email address.
+//		When an email address is entered, the account-picker will look up the email address, treating it as "unconfirmed".
+//
+// 		If email parameters (unencryptedEmail and encryptedEmail) are passed to oiiWidgets.launch(), the account-picker will not prompt for an email address.
+//		Instead, it will immediately look up the email address, treating it as a "confirmed" email address.
+//
+//		Business rules in the OII back-end (defined for the offering ID) will determine how a match for the email address is determined. For IOP, for example,
+//      an "unconfirmed" email address will match only a single QBO account. If there are multiple QBO accounts or no QBO accounts for the email, then it will
+//      be treated as not found. A "confirmed" email address, however, will match any account.
+//
+// 		By default, if an account match is not found for the email, the onFinish handler will be called with no realmID. It's then the caller's responsibility
+// 		to continue the workflow. You can change this behavior by passing autoSignup as true. In this case, when an email match is not found, the sign-up
+// 		widget will automatically be displayed.
 //
 // NOTE: sign-in header text has 3 possible alternate values that are shown for different cases where user is coming directly form account-picker.
 //			signInHeaderAccountAutoSelected	- account was auto selected by account-picker based on matching email address to account
@@ -211,6 +234,8 @@
 	oiiWidgets.WIDGET_SIGN_IN_VERIFY = "ius-sign-in-verify-widget";	// This isn't a real OII widget - it's the "verify login" version of the sign-in widget
 	oiiWidgets.WIDGET_SIGN_UP = "ius-sign-up-widget";
 	oiiWidgets.WIDGET_REALM_PICKER = "ius-realm-picker-widget";
+	oiiWidgets.WIDGET_REALM_PICKER_CREATE = "ius-realm-picker-create-widget"; // This isn't a real OII widget - it's the "create company" version of the realm-picker widget
+	oiiWidgets.WIDGET_REALM_PICKER_SIGNOUT = "ius-realm-picker-signout-widget"; // // This isn't a real OII widget - it's the "verify sign out" version of the realm-picker widget
 	oiiWidgets.WIDGET_ACCOUNT_PICKER = "ius-account-picker-widget";
 	oiiWidgets.WIDGET_ACCOUNT_PICKER_EMAIL = "ius-account-picker-email-widget";	// This isn't a real OII widget - it's the Account Picker widget "enter email" view.
 	oiiWidgets.WIDGET_USERNAME_RECOVERY = "ius-username-recovery-widget";
@@ -278,11 +303,39 @@
 		if( typeof params.useCurrentLogin === 'undefined' ) {
 			params.useCurrentLogin = true;
 		}
+		if( typeof params.isSignin === 'undefined' ) {
+			params.isSignin = false;
+		}
 		if( typeof params.isSignup === 'undefined' ) {
 			params.isSignup = false;
 		}
 		if( typeof params.isMigration === 'undefined' ) {
 			params.isMigration = false;
+		}
+		if( typeof params.isUpdate === 'undefined' ) {
+			params.isUpdate = false;
+		}
+		if( typeof params.flow === 'undefined' ) {
+			if( params.isSignin ) {
+				params.flow = null; //"sign-in"; //TODO: Add back "sign-in" when this flow gets defined in OII backend.
+			} else if( params.isSignup ) {
+				params.flow = "sign-up";
+			} else if( params.isMigration ) {
+				params.flow = "migration";
+			} else if( params.isUpdate ) {
+				params.flow = "migration";
+			} else {
+				params.flow = null;
+			}
+		}
+		if( typeof params.autoSignup === 'undefined' ) {
+			params.autoSignup = false;
+		}
+		if( typeof params.allowAccountCreate === 'undefined' ) {
+			params.allowAccountCreate = true;
+		}
+		if( typeof params.allowRealmCreate === 'undefined' ) {
+			params.allowRealmCreate = true;
 		}
 		if( typeof params.showVerifyLogin === 'undefined' ) {
 			params.showVerifyLogin = false;
@@ -290,8 +343,14 @@
 		if( typeof params.showSecurityUpgrade === 'undefined' ) {
 			params.showSecurityUpgrade = false;
 		}
+		if( typeof params.userId === 'undefined' ) {
+			params.userId = null;
+		}
 		if( typeof params.encryptedEmail === 'undefined' ) {
 			params.encryptedEmail = null;
+		}
+		if( typeof params.unencryptedEmail === 'undefined' ) {
+			params.unencryptedEmail = null;
 		}
 		if( typeof params.passwordRecoveryFinishUrl === 'undefined' ) {
 			params.passwordRecoveryFinishUrl = null;
@@ -315,6 +374,11 @@
 			WIDGET_FUNCTIONS.onCustomerServiceClick = null;
 		} else {
 			WIDGET_FUNCTIONS.onCustomerServiceClick = onCustomerServiceClick;
+		}
+		if( typeof params.onCreateAccountClick === 'undefined') {
+			WIDGET_FUNCTIONS.onCreateAccountClick = null;
+		} else {
+			WIDGET_FUNCTIONS.onCreateAccountClick = onCreateAccountClick;
 		}
 
 		// Since we use the OII URL for more than just scripts, make sure the URL is just the base URL.
@@ -351,7 +415,32 @@
 		showWidget(widgetId);
 	}
 
-	//-------------------------------------------------------------------------
+	// Define public method for finding an element within a parent element.
+	// This is needed because sometimes mulitple widgets exist within the DOM at the same time, and some element IDs
+	// exist in multiple widgets. So when you do a normal document.getElementById(), you may not get the element in
+	// the current widget.
+	oiiWidgets.getChildElementById = function(parentId, childId, optionalChildTagName) {
+		// If child tag name not given, default to all tags.
+		if( !optionalChildTagName ) {
+			optionalChildTagName = "*";
+		}
+
+		var foundChild = null;
+
+		var parent = document.getElementById(parentId);
+		var children = parent.getElementsByTagName(optionalChildTagName);
+		for( var i = 0; i < children.length; i++ ) {
+			var child = children[i];
+			if( child.id === childId ) {
+				foundChild = child;
+				break;
+			}
+		}
+
+		return foundChild;
+	}
+
+		//-------------------------------------------------------------------------
 	//---   Private functions
 	//-------------------------------------------------------------------------
 
@@ -548,16 +637,23 @@
 			isLoggedIn:isLoggedIn,
 			showVerifyLogin:WIDGET_PARAMS.showVerifyLogin,
 			isEmailConfirmed:isEmailConfirmed,
-			haveEncryptedEmail:haveEncryptedEmail
+			haveEncryptedEmail:haveEncryptedEmail,
+			scriptLoadTime:SCRIPT_LOAD_TOTAL_TIME,
+			loginCheckTime:loginCheckTotalTime
 		};
 
-		if( WIDGET_PARAMS.isSignup ) {
+		if( WIDGET_PARAMS.isSignin ) {
+			info["workflow"] = "signin";
+		} else if( WIDGET_PARAMS.isSignup ) {
 			info["workflow"] = "signup";
 		} else if( WIDGET_PARAMS.isMigration ) {
 			info["workflow"] = "migration";
 		} else if ( WIDGET_PARAMS.isUpdate ) {
 			info["workflow"] = "update";
+		} else {
+			info["workflow"] = "none";
 		}
+		info["flowParam"] = WIDGET_PARAMS.flow;
 
 		// If client specified an override for which widget to start with, go immediately to that widget.
 		if( typeof WIDGET_PARAMS.startWidget === 'string' && WIDGET_PARAMS.startWidget.length > 0 ) {
@@ -581,6 +677,28 @@
 			else {
 				nextWidget = oiiWidgets.WIDGET_REALM_PICKER;
 			}
+		}
+		// Handle sign-in workflow.
+		else if( WIDGET_PARAMS.isSignin ) {
+			log("user not logged in: isSignin=true, isEmailConfirmed=" + isEmailConfirmed  + ", haveEncryptedEmail=" + haveEncryptedEmail + ", glogin=" + (GLOGIN_COOKIE_VALUE || "null"));
+			// If we have an encrypted email, account-picker can use it to find accounts.
+			if( WIDGET_PARAMS.encryptedEmail ) {
+				nextWidget = oiiWidgets.WIDGET_ACCOUNT_PICKER;
+			}
+			// Otherwise, go straight to sign-in widget.
+			else {
+				nextWidget = oiiWidgets.WIDGET_SIGN_IN;
+			}
+			/* Keeping this around in case we need to lookup email addresses.
+				intuit.ius.apis.lookupAccountByEmailAddress({
+					offeringId: WIDGET_PARAMS.offeringId,
+					offeringEnv: WIDGET_PARAMS.offeringEnv,
+					email : data.getEmail(),
+					isEmailEncrypted : data.getIsEmailEncrypted(),
+					done: function(response) { events.onFindAccountSuccess(response); },
+					fail: function(response) { events.onFindAccountFailed(response); }
+				});
+			*/
 		}
 		// Determine the starting widget for a not-logged-in user.
 		else {
@@ -611,8 +729,6 @@
 		} else {
 			info["nextWidget"] = null;
 		}
-		info["scriptLoadTime"] = SCRIPT_LOAD_TOTAL_TIME;
-		info["loginCheckTime"] = loginCheckTotalTime;
 		notifyInfo("start", info);
 		if( nextWidget !== null ) {
 			showWidget(nextWidget);
@@ -679,6 +795,24 @@
 			log("*** ERROR *** addStyles: script target not found");
 			notifyError("oii", oiiWidgets.errorCodes.TARGET_NOT_FOUND, "error adding styles");
 		}
+
+		// Add class to main widget container to allow styling by external style definition (e.g., oiiWidgets.css).
+		var divContainer = document.getElementById(WIDGET_PARAMS.containerId);
+		if( divContainer ) {
+			var iusContainerClass = "ius-container";
+			var className = divContainer.className;
+			// If container already has a class, append the class name.
+			if( className != null && className.length > 0 ) {
+				// But don't add it if it's already set.
+				if( className.indexOf(iusContainerClass) === -1 ) {
+					divContainer.className += (" " + iusContainerClass);
+				}
+			}
+			// If container doesn't yet have a class, set it.
+			else {
+				divContainer.className = iusContainerClass;
+			}
+		}
 	}
 
 	// Add individual <div> containers for the OII widgets.
@@ -708,6 +842,7 @@
 				var newDiv = document.createElement("div");			// Create the <div>.
 				newDiv.setAttribute( "id", divId );					// Set it's attribute to the value required by the OII widget implementation.
 				newDiv.setAttribute( "isWidget", "true" );			// Mark as a widget DIV.
+				newDiv.className = "ius-widget-div";				// CSS class to allow styling.
 				newDiv.showFunction = divFunction;					// Set pointer to the display function (defined below).
 				oiiContainer.appendChild(newDiv);					// Add the widget's <div> to the client's container <div>.
 				log( "added " + divId);
@@ -1199,9 +1334,14 @@
 			var handlerFunction = function(){callback(widgetId); return false;};
 			link.setAttribute( "href", "#");
 			link.onclick = handlerFunction;
+			var parent = document.getElementById(parentId);
+			if( parent && parent.style ) {
+				parent.style.display = "block";
+			}
 		}
 		// If callback was not given, or was null, hide the link and its parent.
 		else  {
+			var parent = document.getElementById(parentId);
 			if( parent && parent.style ) {
 				parent.style.display = "none";
 			}
@@ -1265,12 +1405,21 @@
 		}
 	}
 
+	function onCreateAccountClick(widgetId) {
+		if( !oiiWidgets.isLoadingWidget ) {
+			log('"Create Account" clicked');
+			notifyInfo(widgetId, {trigger:"click", link:"createAccount"});
+			WIDGET_PARAMS.onCreateAccountClick();
+		}
+	}
+
 	//----- Sign In Widget -----
 
 	// Display function for Sign In widget.
 	function showSignIn(widgetId) {
 		log('Showing "Sign In" widget');
 
+		oiiWidgets.hasSigninError = false;
 		oiiWidgets.isLoadingWidget = true;
 
 		intuit.ius.signIn.setup({
@@ -1307,6 +1456,18 @@
 
 	function onSignInLoad(widgetId) {
 		oiiWidgets.isLoadingWidget = false;
+
+		// Hide "create new account" link if requested to do so.
+		if( !WIDGET_PARAMS.allowAccountCreate ) {
+			var signUpLink = oiiWidgets.getChildElementById("ius-sign-in", "ius-sign-up", "li");
+			if( signUpLink && signUpLink.style ) {
+				signUpLink.style.display = "none";
+			}
+			signUpLink = oiiWidgets.getChildElementById("ius-verify-ticket", "sign-up", "li");
+			if( signUpLink && signUpLink.style ) {
+				signUpLink.style.display = "none";
+			}
+		}
 
 		var userNameField = document.getElementById("ius-sign-in-username");
 		var passwordField = document.getElementById("ius-sign-in-password");
@@ -1354,6 +1515,14 @@
 				}
 			}
 			passwordField.focus();
+		}
+
+		// Set handlers to clear any existing sign-in error message.
+		if( userNameField ) {
+			userNameField.onkeydown = clearSigninError;
+		}
+		if( passwordField ) {
+			passwordField.onkeydown = clearSigninError;
 		}
 
 		// If we haven't yet updated the header text elements, do so now.
@@ -1479,8 +1648,13 @@
 			if( userNameField ) {
 				oiiWidgets.userNamePrefill = userNameField.value; // Save user-entered userId to pre-fill on next widget.
 			}
-			notifyInfo(oiiWidgets.WIDGET_SIGN_IN, {trigger:"click", link:"signUp"});
-			showWidget(oiiWidgets.WIDGET_SIGN_UP);
+
+			if( WIDGET_FUNCTIONS.onCreateAccountClick ) {
+				WIDGET_FUNCTIONS.onCreateAccountClick(oiiWidgets.WIDGET_SIGN_UP);
+			} else {
+				notifyInfo(oiiWidgets.WIDGET_SIGN_IN, {trigger:"click", link:"signUp"});
+				showWidget(oiiWidgets.WIDGET_SIGN_UP);
+			}
 		}
 	}
 
@@ -1504,6 +1678,7 @@
 
 	function onSignInFail(response) {
 		log('"Sign In" failed');
+		oiiWidgets.hasSigninError = true;
 
 		var userId = "";
 		var userNameField = document.getElementById("ius-sign-in-username");
@@ -1513,6 +1688,17 @@
 		var info = {trigger:"signIn", result:"fail", userId:userId};
 		addResponseProperties(info, response);
 		notifyInfo(oiiWidgets.WIDGET_SIGN_IN, info);
+	}
+
+	function clearSigninError() {
+		if( oiiWidgets.hasSigninError ) {
+			oiiWidgets.hasSigninError = false;
+			var errorLabel = oiiWidgets.getChildElementById("ius-sign-in", "error-message");
+			if( errorLabel && errorLabel.innerText ) {
+				errorLabel.innerText = "";
+				errorLabel.className += " hide";
+			}
+		}
 	}
 
 	function onSignInWithAnotherAccount () {
@@ -1531,7 +1717,13 @@
 		GLOGIN_COOKIE_VALUE = null; // Clear any pre-existing glogin cookie value.
 		WIDGET_PARAMS.userId = null;// Clear any passed-in value for pre-fill.
 		notifyInfo(oiiWidgets.WIDGET_SIGN_IN_VERIFY, {trigger:"click", link:"signUp"});
-		showWidget(oiiWidgets.WIDGET_SIGN_UP);
+
+		if( WIDGET_FUNCTIONS.onCreateAccountClick ) {
+			WIDGET_FUNCTIONS.onCreateAccountClick(oiiWidgets.WIDGET_SIGN_UP);
+		} else {
+			notifyInfo(oiiWidgets.WIDGET_SIGN_IN, {trigger:"click", link:"signUp"});
+			showWidget(oiiWidgets.WIDGET_SIGN_UP);
+		}
 	}
 
 	function onContinueWithThisAccount() {
@@ -1755,15 +1947,8 @@
 		oiiWidgets.isLoadingWidget = true;
 		oiiWidgets.realmListCount = null;
 
-		var flow = null;
-		if( WIDGET_PARAMS.isSignup ) {
-			flow = "sign-up";
-		} else {
-			flow = "migration";
-		}
-
 		var onCreateNewCompanySelected = null;
-		if( WIDGET_PARAMS.isSignup && WIDGET_PARAMS.onFinishNeedCreate ) {
+		if( WIDGET_PARAMS.onFinishNeedCreate ) {
 			onCreateNewCompanySelected = function(companyName) {onRealmPickerCreateNewCompany(widgetId,companyName);};
 		}
 
@@ -1772,8 +1957,9 @@
 		intuit.ius.realmPicker.setup({
 			offeringId : WIDGET_PARAMS.offeringId,
 			offeringEnv : WIDGET_PARAMS.oiiEnv,
-			flow : flow,
-			autoCreateCompany : true,		//TODO: when should this be set?
+			flow : WIDGET_PARAMS.flow,
+			autoCreateCompany : true,	// TODO: Might be obsolete and can be deleted.
+			isProductSignUp : !WIDGET_PARAMS.isSignin,
 			encryptedData : WIDGET_PARAMS.encryptedData,
 			companyNameToBeCreated : WIDGET_PARAMS.companyName,
 			realmNamePattern : WIDGET_PARAMS.companyName,
@@ -1794,19 +1980,49 @@
 		oiiWidgets.isLoadingWidget = false;
 
 		var isWidgetVisible = isVisible(widgetId);
+		var loadTime = getElapsedTime(REALM_PICKER_START_TIME);
 
-		// Send notification of how many realms are found. But only if realm picker is actually shown.
-		if( isWidgetVisible ) {
+		// If realm picker is shown, send notification of how many realms are found.
+		if( isVisible("select-realm") || isVisible("ius-realm-picker") ) {
+			// Hide "create new company" link if requested to do so.
+			if( !WIDGET_PARAMS.allowRealmCreate ) {
+				var selectRealm = document.getElementById("select-realm");
+				if( selectRealm ) {
+					var footer = selectRealm.getElementsByTagName("tfoot");
+					if( footer && footer.length ) {
+						footer = footer[0];
+					}
+					if( footer && footer.style ) {
+						footer.style.display = "none";
+					}
+				}
+			}
 			var count = getListCount( document.getElementById(widgetId) );
 			oiiWidgets.realmListCount = count;
-			var loadTime = getElapsedTime(REALM_PICKER_START_TIME);
-			REALM_PICKER_START_TIME = null;  // Clear the start time so that we don't try to calculate a realm auto-select time.
-			handleWidgetLoad(widgetId, {listCount:oiiWidgets.realmListCount, loadTime:loadTime});
+			handleWidgetLoad(oiiWidgets.WIDGET_REALM_PICKER, {listCount:oiiWidgets.realmListCount, loadTime:loadTime});
+		}
+		else if( isVisible("create-realm") ) {
+			handleWidgetLoad(oiiWidgets.WIDGET_REALM_PICKER_CREATE, {loadTime:loadTime});
+			// If caller defines a handler for realm create, call it.
+			if( WIDGET_PARAMS.onFinishNeedCreate ) {
+				// Since client is handling creation, hide widget "create realm" view.
+				var createRealm = document.getElementById("create-realm");
+				if( createRealm && createRealm.style ) {
+					createRealm.style.display = "none";
+					showLoaderAnimation();
+				}
+				onRealmPickerCreateNewCompany(oiiWidgets.WIDGET_REALM_PICKER_CREATE);
+			}
+		}
+		else if( isVisible("sign-out") ) {
+			handleWidgetLoad(oiiWidgets.WIDGET_REALM_PICKER_SIGNOUT, {loadTime:loadTime});
 		}
 
 		// If widget content not displayed, keep loader animation running.
 		if( !isWidgetVisible ) {
 			showLoaderAnimation();
+		} else {
+			REALM_PICKER_START_TIME = null;  // Clear the start time so that we don't try to calculate a realm auto-select time.
 		}
 	}
 
@@ -1912,7 +2128,7 @@
 		log('"Account Picker" load');
 		oiiWidgets.isLoadingWidget = false;
 		// Determine which view of account picker is shown and handle accordingly.
-		if( isVisible("emailAddress") ) {
+		if( isVisible("email-checker") ) {
 			onAccountPickerLoadEmailView(oiiWidgets.WIDGET_ACCOUNT_PICKER_EMAIL);
 		} else {
 			onAccountPickerLoadListView(oiiWidgets.WIDGET_ACCOUNT_PICKER);
@@ -1926,8 +2142,10 @@
 		// So clear the start time so that we don't show an incorrect load time.
 		ACCOUNT_PICKER_START_TIME = null;
 
+		// Find email field.
+		var emailField = oiiWidgets.getChildElementById("email-checker", "emailAddress", "input");
+
 		var emailFrom = "userEntered";
-		var emailField = document.getElementById("emailAddress");
 		if( emailField ) {
 			emailField.value = "";
 			emailField.focus();
@@ -2013,22 +2231,23 @@
 
 		// Use cases for signup workflows.
 		if( WIDGET_PARAMS.isSignup ) {
-			// Selected user ID is provided only if a single QBO account was found and it's user name was the same as the email address.
+			// Selected user ID is provided only if conditions specified by back-end business rules are met.
+			// For example, for CMT/IOP flow, user ID is provided only if a single QBO account was found and
+			// the account's user name was the same as the email address.
 			if( selectedUserId ) {
 				oiiWidgets.userNamePrefill = selectedUserId; // Save the found user ID to pre-fill on next widget.
 				nextWidget = oiiWidgets.WIDGET_SIGN_IN;
 				result = "success";
 				log( '"Account Picker" using ' + selectedUserId + ' for sign-in');
 			}
-			// If a single QBO account was not found but a GLOGIN cookie exists, use that for sign-in.
+			// If back-end business rules were not met, but a GLOGIN cookie exists, use that for sign-in pre-fill.
 			else if( GLOGIN_COOKIE_VALUE ) {
 				selectedUserId = GLOGIN_COOKIE_VALUE;
 				nextWidget = oiiWidgets.WIDGET_SIGN_IN;
 				result = "glogin";
 				log( '"Account Picker" using GLOGIN (' + GLOGIN_COOKIE_VALUE + ') for sign-in');
 			}
-			// If no acceptable account was found, we'll return to the caller with no Realm ID set.
-			// Caller is responsible for continuing with sign-up workflow.
+			// If no acceptable account was found, go to sign-in widget, but don't pre-fill user ID.
 			else {
 				nextWidget = oiiWidgets.WIDGET_SIGN_IN;
 				result = "mismatch";
@@ -2054,7 +2273,7 @@
 					result = "success";
 					log( '"Account Picker" using auto-selected ' + selectedUserId + ' for sign-in');
 				}
-				// If we don't have a usable match, go to sign-in widget, but don't set a pre-fill value for user name.
+				// If we don't have a usable match, go to sign-in widget, but don't pre-fill value for user ID.
 				else {
 					nextWidget = oiiWidgets.WIDGET_SIGN_IN;
 					result = "mismatch";
@@ -2112,12 +2331,14 @@
 
 		// For sign-up workflow, if we're unable to find an account for given email address, the widget workflow ends.
 		// We indicate this condition to the client by calling onFinish without realm info.
-		if( WIDGET_PARAMS.isSignup ) {
+		// Setting autoSignup=true will override this and take user to sign-up widget.
+		if( !WIDGET_PARAMS.autoSignup ) {
+			log( 'Returning to caller to handle create functionality (set autoSignup=true to go to sign-up widget)');
 			notifyFinish(widgetId);	// Client will need to handle "finish" with no RealmId set.
 		}
 		// For other workflows, we go to sign-up, where email address will be pre-filled.
 		else {
-			oiiWidgets.userNamePrefill = oiiWidgets.userEnteredEmail;
+			oiiWidgets.userNamePrefill = oiiWidgets.userEnteredEmail || WIDGET_PARAMS.unencryptedEmail;
 			showWidget(oiiWidgets.WIDGET_SIGN_UP);
 		}
 	}

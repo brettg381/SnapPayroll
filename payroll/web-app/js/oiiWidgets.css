@@ -1,0 +1,536 @@
+/*
+#custom-email-checker,
+#ius-sign-in-widget,
+#ius-sign-in-widget #ius-sign-in,
+#ius-sign-in-widget #ius-sign-in #ius-form,
+#ius-sign-up-widget,
+#ius-sign-up-widget #ius-sign-up,
+#ius-sign-up-widget #ius-sign-up #ius-form,
+#ius-security-level-manager-widget,
+#ius-security-level-manager-widget #ius-security-level-manager,
+#ius-security-level-manager-widget #ius-security-level-manager #ius-form,
+#ius-security-level-manager-widget #ius-security-level-manager,
+#ius-realm-picker-widget,
+#ius-realm-picker-widget #ius-realm-picker,
+#ius-realm-picker-widget #ius-realm-picker #ius-sections,
+#ius-realm-picker-widget #ius-realm-picker #select-realm,
+#ius-realm-picker-widget #ius-realm-picker #sign-out,
+#ius-account-picker-widget,
+#ius-account-picker-widget #ius-account-picker,
+#ius-account-picker-widget #main,
+#ius-account-picker-widget #email-checker,
+#ius-username-recovery-widget,
+#ius-username-recovery-widget #ius-username-recovery,
+#ius-username-recovery-widget #ius-username-recovery #email-entry,
+#ius-username-recovery-widget #ius-username-recovery #confirm,
+#ius-password-recovery-widget,
+#ius-password-recovery-widget #ius-password-recovery,
+#ius-password-recovery-widget #ius-password-recovery #confirm,
+#ius-password-recovery-widget #ius-password-recovery #recovery-options,
+#ius-password-recovery-widget #ius-password-recovery #new-password-entry,
+#ius-password-recovery-widget #ius-password-recovery #security-answer-entry,
+#ius-password-recovery-widget #ius-password-recovery #user-id-entry
+{
+
+}
+
+div.ius-container div.ius,
+div.ius-container #ius-sign-in,
+div.ius-container #ius-sign-up,
+div.ius-container #ius-security-level-manager,
+div.ius-container #ius-realm-picker,
+div.ius-container #ius-account-picker,
+div.ius-container #ius-username-recovery,
+div.ius-container #ius-password-recovery
+{}
+*/
+
+/* Class name "ius-container" gets added by oiiWidgets.js to the element identified by the "containerId" parameter to oiiWidgets.launch(). */
+/* Add basic "frame" styling to the container such as border, content padding, and default font info. */
+div.ius-container {
+	margin:0px;
+	padding:0px;
+	background-color:white;
+	text-align:center;
+	border:1px solid #505050;
+	font-family:arial, helvetica, clean, sans-serif;
+	font-weight:normal;
+	font-style:normal;
+}
+
+
+/* Add padding to each widget container. */
+div.ius-container div.ius-widget-div {
+	margin:15px;
+	padding:0px;
+	text-align:left;
+}
+div.ius-container div.loaderAnimation {
+	margin:15px;
+	padding:0px;
+	text-align:center;
+	vertical-align:middle;
+}
+
+/* Most OII widgets wrap input fields in a "fieldset" element. */
+/* Remove margins and padding for this fieldset. */
+div.ius-container div.ius fieldset,
+div.ius-container #ius-sign-in fieldset,
+div.ius-container #ius-sign-up fieldset,
+div.ius-container #ius-security-level-manager fieldset,
+div.ius-container #ius-realm-picker fieldset,
+div.ius-container #ius-account-picker fieldset,
+div.ius-container #ius-username-recovery fieldset,
+div.ius-container #ius-password-recovery fieldset
+{
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	text-indent:0px;
+	text-align:left;
+}
+
+/* Primary header for each widget. */
+div.ius-container div.ius h1,
+div.ius-container #ius-sign-in h1,
+div.ius-container #ius-sign-up h1,
+div.ius-container #ius-security-level-manager h1,
+div.ius-container #ius-realm-picker h1,
+div.ius-container #ius-account-picker h1,
+div.ius-container #ius-username-recovery h1,
+div.ius-container #ius-password-recovery h1
+{
+	margin:0px;
+	padding:0px 0px 0px 0px;
+	width:100%;
+	color:#339900;
+	font-family:arial, helvetica, clean, sans-serif;
+	font-weight:normal;
+	font-size:18px;
+	line-height:20px;
+	text-align:left;
+}
+
+/* Sub-header for each widget. */
+div.ius-container div.ius h2,
+div.ius-container #ius-sign-in h2,
+div.ius-container #ius-sign-up h2,
+div.ius-container #ius-security-level-manager h2,
+div.ius-container #ius-realm-picker h2,
+div.ius-container #ius-account-picker h2,
+div.ius-container #ius-username-recovery h2,
+div.ius-container #ius-password-recovery h2,
+div.ius-container #widget-header span	/* password-recovery widget */
+{
+	margin:0px;
+	padding:8px 0px 0px 0px;
+	width:100%;
+	color:#606060;
+	font-family:arial, helvetica, clean, sans-serif;
+	font-weight:normal;
+	font-size:14px;
+	line-height:16px;
+	text-align:left;
+}
+
+/* Header padding for password-recovery and username-recovery "confirm" views. */
+div.ius-container #widget-header {
+	padding-bottom:10px;
+}
+
+/* Main form container for each widget. */
+div.ius-container div.ius form
+div.ius-container div.ius form#ius-form,
+div.ius-container div.ius form.view,
+div.ius-container div.ius #email-entry, 	/* username-recovery widget */
+div.ius-container div.ius #ius-security-level-manager
+{
+	text-align:left;
+	margin:10px 0px 0px 0px;
+	padding:0px;
+}
+
+/* Footer content on some widgets. */
+div.ius-container div.ius footer {
+	clear:left;	/* fixes issue with floating button element above the footer */
+}
+div.ius-container div.ius #widget-footer {
+	margin-top:15px;
+	text-align:left;
+	xfloat:left;
+}
+
+/* Text labels for entry fields. */
+div.ius-container div.ius label,
+div.ius-container div.ius .label-main,
+div.ius-container #ius-password-recovery label,  /* password-recovery widget */
+div.ius-container #ius-username-recovery label	 /* username-recovery widget */
+{
+	margin:0px;
+	padding:4px 0px 0px 0px;
+	color:#515151;
+	font-size:14px;
+	font-family:arial, helvetica, clean, sans-serif;
+	font-style:normal;
+	font-weight:bold;
+	text-align:left;
+}
+
+/* Labels used for displaying error messages. */
+div.ius-container div.ius label.error,
+div.ius-container div.ius strong.error
+{
+	padding:4px 0px 0px 0px;
+	color:#CC0000;
+	font-size:12px;
+	font-weight:normal;
+}
+
+div.ius-container #ius-password-recovery strong.error {
+	top:0px;
+}
+
+/* Input fields. */
+div.ius-container div.ius input,
+div.ius-container #ius-account-picker input[type=email],
+div.ius-container #ius-sign-in input[type=text],
+div.ius-container #ius-sign-in input[type=email],
+div.ius-container #ius-sign-in input[type=password],
+div.ius-container #ius-sign-up input[type=text],
+div.ius-container #ius-sign-up input[type=email],
+div.ius-container #ius-sign-up input[type=password],
+div.ius-container #ius-realm-picker #create-realm input[type=text],
+div.ius-container #ius-security-level-manager input[type=text],
+div.ius-container #ius-security-level-manager input[type=password],
+div.ius-container div.ius input.error,
+div.ius-container div.ius #user-id-entry #user-id,	/* password-recovery widget */
+div.ius-container div.ius #new-password-entry #new-password,	/* password-recovery widget */
+div.ius-container div.ius #new-password-entry #confirm-password,	/* password-recovery widget */
+div.ius-container div.ius #email-entry #user-email	/* username-recovery widget */
+{
+	margin-top:3px;
+	padding:0px 3px 0px 3px;
+	height:25px;
+	font-size:14px;
+	line-height:20px;
+}
+
+/* Input fields that have been marked as having a data entry error. */
+/* Default iUS styling results in red text for these entry fields - this sets color bcak to black. */
+div.ius-container div.ius input.error {
+	color:#000000;
+}
+
+/* Set consistent width for email, userID, and password entry fields. */
+div.ius-container div.ius #emailAddress,
+div.ius-container div.ius #ius-sign-in-username,
+div.ius-container div.ius #ius-sign-in-password,
+div.ius-container div.ius #ius-email,
+div.ius-container div.ius #ius-sign-up-password,
+div.ius-container div.ius #ius-sign-up-confirm-password,
+div.ius-container div.ius #user-id-entry #user-id,	/* password-recovery widget */
+div.ius-container div.ius #new-password-entry #new-password,	/* password-recovery widget */
+div.ius-container div.ius #new-password-entry #confirm-password,	/* password-recovery widget */
+div.ius-container div.ius #email-entry #user-email	/* username-recovery widget */
+{
+	width:300px;
+}
+
+/* Left align all list containers. */
+div.ius-container div.ius ul,
+div.ius-container #ius-sign-in ul,
+div.ius-container #ius-sign-up ul,
+div.ius-container #ius-security-level-manager ul,
+div.ius-container #ius-realm-picker ul,
+div.ius-container #ius-account-picker ul,
+div.ius-container #ius-username-recovery ul,
+div.ius-container #ius-password-recovery ul
+{
+	float:left;
+	clear:left;
+	margin-top:5px;
+	padding-bottom:0px;
+}
+
+/* Right align the links on the "verify ticket" widget. */
+div.ius-container #ius-verify-ticket ul {
+	float:right;
+	width:auto;
+}
+
+/* Left align all list items. */
+div.ius-container div.ius li,
+div.ius-container #ius-sign-in-widget li,
+div.ius-container #ius-sign-up-widget li,
+div.ius-container #ius-security-level-manager-widget li,
+div.ius-container #ius-realm-picker-widget li,
+div.ius-container #ius-account-picker-widget li,
+div.ius-container #ius-username-recovery-widget li,
+div.ius-container #ius-password-recovery-widget li
+{
+	text-align:left;
+}
+
+/* Remove extra spacing on username-recovery "confirm" view. */
+div.ius-container #ius-username-recovery .view {
+	padding-top:0px;
+}
+
+/* Add spacing between paragraphs on username-recovery "confirm" view. */
+div.ius-container #ius-username-recovery p {
+	padding-bottom:10px;
+}
+
+/* Remove extra spacing from button on username-recovery "confirm" view. */
+div.ius-container #ius-username-recovery span.ius-btn {
+	margin-top:10px;
+}
+
+/* Adjust spacing for re-send message at top of username-recovery "confirm" view. */
+div.ius-container #ius-username-recovery .message {
+	margin-top:0px;
+	margin-bottom:20px;
+}
+
+/* Additional spacing for labels on security-level-manager widget. */
+div.ius-container #ius-security-level-manager label.label-main {
+	padding-top:10px;
+}
+
+/* Additional spacing for button on security-level-manager widget. */
+div.ius-container #ius-security-level-manager #continue-btn {
+	margin-top:15px;
+}
+
+/* Adjustments for old style of realm-picker. */
+div.ius-container #ius-realm-picker form ul li {
+	margin:0px;
+	padding:0px 0px 8px 0px;
+	vertical-align:top;
+}
+div.ius-container #ius-realm-picker form ul li label {
+	margin:0px;
+	padding:0px 0px 0px 5px;
+	font-weight:normal;
+}
+div.ius-container #ius-realm-picker form ul li input {
+	height:14px;
+}
+
+/* Adjust spacing on realm-picker footer. */
+div.ius-container #ius-realm-picker #select-realm-footer,
+div.ius-container #ius-realm-picker #create-realm-footer
+{
+	padding-top:10px;
+	padding-bottom:5px;
+	text-align:left;
+}
+
+/* Set explicit width for account-picker and realm-picker tables. */
+div.ius-container #ius-realm-picker table,
+div.ius-container #ius-account-picker table {
+	width:600px;
+}
+
+/* Adjust spacing for account-picker and realm-picker tables. */
+div.ius-container #ius-realm-picker td,
+div.ius-container #ius-account-picker td
+{
+	margin:0px;
+	padding:2px 3px 2px 3px;
+}
+
+/* Adjust styling applied from other general styling. */
+div.ius-container #ius-realm-picker td label,
+div.ius-container #ius-account-picker td label
+{
+	margin:0px;
+	padding:0px;
+	font-weight:normal;
+	font-size:12px;
+	line-height:normal;
+}
+div.ius-container #ius-realm-picker td input,
+div.ius-container #ius-account-picker td input
+{
+	margin:1px 5px 0px 0px;
+	padding:1px 0px 0px 0px;
+	line-height:normal;
+	height:13px;
+}
+div.ius-container #ius-verify-ticket label {
+	font-weight:normal;
+}
+
+/* Adjust buttons and link positions for realm-picker "sign out" view. */
+div.ius-container #ius-realm-picker #realm-picker-sign-out-nav {
+	padding:18px 0px 10px 0px;
+	width:250px;
+	float:left;
+}
+div.ius-container #ius-realm-picker #sign-out #realm-picker-sign-out-nav .ius-btn {
+	float:right;
+	margin:0px 20px 0px 0px;
+}
+div.ius-container #ius-realm-picker #sign-out #realm-picker-sign-out-nav a {
+	float:right;
+	margin-top:10px;
+}
+
+/* Adjust layout for realm-picker "create realm" view. */
+div.ius-container #ius-realm-picker #create-realm fieldset {
+	height:50px;
+}
+div.ius-container #ius-realm-picker #create-realm #realm-name {
+	margin-bottom:4px;
+	width:300px;
+	display:block;
+}
+div.ius-container #ius-realm-picker #create-realm label.error {
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	font-size:12px;
+	line-height:14px;
+	font-weight:normal;
+}
+div.ius-container #ius-realm-picker #create-realm #create-btn {
+	float:left;
+	margin:0px 0px 15px 0px;
+}
+div.ius-container #ius-realm-picker #create-realm #create-realm-footer {
+	text-align:left;
+}
+div.ius-container #ius-realm-picker #create-realm a {
+	clear:left;
+	text-align:left;
+}
+
+.test #ius-account-picker div#main-footer,
+.test div#main-footer {
+	padding-bottom:0px;
+}
+
+.test .ius #widget-footer {
+	margin-top:15px;
+	padding-top:0px;
+	border-top:0px;
+}
+
+.test #ius-username-recovery #widget-footer {
+	text-align:left;
+}
+
+.test #ius-username-recovery #confirm .email {
+	padding-bottom:0px;
+}
+
+.test #ius-username-recovery .message {
+	margin-bottom:15px;
+}
+
+.test #ius-password-recovery #confirm div {
+	width:375px;
+}
+
+.test #ius-password-recovery .ius-btn {
+	margin-bottom:0px;
+}
+
+.test #ius-password-recovery .ius-btn {
+	margin-top:20px;
+}
+
+.test #ius-password-recovery #new-password-entry #back-btn {
+	margin-left:10px;
+}
+
+.test #ius-password-recovery #confirm em {
+	font-size:12px;
+}
+
+.test #ius-password-recovery #confirm .request {
+	padding-bottom:0px;
+}
+
+.test #ius-password-recovery #widget-footer {
+	text-align:left;
+}
+
+.test #ius-password-recovery ol.numberedList {
+	margin-left:0px;
+	margin-bottom:10px;
+}
+
+.test #ius-password-recovery ol.numberedList li.numberedListItem {
+	list-style-type:decimal;
+	list-style-position:outside;
+	padding-left:0px;
+	margin-left:30px;
+	margin-top:10px;
+}
+
+/* Previous styling for entry fields affects checkboxes, but we don't want it to. */
+/* So set styling specific for checkboxes. */
+div.ius-container div.ius input[type=checkbox],
+div.ius-container div.ius fieldset.ius-checkbox input
+{
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	vertical-align:middle;
+}
+
+/* Set consistent styling for all buttons. */
+div.ius-container div.ius input.ius-btn,
+div.ius-container div.ius input.ius-custom-btn,
+div.ius-container div.ius a.ius-btn-back,
+div.ius-container div.ius input.ius-btn,
+div.ius-container div.ius span.ius-btn,
+div.ius-container div.ius input[type=button],
+div.ius-container div.ius input[type=submit],
+div.ius-container #ius-realm-picker input#continue-btn,
+div.ius-container #ius-realm-picker .ius-btn,
+div.ius-container #ius-sign-in input#ius-sign-in-btn,
+div.ius-container #ius-sign-up input#ius-sign-up-btn,
+div.ius-container #ius-account-picker div#main input[type=button],
+div.ius-container #ius-password-recovery input#continue-btn,
+div.ius-container #ius-password-recovery input#back-btn,
+div.ius-container #user-id-entry input.ius-btn,
+div.ius-container #email-entry input.ius-btn
+{
+	float:none;
+	text-align:center;
+	margin:8px 15px 0px 0px;
+	padding:0px 10px 0px 10px;
+	height:32px;
+	font-size:13px;
+	font-weight:bold;
+	border-left:1px solid #0E7CCF;
+	border-top:1px solid #0E7CCF;
+	border-right:1px solid #003156;
+	border-bottom:1px solid #003156;
+	color:#FFFFFF;
+	background-color:#3690D4;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63B1E9', endColorstr='#3892D5',GradientType=0 );
+	background: -webkit-linear-gradient(#63B1E9, #3892D5);
+	background:    -moz-linear-gradient(#63B1E9, #3892D5);
+	background:      -o-linear-gradient(#63B1E9, #3892D5);
+	background:         linear-gradient(#63B1E9, #3892D5);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+div.ius-container #ius-sign-in #ius-sign-in-btn,
+div.ius-container #ius-realm-picker .ius-btn
+{
+	float:left;
+}
+div.ius-container #ius-realm-picker #ok-btn {
+	padding-left:20px;
+	padding-right:20px;
+}
+
+/* Fix text alignment for buttons implemented via <span>. */
+div.ius-container div.ius span.ius-btn {
+	line-height:32px;
+}
