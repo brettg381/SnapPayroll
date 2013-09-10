@@ -224,51 +224,21 @@ $('#inputEmployee').bind('change paste keyup blur', function() {
 $('#inputState').change(function() {
     console.log('inputState change');
 });
-$('#payDate').bind('change paste keyup blur', function() {
-    delayedCalculate();
-});
-$('#payPeriod').bind('change paste keyup blur', function() {
-    delayedCalculate();
-});
-$('#payType').bind('change paste keyup blur', function() {
-    delayedCalculate();
-});
-$('#hoursWorked').bind('change paste keyup blur', function() {
-    delayedCalculate();
-});
-$('#payRate').bind('change paste keyup blur', function() {
-    delayedCalculate();
-});
-$('#overtimeHoursWorked').bind('change paste keyup blur', function() {
-    delayedCalculate();
-});
-$('#salary').bind('change paste keyup blur', function() {
-    delayedCalculate();
-});
-$('#bonus').bind('change paste keyup blur', function() {
-    delayedCalculate();
-});
-$('#commission').bind('change paste keyup blur', function() {
-    delayedCalculate();
-});
-$('#fedFilingStatus').bind('change paste keyup blur', function() {
-    delayedCalculate();
-});
-$('#fedAllowances').bind('change paste keyup blur', function() {
-    delayedCalculate();
-});
-$('#fedAdditionalWithheld').bind('change paste keyup blur', function() {
-    delayedCalculate();
-});
-$('#stateFilingStatus').bind('change paste keyup blur', function() {
-    delayedCalculate();
-});
-$('#stateAllowances').bind('change paste keyup blur', function() {
-    delayedCalculate();
-});
-$('#stateAdditionalWithheld').bind('change paste keyup blur', function() {
-    delayedCalculate();
-});
+$('#payDate').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#payPeriod').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#payType').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#hoursWorked').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#payRate').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#overtimeHoursWorked').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#salary').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#bonus').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#commission').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#fedFilingStatus').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#fedAllowances').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#fedAdditionalWithheld').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#stateFilingStatus').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#stateAllowances').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#stateAdditionalWithheld').bind('change paste keyup blur', function() { delayedCalculate(); });
 
 // EVENTS FOR THE LANDING FORM
 $('#landingHoursWorked').bind('change paste keyup blur', function() {validateLandingForm();});

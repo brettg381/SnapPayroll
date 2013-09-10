@@ -41,7 +41,6 @@ Handlebars.registerHelper('md5', function(val) {
 
 // =======================
 // CHART DRAWING
-// google.setOnLoadCallback(drawChart);
 function drawChart(totalNet, totalTaxes) {
     var data = google.visualization.arrayToDataTable([
         ['Source', 'Amount'],
@@ -55,8 +54,8 @@ function drawChart(totalNet, totalTaxes) {
         width: 280,
         chartArea: {
             left: 0,
-            top: 0,
-            height: '100%',
+            top: 10,
+            height: 180,
             width: '100%'
         },
         legend: 'none',
