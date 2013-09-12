@@ -228,6 +228,7 @@ h4 {
  * INSIGHT
  **/
 #overviewLayout .insight {
+    min-width: 1200px;
     background-color: #f7fafc;
     padding: 10px 0 60px 0;
 }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript" src="js/libs/backbone.marionette/jquery.js"></script>
+<script type="text/javascript">
+    var obj = {"addEmployeeModel": {
+        "employeeModel": {
+            "firstName" : "Tom",
+            "lastName" : "Sawyer"
+        }
+//        "index": 0,
+//        "persist": true
+//            "filedI9Form": false,
+//            "filedNewHireForm": false
+//        },
+//        "company": {
+//            "companyId": 2694911,
+//            "version": 4084,
+//            "bankAccountStatusId": 0,
+//            "isCompanyBankAccountChanged": false
+//        }
+    }};
+    $.ajax({
+        url: 'https://branch-ws.iopdev.intuit.com:2443/webservices/json/SetupWebService',
+        type: 'POST',
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify(obj),
+        success: function(data, status, jqXHR) {
+            console.log('-------------- SUCCESS ---------------');
+            console.log(data);
+        },
+        error: function(jqXHR, status, errorThrown) {
+            console.log('-------------- ERROR ---------------');
+            console.log(errorThrown);
+        }
+    });
+</script>
+</body>
+</html>
