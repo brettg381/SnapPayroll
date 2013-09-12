@@ -58,6 +58,12 @@ function drawChart(totalNet, totalTaxes) {
             height: 180,
             width: '100%'
         },
+        tooltip: {
+            testStyle: {
+                color: '#ffffff',
+                backgroundColor: '#000000'
+            }
+        },
         legend: 'none',
         pieSliceText: 'none',
         pieHole: 0.5
