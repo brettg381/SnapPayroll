@@ -13,6 +13,9 @@
 .inactive {
     display: none;
 }
+.caret {
+    vertical-align: middle;
+}
 input.error {
     border: 1px red solid;
 }
@@ -46,6 +49,7 @@ h4 {
  */
 .frameLayout {
     position: absolute;
+    overflow: scroll;
     top: 0;
     right: 0;
     left: 0;
@@ -70,6 +74,9 @@ h4 {
     left: 0;
     right: 0;
     bottom: 0;
+}
+#overviewLayout {
+    z-index: 200;
 }
 
 /**
@@ -199,9 +206,6 @@ h4 {
     height: 100%;
     float: left;
 }
-#overviewLayout .north {
-    overflow: hidden;
-}
 #overviewLayout .center {
     overflow: hidden;
 }
@@ -315,6 +319,9 @@ h4 {
 }
 #overviewLayout #mainMenu .menuItem {
     margin-right: 20px;
+}
+#overviewLayout #mainMenu #userActions {
+    position: relative;
 }
 
 /**
