@@ -215,6 +215,20 @@ var calculate = function() {
     });
 };
 
+var setPayType = function(payType) {
+    if (payType == 'Salary') {
+        $('.hourly').each(function() {
+            $(this).hide();
+        });
+        $('#hoursWorked').val('');
+        $('#overtimeHoursWorked').val('');
+        $('#salary').val('');
+        $('#landingHoursWorked').val('');
+    } else {
+        $('.hourly').each(function() {
+            $(this).show();
+        });
+    }}
 // EVENTS FOR THE PAYCHECK FORM
 $('#inputEmployee').bind('change paste keyup blur', function() {
     var name = $('#inputEmployee').val();
@@ -229,7 +243,7 @@ $('#inputState').change(function() {
 });
 $('#payDate').bind('change paste keyup blur', function() { delayedCalculate(); });
 $('#payPeriod').bind('change paste keyup blur', function() { delayedCalculate(); });
-$('#payType').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#payType').bind('change paste keyup blur', function() { setPayType($(this).val()); delayedCalculate(); });
 $('#hoursWorked').bind('change paste keyup blur', function() { delayedCalculate(); });
 $('#payRate').bind('change paste keyup blur', function() { delayedCalculate(); });
 $('#overtimeHoursWorked').bind('change paste keyup blur', function() { delayedCalculate(); });
@@ -244,6 +258,7 @@ $('#stateAllowances').bind('change paste keyup blur', function() { delayedCalcul
 $('#stateAdditionalWithheld').bind('change paste keyup blur', function() { delayedCalculate(); });
 
 // EVENTS FOR THE LANDING FORM
+$('#landingPayType').bind('change', function() {setPayType($(this).val());});
 $('#landingHoursWorked').bind('change paste keyup blur', function() {validateLandingForm();});
 $('#landingPayRate').bind('change paste keyup blur', function() {validateLandingForm();});
 $('#landingPayDate').bind('change paste keyup blur', function() {validateLandingForm();});

@@ -56,9 +56,12 @@
                                     </div>
                                     <div id="landingPayInformationSection" class="accordion-body collapse in">
                                         <div class="control-group">
-                                            <label class="control-label" for="landingHoursWorked">Hours Worked</label>
+                                            <label class="control-label" for="landingPayType">Pay Type</label>
                                             <div class="controls">
-                                                <input type="text" class="input-small" id="landingHoursWorked" placeholder="0.0">
+                                                <select id="landingPayType" class="input-medium">
+                                                    <option>Hourly</option>
+                                                    <option>Salary</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="control-group">
@@ -68,6 +71,12 @@
                                                     <span class="add-on">$</span>
                                                     <input type="text" id="landingPayRate" class="input-small" placeholder="0.00">
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group hourly">
+                                            <label class="control-label" for="landingHoursWorked">Hours Worked</label>
+                                            <div class="controls">
+                                                <input type="text" class="input-small" id="landingHoursWorked" placeholder="0.0">
                                             </div>
                                         </div>
                                         <div class="control-group">
@@ -82,15 +91,6 @@
                                                 <select id="landingPayPeriod" class="input-medium">
                                                     <option>Weekly</option>
                                                     <option>Bi-weekly</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="control-group">
-                                            <label class="control-label" for="landingPayType">Pay Type</label>
-                                            <div class="controls">
-                                                <select id="landingPayType" class="input-medium">
-                                                    <option>Hourly</option>
-                                                    <option>Salary</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -313,9 +313,12 @@
                                         </div>
                                         <div id="payInformationSection" class="accordion-body collapse in">
                                             <div class="control-group">
-                                                <label class="control-label" for="hoursWorked">Hours Worked</label>
+                                                <label class="control-label" for="payType">Pay Type</label>
                                                 <div class="controls">
-                                                    <input type="text" class="input-small" id="hoursWorked" placeholder="0.0">
+                                                    <select id="payType" class="input-medium">
+                                                        <option>Hourly</option>
+                                                        <option>Salary</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="control-group">
@@ -325,6 +328,12 @@
                                                         <span class="add-on">$</span>
                                                         <input type="text" id="payRate" class="input-small" placeholder="0.00">
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="control-group hourly">
+                                                <label class="control-label" for="hoursWorked">Hours Worked</label>
+                                                <div class="controls">
+                                                    <input type="text" class="input-small" id="hoursWorked" placeholder="0.0">
                                                 </div>
                                             </div>
                                             <div class="control-group">
@@ -342,34 +351,24 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="control-group">
-                                                <label class="control-label" for="payType">Pay Type</label>
-                                                <div class="controls">
-                                                    <select id="payType" class="input-medium">
-                                                        <option>Hourly</option>
-                                                        <option>Salary</option>
-                                                    </select>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                     <!-- ============== -->
                                     <!-- ADDITIONAL PAY -->
                                     <div class="accordion-group">
                                         <div class="accordion-heading">
-
                                             <a class="accordion-toggle" data-toggle="collapse" data-parent="#paymentAccordion" href="#additionalPaySection">
                                                 <h4 class="form_title arrow-right">Additional Pay <small>(Optional)</small></h4>
                                             </a>
                                         </div>
                                         <div id="additionalPaySection" class="accordion-body collapse">
-                                            <div class="control-group">
+                                            <div class="control-group hourly">
                                                 <label class="control-label" for="overtimeHoursWorked">Overtime Worked</label>
                                                 <div class="controls">
                                                     <input type="text" class="input-small" id="overtimeHoursWorked" placeholder="0.0">
                                                 </div>
                                             </div>
-                                            <div class="control-group">
+                                            <div class="control-group hourly">
                                                 <label class="control-label" for="salary">Salary</label>
                                                 <div class="controls">
                                                     <div class="input-prepend">
