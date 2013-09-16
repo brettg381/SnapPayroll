@@ -176,10 +176,20 @@ var calculate = function() {
         $('#displayAdditionalBonus').html('$' + bonus.toFixed(2));
         $('#displayAdditionalCommission').html('$' + commission.toFixed(2));
         grossPay = hoursWorked * payRate + overtimeHoursWorked * (payRate * 1.5) + commission + bonus + salary;
-    } else {
-        payAmount = $('#payAmount').val();
-        if (!payAmount) return;
-        payAmount = parseFloat(payAmount);
+    } else { // Salary
+        payRate = $('#payRate').val();
+        if (!payRate) return;
+        payRate = parseFloat(payRate);
+        commission = $('#commission').val();
+        commission = commission ? parseFloat(commission) : 0;
+        bonus = $('#bonus').val();
+        bonus = bonus ? parseFloat(bonus) : 0;
+        $('#displayGrossHourly').html('$0.00');
+        $('#displayGrossOvertime').html('$0.00');
+        $('#displayAdditionalSalary').html('$' + payRate.toFixed(2));
+        $('#displayAdditionalBonus').html('$' + bonus.toFixed(2));
+        $('#displayAdditionalCommission').html('$' + commission.toFixed(2));
+        grossPay = payRate + commission + bonus;
     }
     payDate = $('#payDate').val();
     var obj = {
