@@ -169,6 +169,10 @@ app.PaycheckInsightView = Backbone.View.extend({
                         $(this).addClass('inactive');
                     }
                 });
+                var ee = findEmployeeByName($('#inputEmployee').val());
+                if (ee != null) {
+                    populatePaycheckFormWithEmployee(ee);
+                }
                 $('#action-layout').show('slide', {'direction': 'right'}, 400);
             });
             drawChart(app.currentUser.get('totalNet'), app.currentUser.get('totalTaxes'));

@@ -83,6 +83,9 @@ var saveEmployeeFromEmployeeForm = function() {
 }
 var findEmployeeByName = function(name) {
     var ee = null;
+    if (name == '') {
+        name = 'Employee 1';
+    }
     app.employees.forEach(function(model) {
         if (model.get('name') == name) {
             ee = model;
