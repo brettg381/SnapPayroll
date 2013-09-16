@@ -96,6 +96,7 @@ var findEmployeeByName = function(name) {
 var populatePaycheckFormWithEmployee = function(ee) {
     $('#inputEmployee').val(ee.get('name'));
     $('#payRate').val(ee.get('payRate'));
+    $('#payType').val(ee.get('payType'));
     $('#fedFilingStatus').val(ee.get('fedFilingStatus'));
     $('#fedAllowances').val(ee.get('fedAllowances'));
     $('#fedAdditionalWithheld').val(ee.get('fedAdditionalWithheld'));
@@ -107,6 +108,7 @@ var populateEmployeeFormWithEmployee = function(ee) {
     $('#eeInputName').val(ee.get('name'));
     $('#eeInputEmail').val(ee.get('email'));
     $('#eeInputPayRate').val(ee.get('payRate'));
+    $('#eeInputPayType').val(ee.get('payType'));
     $('#eeInputPayPeriod').val(ee.get('payPeriod'));
     $('#eeInputFedFilingStatus').val(ee.get('fedFilingStatus'));
     $('#eeInputFedAllowances').val(ee.get('fedAllowances'));
