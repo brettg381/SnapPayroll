@@ -43,6 +43,14 @@ var validateEmployeeForm = function() {
     if (!validateNumberField($('#eeInputStateAdditionalWithheld'))) isValid = false;
     return isValid;
 }
+var updateEmployeesInPaychecks = function() {
+    app.paychecks.forEach(function(paycheck) {
+        var ee = findEmployeeByName(paycheck.get('employee'));
+        if (ee != null) {
+            paycheck.set('eeEmail', ee.get('email'));
+        }
+    });
+}
 var saveEmployeeFromEmployeeForm = function() {
     if (!validateEmployeeForm()) return false;
     var name = $('#eeInputName').val();
@@ -68,7 +76,9 @@ var saveEmployeeFromEmployeeForm = function() {
         stateAdditionalWithheld: toFloat($('#eeInputStateAdditionalWithheld').val()),
         numChecks: 0
     });
+    updateEmployeesInPaychecks();
     app.employeesView.render();
+    app.paychecksView.render();
     return true;
 }
 var findEmployeeByName = function(name) {

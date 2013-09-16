@@ -93,8 +93,10 @@ var validatePaycheckForm = function() {
 
 var savePaycheckFromPaycheckForm = function() {
     if (!validatePaycheckForm()) return;
-    var ee = $('#inputEmployee').val();
-    ee = (ee == '') ? 'Employee 1' : ee;
+    var eeName = $('#inputEmployee').val();
+    eeName = (eeName == '') ? 'Employee 1' : eeName;
+    var ee = findEmployeeByName(eeName);
+    var eeEmail = (ee == null) ? '' : ee.email;
     var payPeriod = $('#payPeriod').val();
     var hoursWorked = $('#hoursWorked').val();
     hoursWorked = (hoursWorked == '') ? 0 : parseFloat(hoursWorked);
@@ -113,8 +115,9 @@ var savePaycheckFromPaycheckForm = function() {
     var netPay = parseFloat($('#netPay').html().substring(1));
     var paycheck = new app.Paycheck({
         "user": (app.currentUser.get('isLoggedIn')) ? app.currentUser.get('email') : 'Unknown',
-        "employee": ee,
-        "eeAbbr": getAbbreviation(ee),
+        "employee": eeName,
+        "eeAbbr": getAbbreviation(eeName),
+        "eeEmail" : eeEmail,
         "state": $('#inputState').val(),
         "hoursWorked": hoursWorked,
         "payRate": payRate,

@@ -159,12 +159,13 @@ app.PaycheckInsightView = Backbone.View.extend({
             var html = this.template(app.currentUser.toJSON());
             this.$el.html(html);
             $('#calculateCheckButton').on('click', function() {
-                $('#action-layout .paycheckInput').each(function() {
+                var paycheckInputs = $('#action-layout .paycheckInput');
+                paycheckInputs.each(function() {
                     if ($(this).hasClass('inactive')) {
                         $(this).removeClass('inactive');
                     }
                 });
-                $('#action-layout .employeeInput').each(function() {
+                paycheckInputs.each(function() {
                     if (!$(this).hasClass('inactive')) {
                         $(this).addClass('inactive');
                     }
