@@ -6,14 +6,13 @@
 <body>
 <script type="text/javascript" src="js/libs/backbone.marionette/jquery.js"></script>
 <script type="text/javascript">
-    var obj = {"addEmployeeModel": {
-        "employeeModel": {
-            "firstName" : "Tom",
-            "lastName" : "Sawyer"
+    var obj = {"getCompanyModel" : {
+        "companyModel": {
+            "businessName": "Test 20130910001 LLC"
         }
     }};
     $.ajax({
-        url: 'http://local.intuit.com:8080/Public/webservices/json/SetupWebService',
+        url: 'https://branch-ws.iopdev.intuit.com/test/webservices/json/SetupWebService',
         type: 'POST',
         contentType: 'application/json',
         dataType: 'json',
@@ -27,6 +26,11 @@
             console.log(errorThrown);
         }
     });
+
+    // id : 2695013
+    // external id : 63312418
+    // realmId : 1005409771
 </script>
+
 </body>
 </html>

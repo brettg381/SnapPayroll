@@ -6,7 +6,6 @@
 </head>
 <body>
 <div id="oiiContainer" style="width:350px;height:350px;float:left;margin:0 25px;"></div>
-<iframe id="iopFrame" src="https://branch.iopdev.intuit.com" style="width:900px;height:350px;"></iframe>
 <script type="text/javascript" src="js/oiiWidgets.js"></script>
 <h3>Add Employee</h3>
 <form>
@@ -57,7 +56,7 @@
 //    --- autoCreated is true or false to indicate if realm was created by OII ---
         console.log('RealmId : ' + realmId);
 //        $('#oiiContainer').hide();
-        $('#iopFrame').attr('src', 'https://branch.iopdev.intuit.com/test/in/account/client.jsp');
+//        $('#iopFrame').attr('src', 'http://local.intuit.com:8080/Public/in/account/client.jsp');
     }
     function handleWidgetNeedCreate(companyName) {
 //	--- handle realm creation workflow ---
@@ -70,7 +69,7 @@
 //	--- see oiiWidgets.errorCodes.* for the possible errorCode values ---
     }
     function handleTermsOfServiceClick() {
-        window.open("http://business.intuit.com/directory/terms.jsp", "oiiNavigation");
+        window.open("http://local.intuit.com:8080/Public/directory/terms.jsp", "oiiNavigation");
     }
     function handleCustomerServiceClick() {
         window.open("http://about.intuit.com/contact/", "oiiNavigation");
@@ -88,7 +87,8 @@
             }
         }};
         $.ajax({
-            url: 'https://branch-ws.iopdev.intuit.com:2443/webservices/json/SetupWebService',
+            // url: 'https://172.28.18.48:8081/Public/webservices/json/SetupWebService',
+            url: 'https://branch-ws.iopdev.intuit.com/test/webservices/json/SetupWebService',
             type: 'POST',
             contentType: 'application/json',
             dataType: 'json',

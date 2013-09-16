@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="js/libs/backbone.marionette/jquery.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        var createEmployee = function() {
+            console.log('-- trying to create EE ---');
+            var obj = {"addEmployeeModel": {
+                "employeeModel": {
+                    "firstName" : "Tom",
+                    "lastName" : "Sawyer"
+                }
+            }};
+            $.ajax({
+                //url: 'https://branch-ws.iopdev.intuit.com:2443/webservices/json/SetupWebService',
+                url: 'https://local.intuit.com:8080/Public/webservices/json/MobileManager',
+                type: 'POST',
+                contentType: 'application/json',
+                dataType: 'json',
+                data: JSON.stringify(obj),
+                success: function(data, status, jqXHR) {
+                    console.log('-------------- SUCCESS ---------------');
+                    console.log(data);
+                },
+                error: function(jqXHR, status, errorThrown) {
+                    console.log('-------------- ERROR ---------------');
+                    console.log(errorThrown);
+                }
+            });
+        }
+        var obj = {"loginMobileMulti" : {
+            "userName" : 'test20130910001@intuit.com',
+            "password" : 'passw0rd'
+        }};
+        $.ajax({
+            //url: 'https://branch-ws.iopdev.intuit.com:2443/webservices/json/MobileManager',
+            url: 'http://local.intuit.com:8080/Public/webservices/json/MobileManager',
+            type: 'POST',
+            contentType: 'application/json',
+            dataType: 'json',
+            data: JSON.stringify(obj),
+            success: function(data, status, jqXHR) {
+                console.log('-------------- SUCCESS ---------------');
+                console.log(data);
+//                createEmployee();
+            },
+            error: function(jqXHR, status, errorThrown) {
+                console.log('-------------- ERROR ---------------');
+                console.log(errorThrown);
+            }
+        });
+    </script>
+</body>
+</html>
