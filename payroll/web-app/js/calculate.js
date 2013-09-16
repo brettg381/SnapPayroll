@@ -110,7 +110,12 @@ var savePaycheckFromPaycheckForm = function() {
     additionalBonus = (additionalBonus == '') ? 0 : parseFloat(additionalBonus);
     var additionalCommission = $('#commission').val();
     additionalCommission = (additionalCommission == '') ? 0 : parseFloat(additionalCommission);
-    var grossPay = payRate * hoursWorked + payRate * 1.5 * otHoursWorked + additionalBonus + additionalSalary + additionalCommission;
+    var grossPay;
+    if ($('#payType').val() == 'Hourly') {
+        grossPay = payRate * hoursWorked + payRate * 1.5 * otHoursWorked + additionalBonus + additionalSalary + additionalCommission;
+    } else {
+        grossPay = payRate + additionalBonus + additionalCommission;
+    }
     var payDateStr = $('#payDate').val();
     var netPay = parseFloat($('#netPay').html().substring(1));
     var paycheck = new app.Paycheck({
