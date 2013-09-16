@@ -64,6 +64,13 @@ h4 {
     padding: 70px 40px;
     z-index: 30;
 }
+#modalLayout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 
 /**
  * LANDING PAGE
@@ -651,5 +658,38 @@ div.mugshot img {
     text-align: left;
 }
 #signupModal form {
+    margin-bottom: 35px;
+}
+
+/**
+ * SIGN IN MODAL
+ */
+#signinModal .modal-content {
+    width: 860px;
+    height: 310px;
+}
+#signinModal .modal-right-col {
+    padding: 20px;
+    width: 260px;
+}
+#signinModal .modal-right-col ul li {
+    border: 0;
+    margin: 5px 0;
+}
+#signinModal .modal-right-col ul li img {
+    display: block;
+    float: left;
+}
+#signinModal .modal-right-col ul li span {
+    display: block;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    line-height: 18px;
+    padding: 0 0 0 55px;
+}
+#signinModal form div.controls {
+    text-align: left;
+}
+#signinModal form {
     margin-bottom: 35px;
 }

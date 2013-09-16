@@ -180,8 +180,8 @@
             <div class="span4">
                 <div id="landingInfoWrapper">
                     <div id="landingControls">
-                        <span>Sign Up</span>
-                        <span>Log In</span>
+                        <span id="landingSignUp">Sign Up</span>
+                        <span id="landingSignIn">Log In</span>
                     </div>
                     <div id="landingInfo">
                         <h3>Calculate paychecks for FREE!</h3>
@@ -728,8 +728,10 @@
                 <button id="finishAddEmployeeButton" class="button primary right">Add</button>
             </div>
         </div>
-        <!-- MODALS -->
-        <div class="modal-overlay" id="signupModal">
+    </div>
+    <!-- MODALS -->
+    <div id="modalLayout" class="frameLayout harmony inactive">
+        <div class="modal-overlay" id="signupModal" style="display:none;">
             <div class="scrim">
                 <div class="layout">
                     <div class="modal-content">
@@ -772,69 +774,112 @@
                 </div>
             </div>
         </div>
-        <!-- TEMPLATES -->
-        <script type="text/template" id="paycheckInsightTemplate">
-            <div class="insightBlock">
-                <div id="insightTotalNetPay">
-                    <span class="insightValueSm">{{fmtDollars this.totalNet}}</span>
-                    <span class="insightLabelSm">NET PAY</span>
-                </div>
-                <div id="insightTotalTaxesWithheld">
-                    <span class="insightValueSm">{{fmtDollars this.totalTaxes}}</span>
-                    <span class="insightLabelSm">TAXES WITHHELD</span>
-                </div>
-            </div>
-            <div id="donutchart" class="insightBlock">
-            </div>
-            <div class="insightBlock">
-                <div id="insightTotalGrossPay">
-                    <span class="insightValueLg">{{fmtDollars this.totalGross}}</span>
-                    <span class="insightLabelLg">TOTAL GROSS PAY FOR 2013</span>
-                </div>
-            </div>
-            <div class="call-to-action">
-                <button id="calculateCheckButton" class="button primary">Calculate New Check</button>
-            </div>
-        </script>
-        <script type="text/template" id="paychecksTemplate">
-            {{#each []}}
-                <tr>
-                    <td>
-                        <div class="mugshot">
-                            <div class="namePlate">
-                                <span class="abbreviation">{{this.eeAbbr}}</span>
-                            </div>
-                            <img src="http://www.gravatar.com/avatar/{{md5 this.email}}?s=26&d=blank"/>
+        <div class="modal-overlay" id="signinModal" style="display:none;">
+            <div class="scrim">
+                <div class="layout">
+                    <div class="modal-content">
+                        <div class="modal-main-col">
+                            <h1>Welcome back!</h1>
+                            <form class="form-horizontal" id="loginForm" method="post" action=".">
+                                <div class="control-group">
+                                    <label class="control-label" for="signupEmail"><b>Your Email</b></label>
+                                    <div class="controls">
+                                        <input type="text" id="loginEmail" placeholder="example@example.com">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="signupPassword"><b>Password</b></label>
+                                    <div class="controls">
+                                        <input type="password" id="loginPassword">
+                                    </div>
+                                </div>
+                            </form>
+                            <button id="loginCancelButton" class="button secondary">Cancel</button>
+                            <button id="loginGoButton" class="button primary">Go!</button>
                         </div>
-                        <span>{{this.employee}}</span></td>
-                    <td>{{fmtDate this.payDate}}</td>
-                    <td>{{fmtDollars this.grossPay}}</td>
-                    <td>{{fmtDollars this.netPay}}</td>
-                </tr>
-            {{/each}}
-        </script>
-        <script type="text/template" id="userTemplate">{{email}}</script>
-        <script type="text/template" id="employeesTemplate">
-            {{#each []}}
+                        <div class="modal-right-col">
+                            <ul>
+                                <li>
+                                    <img src="images/payroll/taxes-dark.png">
+                                    <span><b>Get accurate calculations</b> based on up-to-date tax rates</span>
+                                </li>
+                                <li>
+                                    <img src="images/payroll/history-dark.png">
+                                    <span><b>Simplify taxes and accounting</b> by saving your check history</span>
+                                </li>
+                                <li>
+                                    <img src="images/payroll/paychecks-dark.png">
+                                    <span><b>Calculate future checks faster</b> with saved employee details</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- TEMPLATES -->
+    <script type="text/template" id="paycheckInsightTemplate">
+        <div class="insightBlock">
+            <div id="insightTotalNetPay">
+                <span class="insightValueSm">{{fmtDollars this.totalNet}}</span>
+                <span class="insightLabelSm">NET PAY</span>
+            </div>
+            <div id="insightTotalTaxesWithheld">
+                <span class="insightValueSm">{{fmtDollars this.totalTaxes}}</span>
+                <span class="insightLabelSm">TAXES WITHHELD</span>
+            </div>
+        </div>
+        <div id="donutchart" class="insightBlock">
+        </div>
+        <div class="insightBlock">
+            <div id="insightTotalGrossPay">
+                <span class="insightValueLg">{{fmtDollars this.totalGross}}</span>
+                <span class="insightLabelLg">TOTAL GROSS PAY FOR 2013</span>
+            </div>
+        </div>
+        <div class="call-to-action">
+            <button id="calculateCheckButton" class="button primary">Calculate New Check</button>
+        </div>
+    </script>
+    <script type="text/template" id="paychecksTemplate">
+        {{#each []}}
             <tr>
                 <td>
                     <div class="mugshot">
                         <div class="namePlate">
-                            <span class="abbreviation">{{this.abbr}}</span>
-                            {{this.email}}
+                            <span class="abbreviation">{{this.eeAbbr}}</span>
                         </div>
                         <img src="http://www.gravatar.com/avatar/{{md5 this.email}}?s=26&d=blank"/>
                     </div>
-                    <span class="name">{{this.name}}</span>
-                </td>
-                <td>{{this.payType}}</td>
-                <td>{{fmtDollars this.payRate}}</td>
-                <td>{{this.numChecks}}</td>
+                    <span>{{this.employee}}</span></td>
+                <td>{{fmtDate this.payDate}}</td>
+                <td>{{fmtDollars this.grossPay}}</td>
                 <td>{{fmtDollars this.netPay}}</td>
             </tr>
-            {{/each}}
-        </script>
-    </div>
+        {{/each}}
+    </script>
+    <script type="text/template" id="userTemplate">{{email}}</script>
+    <script type="text/template" id="employeesTemplate">
+        {{#each []}}
+        <tr>
+            <td>
+                <div class="mugshot">
+                    <div class="namePlate">
+                        <span class="abbreviation">{{this.abbr}}</span>
+                        {{this.email}}
+                    </div>
+                    <img src="http://www.gravatar.com/avatar/{{md5 this.email}}?s=26&d=blank"/>
+                </div>
+                <span class="name">{{this.name}}</span>
+            </td>
+            <td>{{this.payType}}</td>
+            <td>{{fmtDollars this.payRate}}</td>
+            <td>{{this.numChecks}}</td>
+            <td>{{fmtDollars this.netPay}}</td>
+        </tr>
+        {{/each}}
+    </script>
 <!-- LIBS -->
     <script type="text/javascript" src="jquery-ui-1.10.3-intuit.custom/js/jquery-ui-1.10.3.custom.js"></script>
     <script type="text/javascript" src="bootstrap-no-gutter/js/bootstrap.min.js"></script>
@@ -860,6 +905,23 @@
                 process(eeNames);
             }
         });
+        $('#landingSignUp').on('click', function() {
+            $('#modalLayout').toggleClass('inactive');
+            $('#signupModal').fadeIn(200);
+        });
+        $('#landingSignIn').on('click', function() {
+            $('#modalLayout').toggleClass('inactive');
+            $('#signinModal').fadeIn(200);
+        });
+        $('#loginGoButton').on('click', function() {
+            $('#loginEmail').addClass('error');
+            $('#loginPassword').addClass('error');
+        });
+        $('#loginCancelButton').on('click', function() {
+            $('#signinModal').fadeOut(200, function() {
+                $('#modalLayout').toggleClass('inactive');
+            });
+        });
         var clearForms = function() {
             $('form').each(function() {$(this).find('input[type=text]').val('')});
             clearCheckDisplay();
@@ -882,6 +944,7 @@
                 $('#action-layout').hide('slide', {'direction': 'right'}, 400);
                 clearForms();
             } else {
+                $('#modalLayout').toggleClass('inactive');
                 $('#signupModal').fadeIn(200);
             }
         });
@@ -891,7 +954,9 @@
             clearForms();
         });
         $('#signupCancelButton').on('click', function () {
-            $('#signupModal').fadeOut(200);
+            $('#signupModal').fadeOut(200, function() {
+                $('#modalLayout').toggleClass('inactive');
+            });
         });
         $('#signupGoButton').on('click', function () {
             var valid = true;
@@ -913,9 +978,16 @@
             app.currentUser.set('isLoggedIn', true);
             savePaycheckFromPaycheckForm();
             saveEmployeeFromPaycheckForm();
-            $('#signupModal').fadeOut(200);
+            $('#signupModal').fadeOut(200, function() {
+                $('#modalLayout').toggleClass('inactive');
+            });
             $('#overviewLayout').css('display', 'inline');
-            $('#action-layout').hide('slide', {'direction': 'right'}, 400);
+            if ($('#action-layout').css('display') != 'none') {
+                $('#action-layout').hide('slide', {'direction': 'right'}, 400);
+            }
+            if (!$('#landingLayout').hasClass('inactive')) {
+                $('#landingLayout').hide('slide', {'direction': 'right'}, 400);
+            }
             clearForms();
             $('#cancelSaveCheckButton').removeClass('inactive');
             app.userView.render();
