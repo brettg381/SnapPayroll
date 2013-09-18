@@ -909,7 +909,7 @@
                 app.employees.forEach(function(model) {
                     eeNames.push(model.get('name'));
                 });
-                process(eeNames);
+                return eeNames;
             }
         });
         $('#landingSignUp').on('click', function() {
