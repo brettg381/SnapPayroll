@@ -90,8 +90,10 @@ var abcore = {
 var setLoginFlow = function(flowName) {
     switch (flowName) {
         case 'sign-up-page':
+            $('#modalLayout').toggleClass('inactive');
             $('#signupModal').show();
             $('#signupModal h1').html('Sign up and get started with paychecks!');
+
         case 'calculator-page':
             $('#action-layout').show();
             $('#landingLayout').hide();
@@ -136,38 +138,44 @@ if (abcore.uid == null) {
     abcore.uid = abcore.utils.getCookie(abcore.const.UID_COOKIE_NAME);
 }
 
+// In full AB testing we assign a UID to all visitors.
+// But full testing is not on by default. To bucket a user, give them a URL with a UID.
 // If uid has still not been set, then we assign one based on the
-if (abcore.uid == null) {
-    abcore.uid = abcore.utils.generateUUID();
-}
+//if (abcore.uid == null) {
+//    abcore.uid = abcore.utils.generateUUID();
+//}
 
-// Store the uid in a cookie
-abcore.utils.setCookie(abcore.const.UID_COOKIE_NAME, abcore.uid, 20);
+// If the UID has been set then they are a participant.
+// We set the UID cookie and bucket them.
+if (abcore.uid != null) {
+    // Store the uid in a cookie
+    abcore.utils.setCookie(abcore.const.UID_COOKIE_NAME, abcore.uid, 20);
 
-// Ask the abcore service for the bucket ID.
-$.ajax({
-    url: 'http://intuit.levelupanalytics.com/abntest/assignments/'+abcore.uid+'/brett_test_OptimalPaycheckFlow/brett_test_IOPLiteFirst-UseExperiments',
-    type: 'GET',
-    success: function(data, status, jqXHR) {
-        abcore.bucketId = data.value.assignment;
-        console.log('[ABCORE] BUCKET ASSIGNMENT = ' + abcore.bucketId);
-        var flowName = '';
-        switch (abcore.bucketId) {
-            case 'flow_a_with_landing': flowName = 'landing-page'; break;
-            case 'flow_b_direct_fill_out': flowName = 'calculator-page'; break;
-            case 'flow_c_sign-up_page': flowName = 'sign-up-page'; break;
+    // Ask the abcore service for the bucket ID.
+    $.ajax({
+        url: 'http://intuit.levelupanalytics.com/abntest/assignments/'+abcore.uid+'/brett_test_OptimalPaycheckFlow/brett_test_IOPLiteFirst-UseExperiments',
+        type: 'GET',
+        success: function(data, status, jqXHR) {
+            abcore.bucketId = data.value.assignment;
+            console.log('[ABCORE] BUCKET ASSIGNMENT = ' + abcore.bucketId);
+            var flowName = '';
+            switch (abcore.bucketId) {
+                case 'flow_a_with_landing': flowName = 'landing-page'; break;
+                case 'flow_b_direct_fill_out': flowName = 'calculator-page'; break;
+                case 'flow_c_sign-up_page': flowName = 'sign-up-page'; break;
+            }
+            setLoginFlow(flowName);
+            abcore.utils.postImpression(abcore.const.EXPERIMENT, abcore.uid);
+            $(document).ready(function() {
+                abcore.utils.postAction('page-load');
+                registerAbcoreActions();
+            });
+        },
+        error: function(jqXHR, status, errorThrown) {
+            abcore.bucketId = 'default';
+            console.log("Error when asking abcore for bucket. Bucket ID set to 'default'.");
+            console.log(jqXHR);
         }
-        setLoginFlow(flowName);
-        abcore.utils.postImpression(abcore.const.EXPERIMENT, abcore.uid);
-        $(document).ready(function() {
-            abcore.utils.postAction('page-load');
-            registerAbcoreActions();
-        });
-    },
-    error: function(jqXHR, status, errorThrown) {
-        abcore.bucketId = 'default';
-        console.log("Error when asking abcore for bucket. Bucket ID set to 'default'.");
-        console.log(jqXHR);
-    }
-});
+    });
+}
 
