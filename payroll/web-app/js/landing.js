@@ -7,7 +7,7 @@ var transferLandingData = function() {
     $('#fedFilingStatus').val($('#landingFedFilingStatus').val());
     $('#fedAllowances').val($('#landingFedAllowances').val());
     $('#fedAdditionalWithheld').val($('#landingFedAdditionalWithheld').val());
-    $('#stateFilingStatus').val($('#landingStateFilingStatus').val());
-    $('#stateAllowances').val($('#landingStateAllowances').val());
-    $('#stateAdditionalWithheld').val($('#landingStateAdditionalWithheld').val());
+    $('#ca_stateFilingStatus').val($('#landing_ca_stateFilingStatus').val());
+    $('#ca_stateExemptions').val($('#landing_ca_stateAdditionalWithholding').val());
+    $('#ca_stateAdditionalWithholding').val($('#landing_ca_stateAdditionalWithholding').val());
 }

@@ -37,10 +37,20 @@
                         <form class="form-horizontal" method="post" action=".">
                             <div class="accordion-group">
                                 <div class="control-group">
-                                    <label class="control-label" for="inputState">State</label>
+                                    <label class="control-label" for="landingInputState">State</label>
                                     <div class="controls">
-                                        <select id="ladingInputState" class="input-medium">
-                                            <option>California</option>
+                                        <select id="landingInputState" class="input-medium">
+                                            <!--<option value="al">Alabama</option>-->
+                                            <!--<option value="az">Arizona</option>-->
+                                            <option value="ca" selected>California</option>
+                                            <!--<option value="ga">Georgia</option>-->
+                                            <!--<option value="il">Illinois</option>-->
+                                            <!--<option value="la">Louisiana</option>-->
+                                            <!--<option value="md">Maryland</option>-->
+                                            <!--<option value="ny">New York</option>-->
+                                            <!--<option value="nc">North Carolina</option>-->
+                                            <!--<option value="va">Virginia</option>-->
+                                            <!--<option value="wa">Washington</option>-->
                                         </select>
                                     </div>
                                 </div>
@@ -97,7 +107,7 @@
                                     </div>
                                 </div>
                                 <!-- ==================== -->
-                                <!-- FEDERAL WITHHOLDINGS -->
+                                <!-- FEDERAL WITHHOLDING -->
                                 <div class="accordion-group">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle" data-toggle="collapse" href="#landingFederalWithHoldingsSection" data-parent="#landingAccordion">
@@ -135,37 +145,511 @@
                                     </div>
                                 </div>
                                 <!-- ================== -->
-                                <!-- STATE WITHHOLDINGS -->
-                                <div class="accordion-group">
+                                <!-- STATE  -->
+
+                                <!-- ALABAMA -->
+                                <div id="landing-state-al" class="accordion-group state-al inactive accordion-last">
                                     <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" href="#landingStateWithHoldingsSection" data-parent="#landingAccordion">
-                                            <h4 class="form_title arrow-right">California State Withholdings</h4>
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseAL">
+                                            <h4 class="form_title arrow-right">Alabama State Withholdings</h4>
                                         </a>
                                     </div>
-                                    <div id="landingStateWithHoldingsSection" class="accordion-body collapse">
+                                    <div id="landingCollapseAL" class="accordion-body collapse">
                                         <div class="control-group">
-                                            <label class="control-label" for="landingStateFilingStatus">Filing Status</label>
+                                            <label class="control-label" for="landing_al_stateFilingStatus">Filling Status</label>
                                             <div class="controls">
-                                                <select id="landingStateFilingStatus">
-                                                    <option value="SingleOrDualIncome">Single/Married (2+ incomes)</option>
-                                                    <option value="MarriedOneIncome">Married (1 income)</option>
-                                                    <option value="HeadOfHousehold">Head of Household</option>
+                                                <select name="landing_al_stateFilingStatus" id="landing_al_stateFilingStatus">
+                                                    <option value="S">Single</option>
+                                                    <option value="0" selected="selected">Single, No Exemption</option>
+                                                    <option value="M">Married</option>
+                                                    <option value="MS">Married, Filing Separately</option>
+                                                    <option value="H">Head of Family</option>
                                                     <option value="DoNotWithhold">Do Not Withhold</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="control-group">
-                                            <label class="control-label" for="landingStateAllowances">Number of Allowances</label>
+                                            <label class="control-label" for="landing_al_stateExemptions">Number Of Dependents</label>
                                             <div class="controls">
-                                                <input type="text" class="input-mini" id="landingStateAllowances" placeholder="0">
+                                                <input type="text" class="input_pre" name="landing_al_stateExemptions" id="landing_al_stateExemptions" placeholder="0"/>
                                             </div>
                                         </div>
                                         <div class="control-group">
-                                            <label class="control-label" for="landingStateAdditionalWithheld">Additional</label>
+                                            <label class="control-label" for="landing_al_stateAdditionalWithholding">Additional Amount</label>
                                             <div class="controls">
                                                 <div class="input-prepend">
                                                     <span class="add-on">$</span>
-                                                    <input type="text" id="landingStateAdditionalWithheld" class="input-small" placeholder="0.00">
+                                                    <input type="text" class="input_pre currency" name="landing_al_stateAdditionalWithholding" id="landing_al_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_al_workSiteZip">Zip Code</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="landing_al_workSiteZip" id="landing_al_workSiteZip" placeholder="" maxlength="5"/>
+                                            </div>
+                                        </div>
+                                        <!--
+                                        <div class="control-group">
+                                            <label class="control-label" for="al_workSiteZip">City</label>
+                                            <div class="controls">
+                                                <select name="al_workSiteCity" id="al_workSiteCity" disabled></select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="al_workSiteZip">County</label>
+                                            <div class="controls">
+                                                <select name="al_workSiteCounty" id="al_workSiteCounty" disabled></select>
+                                            </div>
+                                        </div>
+                                        -->
+                                    </div>
+                                </div>
+                                <!-- ARIZONA -->
+                                <div id="landing-state-az" class="accordion-group state-az inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseAZ">
+                                            <h4 class="form_title arrow-right">Arizona State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="landingCollapseAZ" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_az_stateFilingStatus">Withholding Rate</label>
+                                            <div class="controls">
+                                                <select name="landing_az_stateFilingStatus" id="landing_az_stateFilingStatus">
+                                                    <option value="V1_A">0.0%</option>
+                                                    <option value="V1_B">0.8%</option>
+                                                    <option value="V1_C">1.3%</option>
+                                                    <option value="V1_D">1.8%</option>
+                                                    <option value="V1_E">2.7%</option>
+                                                    <option value="V1_F">3.6%</option>
+                                                    <option value="V1_G">4.2%</option>
+                                                    <option value="V1_H" selected="selected">5.1%</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_az_stateAdditionalWithholding">Additional Amount</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="landing_az_stateAdditionalWithholding" id="landing_az_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- CALIFORNIA -->
+                                <div id="landing-state-ca" class="accordion-group state-ca accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseCA">
+                                            <h4 class="form_title arrow-right">California State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="landingCollapseCA" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_ca_stateFilingStatus">Filling Status</label>
+                                            <div class="controls">
+                                                <select name="landing_ca_stateFilingStatus" id="landing_ca_stateFilingStatus">
+                                                    <option value="SingleOrDualIncome" selected="selected">Single/Married (2+ incomes)</option>
+                                                    <option value="MarriedOneIncome">Married (1 income)</option>
+                                                    <option value="HeadOfHousehold">Head Of Household</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_ca_stateExemptions">Number of Allowances</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="landing_ca_stateExemptions" id="landing_ca_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_ca_stateAdditionalWithholding">Additional Withholding</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="landing_ca_stateAdditionalWithholding" id="landing_ca_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- COLORADO -->
+                                <div id="landing-state-co" class="accordion-group state-co inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseCO">
+                                            <h4 class="form_title arrow-right">Colorado State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="landingCollapseCO" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_co_stateExemptions">Number of Allowances</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="landing_ca_stateExemptions" id="landing_co_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_co_stateAdditionalWithholding">Additional Withholding</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="landing_co_stateAdditionalWithholding" id="landing_co_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- GEORGIA -->
+                                <div id="landing-state-ga" class="accordion-group state-ga inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseGA">
+                                            <h4 class="form_title arrow-right">Georgia State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="landingCollapseGA" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_ga_stateFilingStatus">Filling Status</label>
+                                            <div class="controls">
+                                                <select name="landing_ga_stateFilingStatus" id="landing_ga_stateFilingStatus">
+                                                    <option value="Single" selected="selected">Single</option>
+                                                    <option value="MarriedJointlyTwoWorking">Married-Joint, 2 Working</option>
+                                                    <option value="MarriedJointlyOneWorking">Married-Joint, 1 Working</option>
+                                                    <option value="MarriedFilingSeparate">Married-Filing Separate</option>
+                                                    <option value="HeadOfHousehold">Head Of Household</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_ga_stateExemptions">Total Allowances</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="landing_ga_stateExemptions" id="landing_ga_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_ga_stateAdditionalWithholding">Additional Withholding</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="landing_ga_stateAdditionalWithholding" id="landing_ga_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ILLINOIS -->
+                                <div id="landing-state-il" class="accordion-group state-il inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseIL">
+                                            <h4 class="form_title arrow-right">Illinois State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="landingCollapseIL" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="il_stateFilingStatus">Filling Status</label>
+                                            <div class="controls">
+                                                <select name="il_stateFilingStatus">
+                                                    <option value="Regular" selected="selected">Regular</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_il_stateExemptions">Basic Allowances</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="landing_il_stateExemptions" id="landing_il_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_il_stateAdditionalWithholding">Additional Withheld</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="landing_il_stateAdditionalWithholding" id="landing_il_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- LOUISIANA -->
+                                <div id="landing-state-la" class="accordion-group state-la inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseLA">
+                                            <h4 class="form_title arrow-right">Louisiana State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="landingCollapseLA" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_la_stateFilingStatus">Filling Status</label>
+                                            <div class="controls">
+                                                <select name="landing_la_stateFilingStatus" id="landing_la_stateFilingStatus">
+                                                    <option value="Regular" selected="selected">Regular</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_la_stateExemptions">Total Exemptions</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="landing_la_stateExemptions" id="landing_la_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_la_stateSecondaryExemptions">Total Dependents</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="landing_la_stateSecondaryExemptions" id="landing_la_stateSecondaryExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_la_stateAdditionalWithholding">Amount to be Withheld</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="landing_la_stateAdditionalWithholding" id="landing_la_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- MARYLAND -->
+                                <div id="landing-state-md" class="accordion-group state-md inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseMD">
+                                            <h4 class="form_title arrow-right">Maryland State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="landingCollapseMD" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_md_stateFilingStatus">Filling Status</label>
+                                            <div class="controls">
+                                                <select name="landing_md_stateFilingStatus" id="landing_md_stateFilingStatus">
+                                                    <option value="Single" selected="selected">Single</option>
+                                                    <option value="Married">Married</option>
+                                                    <option value="Single">Married, but Single Rate</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_md_residenceCounty">Residence County</label>
+                                            <div class="controls">
+                                                <select name="landing_md_residenceCounty" id="landing_md_residenceCounty">
+                                                    <option value="Allegany">Allegany</option>
+                                                    <option value="Anne Arundel">Anne Arundel</option>
+                                                    <option value="Baltimore">Baltimore</option>
+                                                    <option value="Calvert">Calvert</option>
+                                                    <option value="Caroline">Caroline</option>
+                                                    <option value="Carroll">Carroll</option>
+                                                    <option value="Cecil">Cecil</option>
+                                                    <option value="Charles">Charles</option>
+                                                    <option value="Dorchester">Dorchester</option>
+                                                    <option value="Frederick">Frederick</option>
+                                                    <option value="Garrett">Garrett</option>
+                                                    <option value="Harford">Harford</option>
+                                                    <option value="Howard">Howard</option>
+                                                    <option value="Kent">Kent</option>
+                                                    <option value="Montgomery">Montgomery</option>
+                                                    <option value="Prince Georges">Prince Georges</option>
+                                                    <option value="Queen Annes">Queen Annes</option>
+                                                    <option value="St Marys">St Marys</option>
+                                                    <option value="Somerset">Somerset</option>
+                                                    <option value="Talbot">Talbot</option>
+                                                    <option value="Washington">Washington</option>
+                                                    <option value="Wicomico">Wicomico</option>
+                                                    <option value="Worcester">Worcester</option>
+                                                    <option value="Baltimore (Ind City)">Baltimore (Ind City)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_md_stateExemptions">Total Exemptions</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="landing_md_stateExemptions" id="landing_md_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_md_stateAdditionalWithholding">Additional Withholding</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="landing_md_stateAdditionalWithholding" id="landing_md_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- NEW YORK -->
+                                <div id="landing-state-ny" class="accordion-group state-ny inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseNY">
+                                            <h4 class="form_title arrow-right">New York State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="landingCollapseNY" class="accordion-body collapse">
+                                        <!-- RESIDENCE -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_ny_residenceCity">Residence</label>
+                                            <div class="controls">
+                                                <select name="landing_ny_residenceCity" id="landing_ny_residenceCity">
+                                                    <option value="" selected="selected">Other</option>
+                                                    <option value="Yonkers">Yonkers</option>
+                                                    <option value="New York">New York City</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- WORK SITE -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_ny_workSiteCity">Work Site</label>
+                                            <div class="controls">
+                                                <select name="landing_ny_workSiteCity" id="landing_ny_workSiteCity">
+                                                    <option value="" selected="selected">Other</option>
+                                                    <option value="Yonkers">Yonkers</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- RESIDENCE FILLING STATUS -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_ny_residenceFilingStatus">Filling Status</label>
+                                            <div class="controls">
+                                                <select name="landing_ny_residenceFilingStatus" id="landing_ny_residenceFilingStatus">
+                                                    <option value="SingleOrHeadOfHousehold" selected="selected">Single</option>
+                                                    <option value="Married">Married</option>
+                                                    <option value="SingleOrHeadOfHousehold">Married, but Single Rate</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- RESIDENCE EXEMPTIONS -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_ny_residenceExemptions">NYC Allowances</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre ny-residence" name="landing_ny_residenceExemptions" id="landing_ny_residenceExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <!-- RESIDENCE WHITEHOLDING -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_ny_residenceAdditionalWithholding">Additional NYC Withholding</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre ny-residence" name="landing_ny_residenceAdditionalWithholding" id="landing_ny_residenceAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- WORK SITE ADDITIONAL -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_ny_workSiteAdditionalWithholding">Additional Yonkers Withholding</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency ny-worksite" name="landing_ny_workSiteAdditionalWithholding" id="landing_ny_workSiteAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- STATE EXEMPTIONS -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_ny_stateExemptions">Allowances</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="landing_ny_stateExemptions" id="landing_ny_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <!-- ADDITIONAL WITHHOLDING -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_ny_stateAdditionalWithholding">Additional State Withholding</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="landing_ny_stateAdditionalWithholding" id="landing_ny_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- NORTH CAROLINA -->
+                                <div id="landing-state-nc" class="accordion-group state-nc inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseNC">
+                                            <h4 class="form_title arrow-right">North Carolina State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="landingCollapseNC" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_nc_stateFilingStatus">Filing Status</label>
+                                            <div class="controls">
+                                                <select name="landing_nc_stateFilingStatus" id="landing_nc_stateFilingStatus">
+                                                    <option value="Single" selected="selected">Single</option>
+                                                    <option value="HeadOfHousehold">Head Of Household</option>
+                                                    <option value="MarriedOrWidow">Married Or Widow(er)</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_nc_stateExemptions">Total Allowances</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="landing_nc_stateExemptions" id="landing_nc_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_nc_stateAdditionalWithholding">Additional Withholdings</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="landing_nc_stateAdditionalWithholding" id="landing_nc_stateAdditionalWithholding" placeholder="0"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- VIRGINIA -->
+                                <div id="landing-state-va" class="accordion-group state-va inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseVA">
+                                            <h4 class="form_title arrow-right">Virginia State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="landingCollapseVA" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_va_stateFilingStatus">Filing Status</label>
+                                            <div class="controls">
+                                                <select name="landing_va_stateFilingStatus" id="landing_va_stateFilingStatus">
+                                                    <option value="Regular" selected="selected">Regular</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_va_stateExemptions">Total Exemptions</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="landing_va_stateExemptions" id="landing_va_stateExemptions"placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_va_stateAdditionalWithholding">Additional Withholding</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="landing_va_stateAdditionalWithholding" id="landing_va_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- WASHINGTON -->
+                                <div id="landing-state-wa" class="accordion-group state-wa inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseWA">
+                                            <h4 class="form_title arrow-right">Washington State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="landingCollapseWA" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="landing_wa_workersCompRate">Workers' Comp Rate</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="landing_wa_workersCompRate" id="landing_wa_workersCompRate" placeholder="0.00" /> /hr
                                                 </div>
                                             </div>
                                         </div>
@@ -296,7 +780,17 @@
                                     <label class="control-label" for="inputState">State</label>
                                     <div class="controls">
                                         <select id="inputState" class="input-medium">
-                                            <option>California</option>
+                                            <!--<option value="al">Alabama</option>-->
+                                            <!--<option value="az">Arizona</option>-->
+                                            <option value="ca" selected>California</option>
+                                            <!--<option value="ga">Georgia</option>-->
+                                            <!--<option value="il">Illinois</option>-->
+                                            <!--<option value="la">Louisiana</option>-->
+                                            <!--<option value="md">Maryland</option>-->
+                                            <!--<option value="ny">New York</option>-->
+                                            <!--<option value="nc">North Carolina</option>-->
+                                            <!--<option value="va">Virginia</option>-->
+                                            <!--<option value="wa">Washington</option>-->
                                         </select>
                                     </div>
                                 </div>
@@ -398,7 +892,7 @@
                                         </div>
                                     </div>
                                 <!-- ==================== -->
-                                <!-- FEDERAL WITHHOLDINGS -->
+                                <!-- FEDERAL -->
                                 <div class="accordion-group">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle" data-toggle="collapse" href="#federalWithHoldingsSection" data-parent="#paymentAccordion">
@@ -436,37 +930,510 @@
                                     </div>
                                 </div>
                                 <!-- ================== -->
-                                <!-- STATE WITHHOLDINGS -->
-                                <div class="accordion-group">
+                                <!-- STATE -->
+                                <!-- ALABAMA -->
+                                <div class="accordion-group state-al inactive accordion-last">
                                     <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" href="#stateWithHoldingsSection" data-parent="#paymentAccordion">
-                                            <h4 class="form_title arrow-right">California State Withholdings</h4>
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#paymentAccordion" href="#collapseAL">
+                                            <h4 class="form_title arrow-right">Alabama State Withholdings</h4>
                                         </a>
                                     </div>
-                                    <div id="stateWithHoldingsSection" class="accordion-body collapse">
+                                    <div id="collapseAL" class="accordion-body collapse">
                                         <div class="control-group">
-                                            <label class="control-label" for="stateFilingStatus">Filing Status</label>
+                                            <label class="control-label" for="al_stateFilingStatus">Filling Status</label>
                                             <div class="controls">
-                                                <select id="stateFilingStatus">
-                                                    <option value="SingleOrDualIncome">Single/Married (2+ incomes)</option>
-                                                    <option value="MarriedOneIncome">Married (1 income)</option>
-                                                    <option value="HeadOfHousehold">Head of Household</option>
+                                                <select name="al_stateFilingStatus" id="al_stateFilingStatus">
+                                                    <option value="S">Single</option>
+                                                    <option value="0" selected="selected">Single, No Exemption</option>
+                                                    <option value="M">Married</option>
+                                                    <option value="MS">Married, Filing Separately</option>
+                                                    <option value="H">Head of Family</option>
                                                     <option value="DoNotWithhold">Do Not Withhold</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="control-group">
-                                            <label class="control-label" for="stateAllowances">Number of Allowances</label>
+                                            <label class="control-label" for="al_stateExemptions">Number Of Dependents</label>
                                             <div class="controls">
-                                                <input type="text" class="input-mini" id="stateAllowances" placeholder="0">
+                                                <input type="text" class="input_pre" name="al_stateExemptions" id="al_stateExemptions" placeholder="0"/>
                                             </div>
                                         </div>
                                         <div class="control-group">
-                                            <label class="control-label" for="stateAdditionalWithheld">Additional</label>
+                                            <label class="control-label" for="al_stateAdditionalWithholding">Additional Amount</label>
                                             <div class="controls">
                                                 <div class="input-prepend">
                                                     <span class="add-on">$</span>
-                                                    <input type="text" id="stateAdditionalWithheld" class="input-small" placeholder="0.00">
+                                                    <input type="text" class="input_pre currency" name="al_stateAdditionalWithholding" id="al_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="al_workSiteZip">Zip Code</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="al_workSiteZip" id="al_workSiteZip" placeholder="" maxlength="5"/>
+                                            </div>
+                                        </div>
+                                        <!--
+                                        <div class="control-group">
+                                            <label class="control-label" for="al_workSiteZip">City</label>
+                                            <div class="controls">
+                                                <select name="al_workSiteCity" id="al_workSiteCity" disabled></select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="al_workSiteZip">County</label>
+                                            <div class="controls">
+                                                <select name="al_workSiteCounty" id="al_workSiteCounty" disabled></select>
+                                            </div>
+                                        </div>
+                                        -->
+                                    </div>
+                                </div>
+                                <!-- ARIZONA -->
+                                <div class="accordion-group state-az inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#paymentAccordion" href="#collapseAZ">
+                                            <h4 class="form_title arrow-right">Arizona State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapseAZ" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="az_stateFilingStatus">Withholding Rate</label>
+                                            <div class="controls">
+                                                <select name="az_stateFilingStatus" id="az_stateFilingStatus">
+                                                    <option value="V1_A">0.0%</option>
+                                                    <option value="V1_B">0.8%</option>
+                                                    <option value="V1_C">1.3%</option>
+                                                    <option value="V1_D">1.8%</option>
+                                                    <option value="V1_E">2.7%</option>
+                                                    <option value="V1_F">3.6%</option>
+                                                    <option value="V1_G">4.2%</option>
+                                                    <option value="V1_H" selected="selected">5.1%</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="az_stateAdditionalWithholding">Additional Amount</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="az_stateAdditionalWithholding" id="az_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- CALIFORNIA -->
+                                <div class="accordion-group state-ca accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#paymentAccordion" href="#collapseCA">
+                                            <h4 class="form_title arrow-right">California State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapseCA" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="ca_stateFilingStatus">Filling Status</label>
+                                            <div class="controls">
+                                                <select name="ca_stateFilingStatus" id="ca_stateFilingStatus">
+                                                    <option value="SingleOrDualIncome" selected="selected">Single/Married (2+ incomes)</option>
+                                                    <option value="MarriedOneIncome">Married (1 income)</option>
+                                                    <option value="HeadOfHousehold">Head Of Household</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="ca_stateExemptions">Number of Allowances</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="ca_stateExemptions" id="ca_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="ca_stateAdditionalWithholding">Additional Withholding</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="ca_stateAdditionalWithholding" id="ca_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- COLORADO -->
+                                <div class="accordion-group state-co inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#paymentAccordion" href="#collapseCO">
+                                            <h4 class="form_title arrow-right">Colorado State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapseCO" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="co_stateExemptions">Number of Allowances</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="ca_stateExemptions" id="co_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="co_stateAdditionalWithholding">Additional Withholding</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="co_stateAdditionalWithholding" id="co_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- GEORGIA -->
+                                <div class="accordion-group state-ga inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#paymentAccordion" href="#collapseGA">
+                                            <h4 class="form_title arrow-right">Georgia State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapseGA" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="ga_stateFilingStatus">Filling Status</label>
+                                            <div class="controls">
+                                                <select name="ga_stateFilingStatus" id="ga_stateFilingStatus">
+                                                    <option value="Single" selected="selected">Single</option>
+                                                    <option value="MarriedJointlyTwoWorking">Married-Joint, 2 Working</option>
+                                                    <option value="MarriedJointlyOneWorking">Married-Joint, 1 Working</option>
+                                                    <option value="MarriedFilingSeparate">Married-Filing Separate</option>
+                                                    <option value="HeadOfHousehold">Head Of Household</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="ga_stateExemptions">Total Allowances</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="ga_stateExemptions" id="ga_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="ga_stateAdditionalWithholding">Additional Withholding</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="ga_stateAdditionalWithholding" id="ga_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ILLINOIS -->
+                                <div class="accordion-group state-il inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#paymentAccordion" href="#collapseIL">
+                                            <h4 class="form_title arrow-right">Illinois State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapseIL" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="il_stateFilingStatus">Filling Status</label>
+                                            <div class="controls">
+                                                <select name="il_stateFilingStatus" id="il_stateFilingStatus">
+                                                    <option value="Regular" selected="selected">Regular</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="il_stateExemptions">Basic Allowances</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="il_stateExemptions" id="il_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="il_stateAdditionalWithholding">Additional Withheld</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="il_stateAdditionalWithholding" id="il_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- LOUISIANA -->
+                                <div class="accordion-group state-la inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#paymentAccordion" href="#collapseLA">
+                                            <h4 class="form_title arrow-right">Louisiana State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapseLA" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="la_stateFilingStatus">Filling Status</label>
+                                            <div class="controls">
+                                                <select name="la_stateFilingStatus" id="la_stateFilingStatus">
+                                                    <option value="Regular" selected="selected">Regular</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="la_stateExemptions">Total Exemptions</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="la_stateExemptions" id="la_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="la_stateSecondaryExemptions">Total Dependents</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="la_stateSecondaryExemptions" id="la_stateSecondaryExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="la_stateAdditionalWithholding">Amount to be Withheld</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="la_stateAdditionalWithholding" id="la_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- MARYLAND -->
+                                <div class="accordion-group state-md inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#paymentAccordion" href="#collapseMD">
+                                            <h4 class="form_title arrow-right">Maryland State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapseMD" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="md_stateFilingStatus">Filling Status</label>
+                                            <div class="controls">
+                                                <select name="md_stateFilingStatus" id="md_stateFilingStatus">
+                                                    <option value="Single" selected="selected">Single</option>
+                                                    <option value="Married">Married</option>
+                                                    <option value="Single">Married, but Single Rate</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="md_residenceCounty">Residence County</label>
+                                            <div class="controls">
+                                                <select name="md_residenceCounty" id="md_residenceCounty">
+                                                    <option value="Allegany">Allegany</option>
+                                                    <option value="Anne Arundel">Anne Arundel</option>
+                                                    <option value="Baltimore">Baltimore</option>
+                                                    <option value="Calvert">Calvert</option>
+                                                    <option value="Caroline">Caroline</option>
+                                                    <option value="Carroll">Carroll</option>
+                                                    <option value="Cecil">Cecil</option>
+                                                    <option value="Charles">Charles</option>
+                                                    <option value="Dorchester">Dorchester</option>
+                                                    <option value="Frederick">Frederick</option>
+                                                    <option value="Garrett">Garrett</option>
+                                                    <option value="Harford">Harford</option>
+                                                    <option value="Howard">Howard</option>
+                                                    <option value="Kent">Kent</option>
+                                                    <option value="Montgomery">Montgomery</option>
+                                                    <option value="Prince Georges">Prince Georges</option>
+                                                    <option value="Queen Annes">Queen Annes</option>
+                                                    <option value="St Marys">St Marys</option>
+                                                    <option value="Somerset">Somerset</option>
+                                                    <option value="Talbot">Talbot</option>
+                                                    <option value="Washington">Washington</option>
+                                                    <option value="Wicomico">Wicomico</option>
+                                                    <option value="Worcester">Worcester</option>
+                                                    <option value="Baltimore (Ind City)">Baltimore (Ind City)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="md_stateExemptions">Total Exemptions</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="md_stateExemptions" id="md_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="md_stateAdditionalWithholding">Additional Withholding</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="md_stateAdditionalWithholding" id="md_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- NEW YORK -->
+                                <div class="accordion-group state-ny inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#paymentAccordion" href="#collapseNY">
+                                            <h4 class="form_title arrow-right">New York State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapseNY" class="accordion-body collapse">
+                                        <!-- RESIDENCE -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="ny_residenceCity">Residence</label>
+                                            <div class="controls">
+                                                <select name="ny_residenceCity" id="ny_residenceCity">
+                                                    <option value="" selected="selected">Other</option>
+                                                    <option value="Yonkers">Yonkers</option>
+                                                    <option value="New York">New York City</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- WORK SITE -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="ny_workSiteCity">Work Site</label>
+                                            <div class="controls">
+                                                <select name="ny_workSiteCity" id="ny_workSiteCity">
+                                                    <option value="" selected="selected">Other</option>
+                                                    <option value="Yonkers">Yonkers</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- RESIDENCE FILLING STATUS -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="ny_residenceFilingStatus">Filling Status</label>
+                                            <div class="controls">
+                                                <select name="ny_residenceFilingStatus" id="ny_residenceFilingStatus" >
+                                                    <option value="SingleOrHeadOfHousehold" selected="selected">Single</option>
+                                                    <option value="Married">Married</option>
+                                                    <option value="SingleOrHeadOfHousehold">Married, but Single Rate</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- RESIDENCE EXEMPTIONS -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="ny_residenceExemptions">NYC Allowances</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre ny-residence" name="ny_residenceExemptions" id="ny_residenceExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <!-- RESIDENCE WHITEHOLDING -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="ny_residenceAdditionalWithholding">Additional NYC Withholding</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre ny-residence" name="ny_residenceAdditionalWithholding" id="ny_residenceAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- WORK SITE ADDITIONAL -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="ny_workSiteAdditionalWithholding">Additional Yonkers Withholding</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency ny-worksite" name="ny_workSiteAdditionalWithholding" id="ny_workSiteAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- STATE EXEMPTIONS -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="ny_stateExemptions">Allowances</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="ny_stateExemptions" id="ny_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <!-- ADDITIONAL WITHHOLDING -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="ny_stateAdditionalWithholding">Additional State Withholding</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="ny_stateAdditionalWithholding" id="ny_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- NORTH CAROLINA -->
+                                <div class="accordion-group state-nc inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#paymentAccordion" href="#collapseNC">
+                                            <h4 class="form_title arrow-right">North Carolina State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapseNC" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="nc_stateFilingStatus">Filing Status</label>
+                                            <div class="controls">
+                                                <select name="nc_stateFilingStatus" id="nc_stateFilingStatus">
+                                                    <option value="Single" selected="selected">Single</option>
+                                                    <option value="HeadOfHousehold">Head Of Household</option>
+                                                    <option value="MarriedOrWidow">Married Or Widow(er)</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="nc_stateExemptions">Total Allowances</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="nc_stateExemptions" id="nc_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="nc_stateAdditionalWithholding">Additional Withholdings</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="nc_stateAdditionalWithholding" id="nc_stateAdditionalWithholding" placeholder="0"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- VIRGINIA -->
+                                <div class="accordion-group state-va inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#paymentAccordion" href="#collapseVA">
+                                            <h4 class="form_title arrow-right">Virginia State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapseVA" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="va_stateFilingStatus">Filing Status</label>
+                                            <div class="controls">
+                                                <select name="va_stateFilingStatus" id="va_stateFilingStatus">
+                                                    <option value="Regular" selected="selected">Regular</option>
+                                                    <option value="DoNotWithhold">Do Not Withhold</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="va_stateExemptions">Total Exemptions</label>
+                                            <div class="controls">
+                                                <input type="text" class="input_pre" name="va_stateExemptions" id="va_stateExemptions" placeholder="0"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="va_stateAdditionalWithholding">Additional Withholding</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="va_stateAdditionalWithholding" id="va_stateAdditionalWithholding" placeholder="0.00"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- WASHINGTON -->
+                                <div class="accordion-group state-wa inactive accordion-last">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#paymentAccordion" href="#collapseWA">
+                                            <h4 class="form_title arrow-right">Washington State Withholdings</h4>
+                                        </a>
+                                    </div>
+                                    <div id="collapseWA" class="accordion-body collapse">
+                                        <div class="control-group">
+                                            <label class="control-label" for="wa_workersCompRate">Workers' Comp Rate</label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">$</span>
+                                                    <input type="text" class="input_pre currency" name="wa_workersCompRate" id="wa_workersCompRate" placeholder="0.00" /> /hr
                                                 </div>
                                             </div>
                                         </div>
@@ -495,7 +1462,17 @@
                                     <label class="control-label" for="eeInputState">State</label>
                                     <div class="controls">
                                         <select id="eeInputState" class="input-medium">
-                                            <option>California</option>
+                                            <!--<option value="al">Alabama</option>-->
+                                            <!--<option value="az">Arizona</option>-->
+                                            <option value="ca" selected>California</option>
+                                            <!--<option value="ga">Georgia</option>-->
+                                            <!--<option value="il">Illinois</option>-->
+                                            <!--<option value="la">Louisiana</option>-->
+                                            <!--<option value="md">Maryland</option>-->
+                                            <!--<option value="ny">New York</option>-->
+                                            <!--<option value="nc">North Carolina</option>-->
+                                            <!--<option value="va">Virginia</option>-->
+                                            <!--<option value="wa">Washington</option>-->
                                         </select>
                                     </div>
                                 </div>
@@ -553,7 +1530,7 @@
                                     </div>
                                 </div>
                                 <!-- ==================== -->
-                                <!-- FEDERAL WITHHOLDINGS -->
+                                <!-- FEDERAL -->
                                 <div class="accordion-group">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle" data-toggle="collapse" href="#eeInputFedWithHoldingsSection" data-parent="#eeInputAccordion">
@@ -591,7 +1568,7 @@
                                     </div>
                                 </div>
                                 <!-- ================== -->
-                                <!-- STATE WITHHOLDINGS -->
+                                <!-- STATE -->
                                 <div class="accordion-group">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle" data-toggle="collapse" href="#eeInputStateWithHoldingsSection" data-parent="#eeInputAccordion">
@@ -600,7 +1577,7 @@
                                     </div>
                                     <div id="eeInputStateWithHoldingsSection" class="accordion-body collapse">
                                         <div class="control-group">
-                                            <label class="control-label" for="stateFilingStatus">Filing Status</label>
+                                            <label class="control-label" for="eeInputStateFilingStatus">Filing Status</label>
                                             <div class="controls">
                                                 <select id="eeInputStateFilingStatus">
                                                     <option value="SingleOrDualIncome">Single/Married (2+ incomes)</option>
@@ -901,6 +1878,12 @@
     <script type="text/javascript" src="js/landing.js"></script>
     <script type="text/javascript" src="js/addee.js"></script>
     <script type="text/javascript">
+        $('#landingInputState').on('change', function() {
+            var state = $('#landingInputState option:selected').val();
+            var itm = $('#landing-state-' + state);
+            itm.removeClass('inactive');
+            itm.children('.accordion-body').collapse();
+        });
         $('#payDate').datepicker();
         $('#landingPayDate').datepicker();
         $('#inputEmployee').typeahead({

@@ -70,8 +70,8 @@ var validateLandingForm = function() {
     if (!validateNumberField($('#landingCommission'))) result = false;
     if (!validateNumberField($('#landingFedAllowances'))) result = false;
     if (!validateNumberField($('#landingFedAdditionalWithheld'))) result = false;
-    if (!validateNumberField($('#landingStateAllowances'))) result = false;
-    if (!validateNumberField($('#landingStateAdditionalWithheld'))) result = false;
+    if (!validateNumberField($('#landing_ca_stateExemptions'))) result = false;
+    if (!validateNumberField($('#landing_ca_stateAdditionalWithholding'))) result = false;
     return result;
 }
 
@@ -86,8 +86,8 @@ var validatePaycheckForm = function() {
     if (!validateNumberField($('#commission'))) result = false;
     if (!validateNumberField($('#fedAllowances'))) result = false;
     if (!validateNumberField($('#fedAdditionalWithheld'))) result = false;
-    if (!validateNumberField($('#stateAllowances'))) result = false;
-    if (!validateNumberField($('#stateAdditionalWithheld'))) result = false;
+    if (!validateNumberField($('#ca_stateExemptions'))) result = false;
+    if (!validateNumberField($('#ca_stateAdditionalWithholding'))) result = false;
     return result;
 }
 
@@ -138,9 +138,9 @@ var savePaycheckFromPaycheckForm = function() {
         "federalFilingStatus": $('#fedFilingStatus'),
         "federalAdditionalWithholding": parseFloat($('#fedAdditionalWithheld')),
         "federalExemptions": parseInt($('#fedAllowances')),
-        "stateFilingStatus": $('#stateFilingStatus'),
-        "stateExemptions": parseInt($('#stateAllowances')),
-        "stateAdditionalWithholding": parseFloat($('#stateAdditionalWithheld'))
+        "stateFilingStatus": $('#ca_stateFilingStatus'),
+        "stateExemptions": parseInt($('#ca_stateExemptions')),
+        "stateAdditionalWithholding": parseFloat($('#ca_stateAdditionalWithholding'))
     });
     app.paychecks.add(paycheck);
     app.currentUser.set('totalNet',app.currentUser.get('totalNet') + netPay);
@@ -207,9 +207,9 @@ var calculate = function() {
         "federalFilingStatus": $('#fedFilingStatus').val(),
         "federalAdditionalWithholding":$('#fedAdditionalWithheld').val(),
         "federalExemptions": $('#fedAllowances').val(),
-        "stateFilingStatus": $('#stateFilingStatus').val(),
-        "stateExemptions": $('#stateAllowances').val(),
-        "stateAdditionalWithholding": $('#stateAdditionalWithheld').val()
+        "stateFilingStatus": $('#ca_stateFilingStatus').val(),
+        "stateExemptions": $('#ca_stateExemptions').val(),
+        "stateAdditionalWithholding": $('#ca_stateAdditionalWithholding').val()
     };
     $.ajax({
         url: AC_URL,
@@ -221,7 +221,6 @@ var calculate = function() {
         dataType: 'json',
         data: JSON.stringify(obj),
         success: function(data, status, jqXHR) {
-            latestCalculatedData = data;
             updateCheckDisplay(data);
         },
         error: function(jqXHR, status, errorThrown) {
@@ -268,9 +267,9 @@ $('#commission').bind('change paste keyup blur', function() { delayedCalculate()
 $('#fedFilingStatus').bind('change paste keyup blur', function() { delayedCalculate(); });
 $('#fedAllowances').bind('change paste keyup blur', function() { delayedCalculate(); });
 $('#fedAdditionalWithheld').bind('change paste keyup blur', function() { delayedCalculate(); });
-$('#stateFilingStatus').bind('change paste keyup blur', function() { delayedCalculate(); });
-$('#stateAllowances').bind('change paste keyup blur', function() { delayedCalculate(); });
-$('#stateAdditionalWithheld').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#ca_stateFilingStatus').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#ca_stateExemptions').bind('change paste keyup blur', function() { delayedCalculate(); });
+$('#ca_stateAdditionalWithholding').bind('change paste keyup blur', function() { delayedCalculate(); });
 
 // EVENTS FOR THE LANDING FORM
 $('#landingPayType').bind('change', function() {setPayType($(this).val());});
@@ -283,5 +282,5 @@ $('#landingBonus').bind('change paste keyup blur', function() {validateLandingFo
 $('#landingCommission').bind('change paste keyup blur', function() {validateLandingForm();});
 $('#landingFedAllowances').bind('change paste keyup blur', function() {validateLandingForm();});
 $('#landingFedAdditionalWithheld').bind('change paste keyup blur', function() {validateLandingForm();});
-$('#landingStateAllowances').bind('change paste keyup blur', function() {validateLandingForm();});
-$('#landingStateAdditionalWithheld').bind('change paste keyup blur', function() {validateLandingForm();});
+$('#landing_ca_stateExemptions').bind('change paste keyup blur', function() {validateLandingForm();});
+$('#landing_ca_stateAdditionalWithholding').bind('change paste keyup blur', function() {validateLandingForm();});
