@@ -14,7 +14,7 @@ var getAbbreviation = function(name) {
 }
 
 var clearBadge = function() {
-    $('#badgeImage').attr('src', 'images/mock-gravatar.png');
+    $('#badgeImage').attr('src', 'images/payroll/mock-gravatar.png');
     $('#badgeNameAbbreviation span').html('E1');
     $('#badgeName span').html('Employee 1');
 }

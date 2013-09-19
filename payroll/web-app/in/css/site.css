@@ -44,7 +44,7 @@ h4 {
     color: #3e3f3f;
 }
 .striped {
-    background: url('../../images/payroll/stripe_12fcb4a93fe3394155faaf07e38d08bb.png');
+    background: url('../images/payroll/stripe_12fcb4a93fe3394155faaf07e38d08bb.png');
 }
 
 /**
@@ -151,10 +151,10 @@ h4 {
     padding: 0 20px;
 }
 #landingLayout form .accordion-heading .accordion-toggle h4.arrow-down {
-    background: url("../../images/payroll/arrow-down.png") no-repeat top left;
+    background: url("../images/payroll/arrow-down.png") no-repeat top left;
 }
 #landingLayout form .accordion-heading .accordion-toggle h4.arrow-right {
-    background: url("../../images/payroll/arrow-right.png") no-repeat top left;
+    background: url("../images/payroll/arrow-right.png") no-repeat top left;
 }
 #landingLayout form .accordion-heading .accordion-toggle h4 small {
     font-style: italic;
@@ -370,10 +370,10 @@ h4 {
     padding: 0 20px;
 }
 #action-layout form .accordion-heading .accordion-toggle h4.arrow-down {
-    background: url("../../images/payroll/arrow-down.png") no-repeat top left;
+    background: url("../images/payroll/arrow-down.png") no-repeat top left;
 }
 #action-layout form .accordion-heading .accordion-toggle h4.arrow-right {
-    background: url("../../images/payroll/arrow-right.png") no-repeat top left;
+    background: url("../images/payroll/arrow-right.png") no-repeat top left;
 }
 #action-layout form .accordion-heading .accordion-toggle h4 small {
     font-style: italic;
@@ -391,9 +391,9 @@ h4 {
 }
 .nav .app-title {
     color: #8696a2;
-    padding: 11px 10px 11px 77px;
-    background: url("../../images/payroll/nav-logo-intuit.png") no-repeat 11px 9px;
-    font-size: 18px;
+    padding: 10px 10px 11px 77px;
+    background: url("../images/payroll/nav-logo-intuit.png") no-repeat 11px 9px;
+    font-size: 17px;
 }
 .nav ul {
     margin: 0;
@@ -408,17 +408,17 @@ h4 {
     background-color: #1899cd;
 }
 .nav ul li.employees {
-    background-image: url('../../images/payroll/employee-icon.png');
+    background-image: url('../images/payroll/employee-icon.png');
     background-repeat: no-repeat;
     background-position: 20px 12px;
 }
 .nav ul li.paychecks {
-    background-image: url('../../images/payroll/paychecks-icon.png');
+    background-image: url('../images/payroll/paychecks-icon.png');
     background-repeat: no-repeat;
     background-position: 20px 12px;
 }
 .nav ul li.taxes {
-    background-image: url('../../images/payroll/taxes-icon.png');
+    background-image: url('../images/payroll/taxes-icon.png');
     background-repeat: no-repeat;
     background-position: 20px 12px;
 }
@@ -523,7 +523,7 @@ div.mugshot img {
 }
 #sample-check-body {
     position: relative;
-    background: #f2f6fb url('../../images/SampleCheck.png') no-repeat 50% 10px;
+    background: #f2f6fb url('../images/payroll/sample-check.png') no-repeat 50% 10px;
     margin: 20px auto 0 auto;
     height: 564px;
     border: 7px solid white;
@@ -608,7 +608,7 @@ div.mugshot img {
     width: 306px;
     height: 430px;
     margin: 60px auto;
-    background: url('../../images/badge.png') no-repeat;
+    background: url('../images/payroll/badge.png') no-repeat;
     background-size: contain;
 }
 #badge img {

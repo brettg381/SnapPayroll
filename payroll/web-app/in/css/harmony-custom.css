@@ -259,112 +259,112 @@ body.harmony nav ul li.icon a.selected {
     padding-left: 45px;
 }
 body.harmony nav ul li.icon.dashboard a {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -833px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -833px no-repeat;
 }
 body.harmony nav ul li.icon.dashboard a:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 body.harmony nav ul li.icon.dashboard a.selected {
-    background: rgba(0, 0, 0, 0.5) url('../../images/payroll/icons-s2b11c90dfb.png') -5px -833px no-repeat;
+    background: rgba(0, 0, 0, 0.5) url('../images/payroll/icons-s2b11c90dfb.png') -5px -833px no-repeat;
 }
 body.harmony nav ul li.icon.dashboard a.parent:hover {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -833px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -833px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
 }
 body.harmony nav ul li.icon.expenses a {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1083px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1083px no-repeat;
 }
 body.harmony nav ul li.icon.expenses a:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 body.harmony nav ul li.icon.expenses a.selected {
-    background: rgba(0, 0, 0, 0.5) url('../../images/payroll/icons-s2b11c90dfb.png') -5px -1083px no-repeat;
+    background: rgba(0, 0, 0, 0.5) url('../images/payroll/icons-s2b11c90dfb.png') -5px -1083px no-repeat;
 }
 body.harmony nav ul li.icon.expenses a.parent:hover {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1083px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1083px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
 }
 body.harmony nav ul li.icon.customers a {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -783px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -783px no-repeat;
 }
 body.harmony nav ul li.icon.customers a:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 body.harmony nav ul li.icon.customers a.selected {
-    background: rgba(0, 0, 0, 0.5) url('../../images/payroll/icons-s2b11c90dfb.png') -5px -783px no-repeat;
+    background: rgba(0, 0, 0, 0.5) url('../images/payroll/icons-s2b11c90dfb.png') -5px -783px no-repeat;
 }
 body.harmony nav ul li.icon.customers a.parent:hover {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -783px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -783px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
 }
 body.harmony nav ul li.icon.vendors a {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -565px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -565px no-repeat;
 }
 body.harmony nav ul li.icon.vendors a:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 body.harmony nav ul li.icon.vendors a.selected {
-    background: rgba(0, 0, 0, 0.5) url('../../images/payroll/icons-s2b11c90dfb.png') -5px -565px no-repeat;
+    background: rgba(0, 0, 0, 0.5) url('../images/payroll/icons-s2b11c90dfb.png') -5px -565px no-repeat;
 }
 body.harmony nav ul li.icon.vendors a.parent:hover {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -565px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -565px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
 }
 body.harmony nav ul li.icon.employees a {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -475px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -475px no-repeat;
 }
 body.harmony nav ul li.icon.employees a:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 body.harmony nav ul li.icon.employees a.selected {
-    background: rgba(0, 0, 0, 0.5) url('../../images/payroll/icons-s2b11c90dfb.png') -5px -475px no-repeat;
+    background: rgba(0, 0, 0, 0.5) url('../images/payroll/icons-s2b11c90dfb.png') -5px -475px no-repeat;
 }
 body.harmony nav ul li.icon.employees a.parent:hover {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -475px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -475px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
 }
 body.harmony nav ul li.icon.accountant a {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -425px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -425px no-repeat;
 }
 body.harmony nav ul li.icon.accountant a:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 body.harmony nav ul li.icon.accountant a.selected {
-    background: rgba(0, 0, 0, 0.5) url('../../images/payroll/icons-s2b11c90dfb.png') -5px -425px no-repeat;
+    background: rgba(0, 0, 0, 0.5) url('../images/payroll/icons-s2b11c90dfb.png') -5px -425px no-repeat;
 }
 body.harmony nav ul li.icon.accountant a.parent:hover {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -425px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -425px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
 }
 body.harmony nav ul li.icon.billsdotcom a {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -615px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -615px no-repeat;
 }
 body.harmony nav ul li.icon.billsdotcom a:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 body.harmony nav ul li.icon.billsdotcom a.selected {
-    background: rgba(0, 0, 0, 0.5) url('../../images/payroll/icons-s2b11c90dfb.png') -5px -615px no-repeat;
+    background: rgba(0, 0, 0, 0.5) url('../images/payroll/icons-s2b11c90dfb.png') -5px -615px no-repeat;
 }
 body.harmony nav ul li.icon.billsdotcom a.parent:hover {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -615px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -615px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
 }
 body.harmony nav ul li.icon.help a {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -733px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -733px no-repeat;
 }
 body.harmony nav ul li.icon.help a:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 body.harmony nav ul li.icon.help a.selected {
-    background: rgba(0, 0, 0, 0.5) url('../../images/payroll/icons-s2b11c90dfb.png') -5px -733px no-repeat;
+    background: rgba(0, 0, 0, 0.5) url('../images/payroll/icons-s2b11c90dfb.png') -5px -733px no-repeat;
 }
 body.harmony nav ul li.icon.help a.parent:hover {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -733px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -733px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
 }
 body.harmony nav ul li.icon.settings a {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -683px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -683px no-repeat;
 }
 body.harmony nav ul li.icon.settings a:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 body.harmony nav ul li.icon.settings a.selected {
-    background: rgba(0, 0, 0, 0.5) url('../../images/payroll/icons-s2b11c90dfb.png') -5px -683px no-repeat;
+    background: rgba(0, 0, 0, 0.5) url('../images/payroll/icons-s2b11c90dfb.png') -5px -683px no-repeat;
 }
 body.harmony nav ul li.icon.settings a.parent:hover {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -683px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -683px no-repeat, rgba(0, 0, 0, 0.5) url("../img/nav-icon-forward.png") 150px 0 no-repeat;
 }
 */
 div.frameLayout.harmony header {
@@ -384,7 +384,7 @@ div.frameLayout.harmony header .menu {
     padding: 0;
     box-shadow: inset -1px 0 rgba(255, 255, 255, 0.1);
     border-right: 1px solid black;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1771px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1771px no-repeat;
     white-space: nowrap;
     margin-right: 15px;
 }
@@ -400,7 +400,7 @@ div.frameLayout.harmony header.trowser {
 }
 div.frameLayout.harmony header.trowser .menu {
     border-right: 1px solid rgba(0, 0, 0, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2231px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2231px no-repeat;
     margin-right: 0;
 }
 div.frameLayout.harmony header.trowser .navigation {
@@ -411,13 +411,13 @@ div.frameLayout.harmony header.trowser .navigation {
     padding: 0;
     box-shadow: inset -1px 0 rgba(255, 255, 255, 0.1);
     border-right: 1px solid rgba(0, 0, 0, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -883px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -883px no-repeat;
     white-space: nowrap;
     margin-right: 15px;
 }
 div.frameLayout.harmony header.trowser .navigation.disabled {
     opacity: 1;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -945px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -945px no-repeat;
 }
 div.frameLayout.harmony header.trowser .navigation .badge {
     color: #fff;
@@ -442,17 +442,17 @@ div.frameLayout.harmony header.trowser .actions a.invoice-solutions {
     padding: 0 10px 0 40px;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1211px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1211px no-repeat;
     color: white;
     text-decoration: none;
 }
 div.frameLayout.harmony header.trowser .actions a.help {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1549px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1549px no-repeat;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 div.frameLayout.harmony header.trowser .actions a.close {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1494px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1494px no-repeat;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -470,16 +470,16 @@ div.frameLayout.harmony header .actions a {
 }
 /* line 469, ../sass/_layout.scss */
 div.frameLayout.harmony header .actions a.create {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1043px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1043px no-repeat;
 }
 div.frameLayout.harmony header .actions a.todo {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -525px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -525px no-repeat;
 }
 div.frameLayout.harmony header .actions a.help {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1003px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1003px no-repeat;
 }
 div.frameLayout.harmony header .actions a.account {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -314px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -314px no-repeat;
 }
 div.frameLayout.harmony header .actions a .badge {
     position: absolute;
@@ -635,37 +635,37 @@ div.frameLayout.harmony .button.plus, div.frameLayout.harmony .button:link.plus,
     -webkit-box-shadow: inset 0 0 0 1px rgba(151, 151, 151, 0.4);
     -moz-box-shadow: inset 0 0 0 1px rgba(151, 151, 151, 0.4);
     box-shadow: inset 0 0 0 1px rgba(151, 151, 151, 0.4);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -o-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -o-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
 }
 div.frameLayout.harmony .button.plus:hover, div.frameLayout.harmony .button.plus.hover, div.frameLayout.harmony .button:link.plus:hover, div.frameLayout.harmony .button:link.plus.hover, div.frameLayout.harmony [type=button].plus:hover, div.frameLayout.harmony [type=button].plus.hover, div.frameLayout.harmony [type=submit].plus:hover, div.frameLayout.harmony [type=submit].plus.hover {
     -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(151, 151, 151, 0.4);
     -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(151, 151, 151, 0.4);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(151, 151, 151, 0.4);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f5f5f5));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -webkit-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -o-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f5f5f5));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -webkit-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -o-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
 }
 div.frameLayout.harmony .button.plus:active, div.frameLayout.harmony .button.plus.active, div.frameLayout.harmony .button:link.plus:active, div.frameLayout.harmony .button:link.plus.active, div.frameLayout.harmony [type=button].plus:active, div.frameLayout.harmony [type=button].plus.active, div.frameLayout.harmony [type=submit].plus:active, div.frameLayout.harmony [type=submit].plus.active {
     background-color: white;
     -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
     -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1879px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1879px no-repeat;
 }
 div.frameLayout.harmony .button.plus[disabled=disabled], div.frameLayout.harmony .button.plus.disabled, div.frameLayout.harmony .button:link.plus[disabled=disabled], div.frameLayout.harmony .button:link.plus.disabled, div.frameLayout.harmony [type=button].plus[disabled=disabled], div.frameLayout.harmony [type=button].plus.disabled, div.frameLayout.harmony [type=submit].plus[disabled=disabled], div.frameLayout.harmony [type=submit].plus.disabled {
     background-color: white;
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1913px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1913px no-repeat;
 }
 div.frameLayout.harmony .button.primary, div.frameLayout.harmony .button:link.primary, div.frameLayout.harmony [type=button].primary, div.frameLayout.harmony [type=submit].primary {
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
@@ -738,37 +738,37 @@ div.frameLayout.harmony .button.secondary.plus, div.frameLayout.harmony .button:
     -webkit-box-shadow: inset 0 0 0 1px rgba(151, 151, 151, 0.4);
     -moz-box-shadow: inset 0 0 0 1px rgba(151, 151, 151, 0.4);
     box-shadow: inset 0 0 0 1px rgba(151, 151, 151, 0.4);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -o-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -o-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
 }
 div.frameLayout.harmony .button.secondary.plus:hover, div.frameLayout.harmony .button.secondary.plus.hover, div.frameLayout.harmony .button:link.secondary.plus:hover, div.frameLayout.harmony .button:link.secondary.plus.hover, div.frameLayout.harmony [type=button].secondary.plus:hover, div.frameLayout.harmony [type=button].secondary.plus.hover, div.frameLayout.harmony [type=submit].secondary.plus:hover, div.frameLayout.harmony [type=submit].secondary.plus.hover {
     -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(151, 151, 151, 0.4);
     -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(151, 151, 151, 0.4);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(151, 151, 151, 0.4);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f5f5f5));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -webkit-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -o-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f5f5f5));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -webkit-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -o-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
 }
 div.frameLayout.harmony .button.secondary.plus:active, div.frameLayout.harmony .button.secondary.plus.active, div.frameLayout.harmony .button:link.secondary.plus:active, div.frameLayout.harmony .button:link.secondary.plus.active, div.frameLayout.harmony [type=button].secondary.plus:active, div.frameLayout.harmony [type=button].secondary.plus.active, div.frameLayout.harmony [type=submit].secondary.plus:active, div.frameLayout.harmony [type=submit].secondary.plus.active {
     background-color: white;
     -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
     -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1947px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1947px no-repeat;
 }
 div.frameLayout.harmony .button.secondary.plus[disabled=disabled], div.frameLayout.harmony .button.secondary.plus.disabled, div.frameLayout.harmony .button:link.secondary.plus[disabled=disabled], div.frameLayout.harmony .button:link.secondary.plus.disabled, div.frameLayout.harmony [type=button].secondary.plus[disabled=disabled], div.frameLayout.harmony [type=button].secondary.plus.disabled, div.frameLayout.harmony [type=submit].secondary.plus[disabled=disabled], div.frameLayout.harmony [type=submit].secondary.plus.disabled {
     background-color: white;
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1981px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1981px no-repeat;
 }
 div.frameLayout.harmony .dark .button, div.frameLayout.harmony .dark .button:link, div.frameLayout.harmony .dark [type=button], div.frameLayout.harmony .dark [type=submit] {
     border: 1px solid #171d23;
@@ -836,48 +836,48 @@ div.frameLayout.harmony .dark .button.plus, div.frameLayout.harmony .dark .butto
     -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc3N2Y4OCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzUzNWM2NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #777f88), color-stop(100%, #535c65));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -webkit-linear-gradient(top, #777f88 0%, #535c65 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -moz-linear-gradient(top, #777f88 0%, #535c65 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -o-linear-gradient(top, #777f88 0%, #535c65 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, linear-gradient(top, #777f88 0%, #535c65 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc3N2Y4OCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzUzNWM2NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #777f88), color-stop(100%, #535c65));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -webkit-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -moz-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -o-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, linear-gradient(top, #777f88 0%, #535c65 100%);
 }
 div.frameLayout.harmony .dark .button.plus:hover, div.frameLayout.harmony .dark .button.plus.hover, div.frameLayout.harmony .dark .button:link.plus:hover, div.frameLayout.harmony .dark .button:link.plus.hover, div.frameLayout.harmony .dark [type=button].plus:hover, div.frameLayout.harmony .dark [type=button].plus.hover, div.frameLayout.harmony .dark [type=submit].plus:hover, div.frameLayout.harmony .dark [type=submit].plus.hover {
     border: 1px solid #171d23;
     -webkit-box-shadow: 0 2px 0 #3a4249, inset 0 0 0 1px rgba(255, 255, 255, 0.1);
     -moz-box-shadow: 0 2px 0 #3a4249, inset 0 0 0 1px rgba(255, 255, 255, 0.1);
     box-shadow: 0 2px 0 #3a4249, inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc3N2Y4OCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzUzNWM2NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #777f88), color-stop(100%, #535c65));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -webkit-linear-gradient(top, #777f88 0%, #535c65 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -moz-linear-gradient(top, #777f88 0%, #535c65 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -o-linear-gradient(top, #777f88 0%, #535c65 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, linear-gradient(top, #777f88 0%, #535c65 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc3N2Y4OCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzUzNWM2NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #777f88), color-stop(100%, #535c65));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -webkit-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -moz-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -o-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, linear-gradient(top, #777f88 0%, #535c65 100%);
 }
 div.frameLayout.harmony .dark .button.plus:active, div.frameLayout.harmony .dark .button.plus.active, div.frameLayout.harmony .dark .button:link.plus:active, div.frameLayout.harmony .dark .button:link.plus.active, div.frameLayout.harmony .dark [type=button].plus:active, div.frameLayout.harmony .dark [type=button].plus.active, div.frameLayout.harmony .dark [type=submit].plus:active, div.frameLayout.harmony .dark [type=submit].plus.active {
     border: 1px solid #2a353f;
     -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.6);
     -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.6);
     box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.6);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI4MzIzYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM2NDI0ZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #28323b), color-stop(100%, #36424f));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, -webkit-linear-gradient(top, #28323b 0%, #36424f 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, -moz-linear-gradient(top, #28323b 0%, #36424f 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, -o-linear-gradient(top, #28323b 0%, #36424f 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, linear-gradient(top, #28323b 0%, #36424f 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI4MzIzYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM2NDI0ZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #28323b), color-stop(100%, #36424f));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, -webkit-linear-gradient(top, #28323b 0%, #36424f 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, -moz-linear-gradient(top, #28323b 0%, #36424f 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, -o-linear-gradient(top, #28323b 0%, #36424f 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, linear-gradient(top, #28323b 0%, #36424f 100%);
 }
 div.frameLayout.harmony .dark .button.plus[disabled=disabled], div.frameLayout.harmony .dark .button.plus.disabled, div.frameLayout.harmony .dark .button:link.plus[disabled=disabled], div.frameLayout.harmony .dark .button:link.plus.disabled, div.frameLayout.harmony .dark [type=button].plus[disabled=disabled], div.frameLayout.harmony .dark [type=button].plus.disabled, div.frameLayout.harmony .dark [type=submit].plus[disabled=disabled], div.frameLayout.harmony .dark [type=submit].plus.disabled {
     border: 1px solid #171d23;
     -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNiNDY0ZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzJkMzg0MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3b464f), color-stop(100%, #2d3842));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, -webkit-linear-gradient(top, #3b464f 0%, #2d3842 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, -moz-linear-gradient(top, #3b464f 0%, #2d3842 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, -o-linear-gradient(top, #3b464f 0%, #2d3842 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, linear-gradient(top, #3b464f 0%, #2d3842 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNiNDY0ZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzJkMzg0MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3b464f), color-stop(100%, #2d3842));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, -webkit-linear-gradient(top, #3b464f 0%, #2d3842 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, -moz-linear-gradient(top, #3b464f 0%, #2d3842 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, -o-linear-gradient(top, #3b464f 0%, #2d3842 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, linear-gradient(top, #3b464f 0%, #2d3842 100%);
 }
 div.frameLayout.harmony .dark .button.primary, div.frameLayout.harmony .dark .button:link.primary, div.frameLayout.harmony .dark [type=button].primary, div.frameLayout.harmony .dark [type=submit].primary {
     border: 1px solid #171d23;
@@ -1039,12 +1039,12 @@ div.frameLayout.harmony .combo-button::after {
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQzNzZjZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM1NThjMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4376cf), color-stop(100%, #3558c1));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #4376cf 0%, #3558c1 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #4376cf 0%, #3558c1 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #4376cf 0%, #3558c1 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQzNzZjZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM1NThjMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4376cf), color-stop(100%, #3558c1));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #4376cf 0%, #3558c1 100%);
 }
 div.frameLayout.harmony .combo-button:hover, div.frameLayout.harmony .combo-button.hover {
     -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
@@ -1062,12 +1062,12 @@ div.frameLayout.harmony .combo-button:hover::after, div.frameLayout.harmony .com
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQzNzZjZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM1NThjMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4376cf), color-stop(100%, #3558c1));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #4376cf 0%, #3558c1 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #4376cf 0%, #3558c1 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #4376cf 0%, #3558c1 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQzNzZjZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM1NThjMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4376cf), color-stop(100%, #3558c1));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #4376cf 0%, #3558c1 100%);
 }
 div.frameLayout.harmony .combo-button:active, div.frameLayout.harmony .combo-button.active, div.frameLayout.harmony .combo-button.open {
     -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
@@ -1085,12 +1085,12 @@ div.frameLayout.harmony .combo-button:active::after, div.frameLayout.harmony .co
     -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3), -1px 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3), -1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3), -1px 0 rgba(255, 255, 255, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI3NDM4OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM0NTlhNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #274389), color-stop(100%, #3459a5));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -webkit-linear-gradient(top, #274389 0%, #3459a5 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -moz-linear-gradient(top, #274389 0%, #3459a5 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -o-linear-gradient(top, #274389 0%, #3459a5 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, linear-gradient(top, #274389 0%, #3459a5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI3NDM4OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM0NTlhNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #274389), color-stop(100%, #3459a5));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -webkit-linear-gradient(top, #274389 0%, #3459a5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -moz-linear-gradient(top, #274389 0%, #3459a5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -o-linear-gradient(top, #274389 0%, #3459a5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, linear-gradient(top, #274389 0%, #3459a5 100%);
 }
 div.frameLayout.harmony .combo-button.disabled {
     opacity: 1;
@@ -1124,12 +1124,12 @@ div.frameLayout.harmony .combo-button.disabled:hover::after, div.frameLayout.har
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JjY2FlYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2E1YjllNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bccaeb), color-stop(100%, #a5b9e4));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JjY2FlYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2E1YjllNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bccaeb), color-stop(100%, #a5b9e4));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
 }
 div.frameLayout.harmony .combo-button.disabled:active, div.frameLayout.harmony .combo-button.disabled.active, div.frameLayout.harmony .combo-button.disabled.open {
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
@@ -1147,23 +1147,23 @@ div.frameLayout.harmony .combo-button.disabled:active::after, div.frameLayout.ha
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JjY2FlYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2E1YjllNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bccaeb), color-stop(100%, #a5b9e4));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JjY2FlYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2E1YjllNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bccaeb), color-stop(100%, #a5b9e4));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
 }
 div.frameLayout.harmony .combo-button.disabled::after {
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JjY2FlYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2E1YjllNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bccaeb), color-stop(100%, #a5b9e4));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JjY2FlYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2E1YjllNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bccaeb), color-stop(100%, #a5b9e4));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
 }
 div.frameLayout.harmony .combo-button.open ul {
     display: block;
@@ -1202,12 +1202,12 @@ div.frameLayout.harmony .dark .combo-button::after {
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRmOGFlYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNlNjdlNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4f8aea), color-stop(100%, #3e67e5));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRmOGFlYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNlNjdlNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4f8aea), color-stop(100%, #3e67e5));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
 }
 div.frameLayout.harmony .dark .combo-button:hover, div.frameLayout.harmony .dark .combo-button.hover {
     -webkit-box-shadow: 0 2px 0 #3b4249, inset 0 0 0 1px rgba(0, 0, 0, 0.1);
@@ -1225,12 +1225,12 @@ div.frameLayout.harmony .dark .combo-button:hover::after, div.frameLayout.harmon
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRmOGFlYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNlNjdlNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4f8aea), color-stop(100%, #3e67e5));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRmOGFlYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNlNjdlNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4f8aea), color-stop(100%, #3e67e5));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
 }
 div.frameLayout.harmony .dark .combo-button:active, div.frameLayout.harmony .dark .combo-button.active, div.frameLayout.harmony .dark .combo-button.open {
     -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
@@ -1248,12 +1248,12 @@ div.frameLayout.harmony .dark .combo-button:active::after, div.frameLayout.harmo
     -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3), -1px 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3), -1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3), -1px 0 rgba(255, 255, 255, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFjMzE1OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI1NDE3NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1c3159), color-stop(100%, #254176));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -webkit-linear-gradient(top, #1c3159 0%, #254176 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -moz-linear-gradient(top, #1c3159 0%, #254176 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -o-linear-gradient(top, #1c3159 0%, #254176 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, linear-gradient(top, #1c3159 0%, #254176 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFjMzE1OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI1NDE3NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1c3159), color-stop(100%, #254176));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -webkit-linear-gradient(top, #1c3159 0%, #254176 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -moz-linear-gradient(top, #1c3159 0%, #254176 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -o-linear-gradient(top, #1c3159 0%, #254176 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, linear-gradient(top, #1c3159 0%, #254176 100%);
 }
 div.frameLayout.harmony .dark .combo-button.disabled .button, div.frameLayout.harmony .dark .combo-button.disabled .button:link, div.frameLayout.harmony .dark .combo-button.disabled [type=button], div.frameLayout.harmony .dark .combo-button.disabled [type=submit] {
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
@@ -1284,12 +1284,12 @@ div.frameLayout.harmony .dark .combo-button.disabled:hover::after, div.frameLayo
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI1NDI2YyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMzY2NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #25426c), color-stop(100%, #203666));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-linear-gradient(top, #25426c 0%, #203666 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -moz-linear-gradient(top, #25426c 0%, #203666 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -o-linear-gradient(top, #25426c 0%, #203666 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI1NDI2YyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMzY2NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #25426c), color-stop(100%, #203666));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -moz-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -o-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, linear-gradient(top, #25426c 0%, #203666 100%);
 }
 div.frameLayout.harmony .dark .combo-button.disabled:active, div.frameLayout.harmony .dark .combo-button.disabled.active, div.frameLayout.harmony .dark .combo-button.disabled.open {
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
@@ -1307,23 +1307,23 @@ div.frameLayout.harmony .dark .combo-button.disabled:active::after, div.frameLay
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI1NDI2YyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMzY2NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #25426c), color-stop(100%, #203666));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-linear-gradient(top, #25426c 0%, #203666 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -moz-linear-gradient(top, #25426c 0%, #203666 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -o-linear-gradient(top, #25426c 0%, #203666 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI1NDI2YyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMzY2NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #25426c), color-stop(100%, #203666));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -moz-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -o-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, linear-gradient(top, #25426c 0%, #203666 100%);
 }
 div.frameLayout.harmony .dark .combo-button.disabled::after {
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI1NDI2YyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMzY2NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #25426c), color-stop(100%, #203666));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-linear-gradient(top, #25426c 0%, #203666 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -moz-linear-gradient(top, #25426c 0%, #203666 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -o-linear-gradient(top, #25426c 0%, #203666 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI1NDI2YyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMzY2NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #25426c), color-stop(100%, #203666));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -moz-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -o-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, linear-gradient(top, #25426c 0%, #203666 100%);
 }
 div.frameLayout.harmony .segment-button {
     overflow: hidden;
@@ -1392,13 +1392,13 @@ div.frameLayout.harmony .icon-button, div.frameLayout.harmony .icon-button:link,
     border: none;
 }
 div.frameLayout.harmony .icon-button.mail, div.frameLayout.harmony .icon-button:link.mail, div.frameLayout.harmony .icon-button[type=button].mail, div.frameLayout.harmony .icon-button[type=submit].mail {
-    background: url('../../images/payroll/icon-buttons-s67879c7ec7.png') 0 -66px no-repeat;
+    background: url('../images/payroll/icon-buttons-s67879c7ec7.png') 0 -66px no-repeat;
 }
 div.frameLayout.harmony .icon-button.mail:hover, div.frameLayout.harmony .icon-button.mail.hover, div.frameLayout.harmony .icon-button.mail:active, div.frameLayout.harmony .icon-button.mail.active, div.frameLayout.harmony .icon-button:link.mail:hover, div.frameLayout.harmony .icon-button:link.mail.hover, div.frameLayout.harmony .icon-button:link.mail:active, div.frameLayout.harmony .icon-button:link.mail.active, div.frameLayout.harmony .icon-button[type=button].mail:hover, div.frameLayout.harmony .icon-button[type=button].mail.hover, div.frameLayout.harmony .icon-button[type=button].mail:active, div.frameLayout.harmony .icon-button[type=button].mail.active, div.frameLayout.harmony .icon-button[type=submit].mail:hover, div.frameLayout.harmony .icon-button[type=submit].mail.hover, div.frameLayout.harmony .icon-button[type=submit].mail:active, div.frameLayout.harmony .icon-button[type=submit].mail.active {
-    background: url('../../images/payroll/icon-buttons-s67879c7ec7.png') 0 -44px no-repeat;
+    background: url('../images/payroll/icon-buttons-s67879c7ec7.png') 0 -44px no-repeat;
 }
 div.frameLayout.harmony .icon-button.mail[disabled=disabled], div.frameLayout.harmony .icon-button.mail.disabled, div.frameLayout.harmony .icon-button:link.mail[disabled=disabled], div.frameLayout.harmony .icon-button:link.mail.disabled, div.frameLayout.harmony .icon-button[type=button].mail[disabled=disabled], div.frameLayout.harmony .icon-button[type=button].mail.disabled, div.frameLayout.harmony .icon-button[type=submit].mail[disabled=disabled], div.frameLayout.harmony .icon-button[type=submit].mail.disabled {
-    background: url('../../images/payroll/icon-buttons-s67879c7ec7.png') 0 -88px no-repeat;
+    background: url('../images/payroll/icon-buttons-s67879c7ec7.png') 0 -88px no-repeat;
 }
 div.frameLayout.harmony .dark .icon-button:hover, div.frameLayout.harmony .dark .icon-button.hover, div.frameLayout.harmony .dark .icon-button:active, div.frameLayout.harmony .dark .icon-button.active, div.frameLayout.harmony .dark .icon-button[disabled=disabled], div.frameLayout.harmony .dark .icon-button.disabled, div.frameLayout.harmony .dark .icon-button:link:hover, div.frameLayout.harmony .dark .icon-button:link.hover, div.frameLayout.harmony .dark .icon-button:link:active, div.frameLayout.harmony .dark .icon-button:link.active, div.frameLayout.harmony .dark .icon-button:link[disabled=disabled], div.frameLayout.harmony .dark .icon-button:link.disabled, div.frameLayout.harmony .dark .icon-button[type=button]:hover, div.frameLayout.harmony .dark .icon-button[type=button].hover, div.frameLayout.harmony .dark .icon-button[type=button]:active, div.frameLayout.harmony .dark .icon-button[type=button].active, div.frameLayout.harmony .dark .icon-button[type=button][disabled=disabled], div.frameLayout.harmony .dark .icon-button[type=button].disabled, div.frameLayout.harmony .dark .icon-button[type=submit]:hover, div.frameLayout.harmony .dark .icon-button[type=submit].hover, div.frameLayout.harmony .dark .icon-button[type=submit]:active, div.frameLayout.harmony .dark .icon-button[type=submit].active, div.frameLayout.harmony .dark .icon-button[type=submit][disabled=disabled], div.frameLayout.harmony .dark .icon-button[type=submit].disabled {
     -webkit-box-shadow: 0 0;
@@ -1407,13 +1407,13 @@ div.frameLayout.harmony .dark .icon-button:hover, div.frameLayout.harmony .dark 
     border: none;
 }
 div.frameLayout.harmony .dark .icon-button.mail, div.frameLayout.harmony .dark .icon-button:link.mail, div.frameLayout.harmony .dark .icon-button[type=button].mail, div.frameLayout.harmony .dark .icon-button[type=submit].mail {
-    background: url('../../images/payroll/icon-buttons-s67879c7ec7.png') 0 0 no-repeat;
+    background: url('../images/payroll/icon-buttons-s67879c7ec7.png') 0 0 no-repeat;
 }
 div.frameLayout.harmony .dark .icon-button.mail:hover, div.frameLayout.harmony .dark .icon-button.mail.hover, div.frameLayout.harmony .dark .icon-button.mail:active, div.frameLayout.harmony .dark .icon-button.mail.active, div.frameLayout.harmony .dark .icon-button:link.mail:hover, div.frameLayout.harmony .dark .icon-button:link.mail.hover, div.frameLayout.harmony .dark .icon-button:link.mail:active, div.frameLayout.harmony .dark .icon-button:link.mail.active, div.frameLayout.harmony .dark .icon-button[type=button].mail:hover, div.frameLayout.harmony .dark .icon-button[type=button].mail.hover, div.frameLayout.harmony .dark .icon-button[type=button].mail:active, div.frameLayout.harmony .dark .icon-button[type=button].mail.active, div.frameLayout.harmony .dark .icon-button[type=submit].mail:hover, div.frameLayout.harmony .dark .icon-button[type=submit].mail.hover, div.frameLayout.harmony .dark .icon-button[type=submit].mail:active, div.frameLayout.harmony .dark .icon-button[type=submit].mail.active {
-    background: url('../../images/payroll/icon-buttons-s67879c7ec7.png') 0 -110px no-repeat;
+    background: url('../images/payroll/icon-buttons-s67879c7ec7.png') 0 -110px no-repeat;
 }
 div.frameLayout.harmony .dark .icon-button.mail[disabled=disabled], div.frameLayout.harmony .dark .icon-button.mail.disabled, div.frameLayout.harmony .dark .icon-button:link.mail[disabled=disabled], div.frameLayout.harmony .dark .icon-button:link.mail.disabled, div.frameLayout.harmony .dark .icon-button[type=button].mail[disabled=disabled], div.frameLayout.harmony .dark .icon-button[type=button].mail.disabled, div.frameLayout.harmony .dark .icon-button[type=submit].mail[disabled=disabled], div.frameLayout.harmony .dark .icon-button[type=submit].mail.disabled {
-    background: url('../../images/payroll/icon-buttons-s67879c7ec7.png') 0 -22px no-repeat;
+    background: url('../images/payroll/icon-buttons-s67879c7ec7.png') 0 -22px no-repeat;
 }
 /*
 body.harmony .badge {
@@ -1434,18 +1434,18 @@ body.harmony .badge.dark {
 body.harmony .confirm {
     width: 22px;
     height: 22px;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1189px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1189px no-repeat;
     display: inline-block;
 }
 body.harmony .alert {
     width: 22px;
     height: 22px;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1151px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1151px no-repeat;
     display: inline-block;
 }
 body.harmony .alert.transaction {
     width: 29px;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -923px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -923px no-repeat;
 }
 body.harmony .alert.transaction span {
     padding-left: 34px;
@@ -1571,12 +1571,12 @@ body.harmony .select::after {
     -webkit-background-clip: padding;
     -moz-background-clip: padding;
     background-clip: padding-box;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -155px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -155px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -155px no-repeat, -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -155px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -155px no-repeat, -o-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -155px no-repeat, linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -155px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -155px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -155px no-repeat, -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -155px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -155px no-repeat, -o-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -155px no-repeat, linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
 }
 body.harmony .select:hover, body.harmony .select.hover {
     background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -1595,12 +1595,12 @@ body.harmony .select:hover::after, body.harmony .select.hover::after {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -243px no-repeat, #3965ce url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjEwMCUiIHgyPSI1MCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0icmdiYSgwLCAwLCAwLCAwLjE1KSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjE1KSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -243px no-repeat, #3965ce -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(100%, rgba(255, 255, 255, 0.15)));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -243px no-repeat, #3965ce -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -243px no-repeat, #3965ce -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -243px no-repeat, #3965ce -o-linear-gradient(bottom, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 1px -243px no-repeat, #3965ce linear-gradient(bottom, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -243px no-repeat, #3965ce url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjEwMCUiIHgyPSI1MCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0icmdiYSgwLCAwLCAwLCAwLjE1KSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjE1KSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -243px no-repeat, #3965ce -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(100%, rgba(255, 255, 255, 0.15)));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -243px no-repeat, #3965ce -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -243px no-repeat, #3965ce -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -243px no-repeat, #3965ce -o-linear-gradient(bottom, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -243px no-repeat, #3965ce linear-gradient(bottom, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
 }
 body.harmony .select:active, body.harmony .select.active, body.harmony .select.open {
     background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -1619,12 +1619,12 @@ body.harmony .select:active::after, body.harmony .select.active::after, body.har
     -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
     -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 2px -242px no-repeat, #3965ce url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0icmdiYSgwLCAwLCAwLCAwLjE1KSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjE1KSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 2px -242px no-repeat, #3965ce -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(100%, rgba(255, 255, 255, 0.15)));
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 2px -242px no-repeat, #3965ce -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 2px -242px no-repeat, #3965ce -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 2px -242px no-repeat, #3965ce -o-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 2px -242px no-repeat, #3965ce linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 2px -242px no-repeat, #3965ce url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0icmdiYSgwLCAwLCAwLCAwLjE1KSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjE1KSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 2px -242px no-repeat, #3965ce -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(100%, rgba(255, 255, 255, 0.15)));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 2px -242px no-repeat, #3965ce -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 2px -242px no-repeat, #3965ce -moz-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 2px -242px no-repeat, #3965ce -o-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 2px -242px no-repeat, #3965ce linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
 }
 body.harmony .select.open ul {
     display: block;
@@ -1792,10 +1792,10 @@ body.harmony .module-template .module-controls button {
     margin: 8px 8px 0 0;
 }
 body.harmony .module-template .module-controls button.close {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1663px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1663px;
 }
 body.harmony .module-template .module-controls button.settings {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1589px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1589px;
 }
 body.harmony .typeahead {
     width: 143px;
@@ -1997,7 +1997,7 @@ div.frameLayout.harmony .lightbox .scrim .layout .modal-content.alert, div.frame
 div.frameLayout.harmony .lightbox .scrim .layout .modal-content.alert .alert-icon, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content.alert .alert-icon {
     width: 50px;
     height: 50px;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -375px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -375px no-repeat;
     float: left;
 }
 div.frameLayout.harmony .lightbox .scrim .layout .modal-content.alert h1, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content.alert h1 {
@@ -2021,7 +2021,7 @@ div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-main-col 
     height: 132px;
     width: 132px;
     margin: 12px auto;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 0;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 0;
 }
 div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-main-col p, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-main-col p {
     font-size: 1.6rem;
@@ -2074,13 +2074,13 @@ div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-right-col
 }
 div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-right-col ul li.complete span, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-right-col ul li.complete span {
     color: #cccccc;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1189px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1189px no-repeat;
 }
 div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-right-col ul li.add-customers span, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-right-col ul li.add-customers span {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -276px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -276px no-repeat;
 }
 div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-right-col ul li.repeating-invoices span, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-right-col ul li.repeating-invoices span {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -295px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -295px no-repeat;
 }
 div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-right-col ul li:first-child, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-right-col ul li:first-child {
     border-top: none;
@@ -2115,10 +2115,10 @@ body.harmony .stage .pulltab {
     -ms-border-radius: 0 0 2px 2px;
     -o-border-radius: 0 0 2px 2px;
     border-radius: 0 0 2px 2px;
-    background: #f3f5f8 url('../../images/payroll/icons-s2b11c90dfb.png') 0 -132px no-repeat;
+    background: #f3f5f8 url('../images/payroll/icons-s2b11c90dfb.png') 0 -132px no-repeat;
 }
 body.harmony .stage .pulltab.open {
-    background: #f3f5f8 url('../../images/payroll/icons-s2b11c90dfb.png') 0 -188px no-repeat;
+    background: #f3f5f8 url('../images/payroll/icons-s2b11c90dfb.png') 0 -188px no-repeat;
 }
 body.harmony .drawer {
     width: 265px;
@@ -2162,7 +2162,7 @@ body.harmony .activity-feed .new-activity .control-area {
 }
 body.harmony .activity-feed .new-activity .control-area a {
     padding-left: 18px;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1173px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1173px no-repeat;
 }
 body.harmony .activity-feed .new-activity .control-area input {
     float: right;
@@ -2187,7 +2187,7 @@ body.harmony .activity-feed div .icon {
 body.harmony .activity-feed div .icon.dot {
     width: 22px;
     height: 22px;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2175px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2175px no-repeat;
     border-top: transparent;
     border-bottom: transparent;
     margin-left: -41px;
@@ -2196,7 +2196,7 @@ body.harmony .activity-feed div .icon.dot {
 body.harmony .activity-feed div .icon.date {
     width: 22px;
     height: 22px;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2153px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2153px no-repeat;
     border-top: transparent;
     border-bottom: transparent;
     margin-left: -41px;
@@ -2345,7 +2345,7 @@ body.harmony .assistant .pop-out {
     border: none;
     height: 14px;
     width: 14px;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1757px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1757px;
 }
 body.harmony .assistant .close {
     position: absolute;
@@ -2354,7 +2354,7 @@ body.harmony .assistant .close {
     border: none;
     height: 14px;
     width: 14px;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1743px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1743px;
 }
 body.harmony .assistant div b {
     position: absolute;
@@ -2424,7 +2424,7 @@ body.harmony .assistant .footer .page-right button {
     height: 15px;
     width: 12px;
     margin: 2px 0;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2015px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2015px;
 }
 body.harmony .assistant .footer .page-left {
     border-right: 1px solid #c04b84;
@@ -2435,7 +2435,7 @@ body.harmony .assistant .footer .page-left button {
     height: 15px;
     width: 12px;
     margin: 2px 0;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2030px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2030px;
 }
 body.harmony .assistant .footer .alternate-help {
     border-left: 1px solid #a62664;
@@ -2460,7 +2460,7 @@ body.harmony .validation-error h1 {
     padding: 2px 0 1px 30px;
     line-height: 22px;
     border: none;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1151px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1151px no-repeat;
 }
 body.harmony .validation-error p {
     font-size: 1.2rem;
@@ -2481,7 +2481,7 @@ body.harmony .validation-success h1 {
     padding: 2px 0 1px 30px;
     line-height: 22px;
     border: none;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1189px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1189px no-repeat;
 }
 body.harmony .validation-success p {
     font-size: 1.2rem;
@@ -2505,7 +2505,7 @@ body.harmony .passive-alert h1 {
     min-width: auto;
     line-height: 22px;
     border: none;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1151px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1151px no-repeat;
 }
 body.harmony .passive-alert p {
     display: inline-block;
@@ -2623,7 +2623,7 @@ body.harmony .flyout-list.global .close {
     top: 30px;
     height: 22px;
     width: 22px;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1457px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1457px no-repeat;
 }
 body.harmony .flyout-list.global h2 {
     font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -2690,7 +2690,7 @@ body.harmony .inline-confirmation p {
     padding: 4px 0 3px 30px;
     display: inline;
     line-height: 22px;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1189px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1189px no-repeat;
 }
 body.harmony .inline-confirmation button {
     position: absolute;
@@ -2700,7 +2700,7 @@ body.harmony .inline-confirmation button {
     right: 12px;
     top: 50%;
     margin-top: -7px;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1743px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1743px;
 }
 body.harmony .inline-confirmation div b {
     position: absolute;
@@ -2746,7 +2746,7 @@ body.harmony .tooltip button {
     height: 14px;
     width: 14px;
     margin-left: 20px;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1743px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1743px;
 }
 body.harmony .tooltip p {
     font-size: 1.2rem;
@@ -2804,16 +2804,16 @@ body.harmony input[type=checkbox], body.harmony div.checkbox {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1605px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1605px;
 }
 body.harmony input[type=checkbox]:hover, body.harmony div.checkbox:hover {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1273px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1273px;
 }
 body.harmony input[type=checkbox]:hover:checked, body.harmony input[type=checkbox]:hover.checked, body.harmony div.checkbox:hover:checked, body.harmony div.checkbox:hover.checked {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1439px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1439px;
 }
 body.harmony input[type=checkbox]:checked, body.harmony input[type=checkbox].checked, body.harmony div.checkbox:checked, body.harmony div.checkbox.checked {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1439px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1439px;
 }
 body.harmony input[type=checkbox] + label, body.harmony div.checkbox + label {
     padding-left: 4px;
@@ -2833,16 +2833,16 @@ body.harmony input[type=radio], body.harmony div.radio {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1133px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1133px;
 }
 body.harmony input[type=radio]:hover, body.harmony div.radio:hover {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -985px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -985px;
 }
 body.harmony input[type=radio]:hover:checked, body.harmony input[type=radio]:hover.checked, body.harmony div.radio:hover:checked, body.harmony div.radio:hover.checked {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -665px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -665px;
 }
 body.harmony input[type=radio]:checked, body.harmony input[type=radio].checked, body.harmony div.radio:checked, body.harmony div.radio.checked {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -665px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -665px;
 }
 body.harmony input[type=radio] + label, body.harmony div.radio + label {
     padding-left: 4px;
@@ -2947,14 +2947,14 @@ body.harmony input[type=text].subtotal, body.harmony input[type=search].subtotal
     height: 22px;
 }
 body.harmony input[type=text].plus, body.harmony input[type=search].plus {
-    background: white url('../../images/payroll/icons-s2b11c90dfb.png') 102px -1630px no-repeat;
+    background: white url('../images/payroll/icons-s2b11c90dfb.png') 102px -1630px no-repeat;
 }
 body.harmony input[type=search] {
     width: 200px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: white url('../../images/payroll/icons-s2b11c90dfb.png') 167px -1298px no-repeat;
+    background: white url('../images/payroll/icons-s2b11c90dfb.png') 167px -1298px no-repeat;
 }
 body.harmony input[type=search]::-webkit-search-cancel-button {
     -webkit-appearance: none;
@@ -3059,17 +3059,17 @@ body.harmony .carousel button {
 }
 body.harmony .carousel button.left {
     left: 0;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1385px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1385px no-repeat;
 }
 body.harmony .carousel button.left:hover {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1331px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1331px no-repeat;
 }
 body.harmony .carousel button.right {
     right: 0;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1349px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1349px no-repeat;
 }
 body.harmony .carousel button.right:hover {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -1367px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1367px no-repeat;
 }
 body.harmony .carousel .paging {
     position: absolute;
@@ -3083,10 +3083,10 @@ body.harmony .carousel .paging li {
     height: 5px;
     margin: 0 6px;
     display: inline-block;
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2271px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2271px no-repeat;
 }
 body.harmony .carousel .paging li.current {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2276px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2276px no-repeat;
 }
 body.harmony .list-basic {
     list-style: none;
@@ -3375,13 +3375,13 @@ body.harmony a.back {
     padding-left: 11px;
 }
 body.harmony a.back:link, body.harmony a.back:visited, body.harmony a.back:hover {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2080px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2080px no-repeat;
 }
 body.harmony a.back:active {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2100px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2100px no-repeat;
 }
 body.harmony a.back.disabled:link, body.harmony a.back.disabled:visited, body.harmony a.back.disabled:hover, body.harmony a.back.disabled:active {
-    background: url('../../images/payroll/icons-s2b11c90dfb.png') 0 -2080px no-repeat;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2080px no-repeat;
 }
 body.harmony input[type=button], body.harmony input[type=submit], body.harmony input[type=reset] {
     margin: 0;

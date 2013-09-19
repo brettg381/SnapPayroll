@@ -44,7 +44,6 @@ var abcore = {
             var timestamp = date.toISOString();
             var data = {};
             data[abcore.const.APP] = [[timestamp, experimentId]];
-            //var data ="{\""+abcore.const.APP+"\": [['"+timestamp+"', '"+experimentId+"']]}";
             $.ajax({
                 url: 'http://intuit.levelupanalytics.com/abntest/impressions/' + uid,
                 type: 'POST',

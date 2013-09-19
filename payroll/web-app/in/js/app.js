@@ -1,7 +1,6 @@
 // ======================
 // GLOBAL SETUP
 var today = new Date();
-var latestCalculatedData = null;
 var app = app || {};
 var formatDate = function(date) {
     var todayMonthStr = (today.getMonth() < 10) ? '0' + (today.getMonth() + 1) : '' + (today.getMonth() + 1);
