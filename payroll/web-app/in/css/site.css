@@ -520,7 +520,7 @@ div.mugshot img {
 }
 #sample-check-body {
     position: relative;
-    background: #f2f6fb url('../images/payroll/sample-check.png') no-repeat 50% 10px;
+    background: #f2f6fb url('../images/payroll/checkbackground.png') no-repeat 50% 10px;
     margin: 20px auto 0 auto;
     height: 564px;
     border: 7px solid white;
