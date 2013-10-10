@@ -19,9 +19,6 @@
 input.error {
     border: 1px red solid;
 }
-html {
-    overflow: scroll;
-}
 body, html {
     height: 100%;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;

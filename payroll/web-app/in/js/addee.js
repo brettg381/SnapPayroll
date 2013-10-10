@@ -1,3 +1,5 @@
+// ================================
+// HELPERS
 var getAbbreviation = function(name) {
     var n = $.trim(name);
     if ('' == n) {
@@ -12,7 +14,6 @@ var getAbbreviation = function(name) {
     }
     return parts[0].substring(0, 1) + parts[parts.length - 1].substring(0, 1);
 }
-
 var clearBadge = function() {
     $('#badgeImage').attr('src', 'images/payroll/mock-gravatar.png');
     $('#badgeNameAbbreviation span').html('E1');
@@ -43,6 +44,9 @@ var validateEmployeeForm = function() {
     if (!validateNumberField($('#eeInputStateAdditionalWithheld'))) isValid = false;
     return isValid;
 }
+
+// ================================
+// FORM FUNCTIONS
 var updateEmployeesInPaychecks = function() {
     app.paychecks.forEach(function(paycheck) {
         var ee = findEmployeeByName(paycheck.get('employee'));
@@ -74,7 +78,6 @@ var saveEmployeeFromEmployeeForm = function() {
         stateFilingStatus: $('#eeInputStateFilingStatus').val(),
         stateAllowances: toInt($('#eeInputStateAllowances').val()),
         stateAdditionalWithheld: toFloat($('#eeInputStateAdditionalWithheld').val()),
-        numChecks: 0
     });
     updateEmployeesInPaychecks();
     app.employeesView.render();
@@ -139,7 +142,7 @@ var saveEmployeeFromPaycheckForm = function() {
         stateFilingStatus: $('#stateFilingStatus').val(),
         stateAllowances: toInt($('#stateAllowances').val()),
         stateAdditionalWithheld: toFloat($('#stateAdditionalWithheld').val()),
-        numChecks: 1,
+        numChecks: (ee.numChecks + 1),
         netPay: toFloat($('#netPay').html().substring(1))
     });
     app.employeesView.render();

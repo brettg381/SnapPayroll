@@ -1,6 +1,6 @@
 google.load("visualization", "1", {packages:["corechart"]});
 
-var AC_URL =  'http://pocketpayroll-lb-QA-ssl-1602432401.us-east-1.elb.amazonaws.com/v1/usa/ca';
+var AC_URL =  'https://pocketpayroll-lb-QA-ssl-1602432401.us-east-1.elb.amazonaws.com/v1/usa/ca';
 var AC_API_KEY = '44F0DCC0-6D52-4BDC-95E1-9784496A177A';
 
 var formatPayDate = function(dateObj) {

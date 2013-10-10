@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="../libs/backbone.marionette/jquery.js"></script>
+    <script type="text/javascript" src="../js/oiiWidgets.js"></script>
+    <script type="text/javascript">
+        var URL_BASE = 'local.intuit.com:8181/Public/';
+//        var URL_BASE = 'https://branch.iopdev.intuit.com/test/';
+        var REALM_ID = null;
+    </script>
+    <script type="text/javascript">
+        function getCookie(c_name) {
+            var c_value = document.cookie;
+            var c_start = c_value.indexOf(" " + c_name + "=");
+            if (c_start == -1) {
+                c_start = c_value.indexOf(c_name + "=");
+            }
+            if (c_start == -1) {
+                c_value = null;
+            }
+            else {
+                c_start = c_value.indexOf("=", c_start) + 1;
+                var c_end = c_value.indexOf(";", c_start);
+                if (c_end == -1) {
+                    c_end = c_value.length;
+                }
+                c_value = unescape(c_value.substring(c_start,c_end));
+            }
+            return c_value;
+        }
+    </script>
+</head>
+<body>
+    <h3>Sign In</h3>
+    <div id="oiiSignIn" style="width:330px;"></div>
+    <hr/>
+
+    <h3>Request IOP Page</h3>
+    <button id="requestIOP">Request</button>
+    <hr/>
+
+    <h3>Add Company</h3>
+    <form>
+        <label for="coName">business name</label><input id="coName" type="text"/><br/>
+        <label for="coPCFname">primary first name</label><input id="coPCFname" type="text"/><br/>
+        <label for="coPCLname">primary last name</label><input id="coPCLname" type="text"/><br/>
+        <label for="coPCEmail">primary email</label><input id="coPCEmail" type="text"/><br/>
+    </form>
+    <button id="btnAddCO">Add company</button>
+    <hr/>
+
+    <h3>Add Employee</h3>
+    <form>
+        <label for="eeFname">first name</label><input id="eeFname" type="text"/><br/>
+        <label for="eeLname">last name</label><input id="eeLname" type="text"/><br/>
+    </form>
+    <button id="btnAddEE">Add employee</button>
+
+    <!-- ========================== -->
+    <!-- updateCompanyModel-->
+    <script type="text/javascript">
+        $('btnAddCO').on('click', function() {
+            alert('addCompany');
+            var obj = {"updateCompanyModel": {
+                "companyModel": {
+                    "businessName": $('#coName').val(),
+                    "featureSetType" :"BasicMinus",
+                    "employeeCountRange": "OneToTwentyFive",
+                    "primaryContact": {  // user
+                        "authId": getCookie('qbn.ptc.gauthid'),  // only first time
+                        "firstName": $('#coPCFname').val(),
+                        "lastName": $('#coPCLname').val(),
+                        "eMailAddress": $('#coPCEmail').val()
+                    },
+                    "businessAddress": {
+                        "address1": "121 Main St.",
+                        "address2":"Building 8",
+                        "city": "Mountain View",
+                        "state": "CA",
+                        "zip":"94039"
+                    },
+                    "realmId": REALM_ID
+                },
+                "persist":true
+            }};
+            console.log(obj);
+            $.ajax({
+                url: 'https://' + URL_BASE + '/webservices/json/SetupWebService',
+                type: 'POST',
+                contentType: 'application/json',
+                dataType: 'json',
+                data: JSON.stringify(obj),
+                success: function(data, status, jqXHR) {
+                    console.log('[btnAddCo] Success');
+                    console.log(data);
+                },
+                error: function(jqXHR, status, errorThrown) {
+                    console.log('[btnAddCo] Failure');
+                    console.log(errorThrown);
+                }
+            });
+        });
+    </script>
+
+    <!-- ========================== -->
+    <script type="text/javascript">
+        $('#requestIOP').on('click', function() {
+            alert('request iop');
+            $.get(
+                    'https://' + URL_BASE + 'realm/realmPicker.jsf',
+                {},
+                function(data) {
+                    console.log('[GET IOP PAGE]');
+                    console.log(data);
+                }
+            );
+        });
+//        $('#requestIOP').on('click', function() {
+//            $.ajax({
+//                url: URL_BASE + 'in/account/client.jsp',
+//                type: 'GET',
+//                success: function(data, status, jqXHR) {
+//                    console.log('[GET IOP PAGE] SUCCESS');
+//                    console.log(data);
+//                },
+//                error: function(jqXHR, status, errorThrown) {
+//                    console.log('[GET IOP PAGE] FAILURE');
+//                    console.log(jqXHR.getAllResponseHeaders());
+//                }
+//            });
+//        });
+    </script>
+    <!-- ========================== -->
+    <!-- addEmployee-->
+    <script type="text/javascript">
+        $('btnAddEE').on('click', function() {
+            var obj = {"addEmployeeModel": {
+                "employeeModel": {
+                    "firstName" : $('#eeFname').val(),
+                    "lastName" : $('#eeLname').val()
+                }
+            }};
+            $.ajax({
+                url: URL_BASE + 'webservices/json/SetupWebService',
+                type: 'POST',
+                contentType: 'application/json',
+                dataType: 'json',
+                data: JSON.stringify(obj),
+                success: function(data, status, jqXHR) {
+                    console.log('[btnAddEE] Success');
+                    console.log(data);
+                },
+                error: function(jqXHR, status, errorThrown) {
+                    console.log('[btnAddEE] Failure');
+                    console.log(errorThrown);
+                }
+            });
+        });
+    </script>
+
+
+    <!-- ========================== -->
+    <!-- OII Sign In -->
+    <script type="text/javascript">
+        oiiWidgets.launch({
+            offeringId : "Intuit.ems.iop",					/* probably ok to hard-code for your app */
+            oiiEnv : "e2e",									/* should vary based on current environment */
+            oiiUrl : "https://accounts-e2e.intuit.com",		/* should vary based on current environment */
+            containerId : "oiiSignIn",					/* must match <div> element above */
+            startWidget : oiiWidgets.WIDGET_SIGN_IN,		/* If, for example, you wanted to force starting with the sign-in -widget */
+            isSignin : true,								/* set to true if doing sign-up workflow */
+            useCurrentLogin : false,
+            showVerifyLogin : false,
+            showSecurityUpgrade : true,
+            onTermsOfServiceClick : handleTermsOfServiceClick,
+            onCustomerServiceClick : handleCustomerServiceClick,
+            onNotify : handleWidgetNotify,
+            onUpdate : handleWidgetUpdate,
+            onFinish : handleWidgetFinish,
+            onFinishNeedCreate : handleWidgetNeedCreate,
+            onError : handleWidgetError,
+            signInHeaderAccountAutoSelected : "We noticed that <b>{1}</b> already has an Intuit account.",
+            signInHeaderAccountUserSelected : "Now that you've selected your user ID, please use it to sign in to your Intuit account.",
+            signInHeaderAccountNotShown : "We noticed that <b>{0}</b> already has an Intuit account. Enter the user ID associated with that email address."
+        });
+        function handleWidgetNotify(widgetId, info) {
+        }
+        function handleWidgetUpdate(widgetId, info) {
+        }
+        function handleWidgetFinish(realmId, grantInfo, autoCreated) {
+            console.log('[handleWidgetFinish] realmId = ' + realmId);
+            REALM_ID = realmId;
+        }
+        function handleWidgetNeedCreate(companyName) {
+            alert("needCreate : " + companyName);
+        }
+        //
+        function handleWidgetError(widgetId, errorCode, logMessage) {
+        }
+        function handleTermsOfServiceClick() {
+            window.open("http://local.intuit.com:8080/Public/directory/terms.jsp", "oiiNavigation");
+        }
+        function handleCustomerServiceClick() {
+            window.open("http://about.intuit.com/contact/", "oiiNavigation");
+        }
+    </script>
+</body>
+</html>

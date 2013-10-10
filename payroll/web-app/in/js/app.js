@@ -2,6 +2,7 @@
 // GLOBAL SETUP
 var today = new Date();
 var app = app || {};
+
 var formatDate = function(date) {
     var todayMonthStr = (today.getMonth() < 10) ? '0' + (today.getMonth() + 1) : '' + (today.getMonth() + 1);
     var todayDayStr = (today.getDate() < 10) ? '0' + today.getDate() : '' + today.getDate();
@@ -18,6 +19,25 @@ var toInt = function(str) {
         return 0;
     }
     return parseInt(str);
+}
+
+app.eeIopToSimple = function(ee) {
+    var name = ee.fistName + ' ' + ee.lastName;
+    var abbr = getAbbreviation(name);
+    var state = ee.workLocation.state;
+    var payType = ee.payRatetype;
+    var payRate = toFloat(ee.salaryRate);
+    var payPeriod = ee.salaryFrequency;   // [norio] I think this is 'Week' rather than 'Weekly'
+    var fedFilingStatus = ee.federalTaxSetup.filingStatus  // [norio] this is an integer that needs to be remapped
+    var fedAllowances = toInt(ee.federalTaxSetup.allowances)
+    var fedAdditionalWithheld = toFloat(ee.federalTaxSetup.additionalWithholding)
+    var stateFilingStatus
+    var stateAllowances
+    var stateAdditionalWithheld
+}
+
+app.eeSimpleToIop = function(simpleEmployeeModel) {
+
 }
 
 // =====================
@@ -69,6 +89,19 @@ function drawChart(totalNet, totalTaxes) {
     };
     var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
     chart.draw(data, options);
+}
+
+// =====================
+// APP FUNCTIONS
+
+// Deferred -- please use done and fail listeners
+app.signIn = function(username, password) {
+    return iop.signIn(username, password);
+}
+
+// Deferred -- please use done and fail listeners
+app.signUp = function(email, password) {
+    return iop.signUp(email, password);
 }
 
 // =====================
@@ -221,4 +254,5 @@ app.employeesView = new app.EmployeesView({collection: app.employees});
 app.currentUser = new app.User();
 app.userView = new app.UserView();
 app.paycheckInsightView = new app.PaycheckInsightView({model: app.currentUser});
+app.currentCompany = null;  // set by login or sign up
 

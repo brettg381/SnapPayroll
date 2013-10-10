@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/harmony-custom.css">
     <link rel="stylesheet" href="css/site.css">
 </head>
+</head>
 <body>
     <div id="landingLayout" class="frameLayout harmony">
         <div class="row-fluid">
@@ -1873,6 +1874,7 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="libs/md5.js"></script>
 <!-- CUSTOM -->
+    <script type="text/javascript" src="js/iop.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/calculate.js"></script>
     <script type="text/javascript" src="js/landing.js"></script>
@@ -1904,8 +1906,33 @@
             $('#signinModal').fadeIn(200);
         });
         $('#loginGoButton').on('click', function() {
-            $('#loginEmail').addClass('error');
-            $('#loginPassword').addClass('error');
+            var signInEmailField = $('#loginEmail');
+            var signInEmail = signInEmailField.val();
+            var signInPasswordField = $('#loginPassword');
+            var signInPassword = signInPasswordField.val();
+
+            var p = app.signIn(signInEmail, signInPassword);
+            p.done(function() {
+                app.currentUser.set('email', signInEmail);
+                app.currentUser.set('isLoggedIn', true);
+                $('#signinModal').fadeOut(200, function() {
+                    $('#modalLayout').toggleClass('inactive');
+                });
+                $('#overviewLayout').css('display', 'inline');
+                var actionLayout = $('#action-layout');
+                if (actionLayout.css('display') != 'none') {
+                    actionLayout.hide('slide', {'direction': 'right'}, 400);
+                }
+                $('#landingLayout').hide('slide', {'direction': 'right'}, 400);
+                clearForms();
+                $('#cancelSaveCheckButton').removeClass('inactive');
+                app.userView.render();
+            });
+            p.fail(function() {
+                $('#loginEmail').addClass('error');
+                $('#loginPassword').addClass('error');
+                //console.error(data);
+            });
         });
         $('#loginCancelButton').on('click', function() {
             $('#signinModal').fadeOut(200, function() {
@@ -1951,36 +1978,47 @@
         $('#signupGoButton').on('click', function () {
             var valid = true;
             var emailPattern = /.+@.+\..+/;
-            if (!emailPattern.test($('#signupEmail').val())) {
-                $('#signupEmail').css('border-color', 'red');
+            var signUpEmailField = $('#signupEmail');
+            var signUpEmail = signUpEmailField.val();
+            var signUpPasswordField = $('#signupPassword');
+            var signUpPassword = signUpPasswordField.val();
+            if (!emailPattern.test(signUpEmail)) {
+                signUpEmailField.css('border-color', 'red');
                 valid = false;
             } else {
-                $('#signupEmail').css('border-color', '#cccccc');
+                signUpEmailField.css('border-color', '#cccccc');
             }
-            if ($('#signupPassword').val() == '') {
-                $('#signupPassword').css('border-color', 'red');
+            if (signUpPassword == '') {
+                signUpPasswordField.css('border-color', 'red');
                 valid = false;
             } else {
-                $('#signupPassword').css('border-color', '#cccccc');
+                signUpPasswordField.css('border-color', '#cccccc');
             }
             if (!valid) return;
-            app.currentUser.set('email', $('#signupEmail').val());
-            app.currentUser.set('isLoggedIn', true);
-            savePaycheckFromPaycheckForm();
-            saveEmployeeFromPaycheckForm();
-            $('#signupModal').fadeOut(200, function() {
-                $('#modalLayout').toggleClass('inactive');
+            var p = app.signUp(signUpEmail, signUpPassword);
+            p.done(function() {
+                app.currentUser.set('email', signUpEmail);
+                app.currentUser.set('isLoggedIn', true);
+                savePaycheckFromPaycheckForm();
+                saveEmployeeFromPaycheckForm();
+                $('#signupModal').fadeOut(200, function() {
+                    $('#modalLayout').toggleClass('inactive');
+                });
+                $('#overviewLayout').css('display', 'inline');
+                var actionLayout = $('#action-layout');
+                if (actionLayout.css('display') != 'none') {
+                    actionLayout.hide('slide', {'direction': 'right'}, 400);
+                }
+                if (!actionLayout.hasClass('inactive')) {
+                    $('#landingLayout').hide('slide', {'direction': 'right'}, 400);
+                }
+                clearForms();
+                $('#cancelSaveCheckButton').removeClass('inactive');
+                app.userView.render();
             });
-            $('#overviewLayout').css('display', 'inline');
-            if ($('#action-layout').css('display') != 'none') {
-                $('#action-layout').hide('slide', {'direction': 'right'}, 400);
-            }
-            if (!$('#landingLayout').hasClass('inactive')) {
-                $('#landingLayout').hide('slide', {'direction': 'right'}, 400);
-            }
-            clearForms();
-            $('#cancelSaveCheckButton').removeClass('inactive');
-            app.userView.render();
+            p.fail(function() {
+                console.error(data);  // [norio] need a spot for display
+            });
         });
         $('#addEmployeeButton').on('click', function() {
             activateEmployeeDisplay("Add Employee", "Let's add a new employee!", "Add");

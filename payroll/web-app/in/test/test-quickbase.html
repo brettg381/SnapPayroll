@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+
+    </title>
+</head>
+<body>
+    <script type="text/javascript" src="js/libs/backbone.marionette/jquery.js"></script>
+    <script type="text/javascript">
+        var xmlStr = '<qdbapi>' +
+        '<udata>mydata</udata>' +
+        '<ticket>2_bdh78chd4_dpsx_b_dnbypa8d372j5rb6vt6kfdx7ty25</ticket>' +
+        '<apptoken>dtmd897bfsw85bb6bneceb6wnze3</apptoken>' +
+        '<field name="first_name">Huck</field>' +
+        '<field name="last_name">Finn</field>' +
+        '<field name="email">example@example.com</field>' +
+        '<field name="num_contractors">4</field>' +
+        '<field name="source">test-page</field>' +
+        '</qdbapi>';
+        $.ajax({
+            url: 'https://intuit.quickbase.com/db/bie8ppud8',
+            type: 'POST',
+            contentType: 'application/xml',
+            data: xmlStr,
+            success: function(data, status, jqXHR) {
+                console.log('-------------- SUCCESS ---------------');
+                console.log(data);
+            },
+            error: function(jqXHR, status, errorThrown) {
+                console.log('-------------- ERROR ---------------');
+                console.log(errorThrown);
+            }
+        });
+    </script>
+    <form action="" method="post">
+        <input type="text" name="email"></input>
+        <input type="text" name="first_name"></input>
+        <input type="text" name="last_name"></input>
+        <input type="text" name="num_contractors"></input>
+        <input type="hidden" name="source"></input>
+    </form>
+</body>
+</html>

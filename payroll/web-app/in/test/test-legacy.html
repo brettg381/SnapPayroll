@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../libs/bootstrap-no-gutter/css/bootstrap.min.css">
+    <script type="text/javascript" src="../libs/backbone.marionette/jquery.js"></script>
+    <style>
+        .form-horizontal {
+            margin-left: -50px;
+        }
+    </style>
+    <!-- CONSTANTS -->
+    <script type="text/javascript">
+        //var URL_BASE = 'https://local.intuit.com:8181/Public';
+        //var URL_BASE = 'https://branch.iopdev.intuit.com/test';
+        var URL_BASE = 'https://easypaychecks.intuitlabs.com';
+    </script>
+    <!-- UTILITIES -->
+    <script type="text/javascript">
+        function getCookie(c_name) {
+            var c_value = document.cookie;
+            var c_start = c_value.indexOf(" " + c_name + "=");
+            if (c_start == -1) {
+                c_start = c_value.indexOf(c_name + "=");
+            }
+            if (c_start == -1) {
+                c_value = null;
+            }
+            else {
+                c_start = c_value.indexOf("=", c_start) + 1;
+                var c_end = c_value.indexOf(";", c_start);
+                if (c_end == -1) {
+                    c_end = c_value.length;
+                }
+                c_value = unescape(c_value.substring(c_start,c_end));
+            }
+            return c_value;
+        }
+
+        function sendRequest(obj, actionStr, isSetup) {
+            var endPoint = (typeof isSetup === "undefined") || isSetup ? '/webservices/json/SetupWebService' : '/webservices/json/MobileManager';
+            $.ajax({
+                url: URL_BASE + endPoint,
+                xhrFields: {
+                    withCredentials: true
+                },
+                type: 'POST',
+                contentType: 'application/json',
+                dataType: 'json',
+                data: JSON.stringify(obj),
+                success: function(data, status, jqXHR) {
+                    console.log('[' + actionStr + '] SUCCESS');
+                    console.log(data);
+                    $('#out').html(JSON.stringify(data, undefined, 2));
+                },
+                error: function(jqXHR, status, errorThrown) {
+                    console.log('[' + actionStr + '] FAILURE');
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="row-fluid" style="margin-top: 20px;">
+        <div class="span4" style="margin-left: 20px;">
+            <h3>Log In</h3>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="eeId">username</label>
+                    <div class="controls"><input id="user" type="text"/></div>
+                    <label class="control-label" for="eeId">password</label>
+                    <div class="controls"><input id="passwd" type="password"/></div>
+                </div>
+            </form>
+            <button class="controls btn-primary" id="btnLogIn">Log In</button>
+            <h3>Get Company</h3>
+            <button class="controls btn-primary" id="btnGetCO">Get</button>
+            <h3>Update Company</h3>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="coName">business name</label>
+                    <div class="controls"><input id="coName" type="text"/></div>
+                    <label class="control-label" for="coPCFname">first name</label>
+                    <div class="controls"><input id="coPCFname" type="text"/></div>
+                    <label class="control-label" for="coPCLname">last name</label>
+                    <div class="controls"><input id="coPCLname" type="text"/></div>
+                    <label class="control-label" for="coPCEmail">email</label>
+                    <div class="controls"><input id="coPCEmail" type="text"/></div>
+                    <label class="control-label" for="coPCPass">password</label>
+                    <div class="controls"><input id="coPCPass" type="password"/></div>
+                </div>
+            </form>
+            <button class="controls btn-primary" id="btnAddCO">Update</button>
+            <h3>Add Pay Schedule</h3>
+            <button class=" controls btn-primary" id="btnSetPaySched">Add</button>
+            <h3>Add Employee</h3>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label  class="control-label" for="eeFname">first name</label>
+                    <div class="controls"><input id="eeFname" type="text"/><br/></div>
+                    <label  class="control-label" for="eeLname">last name</label>
+                    <div class="controls"><input id="eeLname" type="text"/><br/></div>
+                </div>
+            </form>
+            <button class="controls btn-primary" id="btnAddEE">Add employee</button>
+            <h3>Get Employee</h3>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="eeId">id</label>
+                    <div class="controls"><input id="eeId" type="text"/></div>
+                </div>
+            </form>
+            <button class="controls btn-primary" id="btnGetEE">Get employee</button><br/>
+            <button class="controls btn-primary" id="btnGetEEs">Get all employees</button><br/>
+            <button class="controls btn-primary" id="btnGetEEsLite">Get all employees lite</button><br/>
+            <button class="controls btn-primary" id="btnGetPaySchedulesLite">Get pay schedules lite</button><br/>
+            <button class="controls btn-primary" id="btnGetPaySchedules">Get pay schedules</button><br/>
+        </div>
+        <div class="span7">
+            <pre id="out"></pre>
+        </div>
+    </div>
+
+    <!-- ========================== -->
+    <!-- saveCompanyPaySchedule -->
+    <script type="text/javascript">
+        $('#btnSetPaySched').on('click', function() {
+            var obj = {"saveCompanyPaySchedule" : {
+                "paySchedule": {
+                    "id": 0,
+                    "payFrequency": "EVERY_WEEK",
+                    "nextPayDay": {
+                        "year": 2013,
+                        "month": 11,
+                        "day": 27
+                    },
+                    "periodEndDate": {
+                        "year": 2013,
+                        "month": 11,
+                        "day": 27
+                    },
+                    "useAsDefault": false,
+                    "isCustom": false,
+                    "description": "Weekly Pay Schedule"
+                }
+            }}
+            sendRequest(obj, 'btnAddCo', 'setPaySchedOut');
+        });
+    </script>
+
+    <!-- ========================== -->
+    <!-- Log In : Mobile Multi      -->
+    <script type="text/javascript">
+        $('#btnLogIn').on('click', function() {
+            var obj = {"loginMobileMulti": {
+                "userName": $('#user').val(),
+                "password": $('#passwd').val()
+            }}
+            sendRequest(obj, 'btnLogIn', false);
+        });
+    </script>
+
+    <!-- ========================== -->
+    <!-- get Company -->
+    <script type="text/javascript">
+        $('#btnGetCO').on('click', function() {
+            var obj = {"getCompanyModel": {}}
+            sendRequest(obj, 'btnGetCO');
+        });
+    </script>
+
+
+    <!-- ========================== -->
+    <!-- updateCompanyModel-->
+    <script type="text/javascript">
+        $('#btnAddCO').on('click', function() {
+            console.log('[btnAddCO click -> add company]');
+                    var email = $('#coPCEmail').val();
+            var obj = {"updateCompanyModel": {
+                "companyModel": {
+                    "acceptedCustomerServiceAgreement": true,
+                    "businessName": $('#coName').val(),
+                    "companyType": 'SmallBusiness',
+                    "featureSetType": 'BasicMinus',
+                    "serviceType": 'IOP',
+                    "employeeCountRange": 'OneToTwentyFive',
+                    "primaryContact": {  // user
+                        "firstName": $('#coPCFname').val(),
+                        "lastName": $('#coPCLname').val(),
+                        "eMailAddress": email,
+                        "userID": email,
+                        "password": $('#coPCPass').val()
+                    },
+                    "businessAddress": {
+                        "address1": "121 Main St.",
+                        "address2":"Building 8",
+                        "city": "Mountain View",
+                        "state": "CA",
+                        "zip":"94039"
+                    }
+                },
+                "persist":true
+            }};
+            sendRequest(obj, 'btnAddCo');
+        });
+    </script>
+
+    <!-- ========================== -->
+    <!-- addEmployee-->
+    <script type="text/javascript">
+        $('#btnAddEE').on('click', function() {
+            var obj = {"addEmployeeModel": {
+                "employeeModel": {
+                    "firstName" : $('#eeFname').val(),
+                    "middleInitial": "",
+                    "lastName" : $('#eeLname').val(),
+                    "homeAddress": {
+                        "id": 0,
+                        "isDefaultAddressOK": true,
+                        "isTaxAddress": false,
+                        "address1": "",
+                        "address2": "",
+                        "city": "",
+                        "county": "",
+                        zip: "",
+//                        "address1": "121 Main Street",
+//                        "address2": "building 8",
+//                        "city": "Mountain View",
+//                        "county": "Santa Clara",
+                        "state": "CA"
+//                        "zip": "94039"
+                    },
+                    "payRateType": "Hourly",
+//                    "salaryFrequency": "Year",
+                    "hourlyWages": [
+                        {
+                            "id": 0,
+                            "version": 0,
+                            "isActive": true,
+                            "isBaseRate": true,
+                            "isHourly": true,
+                            "isNonCash": false,
+                            "isSalary": false,
+                            "rate": "10.0000"
+//                            "companyWageItem": {
+//                                "id": 3101516,
+//                                "version": 0,
+//                                "isActive": true,
+//                                "name": "Regular Pay",
+//                                "permanentName": "HOURLY1",
+//                                "isNonCash": false,
+//                                "displayOrder": 1,
+//                                "wageItemId": "HOURLY_PAY",
+//                                "isPaidByHours": true,
+//                                "payDayName": "Regular Pay",
+//                                "wageItemExportType": "ExpenseOnly"
+//                            }
+                        }
+                    ],
+                    //"payRateType": 'Salary',
+                    //"salaryRate": 1000.00,
+                    "salaryFrequency": 'Year',      // this is "Year" by default or if Hourly
+                    "salaryHoursPerDay": 8,
+                    "salaryDaysPerWeek": 5,
+                    "employmentStatus": true,
+                    "federalTaxSetup": {
+                        "filingStatus": 1,
+                        "allowances": 0,
+                        "allowanceAmount": 0,
+                        "additionalWithholding": 0,
+                        "isIncomeTaxWithholdingRequired": true,
+                        "hasRegularAllowances": true,
+                        "hasAdditionalWithholding": true,
+                        "hasExemptionAmount": false
+                    },
+                    "residenceTaxSetup": {
+                        "filingStatus": 1,
+                        "allowances": 0,
+                        "allowanceAmount": 0,
+                        "additionalWithholding": 0,
+                        "isIncomeTaxWithholdingRequired": true,
+                        "hasRegularAllowances": true,
+                        "hasAdditionalWithholding": true,
+                        "hasExemptionAmount": false
+                    },
+                    "filedNewHireForm": true,
+                    "filedI9Form": true,
+                    "timeSheetsTrackingEnabled": true,
+
+                }
+            }};
+            sendRequest(obj, 'btnAddEE');
+        });
+    </script>
+    <!-- ========================== -->
+    <!-- getEmployee-->
+    <script type="text/javascript">
+        $('#btnGetEE').on('click', function() {
+            var obj = {"getEmployeeModelByIndex" : {
+                "index" : $('#eeId').val()
+            }};
+            sendRequest(obj, 'getEmployeeModel');
+        });
+    </script>
+    <!-- ========================== -->
+    <!-- getEmployeeModels-->
+    <script type="text/javascript">
+        $('#btnGetEEs').on('click', function() {
+            var obj = {"getEmployeeModels" : {}};
+            sendRequest(obj, 'getEmployeeModels');
+        });
+    </script>
+    <!-- ========================== -->
+    <!-- getPaySchedulesLite-->
+    <script type="text/javascript">
+        $('#btnGetPaySchedulesLite').on('click', function() {
+            var obj = {"getPaySchedulesLite" : {
+                "includePeriodWithUnapprovedChecks" : true
+            }};
+            sendRequest(obj, 'getPaySchedulesLite', false);
+        });
+    </script>
+    <!-- ========================== -->
+    <!-- getEmployeeModelsLite-->
+    <script type="text/javascript">
+        $('#btnGetEEsLite').on('click', function() {
+            var obj = {"getEmployeeModelsLite" : {
+            }};
+            sendRequest(obj, 'getPaySchedulesLite', false);
+        });
+    </script>
+    <!-- ========================== -->
+    <!-- getPayScheduleModels-->
+    <script type="text/javascript">
+        $('#btnGetPaySchedules').on('click', function() {
+            var obj = {"getPayScheduleModels" : {
+            }};
+            sendRequest(obj, 'getPayScheduleModels');
+        });
+    </script>
+</body>
+</html>

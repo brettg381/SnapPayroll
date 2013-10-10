@@ -2,7 +2,7 @@
 <html>
 <head>
     <title></title>
-    <script type="text/javascript" src="js/libs/backbone.marionette/jquery.js"></script>
+    <script type="text/javascript" src="../libs/backbone.marionette/jquery.js"></script>
 </head>
 <body>
 <div id="oiiContainer" style="width:350px;height:350px;float:left;margin:0 25px;"></div>
@@ -87,8 +87,8 @@
             }
         }};
         $.ajax({
-            // url: 'https://172.28.18.48:8081/Public/webservices/json/SetupWebService',
-            url: 'https://branch-ws.iopdev.intuit.com/test/webservices/json/SetupWebService',
+            url: 'http://local.intuit.com:8080/Public/webservices/json/SetupWebService',
+            //url: 'https://branch-ws.iopdev.intuit.com/test/webservices/json/SetupWebService',
             type: 'POST',
             contentType: 'application/json',
             dataType: 'json',

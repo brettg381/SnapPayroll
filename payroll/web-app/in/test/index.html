@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../libs/bootstrap-no-gutter/css/bootstrap.min.css">
+    <script type="text/javascript" src="../libs/backbone.marionette/jquery.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap-no-gutter/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/utils.js"></script>
+    <script type="text/javascript" src="../js/iop.js"></script>
+    <!-- CONSTANTS -->
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .contentCol {
+            margin: 0 10px;
+        }
+        #input {
+            margin-top: 8px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <div class="navbar-inner">
+        <a class="brand" href="#">
+            IOPJS
+        </a>
+        <ul class="nav">
+            <li class="dropdown active">
+                <a id="branchSelect" href="" class="dropdown-toggle" data-toggle="dropdown">
+                    branch_test<b class="caret"></b>
+                </a>
+                <ul id="branchSelectOptions" class="dropdown-menu">
+                    <li><a href="#">branch</a></li>
+                    <li><a href="#">branch_test</a></li>
+                    <li><a href="#">easypaychecks</a></li>
+                </ul>
+            </li>
+        </ul>
+        <form class="navbar-form pull-right">
+            <input id="username" type="text" class="span4" placeholder="username"/>
+            <input id="password" type="password" class="span4" placeholder="password"/>
+            <button id="loginBtn" type="login" class="btn">Log In</button>
+        </form>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span6">
+        <div id="left" class="contentCol">
+            <div class="input-prepend" style="width:92%;">
+                <div class="btn-group">
+                    <button class="btn dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>
+                    <ul id="requestHistoryMenu" class="dropdown-menu"></ul>
+                </div>
+                <input id="requestName" style="width:100%;" id="prependedDropdownButton" type="text" placeholder="Request Title"/>
+            </div>
+            <textarea id="input" style="display:block;width:97%;" rows="60"></textarea>
+        </div>
+    </div>
+    <div class="span6">
+        <div id="right" class="contentCol">
+            <pre id="output"></pre>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var app = {};
+    app.availableRequests = null;
+    app.clear = function() {
+        $('#output').html('');
+        $('#input').html('');
+        $('#requestName').html('');
+    }
+    app.send = function() {
+        var requestName = $('#requestName').val();
+        var requestPayload = $('#input').val();
+        // send the request
+        var p = iop.sendRequest(JSON.parse(requestPayload), false);
+        p.done(function(obj) {
+            $('#output').html(JSON.stringify(obj, undefined, 2));
+        });
+        // store the value
+        if (requestName != '') {
+            var obj = null;
+            for (var i = 0; i < app.availableRequests.length; i++) {
+                if (app.availableRequests[i].name == requestName) {
+                    obj = app.availableRequests[i];
+                    obj.payload = requestPayload;
+                    break;
+                }
+            }
+            if (obj == null) {
+                obj = {
+                    name: requestName,
+                    payload: requestPayload
+                }
+                app.availableRequests.push(obj);
+            }
+            app.saveList();
+            app.renderList();
+        }
+    }
+    app.renderList = function() {
+        var list = $('#requestHistoryMenu');
+        list.html('');
+        for (var i = 0; i < app.availableRequests.length; i++) {
+            list.append('<li><a href="">' + app.availableRequests[i].name + '</a></li>');
+        }
+        list.find('a').on('click', function(event) {
+            for (var i = 0; i < app.availableRequests.length; i++) {
+                var name = this.text;
+                if (app.availableRequests[i].name == name) {
+                    $('#requestName').val(app.availableRequests[i].name);
+                    $('#input').val(app.availableRequests[i].payload);
+                    break;
+                }
+            }
+            return false;
+        });
+    }
+    app.loadList = function() {
+        var listStr = localStorage.getItem('availableRequests');
+        if (listStr == '') {
+            app.availableRequests = [];
+        } else {
+            app.availableRequests = JSON.parse(listStr);
+        }
+    }
+    app.saveList = function() {
+        if (app.availableRequests != null) {
+            localStorage.setItem('availableRequests', JSON.stringify(app.availableRequests));
+        }
+    }
+</script>
+<script type="text/javascript">
+    $('#branchSelectOptions').find('a').on('click', function() {
+        var t = this.text;
+        switch (t) {
+            case 'branch':
+                iop.URL_BASE = 'https://branch.iopdev.intuit.com';
+                break;
+            case 'branch_test':
+                iop.URL_BASE = 'https://branch.iopdev.intuit.com/test';
+                break;
+            case 'easypaychecks':
+                iop.URL_BASE = 'https://easypaychecks.intuitlabs.com';
+                break;
+        }
+        $('#branchSelect').html(t + '<b class="caret"></b>');
+    });
+    $('#loginBtn').on('click', function() {
+        app.clear();
+        var obj = {"loginMobileMulti": {
+            "userName": $('#username').val(),
+            "password": $('#password').val()
+        }};
+        var p = iop.sendRequest(obj, true);
+        p.done(function(obj) {
+            $('#output').html(JSON.stringify(obj, undefined, 2));
+        });
+    });
+    $('#input').bind('paste blur', function() {
+        app.send();
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        app.loadList();
+        app.renderList();
+    });
+</script>
+</body>
+</html>
