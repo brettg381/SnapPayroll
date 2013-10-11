@@ -11,8 +11,8 @@
     <!-- CONSTANTS -->
     <script type="text/javascript">
         //var URL_BASE = 'https://local.intuit.com:8181/Public';
-        //var URL_BASE = 'https://branch.iopdev.intuit.com/test';
-        var URL_BASE = 'https://easypaychecks.intuitlabs.com';
+        var URL_BASE = 'https://branch.iopdev.intuit.com/test';
+        //var URL_BASE = 'https://easypaychecks.intuitlabs.com';
     </script>
     <!-- UTILITIES -->
     <script type="text/javascript">
@@ -155,6 +155,7 @@
             <button class="controls btn-primary" id="btnGetEEsLite">Get all employees lite</button><br/>
             <button class="controls btn-primary" id="btnGetPaySchedulesLite">Get pay schedules lite</button><br/>
             <button class="controls btn-primary" id="btnGetPaySchedules">Get pay schedules</button><br/>
+            <button class="controls btn-primary" id="btnCreateDraftPaycheck">Create draft paycheck</button><br/>
         </div>
         <div class="span7">
             <pre id="out"></pre>
@@ -353,6 +354,50 @@
                 "companyWageItemId" : $('#coWageItemId').val()
             }};
             sendRequest(obj, 'getCompanyWageItem');
+        });
+    </script>
+    <!-- ========================== -->
+    <!-- createDraftPaychecks-->
+    <script type="text/javascript">
+        $('#btnCreateDraftPaycheck').on('click', function() {
+            var objEEPayInfos = {"employeePayInfo":[{
+					"employeeId":633806,
+					"wageItemId":"HOURLY_PAY",
+					"payDayValues":[{
+						"wageItemId":"HOURLY_PAY",
+						"name":"Regular Pay",
+						"permanentName":"HOURLY1",
+						"employeeWageItemId":1189106, // from employee model's "hourlyWages"
+						"employeeWageItemDbId":1189106,
+						"rate":45.67,
+						"hours":71.5
+					}]
+				}]
+            };
+
+            var obj = {"createDraftPaychecks" : {
+            	"periodStartDate" : {
+            		"year" : 2013,
+            		"month" : 9,
+            		"day" : 28
+				},
+				"periodEndDate" : {
+					"year" : 2013,
+					"month" : 10,
+					"day" : 11
+				},
+				"checkDate" : {
+					"year" : 2013,
+					"month" : 10,
+					"day" : 11
+				},
+				"employeePayInfo" : [{"employeeId":633806,"wageItemId":"HOURLY_PAY","payDayValues":[{"wageItemId":"HOURLY_PAY","name":"Regular Pay","permanentName":"HOURLY1","employeeWageItemId":1189106,"employeeWageItemDbId":1189106,"rate":45.67,"hours":71.5}]}],
+				"skipSalariedHoursAdjustment" : true,
+				"allowMultipleChecks" : false
+				}
+
+            };
+            sendRequest(obj, 'createDraftPaychecks', false);
         });
     </script>
     <!-- ========================== -->
