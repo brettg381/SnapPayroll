@@ -2012,7 +2012,7 @@
                 $('#cancelSaveCheckButton').show();
                 app.userView.render();
             });
-            p.fail(function() {
+            p.fail(function(data) {
                 console.error(data);  // [norio] need a spot for display
             });
         });

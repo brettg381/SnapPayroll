@@ -6,9 +6,11 @@
 // SETUP
 
 iop = {};
-//iop.URL_BASE = 'https://branch.iopdev.intuit.com/test';
+iop.URL_BASE = 'https://branch.iopdev.intuit.com/test';
 iop.employees = [];
 iop.paySchedules = [];
+iop.wageItemIds = ['HOURLY_PAY', 'OVERTIME', 'SALARY', 'BONUS', 'COMMISSION', 'DOUBLE_OVERTIME'];
+iop.wageItemNames = ['hourly_t', 'overtime_t', 'salary_t', 'bonus_t', 'commission_t', 'double time_t'];
 
 // ===============================
 // HELPERS
@@ -17,7 +19,7 @@ iop.sendRequest = function(obj, isMobile) {
     var endPoint = isMobile ? '/webservices/json/MobileManager' : '/webservices/json/SetupWebService';
     var dfd = $.Deferred();
     $.ajax({
-        url: endPoint,
+        url: iop.URL_BASE + endPoint,
         xhrFields: {
             withCredentials: true
         },
@@ -76,6 +78,7 @@ iop.signIn = function(email, password) {
  * @returns a $.Deferred promise for completion binding.
  */
 iop.signUp = function(email, password) {
+    // create the company
     var obj = {"updateCompanyModel": {
         "companyModel": {
             "acceptedCustomerServiceAgreement": true,
@@ -104,10 +107,31 @@ iop.signUp = function(email, password) {
     var req = iop.sendRequest(obj, false);
     req.done(function(data) {
         iop.company = data;
-        dfd.resolve();
+        // add wage items
+        var p = iop.setupWageItem(1);
+        p.done(dfd.resolve);
+        p.fail(dfd.reject);
     });
     req.fail(dfd.reject);
+
+    // add pay schedule
+    // TODO
+
     return dfd.promise();
+}
+
+/**
+ * Sets up the wage items for a company. This has to be done with
+ * sequential requests.
+ */
+iop.setupWageItem = function(idx) {
+    var obj = {"addNewCompanyWageItem" : {
+        "companyWageItemModel" : {
+            "name": iop.wageItemNames[idx],
+            "wageItemId": iop.wageItemIds[idx]
+        }
+    }};
+    return iop.sendRequest(obj, false);
 }
 
 iop.logOut = function() {
