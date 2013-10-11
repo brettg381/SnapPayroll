@@ -1,10 +1,12 @@
-// Defines the functions to interface with IOP.
+/*************************************
+ * IOP javascript interface
+ *************************************/
 
 // ===============================
 // SETUP
 
 iop = {};
-iop.URL_BASE = 'https://branch.iopdev.intuit.com/test';
+//iop.URL_BASE = 'https://branch.iopdev.intuit.com/test';
 iop.employees = [];
 iop.paySchedules = [];
 
@@ -15,7 +17,7 @@ iop.sendRequest = function(obj, isMobile) {
     var endPoint = isMobile ? '/webservices/json/MobileManager' : '/webservices/json/SetupWebService';
     var dfd = $.Deferred();
     $.ajax({
-        url: iop.URL_BASE + endPoint,
+        url: endPoint,
         xhrFields: {
             withCredentials: true
         },
@@ -106,6 +108,11 @@ iop.signUp = function(email, password) {
     });
     req.fail(dfd.reject);
     return dfd.promise();
+}
+
+iop.logOut = function() {
+    var obj = {"logout": {}};
+    return iop.sendRequest(obj, true);
 }
 
 // ===============================

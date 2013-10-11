@@ -22,14 +22,12 @@
     <link rel="stylesheet" href="css/harmony-custom.css">
     <link rel="stylesheet" href="css/site.css">
 </head>
-</head>
 <body>
     <div id="landingLayout" class="frameLayout harmony">
         <div class="row-fluid">
             <div class="offset1 span6">
                 <div class="invisibleHeader">
-                    <img class="logo" src="images/payroll/nav-logo-intuit.png"/>
-                    <span>Easy Paychecks</span>
+                    <img class="logo" src="images/payroll/logo-large.png"/>
                 </div>
                 <div id="landingCalcFormWrapper">
                     <div id="landingCalcForm">
@@ -690,7 +688,7 @@
     <div id="overviewLayout" class="frameLayout harmony inactive">
         <div class="west">
             <div class="nav">
-                <div class="app-title">Easy Paychecks</div>
+                <div class="app-title"></div>
                 <ul>
                     <li class="paychecks selected">Paychecks</li>
                     <li class="employees">Employees</li>
@@ -706,7 +704,7 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                        <li><a href="">Log Out</a></li>
+                        <li><a id="logout" href="">Log Out</a></li>
                     </ul>
                 </div>
             </div>
@@ -1910,7 +1908,6 @@
             var signInEmail = signInEmailField.val();
             var signInPasswordField = $('#loginPassword');
             var signInPassword = signInPasswordField.val();
-
             var p = app.signIn(signInEmail, signInPassword);
             p.done(function() {
                 app.currentUser.set('email', signInEmail);
@@ -1931,7 +1928,6 @@
             p.fail(function() {
                 $('#loginEmail').addClass('error');
                 $('#loginPassword').addClass('error');
-                //console.error(data);
             });
         });
         $('#loginCancelButton').on('click', function() {
@@ -2050,6 +2046,9 @@
                     $('#paychecksOverview').toggleClass('inactive');
                     break;
             }
+        });
+        $('#logout').on('mouseup', function() {
+            app.logOut();
         });
     </script>
     <script type="text/javascript">

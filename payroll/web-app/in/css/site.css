@@ -10,7 +10,7 @@
 .bold {
     font-weight: bold;
 }
-.inactive {
+.hidden {
     display: none;
 }
 .caret {
@@ -82,17 +82,6 @@ h4 {
 #landingLayout .invisibleHeader {
     color: #8997a5;
     vertical-align: middle;
-}
-#landingLayout .invisibleHeader img.logo {
-    width: 114px;
-    height: 36px;
-    float: left;
-}
-#landingLayout .invisibleHeader span {
-    font-size: 30px;
-    line-height: 47px;
-    display: inline-block;
-    margin-left: 20px;
 }
 #landingCalcFormWrapper {
     position: relative;
@@ -388,9 +377,8 @@ h4 {
 }
 .nav .app-title {
     color: #8696a2;
-    padding: 10px 10px 11px 77px;
-    background: url("../images/payroll/nav-logo-intuit.png") no-repeat 11px 9px;
-    font-size: 17px;
+    height: 42px;
+    background: url("../images/payroll/logo-small.png") no-repeat 15px 11px;
 }
 .nav ul {
     margin: 0;

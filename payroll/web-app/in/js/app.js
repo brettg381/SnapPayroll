@@ -21,6 +21,7 @@ var toInt = function(str) {
     return parseInt(str);
 }
 
+// [norio] UNFINISHED!
 app.eeIopToSimple = function(ee) {
     var name = ee.fistName + ' ' + ee.lastName;
     var abbr = getAbbreviation(name);
@@ -28,16 +29,16 @@ app.eeIopToSimple = function(ee) {
     var payType = ee.payRatetype;
     var payRate = toFloat(ee.salaryRate);
     var payPeriod = ee.salaryFrequency;   // [norio] I think this is 'Week' rather than 'Weekly'
-    var fedFilingStatus = ee.federalTaxSetup.filingStatus  // [norio] this is an integer that needs to be remapped
-    var fedAllowances = toInt(ee.federalTaxSetup.allowances)
-    var fedAdditionalWithheld = toFloat(ee.federalTaxSetup.additionalWithholding)
+    var fedFilingStatus = ee.federalTaxSetup.filingStatus;  // [norio] this is an integer that needs to be remapped
+    var fedAllowances = toInt(ee.federalTaxSetup.allowances);
+    var fedAdditionalWithheld = toFloat(ee.federalTaxSetup.additionalWithholding);
     var stateFilingStatus
     var stateAllowances
     var stateAdditionalWithheld
 }
 
+// [norio] UNFINISHED!
 app.eeSimpleToIop = function(simpleEmployeeModel) {
-
 }
 
 // =====================
@@ -102,6 +103,9 @@ app.signIn = function(username, password) {
 // Deferred -- please use done and fail listeners
 app.signUp = function(email, password) {
     return iop.signUp(email, password);
+}
+app.logOut = function() {
+    return iop.logOut();
 }
 
 // =====================
