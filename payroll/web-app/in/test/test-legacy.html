@@ -73,6 +73,7 @@
             </form>
             <button class="controls btn-primary" id="btnLogIn">Log In</button>
             <button class="controls btn-primary" id="btnLogOut">Log Out</button>
+            <button class="controls btn-primary" id="btnTest">Test</button>
             <h3>Get Company</h3>
             <button class="controls btn-primary" id="btnGetCO">Get</button>
             <h3>Update Company</h3>
@@ -454,5 +455,14 @@
             sendRequest(obj, 'logout', false);
         });
     </script>
+    <!-- ========================== -->
+    <!-- Testing-->
+    <script type="text/javascript">
+        $('#btnTest').on('click', function() {
+            var obj = {"updateEmployeeModelById": {}};
+            sendRequest(obj, 'test');
+        });
+    </script>
+
 </body>
 </html>
