@@ -95,12 +95,9 @@ function drawChart(totalNet, totalTaxes) {
 // =====================
 // APP FUNCTIONS
 
-// Deferred -- please use done and fail listeners
 app.signIn = function(username, password) {
     return iop.signIn(username, password);
 }
-
-// Deferred -- please use done and fail listeners
 app.signUp = function(email, password) {
     return iop.signUp(email, password);
 }

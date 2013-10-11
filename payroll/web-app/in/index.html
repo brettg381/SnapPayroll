@@ -147,7 +147,7 @@
                                 <!-- STATE  -->
 
                                 <!-- ALABAMA -->
-                                <div id="landing-state-al" class="accordion-group state-al inactive accordion-last">
+                                <div id="landing-state-al" class="accordion-group state-al hidden accordion-last">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseAL">
                                             <h4 class="form_title arrow-right">Alabama State Withholdings</h4>
@@ -205,7 +205,7 @@
                                     </div>
                                 </div>
                                 <!-- ARIZONA -->
-                                <div id="landing-state-az" class="accordion-group state-az inactive accordion-last">
+                                <div id="landing-state-az" class="accordion-group state-az hidden accordion-last">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseAZ">
                                             <h4 class="form_title arrow-right">Arizona State Withholdings</h4>
@@ -275,7 +275,7 @@
                                     </div>
                                 </div>
                                 <!-- COLORADO -->
-                                <div id="landing-state-co" class="accordion-group state-co inactive accordion-last">
+                                <div id="landing-state-co" class="accordion-group state-co hidden accordion-last">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseCO">
                                             <h4 class="form_title arrow-right">Colorado State Withholdings</h4>
@@ -300,7 +300,7 @@
                                     </div>
                                 </div>
                                 <!-- GEORGIA -->
-                                <div id="landing-state-ga" class="accordion-group state-ga inactive accordion-last">
+                                <div id="landing-state-ga" class="accordion-group state-ga hidden accordion-last">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseGA">
                                             <h4 class="form_title arrow-right">Georgia State Withholdings</h4>
@@ -338,7 +338,7 @@
                                     </div>
                                 </div>
                                 <!-- ILLINOIS -->
-                                <div id="landing-state-il" class="accordion-group state-il inactive accordion-last">
+                                <div id="landing-state-il" class="accordion-group state-il hidden accordion-last">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseIL">
                                             <h4 class="form_title arrow-right">Illinois State Withholdings</h4>
@@ -372,7 +372,7 @@
                                     </div>
                                 </div>
                                 <!-- LOUISIANA -->
-                                <div id="landing-state-la" class="accordion-group state-la inactive accordion-last">
+                                <div id="landing-state-la" class="accordion-group state-la hidden accordion-last">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseLA">
                                             <h4 class="form_title arrow-right">Louisiana State Withholdings</h4>
@@ -412,7 +412,7 @@
                                     </div>
                                 </div>
                                 <!-- MARYLAND -->
-                                <div id="landing-state-md" class="accordion-group state-md inactive accordion-last">
+                                <div id="landing-state-md" class="accordion-group state-md hidden accordion-last">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseMD">
                                             <h4 class="form_title arrow-right">Maryland State Withholdings</h4>
@@ -479,7 +479,7 @@
                                     </div>
                                 </div>
                                 <!-- NEW YORK -->
-                                <div id="landing-state-ny" class="accordion-group state-ny inactive accordion-last">
+                                <div id="landing-state-ny" class="accordion-group state-ny hidden accordion-last">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseNY">
                                             <h4 class="form_title arrow-right">New York State Withholdings</h4>
@@ -566,7 +566,7 @@
                                     </div>
                                 </div>
                                 <!-- NORTH CAROLINA -->
-                                <div id="landing-state-nc" class="accordion-group state-nc inactive accordion-last">
+                                <div id="landing-state-nc" class="accordion-group state-nc hidden accordion-last">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseNC">
                                             <h4 class="form_title arrow-right">North Carolina State Withholdings</h4>
@@ -602,7 +602,7 @@
                                     </div>
                                 </div>
                                 <!-- VIRGINIA -->
-                                <div id="landing-state-va" class="accordion-group state-va inactive accordion-last">
+                                <div id="landing-state-va" class="accordion-group state-va hidden accordion-last">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseVA">
                                             <h4 class="form_title arrow-right">Virginia State Withholdings</h4>
@@ -636,7 +636,7 @@
                                     </div>
                                 </div>
                                 <!-- WASHINGTON -->
-                                <div id="landing-state-wa" class="accordion-group state-wa inactive accordion-last">
+                                <div id="landing-state-wa" class="accordion-group state-wa hidden accordion-last">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle collapsed disabled" data-toggle="collapse" data-parent="#landingAccordion" href="#landingCollapseWA">
                                             <h4 class="form_title arrow-right">Washington State Withholdings</h4>
@@ -1969,7 +1969,6 @@
         $('#signupCancelButton').on('click', function () {
             $('#signupModal').fadeOut(200, function() {
                 $('#modalLayout').toggle();
-                //$('#modalLayout').toggleClass('inactive');
             });
         });
         $('#signupGoButton').on('click', function () {
@@ -2010,7 +2009,6 @@
                     $('#landingLayout').hide('slide', {'direction': 'right'}, 400);
                 }
                 clearForms();
-                //$('#cancelSaveCheckButton').removeClass('inactive');
                 $('#cancelSaveCheckButton').show();
                 app.userView.render();
             });
