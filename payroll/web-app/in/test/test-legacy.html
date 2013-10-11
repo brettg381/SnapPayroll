@@ -11,8 +11,8 @@
     <!-- CONSTANTS -->
     <script type="text/javascript">
         //var URL_BASE = 'https://local.intuit.com:8181/Public';
-        var URL_BASE = 'https://branch.iopdev.intuit.com/test';
-        //var URL_BASE = 'https://easypaychecks.intuitlabs.com';
+        //var URL_BASE = 'https://branch.iopdev.intuit.com/test';
+        var URL_BASE = 'https://easypaychecks.intuitlabs.com';
     </script>
     <!-- UTILITIES -->
     <script type="text/javascript">
@@ -72,6 +72,7 @@
                 </div>
             </form>
             <button class="controls btn-primary" id="btnLogIn">Log In</button>
+            <button class="controls btn-primary" id="btnLogOut">Log Out</button>
             <h3>Get Company</h3>
             <button class="controls btn-primary" id="btnGetCO">Get</button>
             <h3>Update Company</h3>
@@ -130,6 +131,7 @@
                     	</select>
                     </div>
                 </div>
+            </form>
             <button class="controls btn-primary" id="btnAddCoWageItem">Add company wage item</button>
 
             <h3>Get Company Wage Item</h3>
@@ -397,6 +399,14 @@
             var obj = {"getPayScheduleModels" : {
             }};
             sendRequest(obj, 'getPayScheduleModels');
+        });
+    </script>
+    <!-- ========================== -->
+    <!-- logOut-->
+    <script type="text/javascript">
+        $('#btnLogOut').on('click', function() {
+            var obj = {"logOut" : {}};
+            sendRequest(obj, 'logout', false);
         });
     </script>
 </body>
