@@ -102,6 +102,45 @@
                 </div>
             </form>
             <button class="controls btn-primary" id="btnAddEE">Add employee</button>
+            
+            <h3>Add Company Wage Item</h3>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="coWageItemName">name</label>
+                    <div class="controls"><input id="coWageItemName" type="text"/></div>
+                    <label class="control-label" for="coWageItemType">wage item type</label>
+                    <div class="controls"><input id="coWageItemType" type="text"/></div>
+                    <div class="controls">
+                    	<select>
+                    		<option value="HOURLY_PAY">HOURLY_PAY</option>
+                    		<option value="MEALS">MEALS</option>
+                    		<option value="LODGING">LODGING</option>
+                    		<option value="OVERTIME">OVERTIME</option>
+                    		<option value="DOUBLE_OVERTIME">DOUBLE_OVERTIME</option>
+                    		<option value="SALARY">SALARY</option>
+                    		<option value="BONUS">BONUS</option>
+                    		<option value="COMMISSION">COMMISSION</option>                    		
+                    		<option value="ALLOWANCE">ALLOWANCE</option>
+                    		<option value="CASH_TIPS">CASH_TIPS</option>
+                    		<option value="HOLIDAY_PAY">HOLIDAY_PAY</option>
+                    		<option value="CLERGY_CASH">CLERGY_CASH</option>
+                    		<option value="ROYALTIES">ROYALTIES</option>
+                    		<option value="CONTRACTOR_PAYMENTS">CONTRACTOR_PAYMENTS</option>
+                    		<option value="PER_DIEM">PER_DIEM</option>
+                    	</select>
+                    </div>
+                </div>
+            <button class="controls btn-primary" id="btnAddCoWageItem">Add company wage item</button>
+
+            <h3>Get Company Wage Item</h3>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="coWageItemId">id</label>
+                    <div class="controls"><input id="coWageItemId" type="text"/></div>
+                </div>
+            </form>
+            <button class="controls btn-primary" id="btnGetCoWageItemId">Get company wage item id</button><br/>
+
             <h3>Get Employee</h3>
             <form class="form-horizontal">
                 <div class="control-group">
@@ -289,6 +328,29 @@
                 }
             }};
             sendRequest(obj, 'btnAddEE');
+        });
+    </script>
+    <!-- ========================== -->
+    <!-- addNewCompanyWageItem-->
+    <script type="text/javascript">
+        $('#btnAddCoWageItem').on('click', function() {
+        	var obj = {"addNewCompanyWageItem" : {
+        		"companyWageItemModel" : {
+					"name": $('#coWageItemName').val(),
+					"wageItemId": $('#coWageItemType').val()
+				}
+        	}};
+		sendRequest(obj, 'addNewCompanyWageItem');
+        });
+	</script>
+    <!-- ========================== -->
+    <!-- getCompanyWageItem-->
+    <script type="text/javascript">
+        $('#btnGetCoWageItemId').on('click', function() {
+            var obj = {"getCompanyWageItem" : {
+                "companyWageItemId" : $('#coWageItemId').val()
+            }};
+            sendRequest(obj, 'getCompanyWageItem');
         });
     </script>
     <!-- ========================== -->
