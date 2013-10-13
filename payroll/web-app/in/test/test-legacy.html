@@ -62,6 +62,18 @@
 <body>
     <div class="row-fluid" style="margin-top: 20px;">
         <div class="span4" style="margin-left: 20px;">
+        	<h3>Recipe</h3>
+        	<div class="control-group">
+        		<ol>
+					<li>updateCompanyModel</li>
+					<li>add wage company wage item: HOURLY_PAY or SALARY</li>
+					<li>addEmployeeModel (Build employee version)</li>
+					<li>collect employee id</li>
+					<li>saveCompanyPaySchedule (Add company pay schedule.)</li>
+					<li>updateEmployeeModelById: this will insert the company pay schedule into the employee (only need to do this once, then every new employee after will get this payschedule after calling addEmployeeModel.)</li>
+        		</ol>
+        	</div>
+        	<hr>
             <h3>Log In</h3>
             <form class="form-horizontal">
                 <div class="control-group">
@@ -73,8 +85,10 @@
             </form>
             <button class="controls btn-primary" id="btnLogIn">Log In</button>
             <button class="controls btn-primary" id="btnLogOut">Log Out</button>
+            <hr>
             <h3>Get Company</h3>
-            <button class="controls btn-primary" id="btnGetCO">Get</button>
+            <button class="controls btn-primary" id="btnGetCO">Get Company</button>
+            <hr>
             <h3>Update Company</h3>
             <form class="form-horizontal">
                 <div class="control-group">
@@ -90,9 +104,11 @@
                     <div class="controls"><input id="coPCPass" type="password"/></div>
                 </div>
             </form>
-            <button class="controls btn-primary" id="btnAddCO">Update</button>
+            <button class="controls btn-primary" id="btnAddCO">Update Company</button>
+            <hr>
             <h3>Add Pay Schedule</h3>
-            <button class=" controls btn-primary" id="btnSetPaySched">Add</button>
+            <button class=" controls btn-primary" id="btnSetPaySched">Add pay schedule</button>
+            <hr>
             <h3>Add Employee</h3>
             <form class="form-horizontal">
                 <div class="control-group">
@@ -103,7 +119,27 @@
                 </div>
             </form>
             <button class="controls btn-primary" id="btnAddEE">Add employee</button>
-            
+			<hr>
+            <h3>Build Employee</h3>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label  class="control-label" for="eeBuildFname">first name</label>
+                    <div class="controls"><input id="eeBuildFname" type="text"/><br/></div>
+                    <label  class="control-label" for="eeBuildLname">last name</label>
+                    <div class="controls"><input id="eeBuildLname" type="text"/><br/></div>
+                </div>
+            </form>
+            <button class="controls btn-primary" id="btnBuildEE">Build employee</button>
+			<hr>
+            <h3>Update Employee</h3>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="updateEEId">id</label>
+                    <div class="controls"><input id="updateEEId" type="text"/></div>
+                </div>
+            </form>
+            <button class="controls btn-primary" id="btnUpdateEE">Update employee</button><br/>
+            <hr>
             <h3>Add Company Wage Item</h3>
             <form class="form-horizontal">
                 <div class="control-group">
@@ -133,7 +169,7 @@
                 </div>
             </form>
             <button class="controls btn-primary" id="btnAddCoWageItem">Add company wage item</button>
-
+			<hr>
             <h3>Get Company Wage Item</h3>
             <form class="form-horizontal">
                 <div class="control-group">
@@ -142,15 +178,16 @@
                 </div>
             </form>
             <button class="controls btn-primary" id="btnGetCoWageItemId">Get company wage item id</button><br/>
-
+			<hr>
             <h3>Get Employee</h3>
             <form class="form-horizontal">
                 <div class="control-group">
-                    <label class="control-label" for="eeId">id</label>
-                    <div class="controls"><input id="eeId" type="text"/></div>
+                    <label class="control-label" for="eeIndex">index</label>
+                    <div class="controls"><input id="eeIndex" type="text"/></div>
                 </div>
             </form>
             <button class="controls btn-primary" id="btnGetEE">Get employee</button><br/>
+            <hr>
             <button class="controls btn-primary" id="btnGetEEs">Get all employees</button><br/>
             <button class="controls btn-primary" id="btnGetEEsLite">Get all employees lite</button><br/>
             <button class="controls btn-primary" id="btnGetPaySchedulesLite">Get pay schedules lite</button><br/>
@@ -168,24 +205,24 @@
         $('#btnSetPaySched').on('click', function() {
             var obj = {"saveCompanyPaySchedule" : {
                 "paySchedule": {
-                    "id": 0,
                     "payFrequency": "EVERY_WEEK",
                     "nextPayDay": {
                         "year": 2013,
-                        "month": 11,
-                        "day": 27
+                        "month": 10,
+                        "day": 18
                     },
                     "periodEndDate": {
                         "year": 2013,
-                        "month": 11,
-                        "day": 27
+                        "month": 10,
+                        "day": 18
                     },
-                    "useAsDefault": false,
+                    "useAsDefault": true,
                     "isCustom": false,
                     "description": "Weekly Pay Schedule"
-                }
+                },
+                "editEmpId" : 2395792
             }}
-            sendRequest(obj, 'btnAddCo', 'setPaySchedOut');
+            sendRequest(obj, 'btnSetPaySched');
         });
     </script>
 
@@ -333,6 +370,50 @@
             sendRequest(obj, 'btnAddEE');
         });
     </script>
+    <!-- buildEmployee-->
+    <script type="text/javascript">
+        $('#btnBuildEE').on('click', function() {
+            var obj = {"addEmployeeModel": {
+                "employeeModel": {
+                    "firstName" : $('#eeBuildFname').val(),
+                    "middleInitial": "",
+                    "lastName" : $('#eeBuildLname').val(),
+                    "homeAddress": {
+                        "isDefaultAddressOK": true,
+                        "isTaxAddress": false,
+                        "address1": "",
+                        "address2": "",
+                        "city": "",
+                        "county": "",
+                        "state": "CA"
+//                        "zip": "94039"
+                    },
+					"employmentStatus": "Active",
+					"isActive": true,
+					"allowPaystubAccess": false,
+					"payStatus": "Active",
+					"payRateType": "Hourly",
+					"workLocation": ""
+                }
+            }};
+            sendRequest(obj, 'btnBuildEE');
+        });
+    </script>
+    <!-- updateEmployee-->
+    <script type="text/javascript">
+        $('#btnUpdateEE').on('click', function() {
+            var obj = {"updateEmployeeModelById": {
+                "employeeModel": {
+                	"id" : $('#updateEEId').val(),                	
+					"payRateType": "Hourly",
+                },
+                "employeeId" : $('#updateEEId').val(),
+                "persist" : true
+            }};
+            sendRequest(obj, 'btnUpdateEE');
+        });
+    </script>
+    <!-- ========================== -->
     <!-- ========================== -->
     <!-- addNewCompanyWageItem-->
     <script type="text/javascript">
@@ -360,7 +441,7 @@
     <!-- createDraftPaychecks-->
     <script type="text/javascript">
         $('#btnCreateDraftPaycheck').on('click', function() {
-            var objEEPayInfos = {"employeePayInfo":[{
+            var objEEPayInfos = [{
 					"employeeId":633806,
 					"wageItemId":"HOURLY_PAY",
 					"payDayValues":[{
@@ -372,8 +453,7 @@
 						"rate":45.67,
 						"hours":71.5
 					}]
-				}]
-            };
+				}];
 
             var obj = {"createDraftPaychecks" : {
             	"periodStartDate" : {
@@ -391,7 +471,7 @@
 					"month" : 10,
 					"day" : 11
 				},
-				"employeePayInfo" : [{"employeeId":633806,"wageItemId":"HOURLY_PAY","payDayValues":[{"wageItemId":"HOURLY_PAY","name":"Regular Pay","permanentName":"HOURLY1","employeeWageItemId":1189106,"employeeWageItemDbId":1189106,"rate":45.67,"hours":71.5}]}],
+				"employeePayInfo" : objEEPayInfos,
 				"skipSalariedHoursAdjustment" : true,
 				"allowMultipleChecks" : false
 				}
@@ -405,7 +485,7 @@
     <script type="text/javascript">
         $('#btnGetEE').on('click', function() {
             var obj = {"getEmployeeModelByIndex" : {
-                "index" : $('#eeId').val()
+                "index" : $('#eeIndex').val()
             }};
             sendRequest(obj, 'getEmployeeModel');
         });
@@ -450,7 +530,7 @@
     <!-- logOut-->
     <script type="text/javascript">
         $('#btnLogOut').on('click', function() {
-            var obj = {"logOut" : {}};
+            var obj = {"logout" : {}};
             sendRequest(obj, 'logout', false);
         });
     </script>
