@@ -67,10 +67,11 @@
         		<ol>
 					<li>updateCompanyModel</li>
 					<li>add wage company wage item: HOURLY_PAY or SALARY</li>
-					<li>addEmployeeModel (Build employee version)</li>
+					<li>addEmployeeModel (Build employee version.)</li>
 					<li>collect employee id</li>
-					<li>saveCompanyPaySchedule (Add company pay schedule.)</li>
-					<li>updateEmployeeModelById: this will insert the company pay schedule into the employee (only need to do this once, then every new employee after will get this payschedule after calling addEmployeeModel.)</li>
+					<li>saveCompanyPaySchedule (Add company pay schedule, from an employee.)</li>
+					<li>updateEmployeeModelById: This will insert the company pay schedule into the employee. (only need to do this once, then every new employee after will get this payschedule after calling addEmployeeModel.)</li>
+					<li>updateEmployeeModelById: By putting the hourWage JsonArray into the updateEmployee model and calling this update method, the hourlyWage pay type will get created. I assume that we can do the same with allWages JsonArray.</li>
         		</ol>
         	</div>
         	<hr>
@@ -136,6 +137,8 @@
                 <div class="control-group">
                     <label class="control-label" for="updateEEId">id</label>
                     <div class="controls"><input id="updateEEId" type="text"/></div>
+                    <label class="control-label" for="updateEEHourlyRate">Hourly rate</label>
+                    <div class="controls"><input id="updateEEHourlyRate" type="text"/></div>
                 </div>
             </form>
             <button class="controls btn-primary" id="btnUpdateEE">Update employee</button><br/>
@@ -188,11 +191,23 @@
             </form>
             <button class="controls btn-primary" id="btnGetEE">Get employee</button><br/>
             <hr>
+            <h3>Create draft paychecks</h3>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="draftCheckEEId">EE Id</label>
+                    <div class="controls"><input id="draftCheckEEId" type="text"/></div>
+                    <label class="control-label" for="draftCheckRate">Hourly rate</label>
+                    <div class="controls"><input id="draftCheckRate" type="text"/></div>
+                    <label class="control-label" for="draftCheckHours">Hours worked</label>
+                    <div class="controls"><input id="draftCheckHours" type="text"/></div>
+                </div>
+            </form>
+            <button class="controls btn-primary" id="btnCreateDraftPaycheck">Create draft paycheck</button><br/>
+            <hr>
             <button class="controls btn-primary" id="btnGetEEs">Get all employees</button><br/>
             <button class="controls btn-primary" id="btnGetEEsLite">Get all employees lite</button><br/>
             <button class="controls btn-primary" id="btnGetPaySchedulesLite">Get pay schedules lite</button><br/>
             <button class="controls btn-primary" id="btnGetPaySchedules">Get pay schedules</button><br/>
-            <button class="controls btn-primary" id="btnCreateDraftPaycheck">Create draft paycheck</button><br/>
         </div>
         <div class="span7">
             <pre id="out"></pre>
@@ -406,6 +421,27 @@
                 "employeeModel": {
                 	"id" : $('#updateEEId').val(),                	
 					"payRateType": "Hourly",
+					"hourlyWages" : [{
+					"isActive" : true,
+					"isBaseRate": true,
+					"isHourly" : true,
+					"isSalary": false,
+					"rate" : $('#updateEEHourlyRate').val(),
+					"companyWageItem" : {
+						"id": 3118514,
+						"version": 0,
+						"isActive": true,
+						"name": "Regular Pay",
+						"permanentName": "HOURLY1",
+						"isNonCash": false,
+						"displayOrder": 1,
+						"wageItemId": "HOURLY_PAY",
+						"isPaidByHours": true,
+						"payDayName": "Regular Pay",
+						"wageItemExportType": "ExpenseOnly"
+					}
+//					"companyWageItem" : objCompanyWageItem (how do I pass the companyModel's companyWageItems's HOURLY_PAY JsonObject into here?
+					}]
                 },
                 "employeeId" : $('#updateEEId').val(),
                 "persist" : true
@@ -442,34 +478,34 @@
     <script type="text/javascript">
         $('#btnCreateDraftPaycheck').on('click', function() {
             var objEEPayInfos = [{
-					"employeeId":633806,
+					"employeeId":$('#draftCheckEEId').val(),
 					"wageItemId":"HOURLY_PAY",
 					"payDayValues":[{
 						"wageItemId":"HOURLY_PAY",
 						"name":"Regular Pay",
 						"permanentName":"HOURLY1",
-						"employeeWageItemId":1189106, // from employee model's "hourlyWages"
-						"employeeWageItemDbId":1189106,
-						"rate":45.67,
-						"hours":71.5
+						"employeeWageItemId":5430070, // from employee model's "hourlyWages"
+						"employeeWageItemDbId":5430070,
+						"rate":$('#draftCheckRate').val(),
+						"hours":$('#draftCheckHours').val()
 					}]
 				}];
 
             var obj = {"createDraftPaychecks" : {
             	"periodStartDate" : {
             		"year" : 2013,
-            		"month" : 9,
-            		"day" : 28
+            		"month" : 10,
+            		"day" : 12
 				},
 				"periodEndDate" : {
 					"year" : 2013,
 					"month" : 10,
-					"day" : 11
+					"day" : 18
 				},
 				"checkDate" : {
 					"year" : 2013,
 					"month" : 10,
-					"day" : 11
+					"day" : 18
 				},
 				"employeePayInfo" : objEEPayInfos,
 				"skipSalariedHoursAdjustment" : true,
