@@ -74,7 +74,7 @@
 					<li>updateEmployeeModelById: By putting the hourWage JsonArray into the updateEmployee model and calling this update method, the hourlyWage pay type will get created. I assume that we can do the same with allWages JsonArray.</li>
         		</ol>
         	</div>
-        	<hr>
+        	<hr/>
             <h3>Log In</h3>
             <form class="form-horizontal">
                 <div class="control-group">
@@ -86,10 +86,10 @@
             </form>
             <button class="controls btn-primary" id="btnLogIn">Log In</button>
             <button class="controls btn-primary" id="btnLogOut">Log Out</button>
-            <hr>
+            <hr/>
             <h3>Get Company</h3>
             <button class="controls btn-primary" id="btnGetCO">Get Company</button>
-            <hr>
+            <hr/>
             <h3>Update Company</h3>
             <form class="form-horizontal">
                 <div class="control-group">
@@ -106,7 +106,7 @@
                 </div>
             </form>
             <button class="controls btn-primary" id="btnAddCO">Update Company</button>
-            <hr>
+            <hr/>
             <h3>Add Pay Schedule</h3>
             <button class=" controls btn-primary" id="btnSetPaySched">Add pay schedule</button>
             <hr>
@@ -120,7 +120,7 @@
                 </div>
             </form>
             <button class="controls btn-primary" id="btnAddEE">Add employee</button>
-			<hr>
+			<hr/>
             <h3>Build Employee</h3>
             <form class="form-horizontal">
                 <div class="control-group">
@@ -131,18 +131,20 @@
                 </div>
             </form>
             <button class="controls btn-primary" id="btnBuildEE">Build employee</button>
-			<hr>
+			<hr/>
             <h3>Update Employee</h3>
             <form class="form-horizontal">
                 <div class="control-group">
                     <label class="control-label" for="updateEEId">id</label>
                     <div class="controls"><input id="updateEEId" type="text"/></div>
+                    <label class="control-label" for="updatePayScheduleId">Payschedule id</label>
+                    <div class="controls"><input id="updatePayScheduleId" type="text"/></div>
                     <label class="control-label" for="updateEEHourlyRate">Hourly rate</label>
                     <div class="controls"><input id="updateEEHourlyRate" type="text"/></div>
                 </div>
             </form>
             <button class="controls btn-primary" id="btnUpdateEE">Update employee</button><br/>
-            <hr>
+            <hr/>
             <h3>Add Company Wage Item</h3>
             <form class="form-horizontal">
                 <div class="control-group">
@@ -172,7 +174,7 @@
                 </div>
             </form>
             <button class="controls btn-primary" id="btnAddCoWageItem">Add company wage item</button>
-			<hr>
+			<hr/>
             <h3>Get Company Wage Item</h3>
             <form class="form-horizontal">
                 <div class="control-group">
@@ -181,7 +183,7 @@
                 </div>
             </form>
             <button class="controls btn-primary" id="btnGetCoWageItemId">Get company wage item id</button><br/>
-			<hr>
+			<hr/>
             <h3>Get Employee</h3>
             <form class="form-horizontal">
                 <div class="control-group">
@@ -190,7 +192,7 @@
                 </div>
             </form>
             <button class="controls btn-primary" id="btnGetEE">Get employee</button><br/>
-            <hr>
+            <hr/>
             <h3>Create draft paychecks</h3>
             <form class="form-horizontal">
                 <div class="control-group">
@@ -203,7 +205,16 @@
                 </div>
             </form>
             <button class="controls btn-primary" id="btnCreateDraftPaycheck">Create draft paycheck</button><br/>
-            <hr>
+            <hr/>
+            <h3>Approve checks</h3>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="draftCheckId">Draft check Id</label>
+                    <div class="controls"><input id="draftCheckId" type="text"/></div>
+                </div>
+            </form>
+            <button class="controls btn-primary" id="btnApprovePaycheck">Approve paycheck</button><br/>
+            <hr/>		
             <button class="controls btn-primary" id="btnGetEEs">Get all employees</button><br/>
             <button class="controls btn-primary" id="btnGetEEsLite">Get all employees lite</button><br/>
             <button class="controls btn-primary" id="btnGetPaySchedulesLite">Get pay schedules lite</button><br/>
@@ -401,7 +412,6 @@
                         "city": "",
                         "county": "",
                         "state": "CA"
-//                        "zip": "94039"
                     },
 					"employmentStatus": "Active",
 					"isActive": true,
@@ -419,8 +429,20 @@
         $('#btnUpdateEE').on('click', function() {
             var obj = {"updateEmployeeModelById": {
                 "employeeModel": {
-                	"id" : $('#updateEEId').val(),                	
+                	"id" : $('#updateEEId').val(),
+                    "gender": "Male",
+                    "homeAddress": {
+                        "address1": "112 Marine Way",
+                        "address2": "",
+                        "city": "Mountain View",
+                        "county": "",
+                        "state": "CA",
+                        "zip": 94039
+                    },               	
 					"payRateType": "Hourly",
+					"payschedule" : {
+						"id" : $('updatePayScheduleId').val()
+					},
 					"hourlyWages" : [{
 					"isActive" : true,
 					"isBaseRate": true,
@@ -514,6 +536,17 @@
 
             };
             sendRequest(obj, 'createDraftPaychecks', false);
+        });
+    </script>
+    <!-- ========================== -->
+    <!-- approvePaychecks-->
+    <script type="text/javascript">
+        $('#btnApprovePaycheck').on('click', function() {
+            var obj = {"approvePaychecks" : {
+                "paycheckIds" : [$('#draftCheckId').val()],
+                "notifyByMail" : false
+            }};
+            sendRequest(obj, 'approvePaychecks', false);
         });
     </script>
     <!-- ========================== -->
