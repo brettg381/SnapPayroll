@@ -143,10 +143,14 @@
                 <div class="control-group">
                     <label class="control-label" for="updateEEId">id</label>
                     <div class="controls"><input id="updateEEId" type="text"/></div>
+                    <label class="control-label" for="updateCompanyWageItemId">Company wage item id</label>
+                    <div class="controls"><input id="updateCompanyWageItemId" type="text"/></div>
                     <label class="control-label" for="updatePayScheduleId">Payschedule id</label>
                     <div class="controls"><input id="updatePayScheduleId" type="text"/></div>
                     <label class="control-label" for="updateEEHourlyRate">Hourly rate</label>
                     <div class="controls"><input id="updateEEHourlyRate" type="text"/></div>
+                    <label class="control-label" for="updateSSN">social security number</label>
+                    <div class="controls"><input id="updateSSN" type="text"/></div>
                 </div>
             </form>
             <button class="controls btn-primary" id="btnUpdateEE">Update employee</button><br/>
@@ -453,6 +457,7 @@
             var obj = {"updateEmployeeModelById": {
                 "employeeModel": {
                 	"id" : $('#updateEEId').val(),
+                	"socialSecurityNumber": $('#updateSSN').val(),
                     "gender": "Male",
                     "homeAddress": {
                         "address1": "112 Marine Way",
@@ -473,7 +478,7 @@
 					"isSalary": false,
 					"rate" : $('#updateEEHourlyRate').val(),
 					"companyWageItem" : {
-						"id": 3118514,
+						"id": $('#updateCompanyWageItemId').val(),
 						"version": 0,
 						"isActive": true,
 						"name": "Regular Pay",
