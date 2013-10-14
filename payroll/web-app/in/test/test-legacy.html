@@ -108,6 +108,12 @@
             <button class="controls btn-primary" id="btnAddCO">Update Company</button>
             <hr/>
             <h3>Add Pay Schedule</h3>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label  class="control-label" for="payscheduleEEId">ee Id</label>
+                    <div class="controls"><input id="payscheduleEEId" type="text"/><br/></div>
+                </div>
+            </form>
             <button class=" controls btn-primary" id="btnSetPaySched">Add pay schedule</button>
             <hr>
             <h3>Add Employee</h3>
@@ -144,6 +150,15 @@
                 </div>
             </form>
             <button class="controls btn-primary" id="btnUpdateEE">Update employee</button><br/>
+            <hr/>
+            <h3>Update Employee Only</h3>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="updateEEId">id</label>
+                    <div class="controls"><input id="updateEEId" type="text"/></div>
+                </div>
+            </form>
+            <button class="controls btn-primary" id="btnUpdateEEOnly">Update employee only</button><br/>
             <hr/>
             <h3>Add Company Wage Item</h3>
             <form class="form-horizontal">
@@ -246,7 +261,7 @@
                     "isCustom": false,
                     "description": "Weekly Pay Schedule"
                 },
-                "editEmpId" : 2395792
+                "editEmpId" : $('#payscheduleEEId').val()
             }}
             sendRequest(obj, 'btnSetPaySched');
         });
@@ -301,7 +316,15 @@
                         "city": "Mountain View",
                         "state": "CA",
                         "zip":"94039"
-                    }
+                    },
+                    "phone": "555-555-5555",
+                    "phoneExtension": "",
+                    "directDeposit": false,
+					"havePaidEmployeesThisYear": false,
+					"startPayrollThisQtr": true,
+					"havePaidTimeOff": false,
+					"haveContractor": false,
+					"haveTimeTracking": false
                 },
                 "persist":true
             }};
@@ -472,6 +495,19 @@
         });
     </script>
     <!-- ========================== -->
+    <!-- updateEmployeeModelOnly-->
+    <script type="text/javascript">
+        $('#btnUpdateEEOnly').on('click', function() {
+            var obj = {"updateEmployeeModelById": {
+                "employeeModel": {
+                	"id" : $('#updateEEId').val()
+                },
+                "employeeId" : $('#updateEEId').val(),
+                "persist" : true
+            }};
+            sendRequest(obj, 'btnUpdateEEOnly');
+        });
+    </script>
     <!-- ========================== -->
     <!-- addNewCompanyWageItem-->
     <script type="text/javascript">
