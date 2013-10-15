@@ -67,6 +67,7 @@
         		<ol>
 					<li>updateCompanyModel</li>
 					<li>add wage company wage item: HOURLY_PAY or SALARY</li>
+					<li>getCompanyWageItem</li>
 					<li>addEmployeeModel (Build employee version.)</li>
 					<li>collect employee id</li>
 					<li>saveCompanyPaySchedule (Add company pay schedule, from an employee.)</li>
@@ -221,6 +222,8 @@
                     <div class="controls"><input id="draftCheckRate" type="text"/></div>
                     <label class="control-label" for="draftCheckHours">Hours worked</label>
                     <div class="controls"><input id="draftCheckHours" type="text"/></div>
+                    <label class="control-label" for="draftCheckEEWageItemId">employeeWageItemId</label>
+                    <div class="controls"><input id="draftCheckEEWageItemId" type="text"/></div>
                 </div>
             </form>
             <button class="controls btn-primary" id="btnCreateDraftPaycheck">Create draft paycheck</button><br/>
@@ -328,7 +331,59 @@
 					"startPayrollThisQtr": true,
 					"havePaidTimeOff": false,
 					"haveContractor": false,
-					"haveTimeTracking": false
+					"haveTimeTracking": false,
+					"companyTaxSetup": {
+						"filingName": $('#coName').val(),
+						"filingType": "other",
+						"isFilingAddressSameAsBusinessAddress": true,
+						"federalEIN": "",
+						"federalDepositSchedules": [
+						{
+							"id": 0,
+							"version": 0,
+							"scheduleId": 1,
+							"filingType": "form941",
+							"effectiveDate": "2013-01-01T00:00:00-08:00",
+							"endDate": "3000-01-01T00:00:00-08:00"
+						}
+						],
+						"stateTaxSetup": [
+						{
+							"state": "CA",
+							"stateSchedules": [
+							{
+								"id": 0,
+								"version": 0,
+								"scheduleId": 20,
+								"effectiveDate": "2013-01-01T00:00:00-08:00",
+								"endDate": "3000-01-01T00:00:00-08:00"
+							}
+							],
+							"stateTaxRates": [
+							{
+								"id": 0,
+								"version": 0,
+								"rate": 0.001,
+								"taxItemId": 9,
+								"effectiveDate": "2013-01-01T00:00:00-08:00",
+								"state": "CA",
+								"endDate": "3000-01-01T00:00:00-08:00",
+								"taxRateType": -1
+							},
+							{
+								"id": 0,
+								"version": 0,
+								"rate": 0.034,
+								"taxItemId": 10,
+								"effectiveDate": "2013-01-01T00:00:00-08:00",
+								"state": "CA",
+								"endDate": "3000-01-01T00:00:00-08:00",
+								"taxRateType": -1
+							}
+							]
+						}
+						]
+					}
                 },
                 "persist":true
             }};
@@ -431,6 +486,8 @@
                     "firstName" : $('#eeBuildFname').val(),
                     "middleInitial": "",
                     "lastName" : $('#eeBuildLname').val(),
+					"filedNewHireForm": false,
+					"filedI9Form": false,               	
                     "homeAddress": {
                         "isDefaultAddressOK": true,
                         "isTaxAddress": false,
@@ -466,7 +523,7 @@
                         "county": "",
                         "state": "CA",
                         "zip": 94039
-                    },               	
+                    },
 					"payRateType": "Hourly",
 					"payschedule" : {
 						"id" : $('updatePayScheduleId').val()
@@ -505,7 +562,10 @@
         $('#btnUpdateEEOnly').on('click', function() {
             var obj = {"updateEmployeeModelById": {
                 "employeeModel": {
-                	"id" : $('#updateEEId').val()
+                	"id" : $('#updateEEId').val(),
+					"payschedule" : {
+						"id" : $('updatePayScheduleId').val()
+					}
                 },
                 "employeeId" : $('#updateEEId').val(),
                 "persist" : true
@@ -547,8 +607,8 @@
 						"wageItemId":"HOURLY_PAY",
 						"name":"Regular Pay",
 						"permanentName":"HOURLY1",
-						"employeeWageItemId":5430070, // from employee model's "hourlyWages"
-						"employeeWageItemDbId":5430070,
+						"employeeWageItemId":$('#draftCheckEEWageItemId').val(), // from employee model's "hourlyWages"
+						"employeeWageItemDbId":$('#draftCheckEEWageItemId').val(),
 						"rate":$('#draftCheckRate').val(),
 						"hours":$('#draftCheckHours').val()
 					}]
