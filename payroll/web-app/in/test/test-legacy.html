@@ -210,8 +210,10 @@
             <h3>Create draft paychecks</h3>
             <form class="form-horizontal">
                 <div class="control-group">
-                    <label class="control-label" for="checkEEId">EE Id</label>
+                    <label class="control-label" for="checkEEId">Employee Id</label>
                     <div class="controls"><input id="checkEEId" type="text"/></div>
+                    <label class="control-label" for="checkHoursWorked">Hours worked</label>
+                    <div class="controls"><input id="checkHoursWorked" type="text"/></div>
                 </div>
             </form>
             <button class="controls btn-primary" id="btnCreatePaycheck">Create check</button><br/>
@@ -577,7 +579,7 @@
 					"payDayValues" : [{
 						"permanentName" : "HOURLY1",
 						"wageItemId" : "HOURLY_PAY",
-						"value" : 35.5, // hours worked
+						"value" : $('#checkHoursWorked').val(), // hours worked
 						"isHoursEditable" : false,
 						"commissionHoursWorked" : 0
 					}],
