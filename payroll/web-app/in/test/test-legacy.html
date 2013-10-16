@@ -13,6 +13,10 @@
         //var URL_BASE = 'https://local.intuit.com:8181/Public';
         var URL_BASE = 'https://branch.iopdev.intuit.com/test';
         //var URL_BASE = 'https://easypaychecks.intuitlabs.com';
+
+		var SETUP_WS = '/webservices/json/SetupWebService';
+		var MOBILE_WS = '/webservices/json/MobileManager';
+        var PAYCHECK_WS = '/webservices/json/PaycheckMgr';
     </script>
     <!-- UTILITIES -->
     <script type="text/javascript">
@@ -36,9 +40,7 @@
             return c_value;
         }
 
-		// /webservices/json/PaycheckMgr
-        function sendRequest(obj, actionStr, isSetup) {
-            var endPoint = (typeof isSetup === "undefined") || isSetup ? '/webservices/json/SetupWebService' : '/webservices/json/MobileManager';
+        function sendRequest(obj, actionStr, endPoint) {
             $.ajax({
                 url: URL_BASE + endPoint,
                 xhrFields: {
@@ -57,29 +59,7 @@
                     console.log('[' + actionStr + '] FAILURE');
                 }
             });
-        }
-        
-        function sendPaycheckMgrRequest(obj, actionStr) {
-            var endPoint = '/webservices/json/PaycheckMgr';
-            $.ajax({
-                url: URL_BASE + endPoint,
-                xhrFields: {
-                    withCredentials: true
-                },
-                type: 'POST',
-                contentType: 'application/json',
-                dataType: 'json',
-                data: JSON.stringify(obj),
-                success: function(data, status, jqXHR) {
-                    console.log('[' + actionStr + '] SUCCESS');
-                    console.log(data);
-                    $('#out').html(JSON.stringify(data, undefined, 2));
-                },
-                error: function(jqXHR, status, errorThrown) {
-                    console.log('[' + actionStr + '] FAILURE');
-                }
-            });
-        }
+        }        
     </script>
 </head>
 <body>
@@ -89,7 +69,7 @@
         	<div class="control-group">
         		<ol>
 					<li>updateCompanyModel</li>
-					<li>add wage company wage item: HOURLY_PAY or SALARY</li>
+					<li>add company wage item: HOURLY_PAY or SALARY</li>
 					<li>getCompanyWageItem</li>
 					<li>addEmployeeModel (Build employee version.)</li>
 					<li>collect employee id</li>
@@ -178,15 +158,6 @@
                 </div>
             </form>
             <button class="controls btn-primary" id="btnUpdateEE">Update employee</button><br/>
-            <hr/>
-            <h3>Update Employee Only</h3>
-            <form class="form-horizontal">
-                <div class="control-group">
-                    <label class="control-label" for="updateEEId">id</label>
-                    <div class="controls"><input id="updateEEId" type="text"/></div>
-                </div>
-            </form>
-            <button class="controls btn-primary" id="btnUpdateEEOnly">Update employee only</button><br/>
             <hr/>
             <h3>Add Company Wage Item</h3>
             <form class="form-horizontal">
@@ -287,7 +258,7 @@
                 },
                 "editEmpId" : $('#payscheduleEEId').val()
             }}
-            sendRequest(obj, 'btnSetPaySched');
+            sendRequest(obj, 'btnSetPaySched', SETUP_WS);
         });
     </script>
 
@@ -299,7 +270,7 @@
                 "userName": $('#user').val(),
                 "password": $('#passwd').val()
             }}
-            sendRequest(obj, 'btnLogIn', false);
+            sendRequest(obj, 'btnLogIn', MOBILE_WS);
         });
     </script>
 
@@ -308,7 +279,7 @@
     <script type="text/javascript">
         $('#btnGetCO').on('click', function() {
             var obj = {"getCompanyModel": {}}
-            sendRequest(obj, 'btnGetCO');
+            sendRequest(obj, 'btnGetCO', SETUP_WS);
         });
     </script>
 
@@ -405,7 +376,7 @@
                 },
                 "persist":true
             }};
-            sendRequest(obj, 'btnAddCo');
+            sendRequest(obj, 'btnAddCo', SETUP_WS);
         });
     </script>
 
@@ -493,7 +464,7 @@
 
                 }
             }};
-            sendRequest(obj, 'btnAddEE');
+            sendRequest(obj, 'btnAddEE', SETUP_WS);
         });
     </script>
     <!-- buildEmployee-->
@@ -504,8 +475,8 @@
                     "firstName" : $('#eeBuildFname').val(),
                     "middleInitial": "",
                     "lastName" : $('#eeBuildLname').val(),
-					"filedNewHireForm": false,
-					"filedI9Form": false,               	
+					"filedNewHireForm": true,
+					"filedI9Form": true,               	
                     "homeAddress": {
                         "isDefaultAddressOK": true,
                         "isTaxAddress": false,
@@ -523,7 +494,7 @@
 					"workLocation": ""
                 }
             }};
-            sendRequest(obj, 'btnBuildEE');
+            sendRequest(obj, 'addEmployeeModel', SETUP_WS);
         });
     </script>
     <!-- updateEmployee-->
@@ -543,8 +514,8 @@
                         "zip": 94039
                     },
 					"payRateType": "Hourly",
-					"payschedule" : {
-						"id" : $('updatePayScheduleId').val()
+					"paySchedule" : {
+						"id" : $('#updatePayScheduleId').val()
 					},
 					"hourlyWages" : [{
 					"isActive" : true,
@@ -571,24 +542,7 @@
                 "employeeId" : $('#updateEEId').val(),
                 "persist" : true
             }};
-            sendRequest(obj, 'btnUpdateEE');
-        });
-    </script>
-    <!-- ========================== -->
-    <!-- updateEmployeeModelOnly-->
-    <script type="text/javascript">
-        $('#btnUpdateEEOnly').on('click', function() {
-            var obj = {"updateEmployeeModelById": {
-                "employeeModel": {
-                	"id" : $('#updateEEId').val(),
-					"payschedule" : {
-						"id" : $('updatePayScheduleId').val()
-					}
-                },
-                "employeeId" : $('#updateEEId').val(),
-                "persist" : true
-            }};
-            sendRequest(obj, 'btnUpdateEEOnly');
+            sendRequest(obj, 'updateEmployeeModelById', SETUP_WS);
         });
     </script>
     <!-- ========================== -->
@@ -601,7 +555,7 @@
 					"wageItemId": $('#coWageItemType').val()
 				}
         	}};
-		sendRequest(obj, 'addNewCompanyWageItem');
+		sendRequest(obj, 'addNewCompanyWageItem', SETUP_WS);
         });
 	</script>
     <!-- ========================== -->
@@ -611,7 +565,7 @@
             var obj = {"getCompanyWageItem" : {
                 "companyWageItemId" : $('#coWageItemId').val()
             }};
-            sendRequest(obj, 'getCompanyWageItem');
+            sendRequest(obj, 'getCompanyWageItem', SETUP_WS);
         });
     </script>
     <!-- ========================== -->
@@ -623,14 +577,14 @@
 					"payDayValues" : [{
 						"permanentName" : "HOURLY1",
 						"wageItemId" : "HOURLY_PAY",
-						"value" : 55.5, // hours worked
+						"value" : 35.5, // hours worked
 						"isHoursEditable" : false,
 						"commissionHoursWorked" : 0
 					}],
 					"dateInPayPeriod" : {
 						"year" : 2013,
 						"month" : 10,
-						"day" : 17
+						"day" : 16
 					},
 					"checkDate" : {
 						"year" : 2013,
@@ -640,9 +594,10 @@
 				}
 
             };
-            sendPaycheckMgrRequest(obj, 'createDraftPaycheck');
+            sendRequest(obj, 'createDraftPaycheck', PAYCHECK_WS);
         });
-    </script>    <!-- ========================== -->
+    </script>
+	<!-- ========================== -->
     <!-- approvePaychecks-->
     <script type="text/javascript">
         $('#btnApprovePaycheck').on('click', function() {
@@ -650,7 +605,7 @@
                 "paycheckIds" : [$('#draftCheckId').val()],
                 "notifyByMail" : false
             }};
-            sendRequest(obj, 'approvePaychecks', false);
+            sendRequest(obj, 'approvePaychecks', MOBILE_WS);
         });
     </script>
     <!-- ========================== -->
@@ -660,7 +615,7 @@
             var obj = {"getEmployeeModelByIndex" : {
                 "index" : $('#eeIndex').val()
             }};
-            sendRequest(obj, 'getEmployeeModel');
+            sendRequest(obj, 'getEmployeeModel', SETUP_WS);
         });
     </script>
     <!-- ========================== -->
@@ -668,7 +623,7 @@
     <script type="text/javascript">
         $('#btnGetEEs').on('click', function() {
             var obj = {"getEmployeeModels" : {}};
-            sendRequest(obj, 'getEmployeeModels');
+            sendRequest(obj, 'getEmployeeModels', SETUP_WS);
         });
     </script>
     <!-- ========================== -->
@@ -678,7 +633,7 @@
             var obj = {"getPaySchedulesLite" : {
                 "includePeriodWithUnapprovedChecks" : true
             }};
-            sendRequest(obj, 'getPaySchedulesLite', false);
+            sendRequest(obj, 'getPaySchedulesLite', MOBILE_WS);
         });
     </script>
     <!-- ========================== -->
@@ -687,7 +642,7 @@
         $('#btnGetEEsLite').on('click', function() {
             var obj = {"getEmployeeModelsLite" : {
             }};
-            sendRequest(obj, 'getPaySchedulesLite', false);
+            sendRequest(obj, 'getPaySchedulesLite', MOBILE_WS);
         });
     </script>
     <!-- ========================== -->
@@ -696,23 +651,15 @@
         $('#btnGetPaySchedules').on('click', function() {
             var obj = {"getPayScheduleModels" : {
             }};
-            sendRequest(obj, 'getPayScheduleModels');
+            sendRequest(obj, 'getPayScheduleModels', SETUP_WS);
         });
     </script>
     <!-- ========================== -->
-    <!-- logOut-->
+    <!-- LOGOUT-->
     <script type="text/javascript">
         $('#btnLogOut').on('click', function() {
             var obj = {"logout" : {}};
-            sendRequest(obj, 'logout', false);
-        });
-    </script>
-    <!-- ========================== -->
-    <!-- Testing-->
-    <script type="text/javascript">
-        $('#btnTest').on('click', function() {
-            var obj = {"updateEmployeeModelById": {}};
-            sendRequest(obj, 'test');
+            sendRequest(obj, 'logout', MOBILE_WS);
         });
     </script>
 
