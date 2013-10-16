@@ -36,8 +36,31 @@
             return c_value;
         }
 
+		// /webservices/json/PaycheckMgr
         function sendRequest(obj, actionStr, isSetup) {
             var endPoint = (typeof isSetup === "undefined") || isSetup ? '/webservices/json/SetupWebService' : '/webservices/json/MobileManager';
+            $.ajax({
+                url: URL_BASE + endPoint,
+                xhrFields: {
+                    withCredentials: true
+                },
+                type: 'POST',
+                contentType: 'application/json',
+                dataType: 'json',
+                data: JSON.stringify(obj),
+                success: function(data, status, jqXHR) {
+                    console.log('[' + actionStr + '] SUCCESS');
+                    console.log(data);
+                    $('#out').html(JSON.stringify(data, undefined, 2));
+                },
+                error: function(jqXHR, status, errorThrown) {
+                    console.log('[' + actionStr + '] FAILURE');
+                }
+            });
+        }
+        
+        function sendPaycheckMgrRequest(obj, actionStr) {
+            var endPoint = '/webservices/json/PaycheckMgr';
             $.ajax({
                 url: URL_BASE + endPoint,
                 xhrFields: {
@@ -216,17 +239,11 @@
             <h3>Create draft paychecks</h3>
             <form class="form-horizontal">
                 <div class="control-group">
-                    <label class="control-label" for="draftCheckEEId">EE Id</label>
-                    <div class="controls"><input id="draftCheckEEId" type="text"/></div>
-                    <label class="control-label" for="draftCheckRate">Hourly rate</label>
-                    <div class="controls"><input id="draftCheckRate" type="text"/></div>
-                    <label class="control-label" for="draftCheckHours">Hours worked</label>
-                    <div class="controls"><input id="draftCheckHours" type="text"/></div>
-                    <label class="control-label" for="draftCheckEEWageItemId">employeeWageItemId</label>
-                    <div class="controls"><input id="draftCheckEEWageItemId" type="text"/></div>
+                    <label class="control-label" for="checkEEId">EE Id</label>
+                    <div class="controls"><input id="checkEEId" type="text"/></div>
                 </div>
             </form>
-            <button class="controls btn-primary" id="btnCreateDraftPaycheck">Create draft paycheck</button><br/>
+            <button class="controls btn-primary" id="btnCreatePaycheck">Create check</button><br/>
             <hr/>
             <h3>Approve checks</h3>
             <form class="form-horizontal">
@@ -310,6 +327,7 @@
                     "featureSetType": 'BasicMinus',
                     "serviceType": 'IOP',
                     "employeeCountRange": 'OneToTwentyFive',
+                    "confirmEMailAddress": false,
                     "primaryContact": {  // user
                         "firstName": $('#coPCFname').val(),
                         "lastName": $('#coPCLname').val(),
@@ -597,49 +615,34 @@
         });
     </script>
     <!-- ========================== -->
-    <!-- createDraftPaychecks-->
+    <!-- PaycheckWebService createDraftPaycheck-->
     <script type="text/javascript">
-        $('#btnCreateDraftPaycheck').on('click', function() {
-            var objEEPayInfos = [{
-					"employeeId":$('#draftCheckEEId').val(),
-					"wageItemId":"HOURLY_PAY",
-					"payDayValues":[{
-						"wageItemId":"HOURLY_PAY",
-						"name":"Regular Pay",
-						"permanentName":"HOURLY1",
-						"employeeWageItemId":$('#draftCheckEEWageItemId').val(), // from employee model's "hourlyWages"
-						"employeeWageItemDbId":$('#draftCheckEEWageItemId').val(),
-						"rate":$('#draftCheckRate').val(),
-						"hours":$('#draftCheckHours').val()
-					}]
-				}];
-
-            var obj = {"createDraftPaychecks" : {
-            	"periodStartDate" : {
-            		"year" : 2013,
-            		"month" : 10,
-            		"day" : 12
-				},
-				"periodEndDate" : {
-					"year" : 2013,
-					"month" : 10,
-					"day" : 18
-				},
-				"checkDate" : {
-					"year" : 2013,
-					"month" : 10,
-					"day" : 18
-				},
-				"employeePayInfo" : objEEPayInfos,
-				"skipSalariedHoursAdjustment" : true,
-				"allowMultipleChecks" : false
+        $('#btnCreatePaycheck').on('click', function() {
+            var obj = {"createDraftPaycheck" : {
+            	"employeeId":$('#checkEEId').val(),
+					"payDayValues" : [{
+						"permanentName" : "HOURLY1",
+						"wageItemId" : "HOURLY_PAY",
+						"value" : 55.5, // hours worked
+						"isHoursEditable" : false,
+						"commissionHoursWorked" : 0
+					}],
+					"dateInPayPeriod" : {
+						"year" : 2013,
+						"month" : 10,
+						"day" : 17
+					},
+					"checkDate" : {
+						"year" : 2013,
+						"month" : 10,
+						"day" : 18
+					}
 				}
 
             };
-            sendRequest(obj, 'createDraftPaychecks', false);
+            sendPaycheckMgrRequest(obj, 'createDraftPaycheck');
         });
-    </script>
-    <!-- ========================== -->
+    </script>    <!-- ========================== -->
     <!-- approvePaychecks-->
     <script type="text/javascript">
         $('#btnApprovePaycheck').on('click', function() {
