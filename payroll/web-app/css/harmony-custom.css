@@ -1,0 +1,1202 @@
+div.frameLayout.harmony header {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    height: 40px;
+    width: 100%;
+    background-color: #193048;
+    color: white;
+}
+div.frameLayout.harmony header .menu {
+    float: left;
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    box-shadow: inset -1px 0 rgba(255, 255, 255, 0.1);
+    border-right: 1px solid black;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1771px no-repeat;
+    white-space: nowrap;
+    margin-right: 15px;
+}
+div.frameLayout.harmony header .title {
+    color: #e3eaf3;
+    line-height: 40px;
+    float: left;
+    padding-left: 15px;
+}
+div.frameLayout.harmony header.trowser {
+    background-color: #6e8ba8;
+    color: white;
+}
+div.frameLayout.harmony header.trowser .menu {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2231px no-repeat;
+    margin-right: 0;
+}
+div.frameLayout.harmony header.trowser .navigation {
+    float: left;
+    display: block;
+    min-width: 40px;
+    height: 40px;
+    padding: 0;
+    box-shadow: inset -1px 0 rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -883px no-repeat;
+    white-space: nowrap;
+    margin-right: 15px;
+}
+div.frameLayout.harmony header.trowser .navigation.disabled {
+    opacity: 1;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -945px no-repeat;
+}
+div.frameLayout.harmony header.trowser .navigation .badge {
+    color: #fff;
+    text-align: center;
+    width: auto;
+    margin: 12px 10px 0 40px;
+}
+div.frameLayout.harmony header.trowser .title {
+    color: white;
+}
+div.frameLayout.harmony header.trowser .status {
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    line-height: 40px;
+    float: right;
+    padding-right: 30px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+div.frameLayout.harmony header.trowser .actions a.invoice-solutions {
+    width: auto;
+    line-height: 40px;
+    padding: 0 10px 0 40px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1211px no-repeat;
+    color: white;
+    text-decoration: none;
+}
+div.frameLayout.harmony header.trowser .actions a.help {
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1549px no-repeat;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+div.frameLayout.harmony header.trowser .actions a.close {
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1494px no-repeat;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+div.frameLayout.harmony header .actions {
+    float: right;
+}
+div.frameLayout.harmony header .actions a {
+    display: block;
+    float: left;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-left: 1px solid #131f2b;
+    white-space: nowrap;
+}
+/* line 469, ../sass/_layout.scss */
+div.frameLayout.harmony header .actions a.create {
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1043px no-repeat;
+}
+div.frameLayout.harmony header .actions a.todo {
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -525px no-repeat;
+}
+div.frameLayout.harmony header .actions a.help {
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1003px no-repeat;
+}
+div.frameLayout.harmony header .actions a.account {
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -314px no-repeat;
+}
+div.frameLayout.harmony header .actions a .badge {
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    height: 15px;
+    min-width: 15px;
+    background-color: #3965ce;
+    background-clip: padding-box;
+    border-radius: 2px;
+    box-shadow: 0 2px black;
+    padding: 0 2px;
+    font-size: 1.0rem;
+    line-height: 15px;
+    font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 600;
+    font-stretch: normal;
+    color: white;
+}
+div.frameLayout.harmony header .actions a.open {
+    background-color: #131f2b;
+}
+div.frameLayout.harmony header .actions .search {
+    display: block;
+    border-left: 1px solid #131f2b;
+    float: left;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 6px 10px;
+}
+div.frameLayout.harmony header .actions .search form {
+    height: 40px;
+}
+div.frameLayout.harmony header .actions .search form input[type=submit] {
+    display: none;
+}
+div.frameLayout.harmony .button, div.frameLayout.harmony .button:link, div.frameLayout.harmony [type=button], div.frameLayout.harmony [type=submit] {
+    background-clip: padding-box;
+    border-radius: 2px;
+    font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-stretch: normal;
+    cursor: pointer;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 34px;
+    height: 34px;
+    padding: 0 20px;
+    border: 0;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 1px rgba(151, 151, 151, 0.4);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+    background-image: -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background-image: -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background-image: -o-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background-image: linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    color: #404040;
+}
+div.frameLayout.harmony .button.mini, div.frameLayout.harmony .button:link.mini, div.frameLayout.harmony [type=button].mini, div.frameLayout.harmony [type=submit].mini {
+    font-size: 1.2rem;
+    line-height: 24px;
+    height: 24px;
+}
+div.frameLayout.harmony .button:visited, div.frameLayout.harmony .button:link:visited, div.frameLayout.harmony [type=button]:visited, div.frameLayout.harmony [type=submit]:visited {
+    color: #404040;
+}
+div.frameLayout.harmony .button:hover, div.frameLayout.harmony .button.hover, div.frameLayout.harmony .button:link:hover, div.frameLayout.harmony .button:link.hover, div.frameLayout.harmony [type=button]:hover, div.frameLayout.harmony [type=button].hover, div.frameLayout.harmony [type=submit]:hover, div.frameLayout.harmony [type=submit].hover {
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(151, 151, 151, 0.4);
+    -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(151, 151, 151, 0.4);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(151, 151, 151, 0.4);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f5f5f5));
+    background-image: -webkit-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background-image: -moz-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background-image: -o-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background-image: linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    text-decoration: none;
+}
+div.frameLayout.harmony .button:active, div.frameLayout.harmony .button.active, div.frameLayout.harmony .button:link:active, div.frameLayout.harmony .button:link.active, div.frameLayout.harmony [type=button]:active, div.frameLayout.harmony [type=button].active, div.frameLayout.harmony [type=submit]:active, div.frameLayout.harmony [type=submit].active {
+    color: rgba(64, 64, 64, 0.5);
+    background-color: white;
+    -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    background-image: none;
+}
+div.frameLayout.harmony .button[disabled=disabled], div.frameLayout.harmony .button.disabled, div.frameLayout.harmony .button:link[disabled=disabled], div.frameLayout.harmony .button:link.disabled, div.frameLayout.harmony [type=button][disabled=disabled], div.frameLayout.harmony [type=button].disabled, div.frameLayout.harmony [type=submit][disabled=disabled], div.frameLayout.harmony [type=submit].disabled {
+    opacity: 1;
+    color: rgba(64, 64, 64, 0.3);
+    background-color: white;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: none;
+}
+div.frameLayout.harmony .button[disabled=disabled]:active, div.frameLayout.harmony .button[disabled=disabled].active, div.frameLayout.harmony .button.disabled:active, div.frameLayout.harmony .button.disabled.active, div.frameLayout.harmony .button:link[disabled=disabled]:active, div.frameLayout.harmony .button:link[disabled=disabled].active, div.frameLayout.harmony .button:link.disabled:active, div.frameLayout.harmony .button:link.disabled.active, div.frameLayout.harmony [type=button][disabled=disabled]:active, div.frameLayout.harmony [type=button][disabled=disabled].active, div.frameLayout.harmony [type=button].disabled:active, div.frameLayout.harmony [type=button].disabled.active, div.frameLayout.harmony [type=submit][disabled=disabled]:active, div.frameLayout.harmony [type=submit][disabled=disabled].active, div.frameLayout.harmony [type=submit].disabled:active, div.frameLayout.harmony [type=submit].disabled.active {
+    color: rgba(64, 64, 64, 0.3);
+}
+div.frameLayout.harmony .button.plus, div.frameLayout.harmony .button:link.plus, div.frameLayout.harmony [type=button].plus, div.frameLayout.harmony [type=submit].plus {
+    padding: 0 15px 0 25px;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(151, 151, 151, 0.4);
+    -moz-box-shadow: inset 0 0 0 1px rgba(151, 151, 151, 0.4);
+    box-shadow: inset 0 0 0 1px rgba(151, 151, 151, 0.4);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -o-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+}
+div.frameLayout.harmony .button.plus:hover, div.frameLayout.harmony .button.plus.hover, div.frameLayout.harmony .button:link.plus:hover, div.frameLayout.harmony .button:link.plus.hover, div.frameLayout.harmony [type=button].plus:hover, div.frameLayout.harmony [type=button].plus.hover, div.frameLayout.harmony [type=submit].plus:hover, div.frameLayout.harmony [type=submit].plus.hover {
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(151, 151, 151, 0.4);
+    -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(151, 151, 151, 0.4);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(151, 151, 151, 0.4);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f5f5f5));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -webkit-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, -o-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1811px no-repeat, linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+}
+div.frameLayout.harmony .button.plus:active, div.frameLayout.harmony .button.plus.active, div.frameLayout.harmony .button:link.plus:active, div.frameLayout.harmony .button:link.plus.active, div.frameLayout.harmony [type=button].plus:active, div.frameLayout.harmony [type=button].plus.active, div.frameLayout.harmony [type=submit].plus:active, div.frameLayout.harmony [type=submit].plus.active {
+    background-color: white;
+    -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1879px no-repeat;
+}
+div.frameLayout.harmony .button.plus[disabled=disabled], div.frameLayout.harmony .button.plus.disabled, div.frameLayout.harmony .button:link.plus[disabled=disabled], div.frameLayout.harmony .button:link.plus.disabled, div.frameLayout.harmony [type=button].plus[disabled=disabled], div.frameLayout.harmony [type=button].plus.disabled, div.frameLayout.harmony [type=submit].plus[disabled=disabled], div.frameLayout.harmony [type=submit].plus.disabled {
+    background-color: white;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1913px no-repeat;
+}
+div.frameLayout.harmony .button.primary, div.frameLayout.harmony .button:link.primary, div.frameLayout.harmony [type=button].primary, div.frameLayout.harmony [type=submit].primary {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQzNzZjZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM1NThjMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4376cf), color-stop(100%, #3558c1));
+    background-image: -webkit-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background-image: -moz-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background-image: -o-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background-image: linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    color: white;
+}
+div.frameLayout.harmony .button.primary:hover, div.frameLayout.harmony .button.primary.hover, div.frameLayout.harmony .button:link.primary:hover, div.frameLayout.harmony .button:link.primary.hover, div.frameLayout.harmony [type=button].primary:hover, div.frameLayout.harmony [type=button].primary.hover, div.frameLayout.harmony [type=submit].primary:hover, div.frameLayout.harmony [type=submit].primary.hover {
+
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQzNzZjZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM1NThjMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4376cf), color-stop(100%, #3558c1));
+    background-image: -webkit-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background-image: -moz-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background-image: -o-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background-image: linear-gradient(top, #4376cf 0%, #3558c1 100%);
+}
+div.frameLayout.harmony .button.primary:active, div.frameLayout.harmony .button.primary.active, div.frameLayout.harmony .button:link.primary:active, div.frameLayout.harmony .button:link.primary.active, div.frameLayout.harmony [type=button].primary:active, div.frameLayout.harmony [type=button].primary.active, div.frameLayout.harmony [type=submit].primary:active, div.frameLayout.harmony [type=submit].primary.active {
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI3NDM4OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM0NTlhNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #274389), color-stop(100%, #3459a5));
+    background-image: -webkit-linear-gradient(top, #274389 0%, #3459a5 100%);
+    background-image: -moz-linear-gradient(top, #274389 0%, #3459a5 100%);
+    background-image: -o-linear-gradient(top, #274389 0%, #3459a5 100%);
+    background-image: linear-gradient(top, #274389 0%, #3459a5 100%);
+}
+div.frameLayout.harmony .button.primary[disabled=disabled], div.frameLayout.harmony .button.primary.disabled, div.frameLayout.harmony .button:link.primary[disabled=disabled], div.frameLayout.harmony .button:link.primary.disabled, div.frameLayout.harmony [type=button].primary[disabled=disabled], div.frameLayout.harmony [type=button].primary.disabled, div.frameLayout.harmony [type=submit].primary[disabled=disabled], div.frameLayout.harmony [type=submit].primary.disabled {
+    color: white;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JjY2FlYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2E1YjllNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bccaeb), color-stop(100%, #a5b9e4));
+    background-image: -webkit-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background-image: -moz-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background-image: -o-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background-image: linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+}
+div.frameLayout.harmony .button.primary[disabled=disabled]:active, div.frameLayout.harmony .button.primary[disabled=disabled].active, div.frameLayout.harmony .button.primary.disabled:active, div.frameLayout.harmony .button.primary.disabled.active, div.frameLayout.harmony .button:link.primary[disabled=disabled]:active, div.frameLayout.harmony .button:link.primary[disabled=disabled].active, div.frameLayout.harmony .button:link.primary.disabled:active, div.frameLayout.harmony .button:link.primary.disabled.active, div.frameLayout.harmony [type=button].primary[disabled=disabled]:active, div.frameLayout.harmony [type=button].primary[disabled=disabled].active, div.frameLayout.harmony [type=button].primary.disabled:active, div.frameLayout.harmony [type=button].primary.disabled.active, div.frameLayout.harmony [type=submit].primary[disabled=disabled]:active, div.frameLayout.harmony [type=submit].primary[disabled=disabled].active, div.frameLayout.harmony [type=submit].primary.disabled:active, div.frameLayout.harmony [type=submit].primary.disabled.active {
+    color: white;
+}
+div.frameLayout.harmony .button.secondary, div.frameLayout.harmony .button:link.secondary, div.frameLayout.harmony [type=button].secondary, div.frameLayout.harmony [type=submit].secondary {
+    color: #3965ce;
+}
+div.frameLayout.harmony .button.secondary:active, div.frameLayout.harmony .button.secondary.active, div.frameLayout.harmony .button:link.secondary:active, div.frameLayout.harmony .button:link.secondary.active, div.frameLayout.harmony [type=button].secondary:active, div.frameLayout.harmony [type=button].secondary.active, div.frameLayout.harmony [type=submit].secondary:active, div.frameLayout.harmony [type=submit].secondary.active {
+    color: rgba(57, 101, 206, 0.5);
+}
+div.frameLayout.harmony .button.secondary[disabled=disabled], div.frameLayout.harmony .button.secondary.disabled, div.frameLayout.harmony .button:link.secondary[disabled=disabled], div.frameLayout.harmony .button:link.secondary.disabled, div.frameLayout.harmony [type=button].secondary[disabled=disabled], div.frameLayout.harmony [type=button].secondary.disabled, div.frameLayout.harmony [type=submit].secondary[disabled=disabled], div.frameLayout.harmony [type=submit].secondary.disabled {
+    color: rgba(57, 101, 206, 0.3);
+}
+div.frameLayout.harmony .button.secondary[disabled=disabled]:active, div.frameLayout.harmony .button.secondary[disabled=disabled].active, div.frameLayout.harmony .button.secondary.disabled:active, div.frameLayout.harmony .button.secondary.disabled.active, div.frameLayout.harmony .button:link.secondary[disabled=disabled]:active, div.frameLayout.harmony .button:link.secondary[disabled=disabled].active, div.frameLayout.harmony .button:link.secondary.disabled:active, div.frameLayout.harmony .button:link.secondary.disabled.active, div.frameLayout.harmony [type=button].secondary[disabled=disabled]:active, div.frameLayout.harmony [type=button].secondary[disabled=disabled].active, div.frameLayout.harmony [type=button].secondary.disabled:active, div.frameLayout.harmony [type=button].secondary.disabled.active, div.frameLayout.harmony [type=submit].secondary[disabled=disabled]:active, div.frameLayout.harmony [type=submit].secondary[disabled=disabled].active, div.frameLayout.harmony [type=submit].secondary.disabled:active, div.frameLayout.harmony [type=submit].secondary.disabled.active {
+    color: rgba(57, 101, 206, 0.3);
+}
+div.frameLayout.harmony .button.secondary.plus, div.frameLayout.harmony .button:link.secondary.plus, div.frameLayout.harmony [type=button].secondary.plus, div.frameLayout.harmony [type=submit].secondary.plus {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(151, 151, 151, 0.4);
+    -moz-box-shadow: inset 0 0 0 1px rgba(151, 151, 151, 0.4);
+    box-shadow: inset 0 0 0 1px rgba(151, 151, 151, 0.4);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -o-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
+}
+div.frameLayout.harmony .button.secondary.plus:hover, div.frameLayout.harmony .button.secondary.plus.hover, div.frameLayout.harmony .button:link.secondary.plus:hover, div.frameLayout.harmony .button:link.secondary.plus.hover, div.frameLayout.harmony [type=button].secondary.plus:hover, div.frameLayout.harmony [type=button].secondary.plus.hover, div.frameLayout.harmony [type=submit].secondary.plus:hover, div.frameLayout.harmony [type=submit].secondary.plus.hover {
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(151, 151, 151, 0.4);
+    -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(151, 151, 151, 0.4);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(151, 151, 151, 0.4);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f5f5f5));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -webkit-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, -o-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1845px no-repeat, linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+}
+div.frameLayout.harmony .button.secondary.plus:active, div.frameLayout.harmony .button.secondary.plus.active, div.frameLayout.harmony .button:link.secondary.plus:active, div.frameLayout.harmony .button:link.secondary.plus.active, div.frameLayout.harmony [type=button].secondary.plus:active, div.frameLayout.harmony [type=button].secondary.plus.active, div.frameLayout.harmony [type=submit].secondary.plus:active, div.frameLayout.harmony [type=submit].secondary.plus.active {
+    background-color: white;
+    -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1947px no-repeat;
+}
+div.frameLayout.harmony .button.secondary.plus[disabled=disabled], div.frameLayout.harmony .button.secondary.plus.disabled, div.frameLayout.harmony .button:link.secondary.plus[disabled=disabled], div.frameLayout.harmony .button:link.secondary.plus.disabled, div.frameLayout.harmony [type=button].secondary.plus[disabled=disabled], div.frameLayout.harmony [type=button].secondary.plus.disabled, div.frameLayout.harmony [type=submit].secondary.plus[disabled=disabled], div.frameLayout.harmony [type=submit].secondary.plus.disabled {
+    background-color: white;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1981px no-repeat;
+}
+div.frameLayout.harmony .dark .button, div.frameLayout.harmony .dark .button:link, div.frameLayout.harmony .dark [type=button], div.frameLayout.harmony .dark [type=submit] {
+    border: 1px solid #171d23;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc3N2Y4OCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzUzNWM2NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #777f88), color-stop(100%, #535c65));
+    background-image: -webkit-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background-image: -moz-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background-image: -o-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background-image: linear-gradient(top, #777f88 0%, #535c65 100%);
+    color: white;
+}
+div.frameLayout.harmony .dark .button:visited, div.frameLayout.harmony .dark .button:link:visited, div.frameLayout.harmony .dark [type=button]:visited, div.frameLayout.harmony .dark [type=submit]:visited {
+    color: white;
+}
+div.frameLayout.harmony .dark .button:hover, div.frameLayout.harmony .dark .button.hover, div.frameLayout.harmony .dark .button:link:hover, div.frameLayout.harmony .dark .button:link.hover, div.frameLayout.harmony .dark [type=button]:hover, div.frameLayout.harmony .dark [type=button].hover, div.frameLayout.harmony .dark [type=submit]:hover, div.frameLayout.harmony .dark [type=submit].hover {
+    border: 1px solid #171d23;
+    -webkit-box-shadow: 0 2px 0 #3a4249, inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: 0 2px 0 #3a4249, inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 0 #3a4249, inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc3N2Y4OCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzUzNWM2NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #777f88), color-stop(100%, #535c65));
+    background-image: -webkit-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background-image: -moz-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background-image: -o-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background-image: linear-gradient(top, #777f88 0%, #535c65 100%);
+}
+div.frameLayout.harmony .dark .button:active, div.frameLayout.harmony .dark .button.active, div.frameLayout.harmony .dark .button:link:active, div.frameLayout.harmony .dark .button:link.active, div.frameLayout.harmony .dark [type=button]:active, div.frameLayout.harmony .dark [type=button].active, div.frameLayout.harmony .dark [type=submit]:active, div.frameLayout.harmony .dark [type=submit].active {
+    color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #2a353f;
+    -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.6);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI4MzIzYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM2NDI0ZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #28323b), color-stop(100%, #36424f));
+    background-image: -webkit-linear-gradient(top, #28323b 0%, #36424f 100%);
+    background-image: -moz-linear-gradient(top, #28323b 0%, #36424f 100%);
+    background-image: -o-linear-gradient(top, #28323b 0%, #36424f 100%);
+    background-image: linear-gradient(top, #28323b 0%, #36424f 100%);
+}
+div.frameLayout.harmony .dark .button[disabled=disabled], div.frameLayout.harmony .dark .button.disabled, div.frameLayout.harmony .dark .button:link[disabled=disabled], div.frameLayout.harmony .dark .button:link.disabled, div.frameLayout.harmony .dark [type=button][disabled=disabled], div.frameLayout.harmony .dark [type=button].disabled, div.frameLayout.harmony .dark [type=submit][disabled=disabled], div.frameLayout.harmony .dark [type=submit].disabled {
+    color: rgba(255, 255, 255, 0.3);
+    border: 1px solid #171d23;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNiNDY0ZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzJkMzg0MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3b464f), color-stop(100%, #2d3842));
+    background-image: -webkit-linear-gradient(top, #3b464f 0%, #2d3842 100%);
+    background-image: -moz-linear-gradient(top, #3b464f 0%, #2d3842 100%);
+    background-image: -o-linear-gradient(top, #3b464f 0%, #2d3842 100%);
+    background-image: linear-gradient(top, #3b464f 0%, #2d3842 100%);
+}
+div.frameLayout.harmony .dark .button[disabled=disabled]:active, div.frameLayout.harmony .dark .button[disabled=disabled].active, div.frameLayout.harmony .dark .button.disabled:active, div.frameLayout.harmony .dark .button.disabled.active, div.frameLayout.harmony .dark .button:link[disabled=disabled]:active, div.frameLayout.harmony .dark .button:link[disabled=disabled].active, div.frameLayout.harmony .dark .button:link.disabled:active, div.frameLayout.harmony .dark .button:link.disabled.active, div.frameLayout.harmony .dark [type=button][disabled=disabled]:active, div.frameLayout.harmony .dark [type=button][disabled=disabled].active, div.frameLayout.harmony .dark [type=button].disabled:active, div.frameLayout.harmony .dark [type=button].disabled.active, div.frameLayout.harmony .dark [type=submit][disabled=disabled]:active, div.frameLayout.harmony .dark [type=submit][disabled=disabled].active, div.frameLayout.harmony .dark [type=submit].disabled:active, div.frameLayout.harmony .dark [type=submit].disabled.active {
+    color: rgba(255, 255, 255, 0.3);
+}
+div.frameLayout.harmony .dark .button.plus, div.frameLayout.harmony .dark .button:link.plus, div.frameLayout.harmony .dark [type=button].plus, div.frameLayout.harmony .dark [type=submit].plus {
+    border: 1px solid #171d23;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc3N2Y4OCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzUzNWM2NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #777f88), color-stop(100%, #535c65));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -webkit-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -moz-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -o-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, linear-gradient(top, #777f88 0%, #535c65 100%);
+}
+div.frameLayout.harmony .dark .button.plus:hover, div.frameLayout.harmony .dark .button.plus.hover, div.frameLayout.harmony .dark .button:link.plus:hover, div.frameLayout.harmony .dark .button:link.plus.hover, div.frameLayout.harmony .dark [type=button].plus:hover, div.frameLayout.harmony .dark [type=button].plus.hover, div.frameLayout.harmony .dark [type=submit].plus:hover, div.frameLayout.harmony .dark [type=submit].plus.hover {
+    border: 1px solid #171d23;
+    -webkit-box-shadow: 0 2px 0 #3a4249, inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: 0 2px 0 #3a4249, inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 0 #3a4249, inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc3N2Y4OCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzUzNWM2NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #777f88), color-stop(100%, #535c65));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -webkit-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -moz-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, -o-linear-gradient(top, #777f88 0%, #535c65 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2119px no-repeat, linear-gradient(top, #777f88 0%, #535c65 100%);
+}
+div.frameLayout.harmony .dark .button.plus:active, div.frameLayout.harmony .dark .button.plus.active, div.frameLayout.harmony .dark .button:link.plus:active, div.frameLayout.harmony .dark .button:link.plus.active, div.frameLayout.harmony .dark [type=button].plus:active, div.frameLayout.harmony .dark [type=button].plus.active, div.frameLayout.harmony .dark [type=submit].plus:active, div.frameLayout.harmony .dark [type=submit].plus.active {
+    border: 1px solid #2a353f;
+    -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.6);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI4MzIzYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM2NDI0ZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #28323b), color-stop(100%, #36424f));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, -webkit-linear-gradient(top, #28323b 0%, #36424f 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, -moz-linear-gradient(top, #28323b 0%, #36424f 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, -o-linear-gradient(top, #28323b 0%, #36424f 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2197px no-repeat, linear-gradient(top, #28323b 0%, #36424f 100%);
+}
+div.frameLayout.harmony .dark .button.plus[disabled=disabled], div.frameLayout.harmony .dark .button.plus.disabled, div.frameLayout.harmony .dark .button:link.plus[disabled=disabled], div.frameLayout.harmony .dark .button:link.plus.disabled, div.frameLayout.harmony .dark [type=button].plus[disabled=disabled], div.frameLayout.harmony .dark [type=button].plus.disabled, div.frameLayout.harmony .dark [type=submit].plus[disabled=disabled], div.frameLayout.harmony .dark [type=submit].plus.disabled {
+    border: 1px solid #171d23;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNiNDY0ZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzJkMzg0MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3b464f), color-stop(100%, #2d3842));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, -webkit-linear-gradient(top, #3b464f 0%, #2d3842 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, -moz-linear-gradient(top, #3b464f 0%, #2d3842 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, -o-linear-gradient(top, #3b464f 0%, #2d3842 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -2045px no-repeat, linear-gradient(top, #3b464f 0%, #2d3842 100%);
+}
+div.frameLayout.harmony .dark .button.primary, div.frameLayout.harmony .dark .button:link.primary, div.frameLayout.harmony .dark [type=button].primary, div.frameLayout.harmony .dark [type=submit].primary {
+    border: 1px solid #171d23;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRmOGFlYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNlNjdlNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4f8aea), color-stop(100%, #3e67e5));
+    background-image: -webkit-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background-image: -moz-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background-image: -o-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background-image: linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    color: white;
+}
+div.frameLayout.harmony .dark .button.primary:hover, div.frameLayout.harmony .dark .button.primary.hover, div.frameLayout.harmony .dark .button:link.primary:hover, div.frameLayout.harmony .dark .button:link.primary.hover, div.frameLayout.harmony .dark [type=button].primary:hover, div.frameLayout.harmony .dark [type=button].primary.hover, div.frameLayout.harmony .dark [type=submit].primary:hover, div.frameLayout.harmony .dark [type=submit].primary.hover {
+    border: 1px solid #171d23;
+    -webkit-box-shadow: 0 2px 0 #3b4249, inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 0 #3b4249, inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 0 #3b4249, inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRmOGFlYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNlNjdlNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4f8aea), color-stop(100%, #3e67e5));
+    background-image: -webkit-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background-image: -moz-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background-image: -o-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background-image: linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+}
+div.frameLayout.harmony .dark .button.primary:active, div.frameLayout.harmony .dark .button.primary.active, div.frameLayout.harmony .dark .button:link.primary:active, div.frameLayout.harmony .dark .button:link.primary.active, div.frameLayout.harmony .dark [type=button].primary:active, div.frameLayout.harmony .dark [type=button].primary.active, div.frameLayout.harmony .dark [type=submit].primary:active, div.frameLayout.harmony .dark [type=submit].primary.active {
+    color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #2a353f;
+    -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFjMzE1OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI1NDE3NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1c3159), color-stop(100%, #254176));
+    background-image: -webkit-linear-gradient(top, #1c3159 0%, #254176 100%);
+    background-image: -moz-linear-gradient(top, #1c3159 0%, #254176 100%);
+    background-image: -o-linear-gradient(top, #1c3159 0%, #254176 100%);
+    background-image: linear-gradient(top, #1c3159 0%, #254176 100%);
+}
+div.frameLayout.harmony .dark .button.primary[disabled=disabled], div.frameLayout.harmony .dark .button.primary.disabled, div.frameLayout.harmony .dark .button:link.primary[disabled=disabled], div.frameLayout.harmony .dark .button:link.primary.disabled, div.frameLayout.harmony .dark [type=button].primary[disabled=disabled], div.frameLayout.harmony .dark [type=button].primary.disabled, div.frameLayout.harmony .dark [type=submit].primary[disabled=disabled], div.frameLayout.harmony .dark [type=submit].primary.disabled {
+    color: rgba(255, 255, 255, 0.3);
+    border: 1px solid #171d23;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI1NDI2YyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMzY2NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #25426c), color-stop(100%, #203666));
+    background-image: -webkit-linear-gradient(top, #25426c 0%, #203666 100%);
+    background-image: -moz-linear-gradient(top, #25426c 0%, #203666 100%);
+    background-image: -o-linear-gradient(top, #25426c 0%, #203666 100%);
+    background-image: linear-gradient(top, #25426c 0%, #203666 100%);
+}
+div.frameLayout.harmony .dark .button.primary[disabled=disabled]:active, div.frameLayout.harmony .dark .button.primary[disabled=disabled].active, div.frameLayout.harmony .dark .button.primary.disabled:active, div.frameLayout.harmony .dark .button.primary.disabled.active, div.frameLayout.harmony .dark .button:link.primary[disabled=disabled]:active, div.frameLayout.harmony .dark .button:link.primary[disabled=disabled].active, div.frameLayout.harmony .dark .button:link.primary.disabled:active, div.frameLayout.harmony .dark .button:link.primary.disabled.active, div.frameLayout.harmony .dark [type=button].primary[disabled=disabled]:active, div.frameLayout.harmony .dark [type=button].primary[disabled=disabled].active, div.frameLayout.harmony .dark [type=button].primary.disabled:active, div.frameLayout.harmony .dark [type=button].primary.disabled.active, div.frameLayout.harmony .dark [type=submit].primary[disabled=disabled]:active, div.frameLayout.harmony .dark [type=submit].primary[disabled=disabled].active, div.frameLayout.harmony .dark [type=submit].primary.disabled:active, div.frameLayout.harmony .dark [type=submit].primary.disabled.active {
+    color: rgba(255, 255, 255, 0.3);
+}
+div.frameLayout.harmony a.button {
+    display: inline-block;
+}
+div.frameLayout.harmony .combo-button {
+    display: inline-block;
+    position: relative;
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+div.frameLayout.harmony .combo-button .button, div.frameLayout.harmony .combo-button .button:link, div.frameLayout.harmony .combo-button [type=button], div.frameLayout.harmony .combo-button [type=submit] {
+    color: white;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQzNzZjZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM1NThjMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4376cf), color-stop(100%, #3558c1));
+    background-image: -webkit-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background-image: -moz-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background-image: -o-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background-image: linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    padding-right: 50px;
+    margin-bottom: 0;
+}
+div.frameLayout.harmony .combo-button .button:active, div.frameLayout.harmony .combo-button .button.active, div.frameLayout.harmony .combo-button .button:link:active, div.frameLayout.harmony .combo-button .button:link.active, div.frameLayout.harmony .combo-button [type=button]:active, div.frameLayout.harmony .combo-button [type=button].active, div.frameLayout.harmony .combo-button [type=submit]:active, div.frameLayout.harmony .combo-button [type=submit].active {
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI3NDM4OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM0NTlhNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #274389), color-stop(100%, #3459a5));
+    background-image: -webkit-linear-gradient(top, #274389 0%, #3459a5 100%);
+    background-image: -moz-linear-gradient(top, #274389 0%, #3459a5 100%);
+    background-image: -o-linear-gradient(top, #274389 0%, #3459a5 100%);
+    background-image: linear-gradient(top, #274389 0%, #3459a5 100%);
+}
+div.frameLayout.harmony .combo-button ul.options {
+    display: none;
+    position: absolute;
+    top: 37px;
+    left: 0;
+    z-index: 5;
+    border: 1px solid #cccccc;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    background-color: white;
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    list-style: none;
+    cursor: pointer;
+}
+div.frameLayout.harmony .combo-button ul.options li {
+    font-size: 1.2rem;
+    line-height: 34px;
+    height: 34px;
+    padding: 0 10px;
+    margin: 1px;
+}
+div.frameLayout.harmony .combo-button ul.options li:hover {
+    background-color: #3965ce;
+    color: white;
+}
+div.frameLayout.harmony .combo-button::after {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 34px;
+    content: "";
+    box-sizing: border-box;
+    -webkit-border-radius: 0 2px 2px 0;
+    -moz-border-radius: 0 2px 2px 0;
+    -ms-border-radius: 0 2px 2px 0;
+    -o-border-radius: 0 2px 2px 0;
+    border-radius: 0 2px 2px 0;
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQzNzZjZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM1NThjMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4376cf), color-stop(100%, #3558c1));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #4376cf 0%, #3558c1 100%);
+}
+div.frameLayout.harmony .combo-button:hover, div.frameLayout.harmony .combo-button.hover {
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQzNzZjZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM1NThjMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4376cf), color-stop(100%, #3558c1));
+    background-image: -webkit-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background-image: -moz-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background-image: -o-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background-image: linear-gradient(top, #4376cf 0%, #3558c1 100%);
+}
+div.frameLayout.harmony .combo-button:hover::after, div.frameLayout.harmony .combo-button.hover::after {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQzNzZjZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM1NThjMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4376cf), color-stop(100%, #3558c1));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #4376cf 0%, #3558c1 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #4376cf 0%, #3558c1 100%);
+}
+div.frameLayout.harmony .combo-button:active, div.frameLayout.harmony .combo-button.active, div.frameLayout.harmony .combo-button.open {
+    -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI3NDM4OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM0NTlhNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #274389), color-stop(100%, #3459a5));
+    background-image: -webkit-linear-gradient(top, #274389 0%, #3459a5 100%);
+    background-image: -moz-linear-gradient(top, #274389 0%, #3459a5 100%);
+    background-image: -o-linear-gradient(top, #274389 0%, #3459a5 100%);
+    background-image: linear-gradient(top, #274389 0%, #3459a5 100%);
+}
+div.frameLayout.harmony .combo-button:active::after, div.frameLayout.harmony .combo-button.active::after, div.frameLayout.harmony .combo-button.open::after {
+    -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3), -1px 0 rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3), -1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3), -1px 0 rgba(255, 255, 255, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI3NDM4OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM0NTlhNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #274389), color-stop(100%, #3459a5));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -webkit-linear-gradient(top, #274389 0%, #3459a5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -moz-linear-gradient(top, #274389 0%, #3459a5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -o-linear-gradient(top, #274389 0%, #3459a5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, linear-gradient(top, #274389 0%, #3459a5 100%);
+}
+div.frameLayout.harmony .combo-button.disabled {
+    opacity: 1;
+}
+div.frameLayout.harmony .combo-button.disabled .button, div.frameLayout.harmony .combo-button.disabled .button:link, div.frameLayout.harmony .combo-button.disabled [type=button], div.frameLayout.harmony .combo-button.disabled [type=submit] {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JjY2FlYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2E1YjllNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bccaeb), color-stop(100%, #a5b9e4));
+    background-image: -webkit-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background-image: -moz-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background-image: -o-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background-image: linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    color: white;
+}
+div.frameLayout.harmony .combo-button.disabled:hover, div.frameLayout.harmony .combo-button.disabled.hover {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JjY2FlYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2E1YjllNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bccaeb), color-stop(100%, #a5b9e4));
+    background-image: -webkit-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background-image: -moz-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background-image: -o-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background-image: linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+}
+div.frameLayout.harmony .combo-button.disabled:hover::after, div.frameLayout.harmony .combo-button.disabled.hover::after {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JjY2FlYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2E1YjllNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bccaeb), color-stop(100%, #a5b9e4));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+}
+div.frameLayout.harmony .combo-button.disabled:active, div.frameLayout.harmony .combo-button.disabled.active, div.frameLayout.harmony .combo-button.disabled.open {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JjY2FlYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2E1YjllNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bccaeb), color-stop(100%, #a5b9e4));
+    background-image: -webkit-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background-image: -moz-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background-image: -o-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background-image: linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+}
+div.frameLayout.harmony .combo-button.disabled:active::after, div.frameLayout.harmony .combo-button.disabled.active::after, div.frameLayout.harmony .combo-button.disabled.open::after {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JjY2FlYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2E1YjllNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bccaeb), color-stop(100%, #a5b9e4));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+}
+div.frameLayout.harmony .combo-button.disabled::after {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JjY2FlYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2E1YjllNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bccaeb), color-stop(100%, #a5b9e4));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #bccaeb 0%, #a5b9e4 100%);
+}
+div.frameLayout.harmony .combo-button.open ul {
+    display: block;
+}
+div.frameLayout.harmony .dark .combo-button .button, div.frameLayout.harmony .dark .combo-button .button:link, div.frameLayout.harmony .dark .combo-button [type=button], div.frameLayout.harmony .dark .combo-button [type=submit] {
+    color: white;
+    border: 1px solid #171d23;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRmOGFlYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNlNjdlNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4f8aea), color-stop(100%, #3e67e5));
+    background-image: -webkit-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background-image: -moz-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background-image: -o-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background-image: linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+}
+div.frameLayout.harmony .dark .combo-button .button:active, div.frameLayout.harmony .dark .combo-button .button.active, div.frameLayout.harmony .dark .combo-button .button:link:active, div.frameLayout.harmony .dark .combo-button .button:link.active, div.frameLayout.harmony .dark .combo-button [type=button]:active, div.frameLayout.harmony .dark .combo-button [type=button].active, div.frameLayout.harmony .dark .combo-button [type=submit]:active, div.frameLayout.harmony .dark .combo-button [type=submit].active {
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFjMzE1OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI1NDE3NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1c3159), color-stop(100%, #254176));
+    background-image: -webkit-linear-gradient(top, #1c3159 0%, #254176 100%);
+    background-image: -moz-linear-gradient(top, #1c3159 0%, #254176 100%);
+    background-image: -o-linear-gradient(top, #1c3159 0%, #254176 100%);
+    background-image: linear-gradient(top, #1c3159 0%, #254176 100%);
+}
+div.frameLayout.harmony .dark .combo-button::after {
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: #171d23;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRmOGFlYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNlNjdlNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4f8aea), color-stop(100%, #3e67e5));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+}
+div.frameLayout.harmony .dark .combo-button:hover, div.frameLayout.harmony .dark .combo-button.hover {
+    -webkit-box-shadow: 0 2px 0 #3b4249, inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 0 #3b4249, inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 0 #3b4249, inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRmOGFlYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNlNjdlNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4f8aea), color-stop(100%, #3e67e5));
+    background-image: -webkit-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background-image: -moz-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background-image: -o-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background-image: linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+}
+div.frameLayout.harmony .dark .combo-button:hover::after, div.frameLayout.harmony .dark .combo-button.hover::after {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRmOGFlYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNlNjdlNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4f8aea), color-stop(100%, #3e67e5));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -webkit-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -moz-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, -o-linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -211px no-repeat, linear-gradient(top, #4f8aea 0%, #3e67e5 100%);
+}
+div.frameLayout.harmony .dark .combo-button:active, div.frameLayout.harmony .dark .combo-button.active, div.frameLayout.harmony .dark .combo-button.open {
+    -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFjMzE1OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI1NDE3NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1c3159), color-stop(100%, #254176));
+    background-image: -webkit-linear-gradient(top, #1c3159 0%, #254176 100%);
+    background-image: -moz-linear-gradient(top, #1c3159 0%, #254176 100%);
+    background-image: -o-linear-gradient(top, #1c3159 0%, #254176 100%);
+    background-image: linear-gradient(top, #1c3159 0%, #254176 100%);
+}
+div.frameLayout.harmony .dark .combo-button:active::after, div.frameLayout.harmony .dark .combo-button.active::after, div.frameLayout.harmony .dark .combo-button.open::after {
+    -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3), -1px 0 rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3), -1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.3), -1px 0 rgba(255, 255, 255, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFjMzE1OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI1NDE3NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1c3159), color-stop(100%, #254176));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -webkit-linear-gradient(top, #1c3159 0%, #254176 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -moz-linear-gradient(top, #1c3159 0%, #254176 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, -o-linear-gradient(top, #1c3159 0%, #254176 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1678px no-repeat, linear-gradient(top, #1c3159 0%, #254176 100%);
+}
+div.frameLayout.harmony .dark .combo-button.disabled .button, div.frameLayout.harmony .dark .combo-button.disabled .button:link, div.frameLayout.harmony .dark .combo-button.disabled [type=button], div.frameLayout.harmony .dark .combo-button.disabled [type=submit] {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI1NDI2YyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMzY2NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #25426c), color-stop(100%, #203666));
+    background-image: -webkit-linear-gradient(top, #25426c 0%, #203666 100%);
+    background-image: -moz-linear-gradient(top, #25426c 0%, #203666 100%);
+    background-image: -o-linear-gradient(top, #25426c 0%, #203666 100%);
+    background-image: linear-gradient(top, #25426c 0%, #203666 100%);
+    color: rgba(255, 255, 255, 0.3);
+}
+div.frameLayout.harmony .dark .combo-button.disabled:hover, div.frameLayout.harmony .dark .combo-button.disabled.hover {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI1NDI2YyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMzY2NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #25426c), color-stop(100%, #203666));
+    background-image: -webkit-linear-gradient(top, #25426c 0%, #203666 100%);
+    background-image: -moz-linear-gradient(top, #25426c 0%, #203666 100%);
+    background-image: -o-linear-gradient(top, #25426c 0%, #203666 100%);
+    background-image: linear-gradient(top, #25426c 0%, #203666 100%);
+}
+div.frameLayout.harmony .dark .combo-button.disabled:hover::after, div.frameLayout.harmony .dark .combo-button.disabled.hover::after {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI1NDI2YyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMzY2NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #25426c), color-stop(100%, #203666));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -moz-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -o-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, linear-gradient(top, #25426c 0%, #203666 100%);
+}
+div.frameLayout.harmony .dark .combo-button.disabled:active, div.frameLayout.harmony .dark .combo-button.disabled.active, div.frameLayout.harmony .dark .combo-button.disabled.open {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI1NDI2YyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMzY2NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #25426c), color-stop(100%, #203666));
+    background-image: -webkit-linear-gradient(top, #25426c 0%, #203666 100%);
+    background-image: -moz-linear-gradient(top, #25426c 0%, #203666 100%);
+    background-image: -o-linear-gradient(top, #25426c 0%, #203666 100%);
+    background-image: linear-gradient(top, #25426c 0%, #203666 100%);
+}
+div.frameLayout.harmony .dark .combo-button.disabled:active::after, div.frameLayout.harmony .dark .combo-button.disabled.active::after, div.frameLayout.harmony .dark .combo-button.disabled.open::after {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI1NDI2YyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMzY2NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #25426c), color-stop(100%, #203666));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -moz-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -o-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, linear-gradient(top, #25426c 0%, #203666 100%);
+}
+div.frameLayout.harmony .dark .combo-button.disabled::after {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    -moz-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), -1px 0 rgba(255, 255, 255, 0.1);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI1NDI2YyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIwMzY2NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #25426c), color-stop(100%, #203666));
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -webkit-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -moz-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, -o-linear-gradient(top, #25426c 0%, #203666 100%);
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 1px -1710px no-repeat, linear-gradient(top, #25426c 0%, #203666 100%);
+}
+div.frameLayout.harmony .segment-button {
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+div.frameLayout.harmony .segment-button .button, div.frameLayout.harmony .segment-button .button:link, div.frameLayout.harmony .segment-button [type=button], div.frameLayout.harmony .segment-button [type=submit] {
+    float: left;
+    margin-left: -1px;
+    margin-bottom: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+}
+div.frameLayout.harmony .segment-button .button:first-child, div.frameLayout.harmony .segment-button .button:link:first-child, div.frameLayout.harmony .segment-button [type=button]:first-child, div.frameLayout.harmony .segment-button [type=submit]:first-child {
+    -webkit-border-radius: 2px 0 0 2px;
+    -moz-border-radius: 2px 0 0 2px;
+    -ms-border-radius: 2px 0 0 2px;
+    -o-border-radius: 2px 0 0 2px;
+    border-radius: 2px 0 0 2px;
+    margin-left: 0;
+}
+div.frameLayout.harmony .segment-button .button:last-child, div.frameLayout.harmony .segment-button .button:link:last-child, div.frameLayout.harmony .segment-button [type=button]:last-child, div.frameLayout.harmony .segment-button [type=submit]:last-child {
+    -webkit-border-radius: 0 2px 2px 0;
+    -moz-border-radius: 0 2px 2px 0;
+    -ms-border-radius: 0 2px 2px 0;
+    -o-border-radius: 0 2px 2px 0;
+    border-radius: 0 2px 2px 0;
+}
+div.frameLayout.harmony .segment-button .button.selected, div.frameLayout.harmony .segment-button .button:link.selected, div.frameLayout.harmony .segment-button [type=button].selected, div.frameLayout.harmony .segment-button [type=submit].selected {
+    background-color: #cbcbcb;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.65);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.65);
+    background-image: none;
+}
+div.frameLayout.harmony .dark .segment-button .button.selected, div.frameLayout.harmony .dark .segment-button .button:link.selected, div.frameLayout.harmony .dark .segment-button [type=button].selected, div.frameLayout.harmony .dark .segment-button [type=submit].selected {
+    border: 1px solid #2a353f;
+    -webkit-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.6);
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFmMjcyZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM0M2Y0YyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1f272e), color-stop(100%, #343f4c));
+    background-image: -webkit-linear-gradient(top, #1f272e 0%, #343f4c 100%);
+    background-image: -moz-linear-gradient(top, #1f272e 0%, #343f4c 100%);
+    background-image: -o-linear-gradient(top, #1f272e 0%, #343f4c 100%);
+    background-image: linear-gradient(top, #1f272e 0%, #343f4c 100%);
+}
+div.frameLayout.harmony .icon-button, div.frameLayout.harmony .icon-button:link, div.frameLayout.harmony .icon-button[type=button], div.frameLayout.harmony .icon-button[type=submit] {
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+    text-indent: 22px;
+    overflow: hidden;
+    line-height: inherit;
+    padding: 0;
+    opacity: 1;
+    -webkit-box-shadow: 0 0;
+    -moz-box-shadow: 0 0;
+    box-shadow: 0 0;
+    border: none;
+}
+div.frameLayout.harmony .sticky-footer {
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 35px;
+    padding: 10px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=97);
+    opacity: 0.97;
+    background-color: #131f2b;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjEwMCUiIHgyPSI1MCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzEzMWYyYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFmMzE0NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #131f2b), color-stop(100%, #1f3145));
+    background-image: -webkit-linear-gradient(bottom, #131f2b 0%, #1f3145 100%);
+    background-image: -moz-linear-gradient(bottom, #131f2b 0%, #1f3145 100%);
+    background-image: -o-linear-gradient(bottom, #131f2b 0%, #1f3145 100%);
+    background-image: linear-gradient(bottom, #131f2b 0%, #1f3145 100%);
+}
+div.frameLayout.harmony .lightbox, div.frameLayout.harmony .modal-overlay {
+    position: absolute;
+    display: none;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+div.frameLayout.harmony .lightbox .scrim, div.frameLayout.harmony .modal-overlay .scrim {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: table;
+}
+div.frameLayout.harmony .lightbox .scrim .layout, div.frameLayout.harmony .modal-overlay .scrim .layout {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .compressor, div.frameLayout.harmony .modal-overlay .scrim .layout .compressor {
+    display: table;
+    margin: 0 auto;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .compressor .content-header, div.frameLayout.harmony .modal-overlay .scrim .layout .compressor .content-header {
+    position: relative;
+    margin-bottom: 20px;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .compressor .content-header span, div.frameLayout.harmony .modal-overlay .scrim .layout .compressor .content-header span {
+    display: table-cell;
+    color: white;
+    font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 600;
+    font-stretch: normal;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .compressor .content-header a, div.frameLayout.harmony .modal-overlay .scrim .layout .compressor .content-header a {
+    display: table-cell;
+    position: absolute;
+    right: 0;
+    top: -12px;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .compressor .content-footer p, div.frameLayout.harmony .modal-overlay .scrim .layout .compressor .content-footer p {
+    color: white;
+    font-weight: normal;
+    text-align: left;
+    padding: 0;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .compressor .content-footer span, div.frameLayout.harmony .modal-overlay .scrim .layout .compressor .content-footer span {
+    font-style: italic;
+    display: block;
+    text-align: left;
+    color: #999999;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content {
+    width: 600px;
+    height: 390px;
+    display: table;
+    margin: 0 auto;
+    background-color: white;
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content h1, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content h1 {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    min-width: 0;
+    font-size: 26px;
+    line-height: 30px;
+    font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 600;
+    font-stretch: normal;
+    padding: 18px 20px;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content.alert, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content.alert {
+    width: 350px;
+    height: 165px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: none;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content.alert .alert-icon, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content.alert .alert-icon {
+    width: 50px;
+    height: 50px;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -375px no-repeat;
+    float: left;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content.alert h1, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content.alert h1 {
+    font-size: 1.6rem;
+    font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 600;
+    font-stretch: normal;
+    padding: 10px 0 20px 60px;
+    text-align: left;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content.alert .button-bar, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content.alert .button-bar {
+    margin-top: 15px;
+    text-align: right;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-main-col, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-main-col {
+    display: table-cell;
+    height: 100%;
+    padding: 12px;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-main-col .success, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-main-col .success {
+    height: 132px;
+    width: 132px;
+    margin: 12px auto;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 0;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-main-col p, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-main-col p {
+    font-size: 1.6rem;
+    color: #999999;
+    padding: 0 10px;
+    width: auto;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-main-col hr, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-main-col hr {
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    margin: 24px 0;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-main-col .button-bar, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-main-col .button-bar {
+    text-align: right;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-right-col, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-right-col {
+    display: table-cell;
+    width: 213px;
+    text-align: left;
+    vertical-align: top;
+    background-color: #f3f5f7;
+    height: 100%;
+    border-left: 1px solid #e6eaef;
+    padding: 12px;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-right-col h1, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-right-col h1 {
+    font-size: 1.8rem;
+    color: #404040;
+    font-weight: normal;
+    padding-left: 0;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-right-col ul, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-right-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-right-col ul li, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-right-col ul li {
+    line-height: 18px;
+    font-size: 14px;
+    font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 600;
+    font-stretch: normal;
+    padding: 14px 0;
+    border-top: 1px solid #f9fafc;
+    border-bottom: 1px solid #d8e0e8;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-right-col ul li span, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-right-col ul li span {
+    padding: 2px 0px 2px 28px;
+    line-height: 22px;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-right-col ul li.complete span, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-right-col ul li.complete span {
+    color: #cccccc;
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -1189px no-repeat;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-right-col ul li.add-customers span, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-right-col ul li.add-customers span {
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -276px no-repeat;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-right-col ul li.repeating-invoices span, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-right-col ul li.repeating-invoices span {
+    background: url('../images/payroll/icons-s2b11c90dfb.png') 0 -295px no-repeat;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-right-col ul li:first-child, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-right-col ul li:first-child {
+    border-top: none;
+}
+div.frameLayout.harmony .lightbox .scrim .layout .modal-content .modal-right-col ul li:last-child, div.frameLayout.harmony .modal-overlay .scrim .layout .modal-content .modal-right-col ul li:last-child {
+    border-bottom: none;
+}
+div.frameLayout.harmony .progress {
+    width: 185px;
+    padding: 2px;
+    border: 4px solid #3965ce;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+}
+div.frameLayout.harmony .progress .fill {
+    height: 4px;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iNTAlIiB4Mj0iMTAwJSIgeTI9IjUwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UzZWFmMyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM5NjVjZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #e3eaf3), color-stop(100%, #3965ce));
+    background-image: -webkit-linear-gradient(left, #e3eaf3 0%, #3965ce 100%);
+    background-image: -moz-linear-gradient(left, #e3eaf3 0%, #3965ce 100%);
+    background-image: -o-linear-gradient(left, #e3eaf3 0%, #3965ce 100%);
+    background-image: linear-gradient(left, #e3eaf3 0%, #3965ce 100%);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
