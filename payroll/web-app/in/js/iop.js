@@ -7,6 +7,10 @@
 
 iop = {};
 iop.URL_BASE = 'https://branch.iopdev.intuit.com/test';
+iop.SETUP_WS = '/webservices/json/SetupWebService';
+iop.MOBILE_WS = '/webservices/json/MobileManager';
+iop.PAYCHECK_WS = '/webservices/json/PaycheckMgr';
+
 iop.employees = [];
 iop.paySchedules = [];
 iop.wageItemIds = ['HOURLY_PAY', 'OVERTIME', 'SALARY', 'BONUS', 'COMMISSION', 'DOUBLE_OVERTIME'];
@@ -15,8 +19,27 @@ iop.wageItemNames = ['hourly_t', 'overtime_t', 'salary_t', 'bonus_t', 'commissio
 // ===============================
 // HELPERS
 
-iop.sendRequest = function(obj, isMobile) {
-    var endPoint = isMobile ? '/webservices/json/MobileManager' : '/webservices/json/SetupWebService';
+iop.getCookie = function(c_name) {
+    var c_value = document.cookie;
+    var c_start = c_value.indexOf(" " + c_name + "=");
+    if (c_start == -1) {
+        c_start = c_value.indexOf(c_name + "=");
+    }
+    if (c_start == -1) {
+        c_value = null;
+    }
+    else {
+        c_start = c_value.indexOf("=", c_start) + 1;
+        var c_end = c_value.indexOf(";", c_start);
+        if (c_end == -1) {
+            c_end = c_value.length;
+        }
+        c_value = unescape(c_value.substring(c_start,c_end));
+    }
+    return c_value;
+}
+
+iop.sendRequest = function(obj, endPoint) {
     var dfd = $.Deferred();
     $.ajax({
         url: iop.URL_BASE + endPoint,
@@ -64,6 +87,9 @@ iop.signIn = function(email, password) {
     var req = iop.sendRequest(obj, true);
     req.done(function(data) {
         iop.company = data;
+
+        // TODO we need to fetch a lot more here.
+
         dfd.resolve();
     });
     req.fail(dfd.reject);
@@ -78,46 +104,16 @@ iop.signIn = function(email, password) {
  * @returns a $.Deferred promise for completion binding.
  */
 iop.signUp = function(email, password) {
-    // create the company
-    var obj = {"updateCompanyModel": {
-        "companyModel": {
-            "acceptedCustomerServiceAgreement": true,
-            "businessName": 'Unavailable',
-            "companyType": 'SmallBusiness',
-            "featureSetType": 'BasicMinus',
-            "serviceType": 'IOP',
-            "employeeCountRange": 'OneToTwentyFive',
-            "primaryContact": {
-                "firstName": email,
-                "lastName": 'Unavailable',
-                "eMailAddress": email,
-                "userID": email,
-                "password": password
-            },
-            "businessAddress": {
-                "address1": '000 Example St',
-                "city": 'Mountain View',
-                "state": 'CA',
-                "zip": '94039'
-            }
-        },
-        "persist":true
-    }};
-    var dfd = $.Deferred();
-    var req = iop.sendRequest(obj, false);
-    req.done(function(data) {
-        iop.company = data;
-        // add wage items
-        var p = iop.setupWageItem(1);
-        p.done(dfd.resolve);
-        p.fail(dfd.reject);
-    });
-    req.fail(dfd.reject);
-
-    // add pay schedule
-    // TODO
-
-    return dfd.promise();
+    // during sign up we follow the formula:
+    // 1) update the company model with email and password
+    // 2) add company wage item HOURLY_PAY
+    // 3) get company wage item
+    // 4) build an employee model (store ID)
+    // 5) saveCompanyPaySchedule (add company pay schedule, from an employee)
+    // 6) updateEmployeeModelById: this will insert the company pay schedule into the employee (only do this once)
+    // 7) updateEmployeeModelById: by putting the hourWage JSON Array into the updateEmployee model and calling
+    //    the update method, the hourlyWage pay type will get created. Assume that we can do the same with
+    //    allWages JSON array.
 }
 
 /**
@@ -333,3 +329,91 @@ iop.syncEmployee = function(index) {
     req.fail(dfd.reject);
     return dfd.promise();
 }
+
+// ===============================
+// MODELS
+
+iop.models = {};
+iop.models.company = {
+    "acceptedCustomerServiceAgreement": true,
+    "businessName": "SNAPDEFAULT",
+    "companyType": 'SmallBusiness',
+    "featureSetType": 'BasicMinus',
+    "serviceType": 'IOP',
+    "employeeCountRange": 'OneToTwentyFive',
+    "confirmEMailAddress": false,
+    "primaryContact": {  // user
+        "firstName": "SNAPDEFAULT",
+        "lastName": "SNAPDEFAULT",
+        "eMailAddress": "",
+        "userID": "",
+        "password": ""
+    },
+    "businessAddress": {
+        "address1": "121 Main St.",
+        "address2":"Building 8",
+        "city": "Mountain View",
+        "state": "CA",
+        "zip":"94039"
+    },
+    "phone": "555-555-5555",
+    "phoneExtension": "",
+    "directDeposit": false,
+    "havePaidEmployeesThisYear": false,
+    "startPayrollThisQtr": true,
+    "havePaidTimeOff": false,
+    "haveContractor": false,
+    "haveTimeTracking": false,
+    "companyTaxSetup": {
+        "filingName": $('#coName').val(),
+        "filingType": "other",
+        "isFilingAddressSameAsBusinessAddress": true,
+        "federalEIN": "",
+        "federalDepositSchedules": [
+            {
+                "id": 0,
+                "version": 0,
+                "scheduleId": 1,
+                "filingType": "form941",
+                "effectiveDate": "2013-01-01T00:00:00-08:00",
+                "endDate": "3000-01-01T00:00:00-08:00"
+            }
+        ],
+        "stateTaxSetup": [
+            {
+                "state": "CA",
+                "stateSchedules": [
+                    {
+                        "id": 0,
+                        "version": 0,
+                        "scheduleId": 20,
+                        "effectiveDate": "2013-01-01T00:00:00-08:00",
+                        "endDate": "3000-01-01T00:00:00-08:00"
+                    }
+                ],
+                "stateTaxRates": [
+                    {
+                        "id": 0,
+                        "version": 0,
+                        "rate": 0.001,
+                        "taxItemId": 9,
+                        "effectiveDate": "2013-01-01T00:00:00-08:00",
+                        "state": "CA",
+                        "endDate": "3000-01-01T00:00:00-08:00",
+                        "taxRateType": -1
+                    },
+                    {
+                        "id": 0,
+                        "version": 0,
+                        "rate": 0.034,
+                        "taxItemId": 10,
+                        "effectiveDate": "2013-01-01T00:00:00-08:00",
+                        "state": "CA",
+                        "endDate": "3000-01-01T00:00:00-08:00",
+                        "taxRateType": -1
+                    }
+                ]
+            }
+        ]
+    }
+};
