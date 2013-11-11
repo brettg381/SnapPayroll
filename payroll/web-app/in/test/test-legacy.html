@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="../libs/bootstrap-no-gutter/css/bootstrap.min.css">
     <script type="text/javascript" src="../libs/backbone.marionette/jquery.js"></script>
+    <script type="text/javascript" src="../libs/jquery-ui-1.10.3-intuit.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
     <style>
         .form-horizontal {
             margin-left: -50px;
@@ -59,7 +60,8 @@
                     console.log('[' + actionStr + '] FAILURE');
                 }
             });
-        }        
+        }      
+        
     </script>
 </head>
 <body>
@@ -116,6 +118,8 @@
                 <div class="control-group">
                     <label  class="control-label" for="payscheduleEEId">ee Id</label>
                     <div class="controls"><input id="payscheduleEEId" type="text"/><br/></div>
+                    <label class="control-label" for="datepicker">Start Date</label>
+                    <div class="controls"><input id="datepicker" type="text"/></div>                    
                 </div>
             </form>
             <button class=" controls btn-primary" id="btnSetPaySched">Add pay schedule</button>
@@ -214,6 +218,8 @@
                     <div class="controls"><input id="checkEEId" type="text"/></div>
                     <label class="control-label" for="checkHoursWorked">Hours worked</label>
                     <div class="controls"><input id="checkHoursWorked" type="text"/></div>
+                    <label class="control-label" for="datepickerDraftCheck">Check Date</label>
+                    <div class="controls"><input id="datepickerDraftCheck" type="text"/></div>                    
                 </div>
             </form>
             <button class="controls btn-primary" id="btnCreatePaycheck">Create check</button><br/>
@@ -240,19 +246,27 @@
     <!-- ========================== -->
     <!-- saveCompanyPaySchedule -->
     <script type="text/javascript">
+		$(function() {
+			$( "#datepicker" ).datepicker();
+		});
+
         $('#btnSetPaySched').on('click', function() {
+        	var startDateParts = $("#datepicker").val().split('/');
+        	var startYear = startDateParts[0];
+        	var startMonth = startDateParts[1];
+        	var startDay = startDateParts[2];
             var obj = {"saveCompanyPaySchedule" : {
                 "paySchedule": {
                     "payFrequency": "EVERY_WEEK",
                     "nextPayDay": {
-                        "year": 2013,
-                        "month": 10,
-                        "day": 18
+                        "year": startYear,
+                        "month": startMonth,
+                        "day": startDay
                     },
                     "periodEndDate": {
-                        "year": 2013,
-                        "month": 10,
-                        "day": 18
+                        "year": startYear,
+                        "month": startMonth,
+                        "day": startDay
                     },
                     "useAsDefault": true,
                     "isCustom": false,
@@ -573,7 +587,16 @@
     <!-- ========================== -->
     <!-- PaycheckWebService createDraftPaycheck-->
     <script type="text/javascript">
+		$(function() {
+			$( "#datepickerDraftCheck" ).datepicker();
+		});
+
         $('#btnCreatePaycheck').on('click', function() {
+        	var startDateParts = $("#datepickerDraftCheck").val().split('/');
+        	var startYear = startDateParts[0];
+        	var startMonth = startDateParts[1];
+        	var startDay = startDateParts[2];
+        
             var obj = {"createDraftPaycheck" : {
             	"employeeId":$('#checkEEId').val(),
 					"payDayValues" : [{
@@ -584,14 +607,14 @@
 						"commissionHoursWorked" : 0
 					}],
 					"dateInPayPeriod" : {
-						"year" : 2013,
-						"month" : 10,
-						"day" : 16
+						"year" : startYear,
+						"month" : startMonth,
+						"day" : startDay
 					},
 					"checkDate" : {
-						"year" : 2013,
-						"month" : 10,
-						"day" : 18
+						"year" : startYear,
+						"month" : startMonth,
+						"day" : startDay
 					}
 				}
 
